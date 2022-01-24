@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -13,6 +13,12 @@
 [ext_resource path="res://fonts/dynamicfont_64-global.tres" type="DynamicFont" id=11]
 [ext_resource path="res://fonts/theme_global.tres" type="Theme" id=12]
 [ext_resource path="res://scripts/Popup.gd" type="Script" id=13]
+[ext_resource path="res://scripts/Computer.gd" type="Script" id=14]
+[ext_resource path="res://icon.png" type="Texture" id=15]
+
+[sub_resource type="Gradient" id=13]
+offsets = PoolRealArray( 0, 0.266234, 0.649351, 1 )
+colors = PoolColorArray( 0.21264, 0.184441, 0.944336, 1, 0.0906563, 0.663086, 0.143204, 1, 0.948242, 0.756528, 0.162979, 1, 0.889648, 0.111206, 0.111206, 1 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 128
@@ -204,6 +210,57 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Computer" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+stretch_mode = 6
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+popup_path = NodePath("../ExclusivePopupNode/Popup")
+temperature_color_gradient = SubResource( 13 )
+
+[node name="Screen" type="TextureRect" parent="Computer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WealthShower" type="Label" parent="Computer"]
+anchor_right = 1.0
+anchor_bottom = 0.071
+margin_left = 7.0
+margin_right = -7.0
+margin_bottom = -0.0800018
+custom_fonts/font = SubResource( 9 )
+text = "0C"
+align = 1
+valign = 1
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="Computer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 409.0
+margin_top = 200.0
+margin_right = -390.0
+margin_bottom = -1241.0
+texture = ExtResource( 15 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoolTimer" type="Timer" parent="Computer"]
+wait_time = 0.1
+autostart = true
+
 [node name="Mouse" type="TextureButton" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -215,21 +272,6 @@ texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 4 )
 expand = true
 stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="WealthShower" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 0.071
-margin_left = 7.0
-margin_right = -7.0
-margin_bottom = -0.0800018
-custom_fonts/font = SubResource( 9 )
-text = "0C"
-align = 1
-valign = 1
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -294,14 +336,14 @@ __meta__ = {
 }
 
 [node name="UpgradeList" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer"]
-margin_right = 698.0
-margin_bottom = 2230.0
+margin_right = 710.0
+margin_bottom = 1880.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
 
 [node name="UpgradeButton" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_right = 698.0
+margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 1
 script = ExtResource( 9 )
@@ -310,8 +352,7 @@ popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
 racine_path = NodePath("../../../../../../..")
 
 [node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
+margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -320,7 +361,7 @@ texture_normal = SubResource( 11 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
-margin_right = 698.0
+margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
@@ -331,7 +372,7 @@ custom_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 690.0
+margin_right = 702.0
 margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
@@ -339,7 +380,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
 margin_right = 128.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
@@ -350,1043 +391,21 @@ stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
 margin_left = 135.0
-margin_right = 682.0
+margin_right = 694.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
+[node name="TitleLabel" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 559.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
 text = "Une Meilleur souris !"
 autowrap = true
 
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="PriceLabel" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton2" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 149.0
-margin_right = 698.0
-margin_bottom = 293.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton3" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 298.0
-margin_right = 698.0
-margin_bottom = 442.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton4" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 447.0
-margin_right = 698.0
-margin_bottom = 591.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton5" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 596.0
-margin_right = 698.0
-margin_bottom = 740.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton6" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 745.0
-margin_right = 698.0
-margin_bottom = 889.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton7" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 894.0
-margin_right = 698.0
-margin_bottom = 1038.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton8" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1043.0
-margin_right = 698.0
-margin_bottom = 1187.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton9" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1192.0
-margin_right = 698.0
-margin_bottom = 1336.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton10" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1341.0
-margin_right = 698.0
-margin_bottom = 1485.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton11" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1490.0
-margin_right = 698.0
-margin_bottom = 1634.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton12" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1639.0
-margin_right = 698.0
-margin_bottom = 1783.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton13" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1788.0
-margin_right = 698.0
-margin_bottom = 1932.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton14" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 1937.0
-margin_right = 698.0
-margin_bottom = 2081.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
-margin_bottom = 99.0
-size_flags_horizontal = 3
-custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-custom_fonts/font = ExtResource( 6 )
-text = "150C"
-autowrap = true
-
-[node name="UpgradeButton15" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 2086.0
-margin_right = 698.0
-margin_bottom = 2230.0
-mouse_filter = 1
-script = ExtResource( 9 )
-upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
-racine_path = NodePath("../../../../../../..")
-
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15"]
-modulate = Color( 1, 0.168627, 0.168627, 1 )
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture_normal = SubResource( 11 )
-expand = true
-
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15"]
-margin_right = 698.0
-margin_bottom = 144.0
-mouse_filter = 2
-custom_constants/margin_right = 8
-custom_constants/margin_top = 8
-custom_constants/margin_left = 8
-custom_constants/margin_bottom = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/MarginContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 690.0
-margin_bottom = 136.0
-mouse_filter = 2
-custom_constants/separation = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/MarginContainer/HBoxContainer"]
-margin_right = 128.0
-margin_bottom = 128.0
-rect_min_size = Vector2( 128, 128 )
-mouse_filter = 2
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/MarginContainer/HBoxContainer"]
-margin_left = 135.0
-margin_right = 682.0
-margin_bottom = 128.0
-mouse_filter = 2
-size_flags_horizontal = 3
-
-[node name="Label" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 547.0
-margin_bottom = 54.0
-size_flags_horizontal = 3
-text = "Une Meilleur souris !"
-autowrap = true
-
-[node name="Label2" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
-margin_right = 547.0
+margin_right = 559.0
 margin_bottom = 99.0
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
@@ -1418,6 +437,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -1501,23 +521,10 @@ text = "OK"
 anims/RESET = SubResource( 7 )
 anims/show_popup = SubResource( 8 )
 
-[connection signal="wealth_changed" from="." to="WealthShower" method="_on_Racine_wealth_changed"]
+[connection signal="wealth_changed" from="." to="Computer/WealthShower" method="_on_Racine_wealth_changed"]
 [connection signal="wealth_changed" from="." to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="_on_Racine_wealth_changed"]
-[connection signal="pressed" from="Mouse" to="." method="_on_Mouse_pressed"]
+[connection signal="timeout" from="Computer/CoolTimer" to="Computer" method="_on_CoolTimer_timeout"]
+[connection signal="pressed" from="Mouse" to="Computer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton5" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton6" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton7" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton8" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton9" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton10" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton11" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton12" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton13" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton14" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton15" method="buy_an_upgrade"]
 [connection signal="pressed" from="OffsetNode/UpgradeMenu/UpgradeMenuHandle" to="OffsetNode/UpgradeMenu" method="_on_UpgradeMenuHandle_pressed"]
 [connection signal="pressed" from="ExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="ExclusivePopupNode/Popup" method="_on_DismissPopupButton_pressed"]
