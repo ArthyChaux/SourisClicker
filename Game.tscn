@@ -1,24 +1,127 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=48 format=2]
 
-[ext_resource path="res://souris101.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
 [ext_resource path="res://scripts/WealthShower.gd" type="Script" id=3]
-[ext_resource path="res://souris1.201.png" type="Texture" id=4]
-[ext_resource path="res://fonts/digital_display/Digital Display.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://fonts/dynamicfont_48.tres" type="DynamicFont" id=6]
+[ext_resource path="res://assets/sprites/souris1.201.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/digital_display/Digital Display.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/fonts/dynamicfont_48.tres" type="DynamicFont" id=6]
 [ext_resource path="res://scripts/UpgradeMenu.gd" type="Script" id=7]
-[ext_resource path="res://70-707718_saturated-oak-texture-oak-wood-texture.jpg" type="Texture" id=8]
+[ext_resource path="res://assets/texture/70-707718_saturated-oak-texture-oak-wood-texture.jpg" type="Texture" id=8]
 [ext_resource path="res://scripts/UpgradeButton.gd" type="Script" id=9]
-[ext_resource path="res://fonts/aldo_the_apache/AldotheApache.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://fonts/dynamicfont_64-global.tres" type="DynamicFont" id=11]
-[ext_resource path="res://fonts/theme_global.tres" type="Theme" id=12]
+[ext_resource path="res://assets/fonts/aldo_the_apache/AldotheApache.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/fonts/dynamicfont_64-global.tres" type="DynamicFont" id=11]
+[ext_resource path="res://assets/fonts/theme_global.tres" type="Theme" id=12]
 [ext_resource path="res://scripts/Popup.gd" type="Script" id=13]
 [ext_resource path="res://scripts/Computer.gd" type="Script" id=14]
-[ext_resource path="res://icon.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/Ordi01.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/fumee.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/feu.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/window.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/VirusPoulpe01.png" type="Texture" id=19]
+[ext_resource path="res://assets/fonts/dynamicfont_128.tres" type="DynamicFont" id=20]
+[ext_resource path="res://scripts/SkinMenu.gd" type="Script" id=21]
+[ext_resource path="res://assets/sprites/GrosseSourisTriangle01.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/SourisMieux01.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/mouse01.png" type="Texture" id=24]
+[ext_resource path="res://scripts/SkinButton.gd" type="Script" id=25]
 
 [sub_resource type="Gradient" id=13]
 offsets = PoolRealArray( 0, 0.266234, 0.649351, 1 )
 colors = PoolColorArray( 0.21264, 0.184441, 0.944336, 1, 0.0906563, 0.663086, 0.143204, 1, 0.948242, 0.756528, 0.162979, 1, 0.889648, 0.111206, 0.111206, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=14]
+particles_animation = true
+particles_anim_h_frames = 13
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=18]
+offsets = PoolRealArray( 0.0151515, 0.174242, 0.643939, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 0.54902, 0.54902, 0.54902, 0.835294, 0.204102, 0.204102, 0.204102, 0.270588 )
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "burn"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 7, 11 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "explode"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 11 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="DynamicFont" id=9]
 size = 128
@@ -30,6 +133,10 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
+
+[sub_resource type="StyleBoxLine" id=21]
+color = Color( 0.466667, 0.466667, 0.466667, 1 )
+thickness = 3
 
 [sub_resource type="Gradient" id=10]
 colors = PoolColorArray( 0.0664062, 0.0664062, 0.0664062, 1, 0.375, 0.375, 0.375, 1 )
@@ -71,6 +178,105 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -980, -0.25, 0, 0.25, 0, -750, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("..:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("..:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "open_skin_menu_big"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 128, -0.25, 0, 0.25, 0, 980, -0.25, 0, 0.25, 0, 750, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("..:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "open_skin_menu_little"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 128, 0 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "open_skin_menu_total"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 980, -0.25, 0, 0.25, 0, 750, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
 }
 tracks/1/type = "bezier"
@@ -143,6 +349,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("..:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=8]
 resource_name = "show_popup"
@@ -191,6 +409,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("..:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="Racine" type="Control"]
 anchor_right = 1.0
@@ -210,31 +440,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Computer" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-expand = true
-stretch_mode = 6
-script = ExtResource( 14 )
+[node name="OrdiOffset" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-popup_path = NodePath("../ExclusivePopupNode/Popup")
+
+[node name="Computer" type="Sprite" parent="OrdiOffset"]
+position = Vector2( -68, -200 )
+scale = Vector2( 7.02677, 7.02677 )
+texture = ExtResource( 15 )
+script = ExtResource( 14 )
+popup_path = NodePath("../../POPUPExclusivePopupNode/Popup")
 temperature_color_gradient = SubResource( 13 )
 
-[node name="Screen" type="TextureRect" parent="Computer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Screen" type="Sprite" parent="OrdiOffset/Computer"]
+position = Vector2( 8.47994, -42.965 )
+texture = ExtResource( 18 )
 
-[node name="WealthShower" type="Label" parent="Computer"]
-anchor_right = 1.0
-anchor_bottom = 0.071
-margin_left = 7.0
-margin_right = -7.0
-margin_bottom = -0.0800018
+[node name="CoolTimer" type="Timer" parent="OrdiOffset/Computer"]
+wait_time = 0.1
+autostart = true
+
+[node name="Fumee" type="CPUParticles2D" parent="OrdiOffset/Computer"]
+modulate = Color( 1, 1, 1, 0.568627 )
+material = SubResource( 14 )
+position = Vector2( -14.5101, 37.8771 )
+amount = 7
+lifetime = 50.0
+randomness = 0.64
+texture = ExtResource( 16 )
+emission_shape = 1
+emission_sphere_radius = 10.0
+gravity = Vector2( 0, -40 )
+scale_amount = 0.5
+color = Color( 1, 0.933333, 0.933333, 1 )
+color_ramp = SubResource( 18 )
+anim_speed = 4.0
+
+[node name="Feu" type="Sprite" parent="OrdiOffset/Computer"]
+visible = false
+position = Vector2( -13.2263, 25.9698 )
+texture = ExtResource( 17 )
+hframes = 12
+
+[node name="FeuAnimationPlayer" type="AnimationPlayer" parent="OrdiOffset/Computer/Feu"]
+anims/RESET = SubResource( 15 )
+anims/burn = SubResource( 16 )
+anims/explode = SubResource( 17 )
+
+[node name="WealthShower" type="Label" parent="OrdiOffset"]
+margin_left = -567.0
+margin_top = -670.0
+margin_right = 780.0
+margin_bottom = -578.561
 custom_fonts/font = SubResource( 9 )
 text = "0C"
 align = 1
@@ -244,30 +510,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Icon" type="TextureRect" parent="Computer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 409.0
-margin_top = 200.0
-margin_right = -390.0
-margin_bottom = -1241.0
-texture = ExtResource( 15 )
-stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CoolTimer" type="Timer" parent="Computer"]
-wait_time = 0.1
-autostart = true
-
 [node name="Mouse" type="TextureButton" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 380.0
-margin_top = 800.0
-margin_right = -380.0
-margin_bottom = -800.0
+margin_left = 261.0
+margin_top = 1412.0
+margin_right = -499.0
+margin_bottom = -188.0
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 4 )
 expand = true
@@ -276,7 +525,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OffsetNode" type="Control" parent="."]
+[node name="UPGRADEMENUOffsetNode" type="Control" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -284,7 +533,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UpgradeMenu" type="Control" parent="OffsetNode"]
+[node name="UpgradeMenu" type="Control" parent="UPGRADEMENUOffsetNode"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -294,7 +543,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuBackgroundOutline" type="Panel" parent="OffsetNode/UpgradeMenu"]
+[node name="MenuBackgroundOutline" type="Panel" parent="UPGRADEMENUOffsetNode/UpgradeMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 0.00146484
@@ -302,7 +551,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuBackgroundInline" type="Panel" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline"]
+[node name="MenuBackgroundInline" type="Panel" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -314,7 +563,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline"]
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 250
@@ -325,7 +574,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 730.0
@@ -335,23 +584,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UpgradeList" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer"]
+[node name="UpgradeList" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer"]
 margin_right = 710.0
 margin_bottom = 1880.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
 
-[node name="UpgradeButton" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+[node name="Label" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
 margin_right = 710.0
-margin_bottom = 144.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 20 )
+text = "MAGASIN"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 112.0
+margin_right = 710.0
+margin_bottom = 142.0
+custom_constants/separation = 30
+custom_styles/separator = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpgradeButton" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 147.0
+margin_right = 710.0
+margin_bottom = 291.0
 mouse_filter = 1
 script = ExtResource( 9 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../ExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
 racine_path = NodePath("../../../../../../..")
 
-[node name="Button" type="TextureButton" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
 margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 1
@@ -360,7 +627,7 @@ size_flags_vertical = 3
 texture_normal = SubResource( 11 )
 expand = true
 
-[node name="MarginContainer" type="MarginContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton"]
 margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 2
@@ -369,7 +636,7 @@ custom_constants/margin_top = 8
 custom_constants/margin_left = 8
 custom_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 702.0
@@ -380,7 +647,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Icon" type="TextureRect" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
 margin_right = 128.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
@@ -389,21 +656,21 @@ texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
 
-[node name="VBoxContainer" type="VBoxContainer" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer"]
 margin_left = 135.0
 margin_right = 694.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
-[node name="TitleLabel" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_right = 559.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
-text = "Une Meilleur souris !"
+text = "Une Meilleure souris !"
 autowrap = true
 
-[node name="PriceLabel" type="Label" parent="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 58.0
 margin_right = 559.0
 margin_bottom = 99.0
@@ -413,7 +680,223 @@ custom_fonts/font = ExtResource( 6 )
 text = "150C"
 autowrap = true
 
-[node name="UpgradeMenuHandle" type="TextureButton" parent="OffsetNode/UpgradeMenu"]
+[node name="UpgradeButton2" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 296.0
+margin_right = 710.0
+margin_bottom = 468.0
+mouse_filter = 1
+script = ExtResource( 9 )
+upgrade_menu_path = NodePath("../../../../..")
+popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+racine_path = NodePath("../../../../../../..")
+
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 702.0
+margin_bottom = 164.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 694.0
+margin_bottom = 156.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 111.0
+size_flags_horizontal = 3
+text = "Ameliorer la ventilation"
+autowrap = true
+
+[node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 115.0
+margin_right = 559.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "150C"
+autowrap = true
+
+[node name="UpgradeButton3" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 473.0
+margin_right = 710.0
+margin_bottom = 645.0
+mouse_filter = 1
+script = ExtResource( 9 )
+upgrade_menu_path = NodePath("../../../../..")
+popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+racine_path = NodePath("../../../../../../..")
+
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 702.0
+margin_bottom = 164.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 19 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 694.0
+margin_bottom = 156.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 111.0
+size_flags_horizontal = 3
+text = "Mettre a jour l'antivirus"
+autowrap = true
+
+[node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 115.0
+margin_right = 559.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "150C"
+autowrap = true
+
+[node name="UpgradeButton4" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 650.0
+margin_right = 710.0
+margin_bottom = 822.0
+mouse_filter = 1
+script = ExtResource( 9 )
+upgrade_menu_path = NodePath("../../../../..")
+popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+racine_path = NodePath("../../../../../../..")
+
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4"]
+margin_right = 710.0
+margin_bottom = 172.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 702.0
+margin_bottom = 164.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 694.0
+margin_bottom = 156.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 111.0
+size_flags_horizontal = 3
+text = "Acheter une nouvelle table"
+autowrap = true
+
+[node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 115.0
+margin_right = 559.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "150C"
+autowrap = true
+
+[node name="UpgradeMenuHandle" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu"]
 modulate = Color( 0.709804, 0.709804, 0.709804, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -428,11 +911,379 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="OffsetNode/UpgradeMenu/UpgradeMenuHandle"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/UpgradeMenuHandle"]
 anims/RESET = SubResource( 1 )
 anims/open_upgrade_menu = SubResource( 2 )
 
-[node name="ExclusivePopupNode" type="Control" parent="."]
+[node name="SKINMENUOffsetNode2" type="Control" parent="."]
+anchor_bottom = 1.0
+margin_left = -980.0
+margin_right = -980.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkinMenu" type="Control" parent="SKINMENUOffsetNode2"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 980.001
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBackgroundOutline" type="Panel" parent="SKINMENUOffsetNode2/SkinMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer"]
+margin_right = 848.0
+margin_bottom = 1920.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 240
+custom_constants/margin_bottom = 10
+
+[node name="MenuBackgroundInline" type="Panel" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control"]
+margin_left = 240.0
+margin_top = 10.0
+margin_right = 838.0
+margin_bottom = 1910.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control"]
+margin_left = 240.0
+margin_top = 10.0
+margin_right = 838.0
+margin_bottom = 1910.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 588.0
+margin_bottom = 1890.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkinList" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer"]
+margin_right = 578.0
+margin_bottom = 1880.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="Label" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_right = 578.0
+margin_bottom = 107.0
+custom_fonts/font = ExtResource( 20 )
+text = "SKINS"
+align = 1
+
+[node name="HSeparator" type="HSeparator" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_top = 112.0
+margin_right = 578.0
+margin_bottom = 142.0
+custom_constants/separation = 30
+
+[node name="SkinButton" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_top = 147.0
+margin_right = 578.0
+margin_bottom = 291.0
+mouse_filter = 1
+script = ExtResource( 25 )
+
+[node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 570.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 562.0
+margin_bottom = 128.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 427.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "La basique"
+valign = 1
+autowrap = true
+
+[node name="SkinButton2" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_top = 296.0
+margin_right = 578.0
+margin_bottom = 440.0
+mouse_filter = 1
+script = ExtResource( 25 )
+
+[node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 570.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 562.0
+margin_bottom = 128.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 427.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "La triangle"
+valign = 1
+autowrap = true
+
+[node name="SkinButton3" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_top = 445.0
+margin_right = 578.0
+margin_bottom = 589.0
+mouse_filter = 1
+script = ExtResource( 25 )
+
+[node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3"]
+margin_right = 578.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 570.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 562.0
+margin_bottom = 128.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 427.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "La mieux"
+valign = 1
+autowrap = true
+
+[node name="OptionButtons" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer"]
+margin_left = 852.0
+margin_right = 980.0
+margin_bottom = 1920.0
+rect_min_size = Vector2( 128, 0 )
+custom_constants/separation = 20
+
+[node name="Label" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_right = 128.0
+margin_bottom = 54.0
+text = " "
+
+[node name="MouseSkinMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 74.0
+margin_right = 128.0
+margin_bottom = 202.0
+rect_min_size = Vector2( 128, 128 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 22 )
+expand = true
+stretch_mode = 5
+
+[node name="ComputerSkinMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 222.0
+margin_right = 128.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 128, 128 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+
+[node name="TableSkinMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 370.0
+margin_right = 128.0
+margin_bottom = 498.0
+rect_min_size = Vector2( 128, 128 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 1081.0
+margin_right = 128.0
+margin_bottom = 1135.0
+size_flags_vertical = 6
+
+[node name="OptionMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 1718.0
+margin_right = 128.0
+margin_bottom = 1846.0
+rect_min_size = Vector2( 128, 128 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 24 )
+expand = true
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 1866.0
+margin_right = 128.0
+margin_bottom = 1920.0
+text = " "
+
+[node name="SkinMenuHandle" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu"]
+modulate = Color( 0.709804, 0.709804, 0.709804, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -36.0
+margin_top = -160.0
+margin_right = 40.0
+margin_bottom = 160.0
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle"]
+anims/RESET = SubResource( 19 )
+anims/open_skin_menu_big = SubResource( 20 )
+anims/open_skin_menu_little = SubResource( 22 )
+anims/open_skin_menu_total = SubResource( 23 )
+
+[node name="POPUPExclusivePopupNode" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -441,7 +1292,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Popup" type="PanelContainer" parent="ExclusivePopupNode"]
+[node name="Popup" type="PanelContainer" parent="POPUPExclusivePopupNode"]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -460,7 +1311,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="ExclusivePopupNode/Popup"]
+[node name="MarginContainer" type="MarginContainer" parent="POPUPExclusivePopupNode/Popup"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 743.0
@@ -470,14 +1321,14 @@ custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
 
-[node name="PanelContainer" type="Panel" parent="ExclusivePopupNode/Popup/MarginContainer"]
+[node name="PanelContainer" type="Panel" parent="POPUPExclusivePopupNode/Popup/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 726.0
 margin_bottom = 576.0
 custom_styles/panel = SubResource( 12 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ExclusivePopupNode/Popup/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="POPUPExclusivePopupNode/Popup/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 726.0
@@ -486,7 +1337,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupDesc" type="Label" parent="ExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
+[node name="PopupDesc" type="Label" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
 margin_top = 134.0
 margin_right = 716.0
 margin_bottom = 245.0
@@ -500,14 +1351,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="ExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
 margin_top = 384.0
 margin_right = 716.0
 margin_bottom = 566.0
 custom_constants/margin_top = 50
 custom_constants/margin_bottom = 50
 
-[node name="DismissPopupButton" type="Button" parent="ExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="DismissPopupButton" type="Button" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer"]
 margin_left = 292.0
 margin_top = 50.0
 margin_right = 424.0
@@ -517,14 +1368,26 @@ size_flags_horizontal = 4
 theme = ExtResource( 12 )
 text = "OK"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ExclusivePopupNode/Popup"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="POPUPExclusivePopupNode/Popup"]
 anims/RESET = SubResource( 7 )
 anims/show_popup = SubResource( 8 )
 
-[connection signal="wealth_changed" from="." to="Computer/WealthShower" method="_on_Racine_wealth_changed"]
-[connection signal="wealth_changed" from="." to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="_on_Racine_wealth_changed"]
-[connection signal="timeout" from="Computer/CoolTimer" to="Computer" method="_on_CoolTimer_timeout"]
-[connection signal="pressed" from="Mouse" to="Computer" method="_on_Mouse_pressed"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/Button" to="OffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="buy_an_upgrade"]
-[connection signal="pressed" from="OffsetNode/UpgradeMenu/UpgradeMenuHandle" to="OffsetNode/UpgradeMenu" method="_on_UpgradeMenuHandle_pressed"]
-[connection signal="pressed" from="ExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="ExclusivePopupNode/Popup" method="_on_DismissPopupButton_pressed"]
+[connection signal="wealth_changed" from="." to="OrdiOffset/WealthShower" method="_on_Racine_wealth_changed"]
+[connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="_on_Racine_wealth_changed"]
+[connection signal="timeout" from="OrdiOffset/Computer/CoolTimer" to="OrdiOffset/Computer" method="_on_CoolTimer_timeout"]
+[connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
+[connection signal="pressed" from="Mouse" to="OrdiOffset/Computer" method="_on_Mouse_pressed"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton" method="buy_an_upgrade"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton2" method="buy_an_upgrade"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton3" method="buy_an_upgrade"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButton4" method="buy_an_upgrade"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/UpgradeMenuHandle" to="UPGRADEMENUOffsetNode/UpgradeMenu" method="_on_UpgradeMenuHandle_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton" method="buy_an_upgrade"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2" method="buy_an_upgrade"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3" method="buy_an_upgrade"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/MouseSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_MouseSkinMenu_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/ComputerSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_ComputerSkinMenu_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/TableSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_TableSkinMenu_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/OptionMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_OptionMenu_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle" to="SKINMENUOffsetNode2/SkinMenu" method="_on_UpgradeMenuHandle_pressed"]
+[connection signal="pressed" from="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="POPUPExclusivePopupNode/Popup" method="_on_DismissPopupButton_pressed"]

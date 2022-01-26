@@ -30,8 +30,8 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom="res://fonts/theme_global.tres"
-theme/custom_font="res://fonts/dynamicfont_64-global.tres"
+theme/custom="res://assets/fonts/theme_global.tres"
+theme/custom_font="res://assets/fonts/dynamicfont_64-global.tres"
 
 [physics]
 
