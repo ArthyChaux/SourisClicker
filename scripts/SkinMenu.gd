@@ -30,22 +30,35 @@ func toggle_menu():
 		elif show_status == SHOW_STATUS.BIG:
 			hide_menu_big()
 
+#### SIGNALS ####
+
 func _on_UpgradeMenuHandle_pressed():
-	if show_status != SHOW_STATUS.BIG:
-		toggle_menu()
+	toggle_menu()
 
 func _on_MouseSkinMenu_pressed():
 	if show_status != SHOW_STATUS.BIG:
-		toggle_menu()
+		
+		# TODO : change panel
+		
+		show_menu_big()
 
 func _on_ComputerSkinMenu_pressed():
 	if show_status != SHOW_STATUS.BIG:
-		toggle_menu()
+		
+		# TODO : change panel
+		
+		show_menu_big()
 
 func _on_TableSkinMenu_pressed():
 	if show_status != SHOW_STATUS.BIG:
-		toggle_menu()
+		
+		# TODO : change panel
+		
+		show_menu_big()
 
 func _on_OptionMenu_pressed():
 	if show_status != SHOW_STATUS.BIG:
-		toggle_menu()
+		
+		# TODO : add popup
+		
+		show_menu_big()
