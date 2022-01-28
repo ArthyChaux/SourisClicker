@@ -3,7 +3,7 @@ extends Node
 const SAVE_PATH = "user://datas.cfg"
 
 var config_file = ConfigFile.new()
-var datas = {
+var base_data = {
 	wealth = 0,
 	increase_on_click = 1,
 	heat_loose_factor = 0.02,
@@ -23,6 +23,7 @@ var datas = {
 	antivirus_skin = "abast",
 	table_skin = "bois"
 }
+var datas = base_data
 
 const upgrades_data = {
 	mouse = {
@@ -31,6 +32,7 @@ const upgrades_data = {
 		mouses_list = ["base", "triangle"],
 		base = {
 			unlock_level = 0,
+			skin_menu_name = "La basique",
 			texture = "res://assets/sprites/souris101.png",
 			tex_ture = "res://assets/sprites/souris1.201.png"
 		},

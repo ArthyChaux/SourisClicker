@@ -8,7 +8,7 @@ onready var popup: PanelContainer = get_node(popup_path)
 export var racine_path: NodePath
 onready var racine: Control = get_node(racine_path)
 export var computer_path: NodePath
-onready var computer: Control = get_node(computer_path)
+onready var computer: Sprite = get_node(computer_path)
 
 
 var price: int setget ,get_price

@@ -1,12 +1,5 @@
 extends Control
 
-"""
-TODO List
-
-Show current stats of player ?
-
-"""
-
 #### WEALTH ####
 
 var wealth: int = 0 setget set_wealth
