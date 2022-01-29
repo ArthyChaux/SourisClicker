@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/base_virale_vps_mise_a_jour.mp3-9c21b78ffa9333eb94d6f3edcdc12566.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/base_virale_vps_mise_a_jour.mp3"
+dest_files=[ "res://.import/base_virale_vps_mise_a_jour.mp3-9c21b78ffa9333eb94d6f3edcdc12566.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

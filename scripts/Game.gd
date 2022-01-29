@@ -10,7 +10,6 @@ func set_wealth(new_wealth: int):
 	GameData.datas["wealth"] = wealth
 	
 	emit_signal("wealth_changed", new_wealth)
-	GameData.soft_save_datas()
 
 #### WEALTH INCREASE ON CLICK ####
 
@@ -22,12 +21,13 @@ func set_wealth_increase_on_click(new_wealth_increase_on_click: int):
 	GameData.datas["increase_on_click"] = wealth_increase_on_click
 	
 	emit_signal("wealth_increase_on_click_changed", new_wealth_increase_on_click)
-	GameData.save_datas()
 
 #### MEMBERS ####
 
 #To have it good at _ready()
 func _ready():
+	randomize()
+	
 	GameData.connect("_data_loaded", self, "data_loaded")
 	GameData.load_datas()
 

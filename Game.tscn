@@ -1,8 +1,8 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=89 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
-[ext_resource path="res://scripts/WealthShower.gd" type="Script" id=3]
+[ext_resource path="res://scripts/upgrade_buttons/UpdateButtonAntivirus.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/souris1.201.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/digital_display/Digital Display.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/fonts/dynamicfont_48.tres" type="DynamicFont" id=6]
@@ -24,18 +24,18 @@
 [ext_resource path="res://assets/sprites/GrosseSourisTriangle01.png" type="Texture" id=22]
 [ext_resource path="res://assets/sprites/SourisMieux01.png" type="Texture" id=23]
 [ext_resource path="res://assets/sprites/mouse01.png" type="Texture" id=24]
-[ext_resource path="res://scripts/skin_buttons/SkinButtonMouse.gd" type="Script" id=25]
+[ext_resource path="res://assets/sprites/fumee/fumee03.png" type="Texture" id=25]
 [ext_resource path="res://assets/sprites/overheat_alert.png" type="Texture" id=26]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonAntivirus.gd" type="Script" id=27]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonVentil.gd" type="Script" id=28]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonAutoclick.gd" type="Script" id=29]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonTable.gd" type="Script" id=30]
-[ext_resource path="res://assets/sprites/GrosseSourisTriangle02.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/thermometre_background.png" type="Texture" id=31]
 [ext_resource path="res://assets/sprites/SourisBlanche02.png" type="Texture" id=32]
-[ext_resource path="res://assets/sprites/SourisBlanche01.png" type="Texture" id=33]
-[ext_resource path="res://assets/sprites/SourisMieux02.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/thermometre_progress_gradient.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/virus_ecrase.png" type="Texture" id=34]
 [ext_resource path="res://assets/sprites/souris_gamer/souris_gamer_blue01.png" type="Texture" id=35]
-[ext_resource path="res://assets/sprites/souris_gamer/souris_gamer_blue02.png" type="Texture" id=36]
+[ext_resource path="res://assets/audio/base_virale_vps_mise_a_jour.mp3" type="AudioStream" id=36]
 [ext_resource path="res://assets/fonts/dynamicfont_32.tres" type="DynamicFont" id=37]
 [ext_resource path="res://assets/sprites/pixelorama.png" type="Texture" id=38]
 [ext_resource path="res://assets/instances/SkinButtonMouse.tscn" type="PackedScene" id=39]
@@ -46,10 +46,39 @@
 [ext_resource path="res://assets/sprites/Ordi01_cover.png" type="Texture" id=44]
 [ext_resource path="res://assets/sprites/terminal.png" type="Texture" id=45]
 [ext_resource path="res://assets/sprites/antivirus_virus_repousse_alert.png" type="Texture" id=46]
+[ext_resource path="res://assets/audio/20220129_005.mp3" type="AudioStream" id=47]
+[ext_resource path="res://scripts/RandomAudioStreamPlayer.gd" type="Script" id=48]
+[ext_resource path="res://assets/audio/20220129_008.mp3" type="AudioStream" id=49]
+[ext_resource path="res://assets/audio/20220129_001.mp3" type="AudioStream" id=50]
+[ext_resource path="res://assets/audio/20220129_003.mp3" type="AudioStream" id=51]
 
 [sub_resource type="DynamicFont" id=9]
-size = 128
+size = 191
 font_data = ExtResource( 5 )
+
+[sub_resource type="GDScript" id=41]
+script/source = "extends Label
+
+
+func _on_Racine_wealth_changed(new_wealth):
+	text = \"%sC\" % new_wealth
+"
+
+[sub_resource type="GDScript" id=39]
+script/source = "extends Label
+
+
+func update_text(click_per_seconds):
+	text = \"HiClick : %sC/s\" %click_per_seconds
+"
+
+[sub_resource type="GDScript" id=38]
+script/source = "extends Label
+
+
+func update_text(new_antivirus_expiration_duration):
+	text = \"Abast : %s:%s:%s:%s\" % [int(new_antivirus_expiration_duration/(3600*24)), int(new_antivirus_expiration_duration/3600) % 24, int(new_antivirus_expiration_duration/60) % 60, new_antivirus_expiration_duration % 60]
+"
 
 [sub_resource type="SpriteFrames" id=24]
 animations = [ {
@@ -95,7 +124,7 @@ tracks/0/keys = {
 "values": [ 0.0 ]
 }
 tracks/1/type = "bezier"
-tracks/1/path = NodePath("../../../../Control/VirusPopHeadTexture:rect_position:x")
+tracks/1/path = NodePath("../../../../VirusPopHeadOffset/VirusPopHeadTexture:rect_position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -105,7 +134,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 tracks/2/type = "bezier"
-tracks/2/path = NodePath("../../../../Control/VirusPopHeadTexture:rect_position:y")
+tracks/2/path = NodePath("../../../../VirusPopHeadOffset/VirusPopHeadTexture:rect_position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -298,6 +327,30 @@ tracks/18/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/19/type = "value"
+tracks/19/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:texture")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=37]
 resource_name = "antivirus_wins"
@@ -350,6 +403,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Rect2( 0, 0, 0, 14 ), Rect2( 0, 0, 36, 14 ), Rect2( 0, 0, 36, 14 ), Rect2( 0, 0, 0, 14 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=34]
 resource_name = "go_in_disc"
@@ -367,7 +432,7 @@ tracks/0/keys = {
 "values": [ 0.0, 0.0, 0.9988 ]
 }
 tracks/1/type = "bezier"
-tracks/1/path = NodePath("../../../../Control/VirusPopHeadTexture:rect_position:x")
+tracks/1/path = NodePath("../../../../VirusPopHeadOffset/VirusPopHeadTexture:rect_position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -377,13 +442,13 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1.5, 3.5, 5.3 )
 }
 tracks/2/type = "bezier"
-tracks/2/path = NodePath("../../../../Control/VirusPopHeadTexture:rect_position:y")
+tracks/2/path = NodePath("../../../../VirusPopHeadOffset/VirusPopHeadTexture:rect_position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( -508, -0.25, 0, 0.25, 0, -508, -0.25, 0, 0.25, 0, -508, -0.25, 0, 0.25, 0, 1372, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( -508, -0.25, 0, 0.25, 0, -508, -0.25, 0, 0.25, 0, -508, -0.25, 0, 0.25, 0, -508, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1.5, 3.5, 5.3 )
 }
 tracks/3/type = "value"
@@ -397,6 +462,30 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=36]
@@ -525,6 +614,34 @@ tracks/10/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "virus_ecrase"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 34 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Path2D/PathFollow2D/VirusOutScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="CanvasItemMaterial" id=14]
@@ -720,7 +837,7 @@ tracks/5/keys = {
 script/source = "extends Label
 
 
-func _process(delta):
+func _process(_delta):
 	text = str(Engine.get_frames_per_second())
 "
 
@@ -840,7 +957,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 128, -0.25, 0, 0.25, 0, 980, -0.25, 0, 0.25, 0, 750, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 158, -0.25, 0, 0.25, 0, 980, -0.25, 0, 0.25, 0, 750, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
 }
 tracks/1/type = "bezier"
@@ -867,7 +984,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 128, 0 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 158, 0 ) ]
 }
 
 [sub_resource type="Animation" id=23]
@@ -898,18 +1015,15 @@ tracks/1/keys = {
 script/source = "extends Label
 
 
-func _process(delta):
-	text = \"\"
-	for key in GameData.datas:
-		text += key + \" : \" + str(GameData.datas[key]) + \"\\n\"
+func _process(_delta):
+	text = JSON.print(GameData.datas, \" - \")
 "
 
 [sub_resource type="GDScript" id=28]
 script/source = "extends Label
 
 func _ready():
-	text = JSON.print(GameData.upgrades_data, \"\\t\")
-
+	text = JSON.print(GameData.upgrades_data, \" - \")
 "
 
 [sub_resource type="DynamicFont" id=5]
@@ -1062,7 +1176,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="."]
+[node name="VirusPopHeadOffset" type="Control" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -1073,7 +1187,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VirusPopHeadTexture" type="TextureRect" parent="Control"]
+[node name="VirusPopHeadTexture" type="TextureRect" parent="VirusPopHeadOffset"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -1124,16 +1238,16 @@ texture = ExtResource( 18 )
 
 [node name="WealthShower" type="Label" parent="OrdiOffset/Computer"]
 margin_left = -36.0
-margin_top = -80.0
+margin_top = -79.0
 margin_right = 636.0
-margin_bottom = 319.0
+margin_bottom = 314.0
 rect_scale = Vector2( 0.142, 0.142 )
 custom_fonts/font = SubResource( 9 )
 text = "0C"
 align = 1
 valign = 1
 autowrap = true
-script = ExtResource( 3 )
+script = SubResource( 41 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1149,7 +1263,7 @@ text = "Hiclick : 0C/s"
 align = 1
 valign = 1
 autowrap = true
-script = ExtResource( 3 )
+script = SubResource( 39 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1165,20 +1279,37 @@ text = "Abast : 00:00:00:00"
 align = 1
 valign = 1
 autowrap = true
-script = ExtResource( 3 )
+script = SubResource( 38 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Mouse01" type="Sprite" parent="OrdiOffset/Computer"]
-position = Vector2( 12.3812, -48.3864 )
+[node name="MouseInComputer" type="Sprite" parent="OrdiOffset/Computer"]
+position = Vector2( 48.8133, -23.0547 )
 scale = Vector2( 0.142313, 0.142313 )
 texture = ExtResource( 24 )
+
+[node name="Thermometre" type="TextureProgress" parent="OrdiOffset/Computer"]
+margin_left = -42.0
+margin_top = -72.0
+margin_right = -37.0
+margin_bottom = -47.0
+rect_scale = Vector2( 0.25, 0.25 )
+min_value = 20.0
+max_value = 120.0
+value = 100.0
+texture_under = ExtResource( 31 )
+texture_progress = ExtResource( 33 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="OverHeatAlert" type="AnimatedSprite" parent="OrdiOffset/Computer"]
 visible = false
 position = Vector2( 8.47994, -42.965 )
 frames = SubResource( 24 )
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -1212,7 +1343,7 @@ position = Vector2( 7.25796, -43.4054 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 3
+frame = 1
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus"]
@@ -1239,19 +1370,18 @@ rotation = 1.5708
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 19 )
 
-[node name="VirusOutScreenButton" type="Button" parent="OrdiOffset/Computer/Virus/Path2D/PathFollow2D/VirusOutScreen"]
+[node name="VirusOutScreenButton" type="TextureButton" parent="OrdiOffset/Computer/Virus/Path2D/PathFollow2D/VirusOutScreen"]
 margin_left = -32.0
 margin_top = -32.0
 margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 64, 64 )
-flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VirusCountDownTimer" type="Timer" parent="OrdiOffset/Computer/Virus"]
-wait_time = 60.0
+wait_time = 15.0
 autostart = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OrdiOffset/Computer/Virus"]
@@ -1260,6 +1390,7 @@ anims/RESET = SubResource( 33 )
 anims/antivirus_wins = SubResource( 37 )
 anims/go_in_disc = SubResource( 34 )
 anims/take_control_of_computer = SubResource( 36 )
+anims/virus_ecrase = SubResource( 40 )
 
 [node name="ComputerCover" type="Sprite" parent="OrdiOffset/Computer"]
 texture = ExtResource( 44 )
@@ -1290,6 +1421,12 @@ hframes = 12
 anims/RESET = SubResource( 15 )
 anims/burn = SubResource( 16 )
 anims/explode = SubResource( 17 )
+
+[node name="MouseAudioStreamPlayer" type="AudioStreamPlayer" parent="OrdiOffset/Computer"]
+stream = ExtResource( 47 )
+volume_db = 9.0
+script = ExtResource( 48 )
+audio_streams = [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 49 ) ]
 
 [node name="Mouse" type="TextureButton" parent="."]
 anchor_right = 1.0
@@ -1385,15 +1522,16 @@ custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
 margin_right = 710.0
-margin_bottom = 107.0
+margin_bottom = 217.0
 custom_fonts/font = ExtResource( 20 )
-text = "MAGASIN"
+text = "magasin_menu_title"
 align = 1
+autowrap = true
 
 [node name="HSeparator" type="HSeparator" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 112.0
+margin_top = 222.0
 margin_right = 710.0
-margin_bottom = 142.0
+margin_bottom = 252.0
 custom_constants/separation = 30
 custom_styles/separator = SubResource( 21 )
 __meta__ = {
@@ -1401,9 +1539,9 @@ __meta__ = {
 }
 
 [node name="UpgradeButtonMouse" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 147.0
+margin_top = 257.0
 margin_right = 710.0
-margin_bottom = 291.0
+margin_bottom = 401.0
 mouse_filter = 1
 script = ExtResource( 9 )
 upgrade_menu_path = NodePath("../../../../..")
@@ -1411,6 +1549,7 @@ popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
 racine_path = NodePath("../../../../../../..")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonMouse"]
+modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
 margin_right = 710.0
 margin_bottom = 144.0
 mouse_filter = 1
@@ -1459,7 +1598,7 @@ size_flags_horizontal = 3
 margin_right = 559.0
 margin_bottom = 54.0
 size_flags_horizontal = 3
-text = "Une Meilleure souris !"
+text = "upgrade_mouse_desc"
 autowrap = true
 
 [node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonMouse/MarginContainer/HBoxContainer/VBoxContainer"]
@@ -1473,9 +1612,9 @@ text = "niv.1, 150C"
 autowrap = true
 
 [node name="UpgradeButtonVentil" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 296.0
+margin_top = 406.0
 margin_right = 710.0
-margin_bottom = 468.0
+margin_bottom = 550.0
 mouse_filter = 1
 script = ExtResource( 28 )
 upgrade_menu_path = NodePath("../../../../..")
@@ -1485,7 +1624,7 @@ computer_path = NodePath("../../../../../../../OrdiOffset/Computer")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil"]
 margin_right = 710.0
-margin_bottom = 172.0
+margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1494,7 +1633,7 @@ expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil"]
 margin_right = 710.0
-margin_bottom = 172.0
+margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
 custom_constants/margin_top = 8
@@ -1505,7 +1644,7 @@ custom_constants/margin_bottom = 8
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 702.0
-margin_bottom = 164.0
+margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
 __meta__ = {
@@ -1514,7 +1653,7 @@ __meta__ = {
 
 [node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil/MarginContainer/HBoxContainer"]
 margin_right = 128.0
-margin_bottom = 156.0
+margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
 texture = ExtResource( 15 )
@@ -1524,21 +1663,21 @@ stretch_mode = 6
 [node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil/MarginContainer/HBoxContainer"]
 margin_left = 135.0
 margin_right = 694.0
-margin_bottom = 156.0
+margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_right = 559.0
-margin_bottom = 111.0
+margin_bottom = 54.0
 size_flags_horizontal = 3
-text = "Ameliorer la ventilation"
+text = "upgrade_ventil_desc"
 autowrap = true
 
 [node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 115.0
+margin_top = 58.0
 margin_right = 559.0
-margin_bottom = 156.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
 custom_fonts/font = ExtResource( 6 )
@@ -1546,9 +1685,9 @@ text = "niv.1, 150C"
 autowrap = true
 
 [node name="UpgradeButtonAutoclick" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 473.0
+margin_top = 555.0
 margin_right = 710.0
-margin_bottom = 645.0
+margin_bottom = 727.0
 mouse_filter = 1
 script = ExtResource( 29 )
 upgrade_menu_path = NodePath("../../../../..")
@@ -1605,7 +1744,7 @@ size_flags_horizontal = 3
 margin_right = 559.0
 margin_bottom = 111.0
 size_flags_horizontal = 3
-text = "Ameliorer le logiciel d'autoclick"
+text = "upgrade_autoclick_desc"
 autowrap = true
 
 [node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAutoclick/MarginContainer/HBoxContainer/VBoxContainer"]
@@ -1619,9 +1758,9 @@ text = "niv.0, 150C"
 autowrap = true
 
 [node name="UpgradeButtonAntivirus" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 650.0
+margin_top = 732.0
 margin_right = 710.0
-margin_bottom = 866.0
+margin_bottom = 904.0
 mouse_filter = 1
 script = ExtResource( 27 )
 upgrade_menu_path = NodePath("../../../../..")
@@ -1631,7 +1770,7 @@ computer_path = NodePath("../../../../../../../OrdiOffset/Computer")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus"]
 margin_right = 710.0
-margin_bottom = 216.0
+margin_bottom = 172.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1640,7 +1779,7 @@ expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus"]
 margin_right = 710.0
-margin_bottom = 216.0
+margin_bottom = 172.0
 mouse_filter = 2
 custom_constants/margin_right = 8
 custom_constants/margin_top = 8
@@ -1651,7 +1790,7 @@ custom_constants/margin_bottom = 8
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 702.0
-margin_bottom = 208.0
+margin_bottom = 164.0
 mouse_filter = 2
 custom_constants/separation = 7
 __meta__ = {
@@ -1660,7 +1799,7 @@ __meta__ = {
 
 [node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus/MarginContainer/HBoxContainer"]
 margin_right = 128.0
-margin_bottom = 200.0
+margin_bottom = 156.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
 texture = ExtResource( 19 )
@@ -1670,7 +1809,7 @@ stretch_mode = 6
 [node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus/MarginContainer/HBoxContainer"]
 margin_left = 135.0
 margin_right = 694.0
-margin_bottom = 200.0
+margin_bottom = 156.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
@@ -1678,30 +1817,31 @@ size_flags_horizontal = 3
 margin_right = 559.0
 margin_bottom = 111.0
 size_flags_horizontal = 3
-text = "Mettre a jour l'antivirus"
+text = "upgrade_antivirus_desc"
 autowrap = true
 
 [node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 115.0
 margin_right = 559.0
-margin_bottom = 200.0
+margin_bottom = 156.0
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
 custom_fonts/font = ExtResource( 6 )
-text = "niv.0, 150C - expire dans 01:59:19"
+text = "niv.0, 150C"
 autowrap = true
 
-[node name="UpgradeButtonTable" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
-margin_top = 871.0
+[node name="UpdateButtonAntivirus" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 909.0
 margin_right = 710.0
-margin_bottom = 1043.0
+margin_bottom = 1081.0
 mouse_filter = 1
-script = ExtResource( 30 )
+script = ExtResource( 3 )
 upgrade_menu_path = NodePath("../../../../..")
 popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
 racine_path = NodePath("../../../../../../..")
+computer_path = NodePath("../../../../../../../OrdiOffset/Computer")
 
-[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable"]
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus"]
 margin_right = 710.0
 margin_bottom = 172.0
 mouse_filter = 1
@@ -1710,7 +1850,7 @@ size_flags_vertical = 3
 texture_normal = SubResource( 11 )
 expand = true
 
-[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable"]
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus"]
 margin_right = 710.0
 margin_bottom = 172.0
 mouse_filter = 2
@@ -1719,7 +1859,7 @@ custom_constants/margin_top = 8
 custom_constants/margin_left = 8
 custom_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 702.0
@@ -1730,9 +1870,84 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer/HBoxContainer"]
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/MarginContainer/HBoxContainer"]
 margin_right = 128.0
 margin_bottom = 156.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 19 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 694.0
+margin_bottom = 156.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 559.0
+margin_bottom = 111.0
+size_flags_horizontal = 3
+text = "update_antivirus_desc"
+autowrap = true
+
+[node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_top = 115.0
+margin_right = 559.0
+margin_bottom = 156.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "niv.0, 150C"
+autowrap = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus"]
+stream = ExtResource( 36 )
+
+[node name="UpgradeButtonTable" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
+margin_top = 1086.0
+margin_right = 710.0
+margin_bottom = 1230.0
+mouse_filter = 1
+script = ExtResource( 30 )
+upgrade_menu_path = NodePath("../../../../..")
+popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+racine_path = NodePath("../../../../../../..")
+
+[node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable"]
+margin_right = 710.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable"]
+margin_right = 710.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 702.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
 texture = ExtResource( 8 )
@@ -1742,21 +1957,21 @@ stretch_mode = 6
 [node name="VBoxContainer" type="VBoxContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer/HBoxContainer"]
 margin_left = 135.0
 margin_right = 694.0
-margin_bottom = 156.0
+margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_right = 559.0
-margin_bottom = 111.0
+margin_bottom = 54.0
 size_flags_horizontal = 3
-text = "Acheter une nouvelle table"
+text = "upgrade_desk_desc"
 autowrap = true
 
 [node name="PriceLabel" type="Label" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_top = 115.0
+margin_top = 58.0
 margin_right = 559.0
-margin_bottom = 156.0
+margin_bottom = 99.0
 size_flags_horizontal = 3
 custom_colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
 custom_fonts/font = ExtResource( 6 )
@@ -1792,7 +2007,7 @@ __meta__ = {
 
 [node name="SkinMenu" type="Control" parent="SKINMENUOffsetNode2"]
 anchor_bottom = 1.0
-margin_right = 980.0
+margin_right = 979.999
 script = ExtResource( 21 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1816,7 +2031,7 @@ __meta__ = {
 }
 
 [node name="Control" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer"]
-margin_right = 834.0
+margin_right = 833.0
 margin_bottom = 1920.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1828,7 +2043,7 @@ custom_constants/margin_bottom = 10
 [node name="MenuBackgroundInline" type="Panel" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control"]
 margin_left = 240.0
 margin_top = 10.0
-margin_right = 824.0
+margin_right = 823.0
 margin_bottom = 1910.0
 custom_styles/panel = SubResource( 4 )
 __meta__ = {
@@ -1838,7 +2053,7 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control"]
 margin_left = 240.0
 margin_top = 10.0
-margin_right = 824.0
+margin_right = 823.0
 margin_bottom = 1910.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
@@ -1851,7 +2066,7 @@ __meta__ = {
 [node name="ScrollContainer" type="ScrollContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
-margin_right = 574.0
+margin_right = 573.0
 margin_bottom = 1890.0
 scroll_horizontal_enabled = false
 __meta__ = {
@@ -1859,40 +2074,34 @@ __meta__ = {
 }
 
 [node name="SkinList" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 1880.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
 
 [node name="Label" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_right = 564.0
-margin_bottom = 107.0
+margin_right = 563.0
+margin_bottom = 217.0
 custom_fonts/font = ExtResource( 20 )
-text = "SKINS"
+text = "skins_menu_title"
 align = 1
+autowrap = true
 
 [node name="HSeparator" type="HSeparator" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_top = 112.0
-margin_right = 564.0
-margin_bottom = 142.0
+margin_top = 222.0
+margin_right = 563.0
+margin_bottom = 252.0
 custom_constants/separation = 30
 
-[node name="SkinButtonMouse" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList" instance=ExtResource( 39 )]
-
 [node name="SkinButton2" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_top = 296.0
-margin_right = 564.0
-margin_bottom = 440.0
+margin_top = 257.0
+margin_right = 563.0
+margin_bottom = 401.0
 mouse_filter = 1
-script = ExtResource( 25 )
-skin_menu_path = NodePath("../../../../../../..")
-mouse_path = NodePath("../../../../../../../../../Mouse")
-texture = ExtResource( 22 )
-tex_ture = ExtResource( 31 )
 
 [node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -1901,7 +2110,7 @@ texture_normal = SubResource( 11 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
@@ -1912,7 +2121,7 @@ custom_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 556.0
+margin_right = 555.0
 margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
@@ -1925,19 +2134,79 @@ margin_right = 128.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
-texture = ExtResource( 22 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer/HBoxContainer"]
 margin_left = 135.0
-margin_right = 548.0
+margin_right = 547.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 413.0
+margin_right = 412.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "La basique"
+valign = 1
+autowrap = true
+
+[node name="SkinButton6" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
+margin_top = 406.0
+margin_right = 563.0
+margin_bottom = 550.0
+mouse_filter = 1
+
+[node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6"]
+margin_right = 563.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6"]
+margin_right = 563.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 555.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6/MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6/MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 547.0
+margin_bottom = 128.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton6/MarginContainer/HBoxContainer/VBoxContainer"]
+margin_right = 412.0
 margin_bottom = 128.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1946,18 +2215,13 @@ valign = 1
 autowrap = true
 
 [node name="SkinButton3" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_top = 445.0
-margin_right = 564.0
-margin_bottom = 589.0
+margin_top = 555.0
+margin_right = 563.0
+margin_bottom = 699.0
 mouse_filter = 1
-script = ExtResource( 25 )
-skin_menu_path = NodePath("../../../../../../..")
-mouse_path = NodePath("../../../../../../../../../Mouse")
-texture = ExtResource( 23 )
-tex_ture = ExtResource( 34 )
 
 [node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -1966,7 +2230,7 @@ texture_normal = SubResource( 11 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
@@ -1977,7 +2241,7 @@ custom_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 556.0
+margin_right = 555.0
 margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
@@ -1996,13 +2260,13 @@ stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer/HBoxContainer"]
 margin_left = 135.0
-margin_right = 548.0
+margin_right = 547.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 413.0
+margin_right = 412.0
 margin_bottom = 128.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2011,18 +2275,13 @@ valign = 1
 autowrap = true
 
 [node name="SkinButton4" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_top = 594.0
-margin_right = 564.0
-margin_bottom = 738.0
+margin_top = 704.0
+margin_right = 563.0
+margin_bottom = 848.0
 mouse_filter = 1
-script = ExtResource( 25 )
-skin_menu_path = NodePath("../../../../../../..")
-mouse_path = NodePath("../../../../../../../../../Mouse")
-texture = ExtResource( 32 )
-tex_ture = ExtResource( 33 )
 
 [node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -2031,7 +2290,7 @@ texture_normal = SubResource( 11 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
@@ -2042,7 +2301,7 @@ custom_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 556.0
+margin_right = 555.0
 margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
@@ -2061,13 +2320,13 @@ stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4/MarginContainer/HBoxContainer"]
 margin_left = 135.0
-margin_right = 548.0
+margin_right = 547.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 413.0
+margin_right = 412.0
 margin_bottom = 128.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2076,18 +2335,13 @@ valign = 1
 autowrap = true
 
 [node name="SkinButton5" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList"]
-margin_top = 743.0
-margin_right = 564.0
-margin_bottom = 887.0
+margin_top = 853.0
+margin_right = 563.0
+margin_bottom = 997.0
 mouse_filter = 1
-script = ExtResource( 25 )
-skin_menu_path = NodePath("../../../../../../..")
-mouse_path = NodePath("../../../../../../../../../Mouse")
-texture = ExtResource( 35 )
-tex_ture = ExtResource( 36 )
 
 [node name="Button" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -2096,7 +2350,7 @@ texture_normal = SubResource( 11 )
 expand = true
 
 [node name="MarginContainer" type="MarginContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5"]
-margin_right = 564.0
+margin_right = 563.0
 margin_bottom = 144.0
 mouse_filter = 2
 custom_constants/margin_right = 8
@@ -2107,7 +2361,7 @@ custom_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5/MarginContainer"]
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 556.0
+margin_right = 555.0
 margin_bottom = 136.0
 mouse_filter = 2
 custom_constants/separation = 7
@@ -2126,13 +2380,13 @@ stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5/MarginContainer/HBoxContainer"]
 margin_left = 135.0
-margin_right = 548.0
+margin_right = 547.0
 margin_bottom = 128.0
 mouse_filter = 2
 size_flags_horizontal = 3
 
 [node name="TitleLabel" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5/MarginContainer/HBoxContainer/VBoxContainer"]
-margin_right = 413.0
+margin_right = 412.0
 margin_bottom = 128.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -2141,8 +2395,8 @@ valign = 1
 autowrap = true
 
 [node name="OptionButtons" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer"]
-margin_left = 838.0
-margin_right = 966.0
+margin_left = 837.0
+margin_right = 965.0
 margin_bottom = 1920.0
 rect_min_size = Vector2( 128, 0 )
 custom_constants/separation = 20
@@ -2219,11 +2473,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
-margin_top = 1081.0
+[node name="Label4" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 518.0
 margin_right = 128.0
-margin_bottom = 1135.0
-size_flags_vertical = 6
+margin_bottom = 1024.0
+size_flags_vertical = 7
+
+[node name="Label2" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 1044.0
+margin_right = 128.0
+margin_bottom = 1550.0
+size_flags_vertical = 7
+
+[node name="ResetGame" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
+margin_top = 1570.0
+margin_right = 128.0
+margin_bottom = 1698.0
+rect_min_size = Vector2( 128, 128 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 25 )
+expand = true
+stretch_mode = 5
 
 [node name="OptionMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
 margin_top = 1718.0
@@ -2242,8 +2512,8 @@ margin_bottom = 1920.0
 text = " "
 
 [node name="COntrol" type="Control" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer"]
-margin_left = 970.0
-margin_right = 980.0
+margin_left = 969.0
+margin_right = 979.0
 margin_bottom = 1920.0
 rect_min_size = Vector2( 10, 0 )
 
@@ -2402,6 +2672,7 @@ anims/show_popup = SubResource( 8 )
 [connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil" method="_on_Racine_wealth_changed"]
 [connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAutoclick" method="_on_Racine_wealth_changed"]
 [connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus" method="_on_Racine_wealth_changed"]
+[connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus" method="_on_Racine_wealth_changed"]
 [connection signal="wealth_changed" from="." to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable" method="_on_Racine_wealth_changed"]
 [connection signal="timeout" from="OrdiOffset/Computer/CoolTimer" to="OrdiOffset/Computer" method="_on_CoolTimer_timeout"]
 [connection signal="timeout" from="OrdiOffset/Computer/AutoclickTimer" to="OrdiOffset/Computer" method="_on_AutoclickTimer_timeout"]
@@ -2416,15 +2687,13 @@ anims/show_popup = SubResource( 8 )
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil" method="buy_an_upgrade"]
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAutoclick/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAutoclick" method="buy_an_upgrade"]
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus" method="buy_an_upgrade"]
+[connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus" method="buy_an_upgrade"]
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable" method="buy_an_upgrade"]
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/UpgradeMenuHandle" to="UPGRADEMENUOffsetNode/UpgradeMenu" method="_on_UpgradeMenuHandle_pressed"]
-[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton2" method="_on_SkinButton_pressed"]
-[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton3" method="_on_SkinButton_pressed"]
-[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton4" method="_on_SkinButton_pressed"]
-[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5/Button" to="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/SkinButton5" method="_on_SkinButton_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel/MouseSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_MouseSkinMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel2/ComputerSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_ComputerSkinMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel3/TableSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_TableSkinMenu_pressed"]
+[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/ResetGame" to="SKINMENUOffsetNode2/SkinMenu" method="_on_ResetGame_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/OptionMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_OptionMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle" to="SKINMENUOffsetNode2/SkinMenu" method="_on_UpgradeMenuHandle_pressed"]
 [connection signal="pressed" from="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="POPUPExclusivePopupNode/Popup" method="_on_DismissPopupButton_pressed"]

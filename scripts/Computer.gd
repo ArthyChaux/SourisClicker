@@ -7,44 +7,52 @@ onready var popup: PanelContainer = get_node(popup_path)
 
 #### HEAT ####
 
-var heat: float = base_heat setget set_heat
+#normal at 20 and exploses at 120
+var heat: float = 20.0 setget set_heat
 
 func set_heat(new_heat):
 	heat = new_heat
 	
-	if new_heat > max_heat_possible:
-		$Feu/FeuAnimationPlayer.play("explode")
-		print("Ordinateur cramé")
-		
-		$Fumee.lifetime = 0.5
-		$Fumee.anim_speed = 1
+	$Thermometre.value = heat
 	
-	#TODO : linear interpolation !
-	elif new_heat > base_heat + 3*(max_heat_possible-base_heat) / 4:
-		$Fumee.lifetime = 0.5
-		$Fumee.anim_speed = 1
+	if new_heat > 120.0 and not $Feu/FeuAnimationPlayer.is_playing():
+		$Feu/FeuAnimationPlayer.play("explode")
+		print("Ordinateur cramé ! (", heat, "°C)")
+		
+		$Fumee.lifetime = 0.3
+		$Fumee.anim_speed = 0.7
+	
+	elif new_heat > 120.0:
+		$Fumee.lifetime = 0.3
+		$Fumee.anim_speed = 0.7
+	
+	elif new_heat > 95.0:
 		$OverHeatAlert.show()
-	elif new_heat > base_heat + 2*(max_heat_possible-base_heat) / 4:
-		$Fumee.lifetime = 2
-		$Fumee.anim_speed = 1.5
-		$OverHeatAlert.hide()
-	elif new_heat > base_heat + (max_heat_possible-base_heat) / 4:
-		$Fumee.lifetime = 8
-		$Fumee.anim_speed = 2
-		$OverHeatAlert.hide()
+	
+		#Fumee interpolation
+		$Fumee.lifetime = 264400*pow(heat, -2.81)
+		$Fumee.anim_speed = 59*pow(heat, -0.9)
+	
 	else:
-		$Fumee.lifetime = 50
-		$Fumee.anim_speed = 4
 		$OverHeatAlert.hide()
+	
+		#Fumee interpolation
+		$Fumee.lifetime = 264400*pow(heat, -2.81)
+		$Fumee.anim_speed = 59*pow(heat, -0.9)
 
-const base_heat: float = 20.0
 
-#Above it, computer overheat
-const max_heat_possible: float = 100.0
-var heat_increase_on_click: float = 0.5
+var heat_increase_on_click: float = 0.5 setget set_heat_increase_on_click
 
-#Loose **heat_loose_factor * (heat - base_heat)** per decisecond
-var heat_loose_factor: float = 0.02
+func set_heat_increase_on_click(new_heat_increase_on_click):
+	heat_increase_on_click = new_heat_increase_on_click
+	GameData.datas["heat_increase_on_click"] = heat_increase_on_click
+
+#Loose **heat_loose_factor * (heat - 20.0)** per decisecond
+var heat_loose_factor: float = 0.02 setget set_heat_loose_factor
+
+func set_heat_loose_factor(new_heat_loose_factor):
+	heat_loose_factor = new_heat_loose_factor
+	GameData.datas["heat_loose_factor"] = new_heat_loose_factor
 
 #### ANTIVIRUS ####
 
@@ -53,24 +61,42 @@ onready var upgrade_antivirus_button: MarginContainer = get_node(upgrade_antivir
 
 var antivirus_expiration_duration = 0 setget set_antivirus_expiration_duration
 
-func set_antivirus_expiration_duration(new_antivirus_expiration_duration):
-	#if >0 launch timer / set truc
-	# if <0 stop timer
-	
-	if true: # TODO !!!!!!!!!!!!!!
+func set_antivirus_expiration_duration(new_antivirus_expiration_duration, by_timer = false):
+	if new_antivirus_expiration_duration >= 0:
 		antivirus_expiration_duration = new_antivirus_expiration_duration
 		GameData.datas["antivirus_expiration_duration"] = new_antivirus_expiration_duration
-		GameData.soft_save_datas()
-		
-		upgrade_antivirus_button.update_button_state()
+	
+	if new_antivirus_expiration_duration == 0:
+		if by_timer:
+			upgrade_antivirus_button.upgrade_level = 0
+			print("Antivirus expired")
+		antivirus_proba_tue_virus = 0
+		$AntivirusCountDownTickTimer.stop()
+	
+	elif antivirus_expiration_duration > 0 and $AntivirusCountDownTickTimer.is_stopped():
+		$AntivirusCountDownTickTimer.start()
+	
+	$AntivirusShower.update_text(self.antivirus_expiration_duration)
 
-var antivirus_proba_tue_virus = 0
+var antivirus_proba_tue_virus = 0 setget set_antivirus_proba_tue_virus
+
+func set_antivirus_proba_tue_virus(new_antivirus_proba_tue_virus):
+	antivirus_proba_tue_virus = new_antivirus_proba_tue_virus
+	GameData.datas["antivirus_proba_tue_virus"] = new_antivirus_proba_tue_virus
 
 #### AUTOCLICK ####
 
-var click_per_seconds = 0
+var click_per_seconds = 0 setget set_click_per_seconds
+
+func set_click_per_seconds(new_click_per_seconds):
+	click_per_seconds = new_click_per_seconds
+	GameData.datas["click_per_seconds"] = new_click_per_seconds
+	
+	$AutoClickShower.update_text(click_per_seconds)
 
 #### MEMBERS ####
+
+var backup = {}
 
 func _ready():
 	GameData.connect("_data_loaded", self, "data_loaded")
@@ -78,36 +104,47 @@ func _ready():
 func data_loaded():
 	self.heat_loose_factor = GameData.datas["heat_loose_factor"]
 	self.antivirus_expiration_duration = GameData.datas["antivirus_expiration_duration"]
+	$AntivirusShower.update_text(self.antivirus_expiration_duration)
 	self.antivirus_proba_tue_virus = GameData.datas["antivirus_proba_tue_virus"]
 	self.click_per_seconds = GameData.datas["click_per_seconds"]
-	
+	backup = GameData.datas
+
 
 #### SIGNALS ####
 
 func _on_Mouse_pressed():
 	racine.wealth += racine.wealth_increase_on_click
 	self.heat += heat_increase_on_click * racine.wealth_increase_on_click
+	$MouseAudioStreamPlayer.random_play()
 
 func _on_CoolTimer_timeout():
-	self.heat -= heat_loose_factor * (heat - base_heat)
+	self.heat -= heat_loose_factor * (heat - 20.0)
 
 func _on_FeuAnimationPlayer_animation_finished(anim_name):
 	if anim_name == "explode":
 		$Feu/FeuAnimationPlayer.play("burn")
-		print("l'ordi brule")
+		print("L'ordi brule")
 		
 		yield(get_tree().create_timer(5), "timeout")
 		
-		popup.set_text("Tu as retrouve une backup de ta partie, tu vas pouvoir continuer.")
+		popup.set_text(tr("backup_restore_after_ordi_burn_message"))
 		popup.popup()
-		print("Back and running")
-		
-		$Feu/FeuAnimationPlayer.play("RESET")
+		print("Ordinateur back and running")
+		popup.connect("_popup_closed", self, "restore_backup")
 		
 		#TODO : looase things
 
+func restore_backup():
+	GameData.can_save_data = false
+	GameData.save_datas(backup, true)
+	
+	print("Saved backup as datas : ", JSON.print(backup, "\t"))
+	print("Reloading scene")
+	get_tree().reload_current_scene()
+
 func _on_AntivirusTickTimer_timeout():
-	self.antivirus_expiration_duration -= 1
+	self.set_antivirus_expiration_duration(antivirus_expiration_duration-1, true)
 
 func _on_AutoclickTimer_timeout():
 	racine.wealth += click_per_seconds
+	self.heat += heat_increase_on_click * click_per_seconds

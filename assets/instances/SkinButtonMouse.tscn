@@ -30,7 +30,6 @@ margin_bottom = 144.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
-disabled = true
 texture_normal = SubResource( 11 )
 expand = true
 
