@@ -1343,7 +1343,6 @@ position = Vector2( 7.25796, -43.4054 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 1
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus"]
@@ -1352,7 +1351,6 @@ position = Vector2( 10.8158, 9.53497 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 35 )
 animation = "in_screen"
-frame = 1
 playing = true
 
 [node name="Path2D" type="Path2D" parent="OrdiOffset/Computer/Virus"]
