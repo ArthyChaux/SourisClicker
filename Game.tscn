@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -51,6 +51,9 @@
 [ext_resource path="res://assets/audio/20220129_008.mp3" type="AudioStream" id=49]
 [ext_resource path="res://assets/audio/20220129_001.mp3" type="AudioStream" id=50]
 [ext_resource path="res://assets/audio/20220129_003.mp3" type="AudioStream" id=51]
+[ext_resource path="res://assets/audio/computer_fan_starting.mp3" type="AudioStream" id=52]
+[ext_resource path="res://assets/audio/computer_fan_stopping.mp3" type="AudioStream" id=53]
+[ext_resource path="res://assets/audio/computer_fan_standard.mp3" type="AudioStream" id=54]
 
 [sub_resource type="DynamicFont" id=9]
 size = 191
@@ -418,7 +421,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=34]
 resource_name = "go_in_disc"
-length = 17.0
+length = 16.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../Path2D/PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -426,7 +429,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 7, 17 ),
+"times": PoolRealArray( 0, 7, 16 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.9988 ]
@@ -832,6 +835,32 @@ tracks/5/keys = {
 "update": 1,
 "values": [ true ]
 }
+
+[sub_resource type="GDScript" id=42]
+script/source = "extends AudioStreamPlayer
+
+
+export var fan_starting: AudioStream
+export var fan_standard: AudioStream
+export var fan_ending: AudioStream
+
+var is_running: bool = true
+
+func start_fanning():
+	stream = fan_starting
+	play()
+
+func end_fanning():
+	stream = fan_ending
+	play()
+
+
+func _on_FanAudioStreamPlayer_finished():
+	if stream == fan_starting and is_running:
+		print(\"Fan started, now going on\")
+		stream = fan_standard
+		play()
+"
 
 [sub_resource type="GDScript" id=26]
 script/source = "extends Label
@@ -1309,7 +1338,6 @@ __meta__ = {
 visible = false
 position = Vector2( 8.47994, -42.965 )
 frames = SubResource( 24 )
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -1343,6 +1371,7 @@ position = Vector2( 7.25796, -43.4054 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
+frame = 2
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus"]
@@ -1425,6 +1454,14 @@ stream = ExtResource( 47 )
 volume_db = 9.0
 script = ExtResource( 48 )
 audio_streams = [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 49 ) ]
+
+[node name="FanAudioStreamPlayer" type="AudioStreamPlayer" parent="OrdiOffset/Computer"]
+stream = ExtResource( 52 )
+volume_db = -20.0
+script = SubResource( 42 )
+fan_starting = ExtResource( 52 )
+fan_standard = ExtResource( 54 )
+fan_ending = ExtResource( 53 )
 
 [node name="Mouse" type="TextureButton" parent="."]
 anchor_right = 1.0
@@ -2679,6 +2716,7 @@ anims/show_popup = SubResource( 8 )
 [connection signal="timeout" from="OrdiOffset/Computer/Virus/VirusCountDownTimer" to="OrdiOffset/Computer/Virus" method="_on_VirusCountDownTimer_timeout"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Virus/AnimationPlayer" to="OrdiOffset/Computer/Virus" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
+[connection signal="finished" from="OrdiOffset/Computer/FanAudioStreamPlayer" to="OrdiOffset/Computer/FanAudioStreamPlayer" method="_on_FanAudioStreamPlayer_finished"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer/Virus" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonMouse/Button" to="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonMouse" method="buy_an_upgrade"]

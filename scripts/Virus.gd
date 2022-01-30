@@ -8,6 +8,7 @@ var is_infested: bool = false
 func _on_VirusCountDownTimer_timeout():
 	if not is_infested and randf() > 0.75:
 		print("Un virus arrive !")
+		$AnimationPlayer.play("RESET")
 		$AnimationPlayer.play("go_in_disc")
 	
 	elif not is_infested:
@@ -42,9 +43,11 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		
 		if randf() > computer.antivirus_proba_tue_virus:
 			print("L'ordinateur est infesté (proba : " + str(computer.antivirus_proba_tue_virus) + ")")
+			$AnimationPlayer.play("RESET")
 			$AnimationPlayer.play("take_control_of_computer")
 			is_infested = true
 		
 		else:
 			print("Le virus a été repoussé par l'antivirus (proba : " + str(computer.antivirus_proba_tue_virus) + ")")
+			$AnimationPlayer.play("RESET")
 			$AnimationPlayer.play("antivirus_wins")

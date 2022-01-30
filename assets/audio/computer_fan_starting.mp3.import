@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/computer_fan_starting.mp3-9272b2936e9ea1452650d090b9cf06ce.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/computer_fan_starting.mp3"
+dest_files=[ "res://.import/computer_fan_starting.mp3-9272b2936e9ea1452650d090b9cf06ce.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

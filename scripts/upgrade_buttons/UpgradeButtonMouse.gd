@@ -44,6 +44,8 @@ func _ready():
 func data_loaded():
 	self.upgrade_level = GameData.datas["mouse_level"]
 	
+	self.upgrade_level = 150
+	
 	# TODO : set skin ?
 	
 	update_button_state()

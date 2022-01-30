@@ -39,7 +39,12 @@ const upgrades_data = {
 		step_price = 50,
 		max_upgrade_level = 9223372036854775807,
 		
-		mouses_list = ["base", "triangle"],
+		mouses_list = [
+			"base", "triangle", "blanche", "mieux", "amongus",
+			"coccinelle", "gamerblue", "gamercyan", "gamergreen",
+			"gamerorange", "gamerpink", "gamerred", "gamerviolet",
+			"gamerwhite", "gameryell"
+		],
 		base = {
 			unlock_level = 0,
 			skin_menu_name = "base_mouse_desc",
@@ -51,6 +56,84 @@ const upgrades_data = {
 			skin_menu_name = "triangle_mouse_desc",
 			texture = "res://assets/sprites/GrosseSourisTriangle01.png",
 			tex_ture = "res://assets/sprites/GrosseSourisTriangle02.png"
+		},
+		blanche = {
+			unlock_level = 20,
+			skin_menu_name = "blanche_mouse_desc",
+			texture = "res://assets/sprites/SourisBlanche02.png",
+			tex_ture = "res://assets/sprites/SourisBlanche01.png"
+		},
+		mieux = {
+			unlock_level = 30,
+			skin_menu_name = "mieux_mouse_desc",
+			texture = "res://assets/sprites/SourisMieux01.png",
+			tex_ture = "res://assets/sprites/SourisMieux02.png"
+		},
+		amongus = {
+			unlock_level = 40,
+			skin_menu_name = "amongus_mouse_desc",
+			texture = "res://assets/sprites/VirusPoulpe01.png",
+			tex_ture = "res://assets/sprites/VirusPoulpe02.png"
+		},
+		coccinelle = {
+			unlock_level = 50,
+			skin_menu_name = "coccinelle_mouse_desc",
+			texture = "res://assets/sprites/thermometre_progress_bayer.png",
+			tex_ture = "res://assets/sprites/thermometre_progress_gradient.png"
+		},
+		gamerblue = {
+			unlock_level = 60,
+			skin_menu_name = "gamerblue_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_blue01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_blue02.png"
+		},
+		gamercyan = {
+			unlock_level = 70,
+			skin_menu_name = "gamercyan_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_cyan01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_cyan02.png"
+		},
+		gamergreen = {
+			unlock_level = 80,
+			skin_menu_name = "gamergreen_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_green01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_green02.png"
+		},
+		gamerorange = {
+			unlock_level = 90,
+			skin_menu_name = "gamerorange_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_orange01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_orange02.png"
+		},
+		gamerpink = {
+			unlock_level = 100,
+			skin_menu_name = "gamerpink_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_pink01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_pink02.png"
+		},
+		gamerred = {
+			unlock_level = 110,
+			skin_menu_name = "gamerred_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_red01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_red02.png"
+		},
+		gamerviolet = {
+			unlock_level = 120,
+			skin_menu_name = "gamerviolet_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_violet01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_violet02.png"
+		},
+		gamerwhite = {
+			unlock_level = 130,
+			skin_menu_name = "gamerwhite_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_white01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_white02.png"
+		},
+		gameryell = {
+			unlock_level = 140,
+			skin_menu_name = "gameryell_mouse_desc",
+			texture = "res://assets/sprites/souris_gamer/souris_gamer_yell01.png",
+			tex_ture = "res://assets/sprites/souris_gamer/souris_gamer_yell02.png"
 		}
 	},
 	ventil = {

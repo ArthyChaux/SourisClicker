@@ -19,6 +19,9 @@ func set_heat(new_heat):
 		$Feu/FeuAnimationPlayer.play("explode")
 		print("Ordinateur cramé ! (", heat, "°C)")
 		
+		$FanAudioStreamPlayer.is_running = false
+		$FanAudioStreamPlayer.stop()
+		
 		$Fumee.lifetime = 0.3
 		$Fumee.anim_speed = 0.7
 	
@@ -100,6 +103,8 @@ var backup = {}
 
 func _ready():
 	GameData.connect("_data_loaded", self, "data_loaded")
+	
+	$FanAudioStreamPlayer.start_fanning()
 
 func data_loaded():
 	self.heat_loose_factor = GameData.datas["heat_loose_factor"]

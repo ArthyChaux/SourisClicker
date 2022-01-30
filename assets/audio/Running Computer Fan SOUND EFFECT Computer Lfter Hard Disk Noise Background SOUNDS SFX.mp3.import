@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Running Computer Fan SOUND EFFECT Computer Lfter Hard Disk Noise Background SOUNDS SFX.mp3-3cf14cc2b848a95d57e65d3675e38e58.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Running Computer Fan SOUND EFFECT Computer Lfter Hard Disk Noise Background SOUNDS SFX.mp3"
+dest_files=[ "res://.import/Running Computer Fan SOUND EFFECT Computer Lfter Hard Disk Noise Background SOUNDS SFX.mp3-3cf14cc2b848a95d57e65d3675e38e58.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
