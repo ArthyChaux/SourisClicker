@@ -7,13 +7,19 @@ onready var popup: PanelContainer = get_node(popup_path)
 
 #### HEAT ####
 
+export var fumee_anim_speed_profile: Curve
+export var fumee_lifetime_profile: Curve
+export var fan_pitch_profile: Curve
+
 #normal at 20 and exploses at 120
 var heat: float = 20.0 setget set_heat
 
 func set_heat(new_heat):
 	heat = new_heat
 	
-	$Thermometre.value = heat
+	$Thermometre.value = lerp($Thermometre.value, heat, 0.3)
+	
+	var factor = 0.01 * lerp($Thermometre.value, heat, 0.1) - 0.2
 	
 	if new_heat > 120.0 and not $Feu/FeuAnimationPlayer.is_playing():
 		$Feu/FeuAnimationPlayer.play("explode")
@@ -22,10 +28,13 @@ func set_heat(new_heat):
 		$FanAudioStreamPlayer.is_running = false
 		$FanAudioStreamPlayer.stop()
 		
+		factor = 1
+		
 		$Fumee.lifetime = 0.3
 		$Fumee.anim_speed = 0.7
 	
 	elif new_heat > 120.0:
+		factor = 1
 		$Fumee.lifetime = 0.3
 		$Fumee.anim_speed = 0.7
 	
@@ -42,6 +51,10 @@ func set_heat(new_heat):
 		#Fumee interpolation
 		$Fumee.lifetime = 264400*pow(heat, -2.81)
 		$Fumee.anim_speed = 59*pow(heat, -0.9)
+	
+	$Fumee.lifetime = fumee_lifetime_profile.interpolate_baked(factor)
+	$Fumee.anim_speed = fumee_anim_speed_profile.interpolate_baked(factor)
+	$FanAudioStreamPlayer.pitch_scale = fan_pitch_profile.interpolate_baked(factor)
 
 
 var heat_increase_on_click: float = 0.5 setget set_heat_increase_on_click

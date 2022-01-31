@@ -49,5 +49,5 @@ func update_button_state():
 		$Button.modulate = Color("ff2b2b")
 
 
-func _on_Racine_wealth_changed(new_wealth):
+func _on_Racine_wealth_changed(_new_wealth):
 	update_button_state()

@@ -25,6 +25,14 @@ func hide_menu_big():
 	$SkinMenuHandle/AnimationPlayer.play_backwards("open_skin_menu_total")
 	show_status = SHOW_STATUS.CLOSE
 
+
+func hide_menu():
+	if show_status == SHOW_STATUS.BIG:
+		$SkinMenuHandle/AnimationPlayer.play_backwards("open_skin_menu_total")
+	elif show_status == SHOW_STATUS.LITTLE:
+		$SkinMenuHandle/AnimationPlayer.play_backwards("open_skin_menu_little")
+	show_status = SHOW_STATUS.CLOSE
+
 func toggle_menu():
 	if not $SkinMenuHandle/AnimationPlayer.is_playing():
 		if show_status == SHOW_STATUS.CLOSE:
@@ -69,6 +77,8 @@ func _on_MouseSkinMenu_pressed():
 		
 		else:
 			button.modulate = Color("828282")
+		
+		button.skin_name = mouse_key
 	
 	if show_status != SHOW_STATUS.BIG:
 		show_menu_big()
@@ -110,6 +120,8 @@ func _on_ComputerSkinMenu_pressed():
 		
 		else:
 			button.modulate = Color("828282")
+		
+		button.skin_name = ventil_key
 	
 	if show_status != SHOW_STATUS.BIG:
 		show_menu_big()
@@ -146,6 +158,8 @@ func _on_TableSkinMenu_pressed():
 		
 		else:
 			button.modulate = Color("828282")
+		
+		button.skin_name = table_key
 	
 	if show_status != SHOW_STATUS.BIG:
 		show_menu_big()
