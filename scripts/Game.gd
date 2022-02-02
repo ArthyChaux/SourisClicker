@@ -1,5 +1,23 @@
 extends Control
 
+
+"""
+  -- TODO --
+
+regler problemes de pixel perfect ecran
+chemins virus
+
+"""
+
+
+
+
+
+
+
+
+
+
 #### WEALTH ####
 
 var wealth: int = 0 setget set_wealth

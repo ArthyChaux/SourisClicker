@@ -4,6 +4,9 @@ extends Control
 enum SHOW_STATUS { CLOSE, LITTLE, BIG }
 onready var show_status = SHOW_STATUS.CLOSE
 
+export var mouse_path: NodePath
+onready var mouse: TextureButton = get_node(mouse_path)
+
 export var button_skin_choose: PackedScene
 onready var skin_list_node = $MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList
 
@@ -42,6 +45,30 @@ func toggle_menu():
 		elif show_status == SHOW_STATUS.BIG:
 			hide_menu_big()
 
+#### SKIN VARIABLES ####
+
+var mouse_skin: String setget set_mouse_skin
+
+func set_mouse_skin(new_mouse_skin):
+	mouse_skin = new_mouse_skin
+	GameData.datas["mouse_skin"] = mouse_skin
+	
+	mouse.texture_normal = load(GameData.upgrades_data["mouse"][mouse_skin]["texture"])
+	mouse.texture_pressed = load(GameData.upgrades_data["mouse"][mouse_skin]["tex_ture"])
+
+var ventil_skin: String
+var table_skin: String
+
+#### MEMBERS ####
+
+func _ready():
+	GameData.connect("_data_loaded", self, "data_loaded")
+
+func data_loaded():
+	self.mouse_skin = GameData.datas["mouse_skin"]
+	self.ventil_skin = GameData.datas["ventil_skin"]
+	self.table_skin = GameData.datas["table_skin"]
+
 #### SIGNALS ####
 
 func _on_UpgradeMenuHandle_pressed():
@@ -71,9 +98,6 @@ func _on_MouseSkinMenu_pressed():
 			var data = GameData.upgrades_data["mouse"][mouse_key]
 			button.get_node("MarginContainer/HBoxContainer/Icon").texture = load(data["texture"])
 			button.get_node("MarginContainer/HBoxContainer/TitleLabel").text = data["skin_menu_name"]
-			
-			button.texture = load(data["texture"])
-			button.tex_ture = load(data["tex_ture"])
 		
 		else:
 			button.modulate = Color("828282")

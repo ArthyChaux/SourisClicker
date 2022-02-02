@@ -11,13 +11,15 @@ export var fumee_anim_speed_profile: Curve
 export var fumee_lifetime_profile: Curve
 export var fan_pitch_profile: Curve
 
+signal exploded()
+
 #normal at 20 and exploses at 120
 var heat: float = 20.0 setget set_heat
 
 func set_heat(new_heat):
 	heat = new_heat
 	
-	$Thermometre.value = lerp($Thermometre.value, heat, 0.3)
+	$Thermometre.value = lerp($Thermometre.value, heat, 0.7)
 	
 	var factor = 0.01 * lerp($Thermometre.value, heat, 0.1) - 0.2
 	
@@ -29,28 +31,16 @@ func set_heat(new_heat):
 		$FanAudioStreamPlayer.stop()
 		
 		factor = 1
-		
-		$Fumee.lifetime = 0.3
-		$Fumee.anim_speed = 0.7
+		emit_signal("exploded")
 	
 	elif new_heat > 120.0:
 		factor = 1
-		$Fumee.lifetime = 0.3
-		$Fumee.anim_speed = 0.7
 	
 	elif new_heat > 95.0:
 		$OverHeatAlert.show()
 	
-		#Fumee interpolation
-		$Fumee.lifetime = 264400*pow(heat, -2.81)
-		$Fumee.anim_speed = 59*pow(heat, -0.9)
-	
 	else:
 		$OverHeatAlert.hide()
-	
-		#Fumee interpolation
-		$Fumee.lifetime = 264400*pow(heat, -2.81)
-		$Fumee.anim_speed = 59*pow(heat, -0.9)
 	
 	$Fumee.lifetime = fumee_lifetime_profile.interpolate_baked(factor)
 	$Fumee.anim_speed = fumee_anim_speed_profile.interpolate_baked(factor)
