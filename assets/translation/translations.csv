@@ -1,24 +1,56 @@
-id,fr,en,fr_CH
-magasin_menu_title,Magasin,Shop,Aipf
-mouse_skins_menu_title,Souris,Mouse,azpojf
-ordinateur_skins_menu_title,Ordinateur,Computer,azfok
-table_skins_menu_title,Table,Desk,q^kfqfk
-upgrade_mouse_desc,Une meilleure souris !,A better mouse !,fqofjqsjfvvq
-upgrade_ventil_desc,Ameliorer la ventilation,Upgrade the fans,^koqdb)à
-upgrade_autoclick_desc,Ameliorer le logiciel d'autoclick,Upgrade the autoclick software,qozjfvqoçv)qzoajfogqsdôq
-upgrade_antivirus_desc,Ameliorer l'antivirus,Upgrade the antivirus software,q)a)vkjkgoq^g^pqf
-update_antivirus_desc,Mettre a jour l'antivirus,Update the antivirus software,"ojgàdob,qpgp"
-upgrade_desk_desc,Acheter une nouvelle table,Buy a new desk,pokqosfj)jqfq
-upgrade_under_tab_level_desc,"niv.%s, %sC","lvl.%s, %sC","faf.%s, %sz"
-upgrade_under_tab_max_level_desc,niv.%s : niveau max atteint !,lvl.%s : max level !,azs.%s
-upgrade_under_tab_no_level_desc,niv.%s,lvl.%s,zap.%s
-base_mouse_desc,La basique,The basic one,oajkzfpjsfvq
-triangle_mouse_desc,La triangle,The triangle one,azegopjdpog
-mieux_mouse_desc,La mieux,The better one,"aozgjsd,bvg"
-blanche_mouse_desc,La blanche,The white one,qapojoigjz
-gamer_blue_mouse_desc,La gamer bleue,the gamer blue,jpozjeogjds
-base_computer_desc,La boite,The box,ozejgojdgos
-table_bois_desc,La table en bois,The wood desk,zoejghpozjebhojs
-backup_restore_after_ordi_burn_message,"Tu as retrouve une backup de ta partie, tu vas pouvoir continuer.","You retrieved a backup of your game, so you can continue playing.",ojzepgbjksdàgkp^zkgôjodsjbhsdkbhpkroh^njoz^sj
-paye_rancon_au_rnasomware_message,Tu as paye ta rancon de %sC au ransomware,You paid %sC to the ransomware,bhsôjzogz%s^jkgôkd=àskgpzkgpkhekrh
-economise_un_peu_message,Economise encore un peu pour ca,You'll nedd more money for that,korhkekfà=kdpfhk^kehke^r
+id,fr,en,fr_CH,ja
+magasin_menu_title,Magasin,Shop,Aipf,すべての
+mouse_skins_menu_title,Souris,Mouse,azpojf,すべての
+ordinateur_skins_menu_title,Ordinateur,Computer,azfok,すべての
+table_skins_menu_title,Table,Desk,q^kfqfk,すべての
+upgrade_mouse_desc,Une meilleure souris !,A better mouse !,fqofjqsjfvvq,すべての
+upgrade_ventil_desc,Ameliorer la ventilation,Upgrade the fans,^koqdb)à,すべての
+upgrade_autoclick_desc,Ameliorer le logiciel d'autoclick,Upgrade the autoclick software,qozjfvqoçv)qzoajfogqsdôq,すべての
+upgrade_antivirus_desc,Ameliorer l'antivirus,Upgrade the antivirus software,q)a)vkjkgoq^g^pqf,すべての
+update_antivirus_desc,Mettre a jour l'antivirus,Update the antivirus software,"ojgàdob,qpgp",すべての
+upgrade_desk_desc,Acheter une nouvelle table,Buy a new desk,pokqosfj)jqfq,すべての
+upgrade_under_tab_level_desc,"niv.%s, %sC","lvl.%s, %sC","faf.%s, %sz","faf.%s, %sz"
+upgrade_under_tab_max_level_desc,niv.%s : niveau max atteint !,lvl.%s : max level !,azs.%s,azs.%s
+upgrade_under_tab_no_level_desc,%sC,%sC,%sm,%sm
+upgrade_under_tab_antivirus_desc,"niv.%s, %sC : Neutralise %s%% des virus","niv.%s, %sC : Neutralise %s%% des virus","niv.%s, %sC : Neutralise %s%% des virus","niv.%s, %sC : Neutralise %s%% des virus"
+upgrade_under_tab_antivirus_max_level_desc,"niv.%s : Neutralise %s%% des virus, niveau max atteint !","niv.%s : Neutralise %s%% des virus, niveau max atteint !","niv.%s : Neutralise %s%% des virus, niveau max atteint !","niv.%s : Neutralise %s%% des virus, niveau max atteint !"
+base_mouse_desc,La basique,The basic one,oajkzfpjsfvq,すべての
+triangle_mouse_desc,La triangle,The triangle one,azegopjdpog,すべての
+blanche_mouse_desc,La blanche,The white one,qapojoigjz,すべての
+mieux_mouse_desc,La mieux,The better one,"aozgjsd,bvg",すべての
+amongus_mouse_desc,,,,すべての
+coccinelle_mouse_desc,,,,すべての
+gamerblue_mouse_desc,La gamer bleue,the gamer blue,jpozjeogjds,すべての
+gamercyan_mouse_desc,,,,すべての
+gamergreen_mouse_desc,,,,すべての
+gamerorange_mouse_desc,,,,すべての
+gamerpink_mouse_desc,,,,すべての
+gamerred_mouse_desc,,,,すべての
+gamerviolet_mouse_desc,,,,すべての
+gamerwhite_mouse_desc,,,,すべての
+gameryell_mouse_desc,,,,すべての
+base_computer_desc,La boite,The box,ozejgojdgos,すべての
+table_bois_desc,La table en bois,The wood desk,zoejghpozjebhojs,すべての
+backup_restore_after_ordi_burn_message,"Tu as retrouve une backup de ta partie, tu vas pouvoir continuer.","You retrieved a backup of your game, so you can continue playing.",ojzepgbjksdàgkp^zkgôjodsjbhsdkbhpkroh^njoz^sj,すべての
+paye_rancon_au_rnasomware_message,Tu as paye ta rancon de %sC au ransomware,You paid %sC to the ransomware,bhsôjzogz%s^jkgôkd=àskgpzkgpkhekrh,すべての
+economise_un_peu_message,Economise encore un peu pour ca,You'll nedd more money for that,korhkekfà=kdpfhk^kehke^r,すべての
+mouse_base_upgrade_message,"Tu peux cliquer avec cette souris, c'est mieux que rien",,,すべての
+mouse_triangle_upgrade_message,,,,すべての
+mouse_blanche_upgrade_message,,,,すべての
+mouse_mieux_upgrade_message,,,,すべての
+mouse_amongus_upgrade_message,,,,すべての
+mouse_coccinelle_upgrade_message,,,,すべての
+mouse_gamer_upgrade_message,Tu nouvelle souris gamer %s a la classe,Tu nouvelle souris gamer %s a la classe,Tu nouvelle souris gamer %s a la classe,Tu nouvelle souris gamer %s a la classe
+ventil_base_upgrade_message,Un ordinateur de base,Un ordinateur de base,Un ordinateur de base,すべての
+hiclick_upgrade_message,Voilà un autoclick de compête,Voilà un autoclick de compête,Voilà un autoclick de compête,すべての
+abast_upgrade_message,Enfin un antivirus à la hauteur des virus auquels tu as affaire,Enfin un antivirus à la hauteur des virus auquels tu as affaire,Enfin un antivirus à la hauteur des virus auquels tu as affaire,すべての
+table_bois_upgrade_message,Rien de mieux qu'une table en bois,Rien de mieux qu'une table en bois,Rien de mieux qu'une table en bois,すべての
+color_blue,bleu,bleu,bleu,すべての
+color_cyan,cyan,cyan,cyan,すべての
+color_green,vert,vert,vert,すべての
+color_orange,,,,すべての
+color_pink,,,,すべての
+color_red,,,,すべての
+color_violet,,,,すべての
+color_white,,,,すべての
+color_yellow,,,,すべての

@@ -40,8 +40,8 @@ theme/custom_font="res://assets/fonts/dynamicfont_64-global.tres"
 [locale]
 
 test="fr"
-locale_filter=[ 0, [ "en", "fr", "fr_CH" ] ]
-translations=PoolStringArray( "res://assets/translation/translations.en.translation", "res://assets/translation/translations.fr.translation", "res://assets/translation/translations.fr_CH.translation" )
+locale_filter=[ 0, [ "en", "fr", "fr_CH", "ja" ] ]
+translations=PoolStringArray( "res://assets/translation/translations.en.translation", "res://assets/translation/translations.fr.translation", "res://assets/translation/translations.fr_CH.translation", "res://assets/translation/translations.ja.translation" )
 
 [physics]
 

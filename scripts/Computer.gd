@@ -17,15 +17,13 @@ signal exploded()
 var heat: float = 20.0 setget set_heat
 
 func set_heat(new_heat):
-	heat = new_heat
+	$Thermometre.value = new_heat
 	
-	$Thermometre.value = lerp($Thermometre.value, heat, 0.7)
-	
-	var factor = 0.01 * lerp($Thermometre.value, heat, 0.1) - 0.2
+	var factor = 0.01 * lerp(heat, new_heat, 0.3) - 0.2
 	
 	if new_heat > 120.0 and not $Feu/FeuAnimationPlayer.is_playing():
 		$Feu/FeuAnimationPlayer.play("explode")
-		print("Ordinateur cramé ! (", heat, "°C)")
+		print("Ordinateur cramé ! (", new_heat, "°C)")
 		
 		$FanAudioStreamPlayer.is_running = false
 		$FanAudioStreamPlayer.stop()
@@ -45,60 +43,20 @@ func set_heat(new_heat):
 	$Fumee.lifetime = fumee_lifetime_profile.interpolate_baked(factor)
 	$Fumee.anim_speed = fumee_anim_speed_profile.interpolate_baked(factor)
 	$FanAudioStreamPlayer.pitch_scale = fan_pitch_profile.interpolate_baked(factor)
+	
+	heat = new_heat
 
-
-var heat_increase_on_click: float = 0.5 setget set_heat_increase_on_click
-
-func set_heat_increase_on_click(new_heat_increase_on_click):
-	heat_increase_on_click = new_heat_increase_on_click
-	GameData.datas["heat_increase_on_click"] = heat_increase_on_click
 
 #Loose **heat_loose_factor * (heat - 20.0)** per decisecond
-var heat_loose_factor: float = 0.02 setget set_heat_loose_factor
-
-func set_heat_loose_factor(new_heat_loose_factor):
-	heat_loose_factor = new_heat_loose_factor
-	GameData.datas["heat_loose_factor"] = new_heat_loose_factor
+var heat_loose_factor: float = 0.02
 
 #### ANTIVIRUS ####
 
-export var upgrade_antivirus_button_path: NodePath
-onready var upgrade_antivirus_button: MarginContainer = get_node(upgrade_antivirus_button_path)
-
-var antivirus_expiration_duration = 0 setget set_antivirus_expiration_duration
-
-func set_antivirus_expiration_duration(new_antivirus_expiration_duration, by_timer = false):
-	if new_antivirus_expiration_duration >= 0:
-		antivirus_expiration_duration = new_antivirus_expiration_duration
-		GameData.datas["antivirus_expiration_duration"] = new_antivirus_expiration_duration
-	
-	if new_antivirus_expiration_duration == 0:
-		if by_timer:
-			upgrade_antivirus_button.upgrade_level = 0
-			print("Antivirus expired")
-		antivirus_proba_tue_virus = 0
+func _antivirus_duration_changed(new_antivirus_duration):
+	if new_antivirus_duration <= 0:
 		$AntivirusCountDownTickTimer.stop()
-	
-	elif antivirus_expiration_duration > 0 and $AntivirusCountDownTickTimer.is_stopped():
+	elif new_antivirus_duration > 0 and $AntivirusCountDownTickTimer.is_stopped():
 		$AntivirusCountDownTickTimer.start()
-	
-	$AntivirusShower.update_text(self.antivirus_expiration_duration)
-
-var antivirus_proba_tue_virus = 0 setget set_antivirus_proba_tue_virus
-
-func set_antivirus_proba_tue_virus(new_antivirus_proba_tue_virus):
-	antivirus_proba_tue_virus = new_antivirus_proba_tue_virus
-	GameData.datas["antivirus_proba_tue_virus"] = new_antivirus_proba_tue_virus
-
-#### AUTOCLICK ####
-
-var click_per_seconds = 0 setget set_click_per_seconds
-
-func set_click_per_seconds(new_click_per_seconds):
-	click_per_seconds = new_click_per_seconds
-	GameData.datas["click_per_seconds"] = new_click_per_seconds
-	
-	$AutoClickShower.update_text(click_per_seconds)
 
 #### MEMBERS ####
 
@@ -106,23 +64,19 @@ var backup = {}
 
 func _ready():
 	GameData.connect("_data_loaded", self, "data_loaded")
+	GameData.connect("antivirus_duration_changed", self, "_antivirus_duration_changed")
 	
 	$FanAudioStreamPlayer.start_fanning()
 
 func data_loaded():
-	self.heat_loose_factor = GameData.datas["heat_loose_factor"]
-	self.antivirus_expiration_duration = GameData.datas["antivirus_expiration_duration"]
-	$AntivirusShower.update_text(self.antivirus_expiration_duration)
-	self.antivirus_proba_tue_virus = GameData.datas["antivirus_proba_tue_virus"]
-	self.click_per_seconds = GameData.datas["click_per_seconds"]
 	backup = GameData.datas
 
 
 #### SIGNALS ####
 
 func _on_Mouse_pressed():
-	racine.wealth += racine.wealth_increase_on_click
-	self.heat += heat_increase_on_click * racine.wealth_increase_on_click
+	GameData.wealth += GameData.wealth_increase_on_click
+	self.heat += GameData.heat_increase_on_click * GameData.wealth_increase_on_click
 	$MouseAudioStreamPlayer.random_play()
 
 func _on_CoolTimer_timeout():
@@ -139,8 +93,6 @@ func _on_FeuAnimationPlayer_animation_finished(anim_name):
 		popup.popup()
 		print("Ordinateur back and running")
 		popup.connect("_popup_closed", self, "restore_backup")
-		
-		#TODO : looase things
 
 func restore_backup():
 	GameData.can_save_data = false
@@ -151,8 +103,8 @@ func restore_backup():
 	get_tree().reload_current_scene()
 
 func _on_AntivirusTickTimer_timeout():
-	self.set_antivirus_expiration_duration(antivirus_expiration_duration-1, true)
+	GameData.antivirus_duration -= 1
 
 func _on_AutoclickTimer_timeout():
-	racine.wealth += click_per_seconds
-	self.heat += heat_increase_on_click * click_per_seconds
+	GameData.wealth += GameData.clicks_per_seconds
+	self.heat += GameData.heat_increase_on_click * GameData.clicks_per_seconds
