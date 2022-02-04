@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -57,13 +57,9 @@
 [ext_resource path="res://scripts/VirusMovePath.gd" type="Script" id=55]
 [ext_resource path="res://scripts/Fumee.gd" type="Script" id=56]
 
-[sub_resource type="Curve" id=43]
-max_value = 4.0
-_data = [ Vector2( 0, 4 ), 0.0, -11.1857, 0, 0, Vector2( 1, 0.945454 ), -0.52683, 0.0, 0, 0 ]
-
 [sub_resource type="Curve" id=44]
-max_value = 50.0
-_data = [ Vector2( 0, 50 ), 0.0, -166.154, 0, 0, Vector2( 1, 0.454548 ), -2.64707, 0.0, 0, 0 ]
+max_value = 12.0
+_data = [ Vector2( 0, 12 ), 0.0, -27.9158, 0, 0, Vector2( 1, 0.454548 ), 1.4926, 0.0, 0, 0 ]
 
 [sub_resource type="Curve" id=45]
 max_value = 5.0
@@ -122,13 +118,34 @@ func _on_Mouse_pressed():
 	pop()
 "
 
-[sub_resource type="SpriteFrames" id=24]
-animations = [ {
-"frames": [ ExtResource( 26 ), null ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
+[sub_resource type="GDScript" id=58]
+script/source = "extends Sprite
+
+
+var is_to_remain_shown: bool = false setget set_is_to_remain_shown
+var is_shown: bool = false
+
+func set_is_to_remain_shown(new_is_to_remain_shown):
+	if not is_to_remain_shown == new_is_to_remain_shown:
+		is_to_remain_shown = new_is_to_remain_shown
+		
+		if not is_shown and new_is_to_remain_shown and $BlitTimer.is_stopped():
+			show()
+			is_shown = true
+			$BlitTimer.start()
+
+
+func _on_BlitTimer_timeout():
+	if is_shown:
+		hide()
+		is_shown = false
+		$BlitTimer.start()
+	
+	elif is_to_remain_shown:
+		show()
+		is_shown = true
+		$BlitTimer.start()
+"
 
 [sub_resource type="SpriteFrames" id=29]
 animations = [ {
@@ -146,19 +163,84 @@ animations = [ {
 "speed": 1.0
 } ]
 
+[sub_resource type="Curve2D" id=71]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 99.8871, 239.729, -99.8871, -239.729, 347.771, 229.427, 19.9774, 228.313, -19.9774, -228.313, 642.056, -266.764, 11.4157, -273.976, -11.4157, 273.976, 84.9134, -469.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
 [sub_resource type="Curve2D" id=49]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 110.055, 121.44, -110.055, -121.44, 647.049, -487.659, 34.155, -125.235, -34.155, 125.235, 117.646, -484.812, 329.917, -23.9071, -329.917, 23.9071, 455.402, 47.4381, 15.18, 451.607, -15.18, -451.607, 388.989, -475.325, 55.1025, 383.278, -55.1025, -383.278, -96.7713, -193.545, -148.005, -83.4903, 148.005, 83.4903, 216.316, -507.583, 212.52, -174.571, -212.52, 174.571, 417.452, -168.878, -41.745, -11.385, 41.745, 11.385, 220.111, 119.543, -105.191, 172.131, 105.191, -172.131, 655.588, -284.625, 166.98, 7.59003, -166.98, -7.59003, 679.307, -1.89709, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 110.055, 121.44, -110.055, -121.44, 647.049, -487.659, 34.155, -125.235, -34.155, 125.235, 117.646, -484.812, 329.917, -23.9071, -329.917, 23.9071, 570.628, 81.8076, 15.18, 451.607, -15.18, -451.607, 388.989, -475.325, 55.1025, 383.278, -55.1025, -383.278, -96.7713, -193.545, -148.005, -83.4903, 148.005, 83.4903, 216.316, -507.583, 212.52, -174.571, -212.52, 174.571, 443.009, -169.621, -41.745, -11.385, 41.745, 11.385, 312.532, 128.474, -105.191, 172.131, 105.191, -172.131, 655.588, -284.625, 166.98, 7.59003, -166.98, -7.59003, 679.307, -1.89709, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
 [sub_resource type="Curve2D" id=50]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 55.1025, 383.278, -55.1025, -383.278, -96.7713, -193.545, -182.572, 158.906, 182.572, -158.906, 603.407, -260.907, 0, 287.383, 0, -287.383, 446.863, -841.544 )
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 156.194, 151.412, -156.194, -151.412, -45.5628, 389.427, 55.1025, 383.278, -55.1025, -383.278, -96.7713, -193.545, -182.572, 158.906, 182.572, -158.906, 603.407, -260.907, 0, 287.383, 0, -287.383, 446.863, -841.544 )
 }
 
 [sub_resource type="Curve2D" id=51]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 189.548, 103.8, -189.548, -103.8, 705.872, -554.071, -4.51305, -135.392, 4.51305, 135.392, 353.885, -432.631, -18.0522, -130.879, 18.0522, 130.879, 705.872, -170.775, 157.957, -22.5653, -157.957, 22.5653, 353.885, 73.0544, 90.2609, 103.8, -90.2609, -103.8, -133.773, 91.0808, 27.0783, 103.8, -27.0783, -103.8, 46.4901, -161.288, -18.0522, 121.853, 18.0522, -121.853, -88.2326, -242.88, 4.51305, 117.339, -4.51305, -117.339, 236.24, -418.4, -4.51305, 108.313, 4.51305, -108.313, -74.9501, -445.914, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 340.96, 11.3589, -340.96, -11.3589, 809.675, -587.716, -4.51305, -135.392, 4.51305, 135.392, 353.885, -432.631, -18.0522, -130.879, 18.0522, 130.879, 705.872, -170.775, 157.957, -22.5653, -157.957, 22.5653, 353.885, 73.0544, 90.2609, 103.8, -90.2609, -103.8, -133.773, 91.0808, 27.0783, 103.8, -27.0783, -103.8, 46.4901, -161.288, -18.0522, 121.853, 18.0522, -121.853, -88.2326, -242.88, 4.51305, 117.339, -4.51305, -117.339, 236.24, -418.4, -4.51305, 108.313, 4.51305, -108.313, -74.9501, -445.914, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=60]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 826.978, 131.993, -826.978, -131.993, 2057.29, -364.859, 590.204, -61.2398, -590.204, 61.2398, 523.961, -399.145, 40.4061, 226.274, -40.4061, -226.274, -833.182, -277.24, -153.543, 29.6311, 153.543, -29.6311, 252.532, -589.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=59]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 417.45, 101.817, -417.45, -101.817, -125.563, 611.331, -220.603, 295.269, 220.603, -295.269, -614.134, -63.9067, -101.817, 227.391, 101.817, -227.391, 668.723, 241.807, -33.939, 50.9085, 33.939, -50.9085, 163.009, -504.859, -57.6963, 111.999, 57.6963, -111.999, 685.866, -365.811, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=61]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 102.803, 24.189, -102.803, -24.189, 1035.39, -770.573, 105.827, -78.6141, -105.827, 78.6141, 735.39, -713.43, 163.276, -217.701, -163.276, 217.701, 663.009, -44.8591, 226.772, 48.3779, -226.772, -48.3779, -80.8008, 34.1885, -120.945, 81.6378, 120.945, -81.6378, -65.5627, -482.954, -172.346, 15.1181, 172.346, -15.1181, 369.675, -485.811, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=62]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 166.299, 157.228, -166.299, -157.228, -425.563, 415.141, -96.7559, 78.6141, 96.7559, -78.6141, -337.944, -564.859, -3.02362, -111.874, 3.02362, 111.874, 160.152, -396.288, 1.67161, -148.624, -1.67161, 148.624, -11.277, -122.002, -78.6141, 0, 78.6141, 0, 175.39, 107.522, 3.4168, 139.454, -3.4168, -139.454, 362.056, -126.764, -1.10597, 92.3802, 1.10597, -92.3802, 221.104, -378.192, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=63]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 79.7566, 125.574, -79.7566, -125.574, 479.199, 247.522, -105.211, 3.3939, 105.211, -3.3939, 635.39, -242.954, 0, -93.3322, 0, 93.3322, 756.342, -64.8591, 69.5749, 5.09085, -69.5749, -5.09085, 613.485, 13.2361, -32.242, 62.7871, 32.242, -62.7871, 511.58, -138.192, -62.7871, -61.0902, 62.7871, 61.0902, 718.247, -181.05, 64.4841, -23.7573, -64.4841, 23.7573, 688.723, -0.097168, 47.5146, 55.9993, -47.5146, -55.9993, 557.294, -45.8115, -28.8481, 45.8176, 28.8481, -45.8176, 545.866, -210.573, -59.3932, -32.242, 59.3932, 32.242, 678.247, -218.192, 35.6359, -49.2115, -35.6359, 49.2115, 726.818, -43.9067, 47.5146, 39.0298, -47.5146, -39.0298, 578.247, -11.5258, -101.817, 35.6359, 101.817, -35.6359, 581.104, -234.383, 15.2725, -147.635, -15.2725, 147.635, 743.009, -122.002, 64.4841, 100.12, -64.4841, -100.12, 535.39, -89.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=64]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 165.527, 191.213, -165.527, -191.213, -35.0866, 237.998, -142.696, 165.527, 142.696, -165.527, -92.2294, -415.335, -91.3254, -142.696, 91.3254, 142.696, 427.771, -361.05, -128.426, -71.348, 128.426, 71.348, 453.485, 69.4266, -62.7862, 111.303, 62.7862, -111.303, 730.628, 49.4266, 171.235, 8.56175, -171.235, -8.56175, 670.628, -412.478, 176.943, -19.9774, -176.943, 19.9774, 530.628, 3.71228, 25.6853, -436.649, -25.6853, 436.649, 67.7706, -478.192, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=65]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 134.134, 19.9774, -134.134, -19.9774, 806.818, 83.7123, 125.572, 71.348, -125.572, -71.348, -75.0866, 63.7123, -88.4715, 208.336, 88.4715, -208.336, -83.658, -318.192, -208.336, -282.538, 208.336, 282.538, 650.628, -383.907, 162.673, -11.4157, -162.673, 11.4157, 596.342, 37.998, 136.988, 0, -136.988, 0, 576.342, -372.478, 119.865, 2.85392, -119.865, -2.85392, 499.199, 109.427, -17.1235, 136.988, 17.1235, -136.988, 324.913, -463.907, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=67]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 122.718, 168.381, -122.718, -168.381, 436.342, 235.141, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=66]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 182.651, 114.157, -182.651, -114.157, -414.134, 246.569, -131.28, 191.213, 131.28, -191.213, -316.991, -269.621, -242.583, -14.2696, 242.583, 14.2696, 196.342, -521.05, 28.5392, -159.819, -28.5392, 159.819, 702.056, -163.907, 159.819, 8.56175, -159.819, -8.56175, 507.771, 86.5695, 154.112, 74.2019, -154.112, -74.2019, 393.485, -495.335, 5.70784, -122.718, -5.70784, 122.718, -119.848, -329.621, 11.4157, 79.9097, -11.4157, -79.9097, 550.628, -492.478, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=68]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 94.1793, 119.865, -94.1793, -119.865, 62.0563, 297.998, 199.774, 134.134, -199.774, -134.134, 693.485, -343.907, 57.0784, -34.247, -57.0784, 34.247, 479.199, 57.998, 88.4715, 94.1793, -88.4715, -94.1793, -92.2294, 72.2837, -228.313, 22.8313, 228.313, -22.8313, -17.9437, -489.621, -182.651, 14.2696, 182.651, -14.2696, 450.628, -283.907, -74.2019, -105.595, 74.2019, 105.595, 722.056, -566.764, 111.303, 17.1235, -111.303, -17.1235, 682.056, -135.335, 145.55, 17.1235, -145.55, -17.1235, 507.771, -538.192, -162.673, -145.55, 162.673, 145.55, 404.913, 15.1409, -28.5392, 134.134, 28.5392, -134.134, 739.199, 40.8552, -34.247, 99.8871, 34.247, -99.8871, 167.771, -409.621, -8.56175, 114.157, 8.56175, -114.157, 713.485, -426.764, 8.56175, 108.449, -8.56175, -108.449, 353.485, -546.764, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=69]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 85.6175, 114.157, -85.6175, -114.157, -359.848, 260.855, -111.303, 39.9549, 111.303, -39.9549, -254.134, 49.4266, -94.1793, 34.247, 94.1793, -34.247, 13.4849, 49.4266, -156.965, 17.1235, 156.965, -17.1235, -136.991, -529.621, -156.965, -85.6175, 156.965, 85.6175, 404.913, -169.621, -91.3254, -2.85392, 91.3254, 2.85392, 719.199, -529.621, 51.3705, -22.8313, -51.3705, 22.8313, 716.342, 37.998, 99.8871, -11.4157, -99.8871, 11.4157, 599.199, -295.335, -57.0784, -85.6175, 57.0784, 85.6175, 370.628, 37.998, -91.3254, 51.3705, 91.3254, -51.3705, 656.342, 72.2837, 171.235, 2.85392, -171.235, -2.85392, 427.771, -489.621, -8.56175, 214.044, 8.56175, -214.044, -23.658, -349.621, -71.348, 85.6175, 71.348, -85.6175, 490.628, -372.478, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
+}
+
+[sub_resource type="Curve2D" id=70]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 99.8871, 239.729, -99.8871, -239.729, 347.771, 229.427, 19.9774, 228.313, -19.9774, -228.313, 642.056, -266.764, 11.4157, -273.976, -11.4157, 273.976, 84.9134, -469.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
 [sub_resource type="Shader" id=46]
@@ -376,7 +458,7 @@ tracks/17/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/18/type = "value"
 tracks/18/path = NodePath("../../../../../POPUPExclusivePopupNode:visible")
@@ -760,16 +842,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
-
-[sub_resource type="CanvasItemMaterial" id=14]
-particles_animation = true
-particles_anim_h_frames = 13
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="Gradient" id=18]
-offsets = PoolRealArray( 0.0151515, 0.174242, 0.643939, 1 )
-colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 0.54902, 0.54902, 0.54902, 0.835294, 0.204102, 0.204102, 0.204102, 0.270588 )
+tracks/2/type = "value"
+tracks/2/path = NodePath("../VirusMovePath/PathFollow2D/VirusOutScreen/VirusOutScreenButton:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=15]
 length = 0.001
@@ -1007,6 +1091,22 @@ script/source = "extends TextureButton
 func _on_TextureButton_pressed():
 	print(\"aaaa\")
 	GameData.ventil_level += 1
+"
+
+[sub_resource type="GDScript" id=57]
+script/source = "extends TextureButton
+
+
+func _on_TextureButton_pressed():
+	print(GameData.autoclick_level)
+	GameData.mouse_level = 9223372036854775807
+	GameData.ventil_level = 9223372036854775807
+	GameData.autoclick_level = 9223372036854775807
+	GameData.antivirus_level = 9223372036854775807
+	GameData.antivirus_duration = 9223372036854775807
+	GameData.table_level = 9223372036854775807
+	print(GameData.autoclick_level)
+
 "
 
 [sub_resource type="GDScript" id=26]
@@ -1397,7 +1497,6 @@ scale = Vector2( 7, 7 )
 texture = ExtResource( 15 )
 script = ExtResource( 14 )
 popup_path = NodePath("../../POPUPExclusivePopupNode/Popup")
-fumee_anim_speed_profile = SubResource( 43 )
 fumee_lifetime_profile = SubResource( 44 )
 fan_pitch_profile = SubResource( 45 )
 
@@ -1411,7 +1510,8 @@ autostart = true
 [node name="AntivirusCountDownTickTimer" type="Timer" parent="OrdiOffset/Computer"]
 
 [node name="Screen" type="Sprite" parent="OrdiOffset/Computer"]
-position = Vector2( 9, -43 )
+position = Vector2( 8.57143, -43 )
+scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 18 )
 
 [node name="WealthShower" type="Label" parent="OrdiOffset/Computer"]
@@ -1463,7 +1563,6 @@ __meta__ = {
 }
 
 [node name="MouseInComputer" type="Sprite" parent="OrdiOffset/Computer"]
-visible = false
 position = Vector2( 48.8133, -23.0547 )
 scale = Vector2( 0.142313, 0.142313 )
 texture = ExtResource( 24 )
@@ -1487,12 +1586,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OverHeatAlert" type="AnimatedSprite" parent="OrdiOffset/Computer"]
+[node name="OverHeatAlert" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
-position = Vector2( 8.47994, -42.965 )
-frames = SubResource( 24 )
-speed_scale = 0.5
-playing = true
+position = Vector2( 9, -43 )
+texture = ExtResource( 26 )
+script = SubResource( 58 )
+
+[node name="BlitTimer" type="Timer" parent="OrdiOffset/Computer/OverHeatAlert"]
+wait_time = 0.5
 
 [node name="AntivirusVirusRepousseAlert" type="Sprite" parent="OrdiOffset/Computer"]
 position = Vector2( 23.197, -22.2008 )
@@ -1505,12 +1606,14 @@ region_rect = Rect2( 0, 0, 0, 14 )
 [node name="BlackScreen" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 8.502, -43 )
+position = Vector2( 8.571, -43 )
+scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 18 )
 
 [node name="BlackScreen2" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
-position = Vector2( 8.47994, -42.965 )
+position = Vector2( 8.571, -43 )
+scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 45 )
 hframes = 15
 vframes = 11
@@ -1542,13 +1645,13 @@ playing = true
 [node name="VirusMovePath" type="Path2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
 position = Vector2( -31.4513, 145.586 )
 scale = Vector2( 0.15, 0.15 )
-curve = SubResource( 49 )
+curve = SubResource( 71 )
 script = ExtResource( 55 )
-curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ]
+curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath"]
 position = Vector2( 888.981, 257.112 )
-rotation = -1.78142
+rotation = 2.70384
 
 [node name="VirusOutScreen" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
 rotation = 1.5708
@@ -1583,34 +1686,78 @@ anims/virus_ecrase = SubResource( 40 )
 
 [node name="Tween" type="Tween" parent="OrdiOffset/Computer/Virus"]
 
-[node name="Fumee2" type="Node2D" parent="OrdiOffset/Computer"]
+[node name="Fumees" type="Node2D" parent="OrdiOffset/Computer"]
 position = Vector2( -14.6582, 37.9975 )
-script = ExtResource( 56 )
 
-[node name="Sprite" type="Sprite" parent="OrdiOffset/Computer/Fumee2"]
+[node name="Fumee" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1.94395, -4.1404 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 16 )
 hframes = 13
+script = ExtResource( 56 )
 
-[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumee2/Sprite"]
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee"]
 
-[node name="Fumee" type="CPUParticles2D" parent="OrdiOffset/Computer"]
-visible = false
-modulate = Color( 1, 1, 1, 0.568627 )
-material = SubResource( 14 )
-position = Vector2( -14.5101, 37.8771 )
-amount = 7
-lifetime = 50.0
-randomness = 0.64
+[node name="Fumee2" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 16 )
-emission_shape = 1
-emission_sphere_radius = 10.0
-gravity = Vector2( 0, -40 )
-scale_amount = 0.5
-color = Color( 1, 0.933333, 0.933333, 1 )
-color_ramp = SubResource( 18 )
-anim_speed = 4.0
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee2"]
+
+[node name="Fumee3" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee3"]
+
+[node name="Fumee4" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee4"]
+
+[node name="Fumee5" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee5"]
+
+[node name="Fumee6" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee6"]
+
+[node name="Fumee7" type="Sprite" parent="OrdiOffset/Computer/Fumees"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1.94395, -4.1404 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 16 )
+hframes = 13
+script = ExtResource( 56 )
+
+[node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee7"]
 
 [node name="Feu" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
@@ -1625,13 +1772,13 @@ anims/explode = SubResource( 17 )
 
 [node name="MouseAudioStreamPlayer" type="AudioStreamPlayer" parent="OrdiOffset/Computer"]
 stream = ExtResource( 47 )
-volume_db = 9.0
+volume_db = 7.0
 script = ExtResource( 48 )
 audio_streams = [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 49 ) ]
 
 [node name="FanAudioStreamPlayer" type="AudioStreamPlayer" parent="OrdiOffset/Computer"]
 stream = ExtResource( 54 )
-volume_db = -22.0
+volume_db = -23.0
 pitch_scale = 0.7
 script = SubResource( 42 )
 fan_starting = ExtResource( 52 )
@@ -1690,6 +1837,20 @@ margin_top = -118.264
 margin_right = -74.448
 margin_bottom = -80.264
 script = SubResource( 55 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="OrdiOffset/Computer"]
+anchor_left = 0.158
+anchor_top = 0.169
+anchor_right = 0.158
+anchor_bottom = 0.169
+margin_left = 19.552
+margin_top = -135.264
+margin_right = 47.552
+margin_bottom = -97.264
+script = SubResource( 57 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2162,6 +2323,7 @@ autowrap = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus"]
 stream = ExtResource( 36 )
+volume_db = -2.0
 
 [node name="UpgradeButtonTable" type="MarginContainer" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList"]
 margin_top = 1086.0
@@ -2927,16 +3089,25 @@ anims/show_popup = SubResource( 8 )
 [connection signal="timeout" from="OrdiOffset/Computer/AutoclickTimer" to="OrdiOffset/Computer" method="_on_AutoclickTimer_timeout"]
 [connection signal="timeout" from="OrdiOffset/Computer/AntivirusCountDownTickTimer" to="OrdiOffset/Computer" method="_on_AntivirusTickTimer_timeout"]
 [connection signal="timeout" from="OrdiOffset/Computer/MouseInComputer/Timer" to="OrdiOffset/Computer/MouseInComputer" method="_on_Timer_timeout"]
+[connection signal="timeout" from="OrdiOffset/Computer/OverHeatAlert/BlitTimer" to="OrdiOffset/Computer/OverHeatAlert" method="_on_BlitTimer_timeout"]
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/VirusOutScreen/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="timeout" from="OrdiOffset/Computer/Virus/VirusCountDownTimer" to="OrdiOffset/Computer/Virus" method="_on_VirusCountDownTimer_timeout"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Virus/AnimationPlayer" to="OrdiOffset/Computer/Virus" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Virus/Tween" to="OrdiOffset/Computer/Virus" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee/Tween" to="OrdiOffset/Computer/Fumees/Fumee" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee2/Tween" to="OrdiOffset/Computer/Fumees/Fumee2" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee3/Tween" to="OrdiOffset/Computer/Fumees/Fumee3" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee4/Tween" to="OrdiOffset/Computer/Fumees/Fumee4" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee5/Tween" to="OrdiOffset/Computer/Fumees/Fumee5" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee6/Tween" to="OrdiOffset/Computer/Fumees/Fumee6" method="_on_Tween_tween_all_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee7/Tween" to="OrdiOffset/Computer/Fumees/Fumee7" method="_on_Tween_tween_all_completed"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
 [connection signal="finished" from="OrdiOffset/Computer/FanAudioStreamPlayer" to="OrdiOffset/Computer/FanAudioStreamPlayer" method="_on_FanAudioStreamPlayer_finished"]
 [connection signal="pressed" from="OrdiOffset/Computer/TextureButton" to="OrdiOffset/Computer/TextureButton" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="OrdiOffset/Computer/TextureButton2" to="OrdiOffset/Computer/TextureButton2" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="OrdiOffset/Computer/TextureButton3" to="OrdiOffset/Computer/TextureButton3" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="OrdiOffset/Computer/TextureButton4" to="OrdiOffset/Computer/TextureButton4" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/TextureButton5" to="OrdiOffset/Computer/TextureButton5" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer/MouseInComputer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer/Virus" method="_on_Mouse_pressed"]

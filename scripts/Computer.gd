@@ -7,7 +7,6 @@ onready var popup: PanelContainer = get_node(popup_path)
 
 #### HEAT ####
 
-export var fumee_anim_speed_profile: Curve
 export var fumee_lifetime_profile: Curve
 export var fan_pitch_profile: Curve
 
@@ -35,13 +34,11 @@ func set_heat(new_heat):
 		factor = 1
 	
 	elif new_heat > 95.0:
-		$OverHeatAlert.show()
+		$OverHeatAlert.is_to_remain_shown = true
 	
 	else:
-		$OverHeatAlert.hide()
+		$OverHeatAlert.is_to_remain_shown = false
 	
-	$Fumee.lifetime = fumee_lifetime_profile.interpolate_baked(factor)
-	$Fumee.anim_speed = fumee_anim_speed_profile.interpolate_baked(factor)
 	$FanAudioStreamPlayer.pitch_scale = fan_pitch_profile.interpolate_baked(factor)
 	
 	heat = new_heat

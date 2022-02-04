@@ -23,6 +23,7 @@ func _on_VirusCountDownTimer_timeout():
 		can_come = false
 		
 		$AnimationPlayer.play("RESET")
+		print($BackBufferCopy/VirusMovePath/PathFollow2D.unit_offset)
 		$AnimationPlayer.play("go_in_disc")
 		$BackBufferCopy/VirusMovePath.set_new_curve()
 	
@@ -36,17 +37,11 @@ func _on_Mouse_pressed():
 		can_come = true
 		
 		if randf() > 0.5:
-			print("Wealth initial : ", GameData.wealth)
-			
 			var malus = int(5.0*GameData.wealth/6.0)
-			print("Malus : ", malus)
 			GameData.wealth -= malus
 			
-			print(tr("paye_rancon_au_rnasomware_message"))
 			computer.popup.set_text(tr("paye_rancon_au_rnasomware_message") % str(malus))
 			computer.popup.popup()
-			
-			print("Tu t'es libéré du virus, et a payé ta rancon de  " + str(malus) + "C au ransomware")
 			
 			is_infested = false
 		
@@ -63,6 +58,7 @@ func _on_VirusOutScreenButton_pressed():
 
 func _on_Computer_exploded():
 	$AnimationPlayer.play("RESET")
+	$Tween.stop_all()
 	can_come = false
 
 

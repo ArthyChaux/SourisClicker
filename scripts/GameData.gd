@@ -2,11 +2,11 @@ extends Node
 
 
 # Aller à la ligne -> Ctrl + L
-# DATAS : 23
-# DERIVED DATAS : 164
-# SAVING : 202
-# CONST DATAS : 253
-# UPGRADE DATAS : 290
+# DATAS : 32
+# DERIVED DATAS : 192
+# SAVING : 259
+# CONST DATAS : 310
+# UPGRADE DATAS : 350
 
 
 var can_save_data: bool = true
@@ -46,6 +46,7 @@ var mouse_level: int = 1 setget set_mouse_level
 func set_mouse_level(new_mouse_level: int):
 	mouse_level = new_mouse_level
 	emit_signal("mouse_level_changed", new_mouse_level)
+	save_datas()
 
 # VENTIL LEVEL #
 signal ventil_level_changed(new_ventil_level)
@@ -54,6 +55,7 @@ var ventil_level: int = 1 setget set_ventil_level
 func set_ventil_level(new_ventil_level: int):
 	ventil_level = new_ventil_level
 	emit_signal("ventil_level_changed", new_ventil_level)
+	save_datas()
 
 # AUTOCLICK LEVEL #
 signal autoclick_level_changed(new_autoclick_level)
@@ -62,6 +64,7 @@ var autoclick_level: int = 0 setget set_autoclick_level
 func set_autoclick_level(new_autoclick_level: int):
 	autoclick_level = new_autoclick_level
 	emit_signal("autoclick_level_changed", new_autoclick_level)
+	save_datas()
 
 # ANTIVIRUS LEVEL #
 signal antivirus_level_changed(new_antivirus_level)
@@ -70,6 +73,7 @@ var antivirus_level: int = 0 setget set_antivirus_level
 func set_antivirus_level(new_antivirus_level: int):
 	antivirus_level = new_antivirus_level
 	emit_signal("antivirus_level_changed", new_antivirus_level)
+	save_datas()
 
 # ANTIVIRUS LEVEL #
 signal antivirus_duration_changed(new_antivirus_duration)
@@ -90,6 +94,7 @@ var table_level: int = 1 setget set_table_level
 func set_table_level(new_table_level: int):
 	table_level = new_table_level
 	emit_signal("table_level_changed", new_table_level)
+	save_datas()
 
 # MOUSE SKIN #
 signal mouse_skin_changed(new_mouse_skin)
@@ -98,6 +103,7 @@ var mouse_skin: String = "base" setget set_mouse_skin
 func set_mouse_skin(new_mouse_skin: String):
 	mouse_skin = new_mouse_skin
 	emit_signal("mouse_skin_changed", new_mouse_skin)
+	save_datas()
 
 # VENTIL SKIN #
 signal ventil_skin_changed(new_ventil_skin)
@@ -106,6 +112,7 @@ var ventil_skin: String = "base" setget set_ventil_skin
 func set_ventil_skin(new_ventil_skin: String):
 	ventil_skin = new_ventil_skin
 	emit_signal("ventil_skin_changed", new_ventil_skin)
+	save_datas()
 
 # AUTOCLICK SKIN #
 signal autoclick_skin_changed(new_autoclick_skin)
@@ -114,6 +121,7 @@ var autoclick_skin: String = "hiclick" setget set_autoclick_skin
 func set_autoclick_skin(new_autoclick_skin: String):
 	autoclick_skin = new_autoclick_skin
 	emit_signal("autoclick_skin_changed", new_autoclick_skin)
+	save_datas()
 
 # ANTIVIRUS SKIN #
 signal antivirus_skin_changed(new_antivirus_skin)
@@ -122,6 +130,7 @@ var antivirus_skin: String = "abast" setget set_antivirus_skin
 func set_antivirus_skin(new_antivirus_skin: String):
 	antivirus_skin = new_antivirus_skin
 	emit_signal("antivirus_skin_changed", new_antivirus_skin)
+	save_datas()
 
 # TABLE SKIN #
 signal table_skin_changed(new_table_skin)
@@ -130,25 +139,26 @@ var table_skin: String = "bois" setget set_table_skin
 func set_table_skin(new_table_skin: String):
 	table_skin = new_table_skin
 	emit_signal("table_skin_changed", new_table_skin)
+	save_datas()
 
 #### DATAS ####
 
 var datas: Dictionary setget set_datas, get_datas
 
 func set_datas(new_datas: Dictionary):
-	wealth = new_datas["wealth"]
+	self.wealth = new_datas["wealth"]
 	
-	mouse_level = new_datas["mouse_level"]
-	ventil_level = new_datas["ventil_level"]
-	autoclick_level = new_datas["autoclick_level"]
-	antivirus_level = new_datas["antivirus_level"]
-	table_level = new_datas["table_level"]
+	self.mouse_level = new_datas["mouse_level"]
+	self.ventil_level = new_datas["ventil_level"]
+	self.autoclick_level = new_datas["autoclick_level"]
+	self.antivirus_level = new_datas["antivirus_level"]
+	self.table_level = new_datas["table_level"]
 	
-	mouse_skin = new_datas["mouse_skin"]
-	ventil_skin = new_datas["ventil_skin"]
-	autoclick_skin = new_datas["autoclick_skin"]
-	antivirus_skin = new_datas["antivirus_skin"]
-	table_skin = new_datas["table_skin"]
+	self.mouse_skin = new_datas["mouse_skin"]
+	self.ventil_skin = new_datas["ventil_skin"]
+	self.autoclick_skin = new_datas["autoclick_skin"]
+	self.antivirus_skin = new_datas["antivirus_skin"]
+	self.table_skin = new_datas["table_skin"]
 
 func get_datas() -> Dictionary:
 	return {
