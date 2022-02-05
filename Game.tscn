@@ -1630,7 +1630,7 @@ position = Vector2( 7.25796, -43.4054 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 1
+frame = 2
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -1654,6 +1654,7 @@ position = Vector2( 888.981, 257.112 )
 rotation = 2.70384
 
 [node name="VirusOutScreen" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
+visible = false
 rotation = 1.5708
 scale = Vector2( 1.1, 1.1 )
 texture = ExtResource( 19 )

@@ -95,14 +95,14 @@ func _on_MouseSkinMenu_pressed():
 		show_menu_big()
 
 func _on_ComputerSkinMenu_pressed():
-	if TranslationServer.get_locale() == "fr":
-		TranslationServer.set_locale("en")
-	elif TranslationServer.get_locale() == "en":
-		TranslationServer.set_locale("fr_CH")
-	elif TranslationServer.get_locale() == "fr_CH":
-		TranslationServer.set_locale("ja")
-	elif TranslationServer.get_locale() == "ja":
-		TranslationServer.set_locale("fr")
+	if GameData.locale == "fr":
+		GameData.set_locale("en")
+	elif GameData.locale == "en":
+		GameData.set_locale("fr_CH")
+	elif GameData.locale == "fr_CH":
+		GameData.set_locale("ja")
+	elif GameData.locale == "ja":
+		GameData.set_locale("fr")
 	
 	
 	$MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/Label.text = "ordinateur_skins_menu_title"
