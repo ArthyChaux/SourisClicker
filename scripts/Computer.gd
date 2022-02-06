@@ -52,6 +52,9 @@ var heat_loose_factor: float = 0.02
 func _antivirus_duration_changed(new_antivirus_duration):
 	if new_antivirus_duration <= 0:
 		$AntivirusCountDownTickTimer.stop()
+		popup.set_text("antivirus_expire_message")
+		popup.popup()
+	
 	elif new_antivirus_duration > 0 and $AntivirusCountDownTickTimer.is_stopped():
 		$AntivirusCountDownTickTimer.start()
 

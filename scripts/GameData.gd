@@ -513,7 +513,7 @@ const upgrades_data = {
 		
 		autoclicks_list = ["hiclick"],
 		hiclick = {
-			unlock_level = 1,
+			unlock_level = 0,
 			unlock_message = "hiclick_upgrade_message",
 			skin_menu_name = "hiclick_desc",
 			texture = "res://assets/sprites/mouse01.png"
@@ -524,7 +524,7 @@ const upgrades_data = {
 		
 		antivirus_list = ["abast"],
 		abast = {
-			unlock_level = 1,
+			unlock_level = 0,
 			unlock_message = "abast_upgrade_message",
 			texture = "res://assets/sprites/VirusPoulpe01.png"
 		}
@@ -534,7 +534,7 @@ const upgrades_data = {
 		
 		table_list = ["bois"],
 		bois = {
-			unlock_level = 1,
+			unlock_level = 0,
 			unlock_message = "table_bois_upgrade_message",
 			skin_menu_name = "table_bois_desc",
 			texture = "res://assets/texture/70-707718_saturated-oak-texture-oak-wood-texture.jpg"

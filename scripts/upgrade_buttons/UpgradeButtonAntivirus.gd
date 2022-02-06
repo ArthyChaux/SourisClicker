@@ -11,10 +11,11 @@ onready var popup: PanelContainer = get_node(popup_path)
 func _ready():
 	GameData.connect("wealth_changed", self, "update_button_state")
 	GameData.connect("antivirus_level_changed", self, "update_button_state")
+	GameData.connect("antivirus_duration_changed", self, "update_button_state")
 
 
 func buy_an_upgrade():
-	if GameData.wealth >= GameData.antivirus_upgrade_price:
+	if GameData.wealth >= GameData.antivirus_upgrade_price and GameData.antivirus_duration > 0:
 		GameData.wealth -= GameData.antivirus_upgrade_price
 		GameData.antivirus_level += 1
 		
@@ -27,6 +28,10 @@ func buy_an_upgrade():
 				popup.set_text(GameData.upgrades_data["antivirus"][antivirus_key]["unlock_message"])
 				popup.popup()
 	
+	elif GameData.antivirus_duration <= 0:
+		popup.set_text("met_antivirus_a_jour_avant_de_lameliorer_message")
+		popup.popup()
+		
 	else:
 		popup.set_text("economise_un_peu_message")
 		popup.popup()
@@ -40,7 +45,8 @@ func update_button_state(_nothing = null):
 		$Button.disabled = true
 	
 	else:
-		if GameData.wealth >= GameData.antivirus_upgrade_price:
+		$Button.disabled = false
+		if GameData.wealth >= GameData.antivirus_upgrade_price and GameData.antivirus_duration > 0:
 			$Button.modulate = Color("ffffff")
 		else:
 			$Button.modulate = Color("ff2b2b")

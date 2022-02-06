@@ -24,7 +24,7 @@
 [ext_resource path="res://assets/sprites/GrosseSourisTriangle01.png" type="Texture" id=22]
 [ext_resource path="res://assets/sprites/SourisMieux01.png" type="Texture" id=23]
 [ext_resource path="res://assets/sprites/mouse01.png" type="Texture" id=24]
-[ext_resource path="res://assets/sprites/fumee/fumee03.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/icons/IconeDuJeu196.png" type="Texture" id=25]
 [ext_resource path="res://assets/sprites/overheat_alert.png" type="Texture" id=26]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonAntivirus.gd" type="Script" id=27]
 [ext_resource path="res://scripts/upgrade_buttons/UpgradeButtonVentil.gd" type="Script" id=28]
@@ -1081,7 +1081,7 @@ script/source = "extends TextureButton
 
 
 func _on_TextureButton_pressed():
-	get_parent().get_node(\"Virus\")._on_VirusCountDownTimer_timeout()
+	get_parent().get_parent().get_node(\"Virus\")._on_VirusCountDownTimer_timeout()
 "
 
 [sub_resource type="GDScript" id=55]
@@ -1630,7 +1630,7 @@ position = Vector2( 7.25796, -43.4054 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 2
+frame = 1
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -1786,71 +1786,89 @@ fan_starting = ExtResource( 52 )
 fan_standard = ExtResource( 54 )
 fan_ending = ExtResource( 53 )
 
-[node name="TextureButton" type="TextureButton" parent="OrdiOffset/Computer"]
+[node name="DebugKeys" type="Control" parent="OrdiOffset/Computer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -127.0
+margin_right = -127.0
+margin_bottom = -127.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.493
 anchor_top = 0.199
 anchor_right = 0.493
 anchor_bottom = 0.199
-margin_left = -162.208
-margin_top = -129.944
-margin_right = -66.208
-margin_bottom = -73.944
+margin_left = -36.8571
+margin_top = -80.0
+margin_right = 59.1429
+margin_bottom = -24.0
+expand = true
 script = SubResource( 52 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="OrdiOffset/Computer"]
+[node name="TextureButton2" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.738201
 anchor_top = 0.431772
 anchor_right = 0.738201
 anchor_bottom = 0.431772
-margin_left = -186.979
-margin_top = -132.534
-margin_right = -143.979
-margin_bottom = -117.534
+margin_left = 1.278
+margin_top = -23.569
+margin_right = 44.278
+margin_bottom = -8.569
+expand = true
 script = SubResource( 53 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="TextureButton3" type="TextureButton" parent="OrdiOffset/Computer"]
+[node name="TextureButton3" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = -0.671402
 anchor_top = 0.529705
 anchor_right = -0.671402
 anchor_bottom = 0.529705
-margin_left = 132.879
-margin_top = -157.605
-margin_right = 171.879
-margin_bottom = -148.605
+margin_left = -39.655
+margin_top = -22.775
+margin_right = -0.654999
+margin_bottom = -13.775
+expand = true
 script = SubResource( 54 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="TextureButton4" type="TextureButton" parent="OrdiOffset/Computer"]
+[node name="TextureButton4" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.158
 anchor_top = 0.169
 anchor_right = 0.158
 anchor_bottom = 0.169
-margin_left = -84.448
-margin_top = -118.264
-margin_right = -74.448
-margin_bottom = -80.264
+margin_left = -46.0
+margin_top = -75.4286
+margin_right = -36.0
+margin_bottom = -37.4286
+expand = true
 script = SubResource( 55 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton5" type="TextureButton" parent="OrdiOffset/Computer"]
+[node name="TextureButton5" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.158
 anchor_top = 0.169
 anchor_right = 0.158
 anchor_bottom = 0.169
-margin_left = 19.552
-margin_top = -135.264
-margin_right = 47.552
-margin_bottom = -97.264
+margin_left = 60.2857
+margin_top = -82.2857
+margin_right = 88.2857
+margin_bottom = -44.2857
+expand = true
 script = SubResource( 57 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2910,7 +2928,7 @@ margin_right = 128.0
 margin_bottom = 1698.0
 rect_min_size = Vector2( 128, 128 )
 size_flags_horizontal = 3
-texture_normal = ExtResource( 25 )
+texture_normal = ExtResource( 38 )
 expand = true
 stretch_mode = 5
 
@@ -2920,7 +2938,7 @@ margin_right = 128.0
 margin_bottom = 1846.0
 rect_min_size = Vector2( 128, 128 )
 size_flags_horizontal = 3
-texture_normal = ExtResource( 38 )
+texture_normal = ExtResource( 25 )
 expand = true
 stretch_mode = 5
 
@@ -3104,11 +3122,11 @@ anims/show_popup = SubResource( 8 )
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee7/Tween" to="OrdiOffset/Computer/Fumees/Fumee7" method="_on_Tween_tween_all_completed"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
 [connection signal="finished" from="OrdiOffset/Computer/FanAudioStreamPlayer" to="OrdiOffset/Computer/FanAudioStreamPlayer" method="_on_FanAudioStreamPlayer_finished"]
-[connection signal="pressed" from="OrdiOffset/Computer/TextureButton" to="OrdiOffset/Computer/TextureButton" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="OrdiOffset/Computer/TextureButton2" to="OrdiOffset/Computer/TextureButton2" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="OrdiOffset/Computer/TextureButton3" to="OrdiOffset/Computer/TextureButton3" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="OrdiOffset/Computer/TextureButton4" to="OrdiOffset/Computer/TextureButton4" method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="OrdiOffset/Computer/TextureButton5" to="OrdiOffset/Computer/TextureButton5" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton" to="OrdiOffset/Computer/DebugKeys/TextureButton" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton2" to="OrdiOffset/Computer/DebugKeys/TextureButton2" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton3" to="OrdiOffset/Computer/DebugKeys/TextureButton3" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton4" to="OrdiOffset/Computer/DebugKeys/TextureButton4" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton5" to="OrdiOffset/Computer/DebugKeys/TextureButton5" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer/MouseInComputer" method="_on_Mouse_pressed"]
 [connection signal="pressed" from="Mouse" to="OrdiOffset/Computer/Virus" method="_on_Mouse_pressed"]
