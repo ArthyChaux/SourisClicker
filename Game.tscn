@@ -1510,7 +1510,7 @@ autostart = true
 [node name="AntivirusCountDownTickTimer" type="Timer" parent="OrdiOffset/Computer"]
 
 [node name="Screen" type="Sprite" parent="OrdiOffset/Computer"]
-position = Vector2( 8.57143, -43 )
+position = Vector2( 9, -43 )
 scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 18 )
 
@@ -1606,13 +1606,13 @@ region_rect = Rect2( 0, 0, 0, 14 )
 [node name="BlackScreen" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 8.571, -43 )
+position = Vector2( 9, -43 )
 scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 18 )
 
 [node name="BlackScreen2" type="Sprite" parent="OrdiOffset/Computer"]
 visible = false
-position = Vector2( 8.571, -43 )
+position = Vector2( 9, -43 )
 scale = Vector2( 1.002, 1.002 )
 texture = ExtResource( 45 )
 hframes = 15
@@ -1639,7 +1639,6 @@ position = Vector2( 10.8158, 9.53497 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 35 )
 animation = "in_screen"
-frame = 1
 playing = true
 
 [node name="VirusMovePath" type="Path2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
