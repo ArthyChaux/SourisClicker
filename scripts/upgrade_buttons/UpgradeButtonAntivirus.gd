@@ -37,7 +37,7 @@ func buy_an_upgrade():
 		popup.popup()
 
 func update_button_state(_nothing = null):
-	$MarginContainer/HBoxContainer/VBoxContainer/PriceLabel.text = tr("upgrade_under_tab_antivirus_desc") % [GameData.antivirus_level, GameData.antivirus_upgrade_price, int(GameData.antivirus_proba_tue_virus/100)]
+	$MarginContainer/HBoxContainer/VBoxContainer/PriceLabel.text = tr("upgrade_under_tab_antivirus_desc") % [GameData.antivirus_level, GameData.antivirus_upgrade_price, int(GameData.antivirus_proba_tue_virus*10000)/100.0]
 	
 	if GameData.antivirus_level >= GameData.upgrades_data["antivirus"]["max_upgrade_level"]:
 		$Button.modulate = Color("828282")

@@ -330,7 +330,10 @@ func save_datas(other_datas = null, force_saving = false):
 			for key in other_datas.keys():
 				config_file.set_value("datas", key, other_datas[key])
 		
-		config_file.save(SAVE_PATH)
+		var result = config_file.save(SAVE_PATH)
+		
+		if not result == OK:
+			printerr("Sauvegarde impossible")
 		
 
 #####################
@@ -539,5 +542,17 @@ const upgrades_data = {
 			skin_menu_name = "table_bois_desc",
 			texture = "res://assets/texture/70-707718_saturated-oak-texture-oak-wood-texture.jpg"
 		}
+	}
+}
+
+const virus_datas: Dictionary = {
+	virus_liste = ["pouple", "pirate"],
+	poulpe = {
+		nominal_speed = 1000,
+		proba_weight = 2
+	},
+	pirate = {
+		nominal_speed = 1000,
+		proba_weight = 2
 	}
 }
