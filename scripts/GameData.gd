@@ -546,13 +546,15 @@ const upgrades_data = {
 }
 
 const virus_datas: Dictionary = {
-	virus_liste = ["pouple", "pirate"],
+	total_proba_weight = 4,
+	
+	virus_liste = ["poulpe", "pirate"],
 	poulpe = {
 		nominal_speed = 1000,
-		proba_weight = 2
+		proba_weight = 2 # int
 	},
 	pirate = {
-		nominal_speed = 1000,
+		nominal_speed = 300,
 		proba_weight = 2
 	}
 }
