@@ -20,8 +20,6 @@ func _ready():
 	timer.connect("timeout", self, "save_datas")
 	timer.start()
 	
-	print("Setting locale to ", OS.get_locale_language())
-	self.locale = OS.get_locale_language()
 
 ###############
 #### DATAS ####
@@ -305,17 +303,24 @@ func load_datas():
 	var result = config_file.load(SAVE_PATH)
 	
 	if not result == OK:
-		printerr("Failed loading datas file. Error code is %s" % result)
-		return null
+		print("Failed loading datas file. Error code is %s" % result)
+		
+		set_datas(base_data)
+		
+		print("Setting locale to ", OS.get_locale_language())
+		set_locale(OS.get_locale_language(), false)
+		return
 	
 	var loaded_datas: Dictionary = base_data.duplicate()
 	
 	for key in loaded_datas.keys(): 
 		loaded_datas[key] = config_file.get_value("datas", key, loaded_datas[key])
 	
+	print("loaded data : ", JSON.print(loaded_datas, "\t"))
+	
 	set_datas(loaded_datas)
 	
-	print("loaded datas: ", JSON.print(self.datas, "\t"))
+#	print("new datas: ", JSON.print(self.datas, "\t"))
 	emit_signal("_data_loaded")
 
 func save_datas(other_datas = null, force_saving = false):
@@ -325,10 +330,12 @@ func save_datas(other_datas = null, force_saving = false):
 			
 			for key in save_datas.keys():
 				config_file.set_value("datas", key, save_datas[key])
+#			print("saved datas: ", JSON.print(save_datas, "\t"))
 		
 		else:
 			for key in other_datas.keys():
 				config_file.set_value("datas", key, other_datas[key])
+#			print("saved datas: ", JSON.print(other_datas, "\t"))
 		
 		var result = config_file.save(SAVE_PATH)
 		

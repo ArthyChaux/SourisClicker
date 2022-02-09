@@ -1,5 +1,10 @@
 extends Node2D
 
+
+export var popup_path: NodePath
+onready var popup: PanelContainer = get_node(popup_path)
+
+
 onready var computer = get_parent()
 
 export var is_infested: bool = false
@@ -25,22 +30,6 @@ func _on_VirusCountDownTimer_timeout():
 		print("Un virus arrive !")
 		can_come = false
 		
-		"""
-const virus_datas: Dictionary = {
-	total_proba_weight = 4,
-	
-	virus_liste = ["pouple", "pirate"],
-	poulpe = {
-		nominal_speed = 1000,
-		proba_weight = 2
-	},
-	pirate = {
-		nominal_speed = 1000,
-		proba_weight = 2
-	}
-}
-		"""
-		
 		var number = randi() % GameData.virus_datas.total_proba_weight + 1
 		var p_n = number
 		
@@ -57,13 +46,17 @@ const virus_datas: Dictionary = {
 		
 		if current_virus_name == "poulpe":
 			print("playing poulpe animation")
-			$AnimationPlayer.play("RESET")
-			$AnimationPlayer.queue("poulpe_discrete_look")
+			$AnimationPlayer.play("poulpe_discrete_look")
 			$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
+			
+			$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+			$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.show()
 		
 		elif current_virus_name == "pirate":
-			$AnimationPlayer.play("RESET")
 			$BackBufferCopy/VirusMovePath.set_new_curve_pirate()
+			
+			$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+			$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.show()
 			virus_move_along_curve()
 	
 	elif can_come:
@@ -100,21 +93,36 @@ func _on_Computer_exploded():
 	can_come = false
 
 
-func _on_Tween_tween_all_completed():
-	print("Un virus a penetre l'ordinateur")
+
+func _on_Tween_tween_completed(object, key):
+	if object == $BackBufferCopy/VirusMovePath/PathFollow2D:
+		print("Un virus a penetre l'ordinateur")
+		
+		if randf() > GameData.antivirus_proba_tue_virus:
+			print("Le virus est passé (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
+			
+			match current_virus_name:
+				"poulpe":
+					$AnimationPlayer.play("poulpe_take_control_of_computer")
+				
+				"pirate":
+					$AnimationPlayer.play("pirate_passed_antivirus")
+		
+		else:
+			print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
+			
+			$AnimationPlayer.play("antivirus_wins")
 	
-	if randf() > GameData.antivirus_proba_tue_virus:
-		print("L'ordinateur est infesté (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
-		$AnimationPlayer.play("RESET")
-		$AnimationPlayer.queue("take_control_of_computer")
-	
-	else:
-		print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
-		$AnimationPlayer.play("RESET")
-		$AnimationPlayer.queue("antivirus_wins")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "virus_ecrase":
 		can_come = true
 		$BackBufferCopy/VirusMovePath/PathFollow2D.unit_offset = 0
+	
+	elif anim_name == "pirate_passed_antivirus":
+		popup.set_text("pirate_vol_souris_message")
+		popup.popup()
+		
+		can_come = true
+

@@ -12,7 +12,7 @@ func _ready():
 func pop():
 	var duration = computer.fumee_lifetime_profile.interpolate_baked(0.01 * computer.heat - 0.2) + randf()
 	
-	var dist = speed * duration * rand_range(0.9, 1.1)
+	var dist = speed * duration
 	var max_opacity = 1 - atan(0.1*duration) * 2/PI
 	var offset = Vector2(rand_range(-11, 11), rand_range(-11, 11))
 	
