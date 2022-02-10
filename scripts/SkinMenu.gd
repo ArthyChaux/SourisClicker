@@ -6,8 +6,12 @@ onready var show_status = SHOW_STATUS.CLOSE
 
 export var mouse_path: NodePath
 onready var mouse: TextureButton = get_node(mouse_path)
+export var table_path: NodePath
+onready var table: TextureRect = get_node(table_path)
 
-export var button_skin_choose: PackedScene
+export var button_mouse_skin_choose: PackedScene
+export var button_computer_skin_choose: PackedScene
+export var button_table_skin_choose: PackedScene
 onready var skin_list_node = $MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList
 
 #### FUNC SHOW / HIDE MENU #####
@@ -51,13 +55,15 @@ func _mouse_skin_changed(new_mouse_skin):
 	mouse.texture_normal = load(GameData.upgrades_data["mouse"][new_mouse_skin]["texture"])
 	mouse.texture_pressed = load(GameData.upgrades_data["mouse"][new_mouse_skin]["tex_ture"])
 
+func _table_skin_changed(new_table_skin):
+	table.texture = load(GameData.upgrades_data.table[new_table_skin]["texture"])
+
 #### MEMBERS ####
 
 func _ready():
 	GameData.connect("mouse_skin_changed", self, "_mouse_skin_changed")
-	GameData.connect("ventil_skin_changed", self, "_ventil_skin_changed")
-	GameData.connect("autoclick_skin_changed", self, "_autoclick_skin_changed")
-	GameData.connect("antivirus_skin_changed", self, "_antivirus_skin_changed")
+#	GameData.connect("autoclick_skin_changed", self, "_autoclick_skin_changed")
+#	GameData.connect("antivirus_skin_changed", self, "_antivirus_skin_changed")
 	GameData.connect("table_skin_changed", self, "_table_skin_changed")
 	
 	$AcceptDialog/ScrollContainer/VBoxContainer/Label.set_process(false)
@@ -77,7 +83,7 @@ func _on_MouseSkinMenu_pressed():
 			child.queue_free()
 	
 	for mouse_key in GameData.upgrades_data["mouse"]["mouses_list"]:
-		var button: MarginContainer = button_skin_choose.instance()
+		var button: MarginContainer = button_mouse_skin_choose.instance()
 		skin_list_node.add_child(button)
 		button.skin_name = mouse_key
 		
@@ -95,16 +101,6 @@ func _on_MouseSkinMenu_pressed():
 		show_menu_big()
 
 func _on_ComputerSkinMenu_pressed():
-	if GameData.locale == "fr":
-		GameData.set_locale("en")
-	elif GameData.locale == "en":
-		GameData.set_locale("fr_CH")
-	elif GameData.locale == "fr_CH":
-		GameData.set_locale("ja")
-	elif GameData.locale == "ja":
-		GameData.set_locale("fr")
-	
-	
 	$MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/Label.text = "ordinateur_skins_menu_title"
 	
 	for child in skin_list_node.get_children():
@@ -113,28 +109,18 @@ func _on_ComputerSkinMenu_pressed():
 			child.queue_free()
 	
 	for ventil_key in GameData.upgrades_data["ventil"]["ventils_list"]:
-		var button: MarginContainer = button_skin_choose.instance()
+		var button: MarginContainer = button_computer_skin_choose.instance()
 		skin_list_node.add_child(button)
+		button.skin_name = ventil_key
 		
 		if GameData.ventil_skin == ventil_key:
-			var data = GameData.upgrades_data["ventil"][ventil_key]
-			button.get_node("MarginContainer/HBoxContainer/Icon").texture = load(data["texture"])
-			button.get_node("MarginContainer/HBoxContainer/TitleLabel").text = data["skin_menu_name"]
-			
-			button.get_node("Button").modulate = Color("00bcff")
-			button.get_node("Button").disabled = true
+			button.set_button_current_skin()
 		
 		elif GameData.ventil_level >= GameData.upgrades_data["ventil"][ventil_key]["unlock_level"]:
-			var data = GameData.upgrades_data["ventil"][ventil_key]
-			button.get_node("MarginContainer/HBoxContainer/Icon").texture = load(data["texture"])
-			button.get_node("MarginContainer/HBoxContainer/TitleLabel").text = data["skin_menu_name"]
-			
-			button.texture = load(data["texture"])
+			button.set_button_available()
 		
 		else:
-			button.modulate = Color("828282")
-		
-		button.skin_name = ventil_key
+			button.set_button_disabled()
 	
 	if show_status != SHOW_STATUS.BIG:
 		show_menu_big()
@@ -148,28 +134,18 @@ func _on_TableSkinMenu_pressed():
 			child.queue_free()
 	
 	for table_key in GameData.upgrades_data["table"]["table_list"]:
-		var button: MarginContainer = button_skin_choose.instance()
+		var button: MarginContainer = button_table_skin_choose.instance()
 		skin_list_node.add_child(button)
+		button.skin_name = table_key
 		
 		if GameData.table_skin == table_key:
-			var data = GameData.upgrades_data["table"][table_key]
-			button.get_node("MarginContainer/HBoxContainer/Icon").texture = load(data["texture"])
-			button.get_node("MarginContainer/HBoxContainer/TitleLabel").text = data["skin_menu_name"]
-			
-			button.get_node("Button").modulate = Color("00bcff")
-			button.get_node("Button").disabled = true
+			button.set_button_current_skin()
 		
-		elif GameData.table_level >= GameData.upgrades_data["table"][table_key]["unlock_level"]:
-			var data = GameData.upgrades_data["table"][table_key]
-			button.get_node("MarginContainer/HBoxContainer/Icon").texture = load(data["texture"])
-			button.get_node("MarginContainer/HBoxContainer/TitleLabel").text = data["skin_menu_name"]
-			
-			button.texture = load(data["texture"])
+		elif GameData.table_level >= GameData.upgrades_data.table[table_key]["unlock_level"]:
+			button.set_button_available()
 		
 		else:
-			button.modulate = Color("828282")
-		
-		button.skin_name = table_key
+			button.set_button_disabled()
 	
 	if show_status != SHOW_STATUS.BIG:
 		show_menu_big()

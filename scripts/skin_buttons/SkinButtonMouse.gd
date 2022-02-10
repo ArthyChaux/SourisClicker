@@ -1,7 +1,7 @@
 extends MarginContainer
 
 
-export var skin_menu_path: NodePath
+export var skin_menu_path: String
 onready var skin_menu: Control = get_node(skin_menu_path)
 
 export var skin_name: String
@@ -14,11 +14,11 @@ func _mouse_skin_changed(new_mouse_skin):
 	if new_mouse_skin == skin_name:
 		set_button_current_skin()
 	
-	elif GameData.mouse_level >= GameData.upgrades_data["mouse"][skin_name]["unlock_level"]:
+	elif GameData.mouse_level >= GameData.upgrades_data.mouse[skin_name]["unlock_level"]:
 		set_button_available()
 
 func _mouse_level_changed(new_mouse_level):
-	if new_mouse_level >= GameData.upgrades_data["mouse"][skin_name]["unlock_level"]:
+	if new_mouse_level >= GameData.upgrades_data.mouse[skin_name]["unlock_level"]:
 		set_button_available()
 	
 	else:

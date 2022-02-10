@@ -8,7 +8,7 @@ onready var popup: PanelContainer = get_node(popup_path)
 onready var computer = get_parent()
 
 export var is_infested: bool = false
-var can_come: bool = true
+export var can_come: bool = true
 
 
 var current_virus_name: String
@@ -41,23 +41,39 @@ func _on_VirusCountDownTimer_timeout():
 				number -= GameData.virus_datas[virus]["proba_weight"]
 		
 		print("Virus is : ", current_virus_name, ", number : ", p_n, ", liste : ", GameData.virus_datas.virus_liste)
+
 		current_virus_speed = GameData.virus_datas[current_virus_name]["nominal_speed"]
 		print("speed : ", current_virus_speed)
 		
-		if current_virus_name == "poulpe":
-			print("playing poulpe animation")
-			$AnimationPlayer.play("poulpe_discrete_look")
-			$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
-			
-			$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
-			$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.show()
+		$BackBufferCopy/MaskVirusOutPolygon.show()
+		$BackBufferCopy/MaskVirusInPolygon.hide()
 		
-		elif current_virus_name == "pirate":
-			$BackBufferCopy/VirusMovePath.set_new_curve_pirate()
+		match current_virus_name:
+			"poulpe":
+				print("playing poulpe animation")
+				$AnimationPlayer.play("poulpe_discrete_look")
+				$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.show()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+		
+			"pirate":
+				$BackBufferCopy/VirusMovePath.set_new_curve_pirate()
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.show()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				virus_move_along_curve()
 			
-			$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
-			$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.show()
-			virus_move_along_curve()
+			"bug":
+				$BackBufferCopy/VirusMovePath.set_new_curve_bug()
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.show()
+				virus_move_along_curve()
+				
 	
 	elif can_come:
 		print("Virus Not coming")
@@ -77,9 +93,6 @@ func _on_Mouse_pressed():
 				
 				computer.popup.set_text(tr("paye_rancon_au_rnasomware_message") % str(malus))
 				computer.popup.popup()
-			
-			"bug":
-				TranslationServer.set_locale("fr_CH")
 
 
 func _on_VirusOutScreenButton_pressed():
@@ -107,6 +120,10 @@ func _on_Tween_tween_completed(object, key):
 				
 				"pirate":
 					$AnimationPlayer.play("pirate_passed_antivirus")
+				
+				"bug":
+					can_come = true
+					TranslationServer.set_locale("fr_CH")
 		
 		else:
 			print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")

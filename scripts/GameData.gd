@@ -298,6 +298,7 @@ func get_table_upgrade_price():
 ################################
 
 signal _data_loaded()
+signal _data_saved(is_error)
 
 func load_datas():
 	var result = config_file.load(SAVE_PATH)
@@ -341,7 +342,10 @@ func save_datas(other_datas = null, force_saving = false):
 		
 		if not result == OK:
 			printerr("Sauvegarde impossible")
+			emit_signal("_data_saved", true)
 		
+		else:
+			emit_signal("_data_saved", false)
 
 #####################
 #### CONST DATAS ####
@@ -395,6 +399,8 @@ const upgrades_data = {
 		base = {
 			unlock_level = 0,
 			unlock_message = "mouse_base_upgrade_message",
+			wireless = false,
+			
 			skin_menu_name = "base_mouse_desc",
 			texture = "res://assets/sprites/souris101.png",
 			tex_ture = "res://assets/sprites/souris1.201.png"
@@ -402,6 +408,8 @@ const upgrades_data = {
 		triangle = {
 			unlock_level = 10,
 			unlock_message = "mouse_triangle_upgrade_message",
+			wireless = false,
+			
 			skin_menu_name = "triangle_mouse_desc",
 			texture = "res://assets/sprites/GrosseSourisTriangle01.png",
 			tex_ture = "res://assets/sprites/GrosseSourisTriangle02.png"
@@ -409,6 +417,8 @@ const upgrades_data = {
 		blanche = {
 			unlock_level = 20,
 			unlock_message = "mouse_blanche_upgrade_message",
+			wireless = false,
+			
 			skin_menu_name = "blanche_mouse_desc",
 			texture = "res://assets/sprites/SourisBlanche02.png",
 			tex_ture = "res://assets/sprites/SourisBlanche01.png"
@@ -416,6 +426,8 @@ const upgrades_data = {
 		mieux = {
 			unlock_level = 30,
 			unlock_message = "mouse_mieux_upgrade_message",
+			wireless = false,
+			
 			skin_menu_name = "mieux_mouse_desc",
 			texture = "res://assets/sprites/SourisMieux01.png",
 			tex_ture = "res://assets/sprites/SourisMieux02.png"
@@ -423,20 +435,26 @@ const upgrades_data = {
 		amongus = {
 			unlock_level = 40,
 			unlock_message = "mouse_amongus_upgrade_message",
+			wireless = true,
+			
 			skin_menu_name = "amongus_mouse_desc",
 			texture = "res://assets/sprites/VirusPoulpe01.png",
 			tex_ture = "res://assets/sprites/VirusPoulpe02.png"
 		},
 		coccinelle = {
 			unlock_level = 50,
-			unlock_message = "mouse_coccinelle_upgrade_message",
-			skin_menu_name = "coccinelle_mouse_desc",
-			texture = "res://assets/sprites/thermometre_progress_bayer.png",
-			tex_ture = "res://assets/sprites/thermometre_progress_gradient.png"
+			unlock_message = "coxy_upgrade_message",
+			wireless = true,
+			
+			skin_menu_name = "coxy_mouse_desc",
+			texture = "res://assets/sprites/coxy01.png",
+			tex_ture = "res://assets/sprites/coxy12.png"
 		},
 		gamerblue = {
 			unlock_level = 60,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_blue",
 			skin_menu_name = "gamerblue_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_blue01.png",
@@ -445,6 +463,8 @@ const upgrades_data = {
 		gamercyan = {
 			unlock_level = 70,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_cyan",
 			skin_menu_name = "gamercyan_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_cyan01.png",
@@ -453,6 +473,8 @@ const upgrades_data = {
 		gamergreen = {
 			unlock_level = 80,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_green",
 			skin_menu_name = "gamergreen_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_green01.png",
@@ -461,6 +483,8 @@ const upgrades_data = {
 		gamerorange = {
 			unlock_level = 90,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_orange",
 			skin_menu_name = "gamerorange_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_orange01.png",
@@ -469,6 +493,8 @@ const upgrades_data = {
 		gamerpink = {
 			unlock_level = 100,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_pink",
 			skin_menu_name = "gamerpink_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_pink01.png",
@@ -477,6 +503,8 @@ const upgrades_data = {
 		gamerred = {
 			unlock_level = 110,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_red",
 			skin_menu_name = "gamerred_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_red01.png",
@@ -485,6 +513,8 @@ const upgrades_data = {
 		gamerviolet = {
 			unlock_level = 120,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_violet",
 			skin_menu_name = "gamerviolet_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_violet01.png",
@@ -493,6 +523,8 @@ const upgrades_data = {
 		gamerwhite = {
 			unlock_level = 130,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_white",
 			skin_menu_name = "gamerwhite_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_white01.png",
@@ -501,6 +533,8 @@ const upgrades_data = {
 		gameryell = {
 			unlock_level = 140,
 			unlock_message = "mouse_gamer_upgrade_message",
+			wireless = true,
+			
 			gamer_mouse_color = "color_yellow",
 			skin_menu_name = "gameryell_mouse_desc",
 			texture = "res://assets/sprites/souris_gamer/souris_gamer_yell01.png",
@@ -510,12 +544,30 @@ const upgrades_data = {
 	ventil = {
 		max_upgrade_level = 9223372036854775807,
 		
-		ventils_list = ["base"],
+		ventils_list = ["base", "pink"],
 		base = {
 			unlock_level = 0,
 			unlock_message = "ventil_base_upgrade_message",
 			skin_menu_name = "base_computer_desc",
-			texture = "res://assets/sprites/Ordi01.png"
+			
+			texture_wire_off = "res://assets/sprites/ordi_wire_off.png",
+			texture_wire_ok = "res://assets/sprites/ordi_wire_ok.png",
+			texture_wire_wrong = "res://assets/sprites/ordi_wire_wrong.png",
+			texture_wireless_off = "res://assets/sprites/ordi_wireless_off.png",
+			texture_wireless_ok = "res://assets/sprites/ordi_wireless_ok.png",
+			texture_wireless_wrong = "res://assets/sprites/ordi_wireless_wrong.png",
+		},
+		pink = {
+			unlock_level = 10,
+			unlock_message = "ventil_pink_upgrade_message",
+			skin_menu_name = "pink_computer_desc",
+			
+			texture_wire_off = "res://assets/sprites/OrdiPink05.png",
+			texture_wire_ok = "res://assets/sprites/OrdiPink01.png",
+			texture_wire_wrong = "res://assets/sprites/OrdiPink02.png",
+			texture_wireless_off = "res://assets/sprites/OrdiPink06.png",
+			texture_wireless_ok = "res://assets/sprites/OrdiPink03.png",
+			texture_wireless_wrong = "res://assets/sprites/OrdiPink04.png",
 		}
 	},
 	autoclick = {
@@ -540,28 +592,38 @@ const upgrades_data = {
 		}
 	},
 	table = {
-		max_upgrade_level = 1,
+		max_upgrade_level = 2,
 		
-		table_list = ["bois"],
+		table_list = ["bois", "camouflage"],
 		bois = {
 			unlock_level = 0,
 			unlock_message = "table_bois_upgrade_message",
 			skin_menu_name = "table_bois_desc",
 			texture = "res://assets/texture/70-707718_saturated-oak-texture-oak-wood-texture.jpg"
+		},
+		camouflage = {
+			unlock_level = 2,
+			unlock_message = "table_camouflage_upgrade_message",
+			skin_menu_name = "table_camouflage_desc",
+			texture = "res://assets/sprites/tableCamouflage01.png"
 		}
 	}
 }
 
 const virus_datas: Dictionary = {
-	total_proba_weight = 4,
+	total_proba_weight = 6,
 	
-	virus_liste = ["poulpe", "pirate"],
+	virus_liste = ["poulpe", "pirate", "bug"],
 	poulpe = {
-		nominal_speed = 1000,
-		proba_weight = 2 # int
+		nominal_speed = 900,
+		proba_weight = 2
 	},
 	pirate = {
 		nominal_speed = 300,
+		proba_weight = 2
+	},
+	bug = {
+		nominal_speed = 2000,
 		proba_weight = 2
 	}
 }

@@ -5,6 +5,15 @@ onready var racine: Control = get_parent().get_parent()
 export var popup_path: NodePath
 onready var popup: PanelContainer = get_node(popup_path)
 
+
+export var texture_wire_off: Texture
+export var texture_wire_ok: Texture
+export var texture_wire_wrong: Texture
+export var texture_wireless_off: Texture
+export var texture_wireless_ok: Texture
+export var texture_wireless_wrong: Texture
+
+
 #### HEAT ####
 
 export var fumee_lifetime_profile: Curve
@@ -64,13 +73,54 @@ var backup = {}
 
 func _ready():
 	GameData.connect("_data_loaded", self, "data_loaded")
+	GameData.connect("_data_saved", self, "data_saved")
 	GameData.connect("antivirus_duration_changed", self, "_antivirus_duration_changed")
+	GameData.connect("mouse_skin_changed", self, "set_new_wireless")
+	GameData.connect("ventil_skin_changed", self, "set_textures")
 	
 	$FanAudioStreamPlayer.start_fanning()
 
 func data_loaded():
 	backup = GameData.datas
 
+func data_saved(is_error):
+	if GameData.upgrades_data.mouse[GameData.mouse_skin]["wireless"]:
+		if is_error:
+			texture = texture_wireless_wrong
+		else:
+			texture = texture_wireless_ok
+		$ResetComputerSkinTimer.start()
+	
+	else:
+		if is_error:
+			texture = texture_wire_wrong
+		else:
+			texture = texture_wire_ok
+		$ResetComputerSkinTimer.start()
+
+func set_new_wireless(new_mouse_skin: String):
+	if GameData.upgrades_data.mouse[new_mouse_skin]["wireless"]:
+		texture = texture_wireless_off
+	
+	else:
+		texture = texture_wire_off
+
+func set_textures(new_ventil_skin: String):
+	texture_wire_off = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wire_off"])
+	texture_wire_ok = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wire_ok"])
+	texture_wire_wrong = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wire_wrong"])
+	texture_wireless_off = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wireless_off"])
+	texture_wireless_ok = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wireless_ok"])
+	texture_wireless_wrong = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wireless_wrong"])
+	
+	set_new_wireless(GameData.mouse_skin)
+
+func _on_ResetComputerSkinTimer_timeout():
+	if GameData.upgrades_data.mouse[GameData.mouse_skin]["wireless"]:
+		texture = texture_wireless_off
+	
+	else:
+		texture = texture_wire_off
 
 #### SIGNALS ####
 
@@ -108,3 +158,5 @@ func _on_AntivirusTickTimer_timeout():
 func _on_AutoclickTimer_timeout():
 	GameData.wealth += GameData.clicks_per_seconds
 	self.heat += GameData.heat_increase_on_click * GameData.clicks_per_seconds
+
+

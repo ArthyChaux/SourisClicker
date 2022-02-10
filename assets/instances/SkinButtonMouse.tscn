@@ -17,7 +17,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-skin_menu_path = NodePath("../../../../../../..")
+skin_menu_path = "../../../../../../../"
 
 [node name="Button" type="TextureButton" parent="."]
 margin_right = 564.0

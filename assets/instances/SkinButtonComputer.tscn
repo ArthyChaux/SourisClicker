@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/skin_buttons/SkinButtonComputer.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=10]
+colors = PoolColorArray( 0.0664062, 0.0664062, 0.0664062, 1, 0.375, 0.375, 0.375, 1 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+
+[node name="SkinButtonMouse" type="MarginContainer"]
+margin_top = 147.0
+margin_right = 564.0
+margin_bottom = 291.0
+mouse_filter = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+skin_menu_path = "../../../../../../../"
+
+[node name="Button" type="TextureButton" parent="."]
+margin_right = 564.0
+margin_bottom = 144.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = SubResource( 11 )
+expand = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 564.0
+margin_bottom = 144.0
+mouse_filter = 2
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 556.0
+margin_bottom = 136.0
+mouse_filter = 2
+custom_constants/separation = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+margin_left = 135.0
+margin_right = 548.0
+margin_bottom = 128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+valign = 1
+autowrap = true
+
+[connection signal="pressed" from="Button" to="." method="_on_SkinButton_pressed"]

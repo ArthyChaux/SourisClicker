@@ -14,6 +14,7 @@ config/name="SourisClicker"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://assets/sprites/icons/IconeDuJeu196.ico"
+config/quit_on_go_back=false
 
 [autoload]
 

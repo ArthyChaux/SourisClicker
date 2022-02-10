@@ -32,7 +32,7 @@ func buy_an_upgrade():
 		popup.popup()
 
 func update_button_state(_nothing = null):
-	$MarginContainer/HBoxContainer/VBoxContainer/PriceLabel.text = tr("upgrade_under_tab_no_level_desc") % [GameData.table_level]
+	$MarginContainer/HBoxContainer/VBoxContainer/PriceLabel.text = tr("upgrade_under_tab_no_level_desc") % [GameData.table_upgrade_price]
 	
 	if GameData.table_level >= GameData.upgrades_data["table"]["max_upgrade_level"]:
 		$Button.modulate = Color("828282")
