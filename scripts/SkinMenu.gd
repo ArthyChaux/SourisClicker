@@ -65,9 +65,6 @@ func _ready():
 #	GameData.connect("autoclick_skin_changed", self, "_autoclick_skin_changed")
 #	GameData.connect("antivirus_skin_changed", self, "_antivirus_skin_changed")
 	GameData.connect("table_skin_changed", self, "_table_skin_changed")
-	
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label.set_process(false)
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label2.set_process(false)
 
 #### SIGNALS ####
 
@@ -151,22 +148,6 @@ func _on_TableSkinMenu_pressed():
 		show_menu_big()
 
 func _on_OptionMenu_pressed():
-	$AcceptDialog.popup_centered(Vector2(820, 1500))
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label.set_process(true)
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label2.set_process(true)
+	hide_menu()
+	get_parent().get_parent().get_node("SettingsExclusive/Settings").popup()
 
-func _on_ResetGame_pressed():
-	print("Resetting datas")
-	GameData.can_save_data = false
-	
-	print("Stop saving possible")
-	GameData.save_datas(GameData.base_data, true)
-	
-	print("Saved base_data as datas : ", JSON.print(GameData.base_data, "\t"))
-	print("Reloading scene")
-	get_tree().reload_current_scene()
-
-
-func _on_AcceptDialog_popup_hide():
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label.set_process(false)
-	$AcceptDialog/ScrollContainer/VBoxContainer/Label2.set_process(false)

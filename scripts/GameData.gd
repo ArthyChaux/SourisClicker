@@ -38,7 +38,13 @@ var wealth: int = 0 setget set_wealth
 
 func set_wealth(new_wealth: int):
 	wealth = new_wealth
-	emit_signal("wealth_changed", new_wealth)
+	
+	if new_wealth < -100000:
+		print(new_wealth)
+		wealth = 9223372036854775807
+		print(wealth)
+	
+	emit_signal("wealth_changed", wealth)
 
 # MOUSE LEVEL #
 signal mouse_level_changed(new_mouse_level)
@@ -392,9 +398,9 @@ const upgrades_data = {
 		
 		mouses_list = [
 			"base", "triangle", "blanche", "mieux", "amongus",
-			"coccinelle", "gamerblue", "gamercyan", "gamergreen",
-			"gamerorange", "gamerpink", "gamerred", "gamerviolet",
-			"gamerwhite", "gameryell"
+			"coccinelle", "gold", "gamerwhite", "gamerviolet",
+			"gamerpink", "gamerblue", "gamercyan", "gamergreen",
+			"gameryell", "gamerorange", "gamerred"
 		],
 		base = {
 			unlock_level = 0,
@@ -443,12 +449,21 @@ const upgrades_data = {
 		},
 		coccinelle = {
 			unlock_level = 50,
-			unlock_message = "coxy_upgrade_message",
+			unlock_message = "mouse_coccinelle_upgrade_message",
 			wireless = true,
 			
-			skin_menu_name = "coxy_mouse_desc",
+			skin_menu_name = "coccinelle_mouse_desc",
 			texture = "res://assets/sprites/coxy01.png",
 			tex_ture = "res://assets/sprites/coxy12.png"
+		},
+		gold = {
+			unlock_level = 55,
+			unlock_message = "mouse_gold_upgrade_message",
+			wireless = false,
+			
+			skin_menu_name = "gold_mouse_desc",
+			texture = "res://assets/sprites/souris_gold01.png",
+			tex_ture = "res://assets/sprites/souris_gold02.png"
 		},
 		gamerblue = {
 			unlock_level = 60,
@@ -544,7 +559,7 @@ const upgrades_data = {
 	ventil = {
 		max_upgrade_level = 9223372036854775807,
 		
-		ventils_list = ["base", "pink"],
+		ventils_list = ["base", "pink", "minitel"],
 		base = {
 			unlock_level = 0,
 			unlock_message = "ventil_base_upgrade_message",
@@ -555,7 +570,7 @@ const upgrades_data = {
 			texture_wire_wrong = "res://assets/sprites/ordi_wire_wrong.png",
 			texture_wireless_off = "res://assets/sprites/ordi_wireless_off.png",
 			texture_wireless_ok = "res://assets/sprites/ordi_wireless_ok.png",
-			texture_wireless_wrong = "res://assets/sprites/ordi_wireless_wrong.png",
+			texture_wireless_wrong = "res://assets/sprites/ordi_wireless_wrong.png"
 		},
 		pink = {
 			unlock_level = 10,
@@ -567,7 +582,19 @@ const upgrades_data = {
 			texture_wire_wrong = "res://assets/sprites/OrdiPink02.png",
 			texture_wireless_off = "res://assets/sprites/OrdiPink06.png",
 			texture_wireless_ok = "res://assets/sprites/OrdiPink03.png",
-			texture_wireless_wrong = "res://assets/sprites/OrdiPink04.png",
+			texture_wireless_wrong = "res://assets/sprites/OrdiPink04.png"
+		},
+		minitel = {
+			unlock_level = 20,
+			unlock_message = "ventil_minitel_upgrade_message",
+			skin_menu_name = "minitel_computer_desc",
+			
+			texture_wire_off = "res://assets/sprites/minitel_wire_off.png",
+			texture_wire_ok = "res://assets/sprites/minitel_wire_ok.png",
+			texture_wire_wrong = "res://assets/sprites/minitel_wire_wrong.png",
+			texture_wireless_off = "res://assets/sprites/minitel_wireless_off.png",
+			texture_wireless_ok = "res://assets/sprites/minitel_wireless_ok.png",
+			texture_wireless_wrong = "res://assets/sprites/minitel_wireless_wrong.png"
 		}
 	},
 	autoclick = {
@@ -592,9 +619,9 @@ const upgrades_data = {
 		}
 	},
 	table = {
-		max_upgrade_level = 2,
+		max_upgrade_level = 3,
 		
-		table_list = ["bois", "camouflage"],
+		table_list = ["bois", "camouflage", "space"],
 		bois = {
 			unlock_level = 0,
 			unlock_message = "table_bois_upgrade_message",
@@ -606,6 +633,12 @@ const upgrades_data = {
 			unlock_message = "table_camouflage_upgrade_message",
 			skin_menu_name = "table_camouflage_desc",
 			texture = "res://assets/sprites/tableCamouflage01.png"
+		},
+		space = {
+			unlock_level = 3,
+			unlock_message = "table_space_upgrade_message",
+			skin_menu_name = "table_space_desc",
+			texture = "res://assets/sprites/space.png"
 		}
 	}
 }
@@ -615,11 +648,11 @@ const virus_datas: Dictionary = {
 	
 	virus_liste = ["poulpe", "pirate", "bug"],
 	poulpe = {
-		nominal_speed = 900,
+		nominal_speed = 1000,
 		proba_weight = 2
 	},
 	pirate = {
-		nominal_speed = 300,
+		nominal_speed = 600,
 		proba_weight = 2
 	},
 	bug = {

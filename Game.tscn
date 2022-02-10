@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=2]
+[gd_scene load_steps=142 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -37,7 +37,7 @@
 [ext_resource path="res://assets/sprites/souris_gamer/souris_gamer_blue01.png" type="Texture" id=35]
 [ext_resource path="res://assets/audio/base_virale_vps_mise_a_jour.mp3" type="AudioStream" id=36]
 [ext_resource path="res://assets/fonts/dynamicfont_32.tres" type="DynamicFont" id=37]
-[ext_resource path="res://assets/sprites/pixelorama.png" type="Texture" id=38]
+[ext_resource path="res://scripts/Settings.gd" type="Script" id=38]
 [ext_resource path="res://assets/instances/SkinButtonMouse.tscn" type="PackedScene" id=39]
 [ext_resource path="res://scripts/Virus.gd" type="Script" id=40]
 [ext_resource path="res://assets/sprites/VirusPoulpe03.png" type="Texture" id=41]
@@ -72,6 +72,7 @@
 [ext_resource path="res://assets/sprites/ordi_wire_wrong.png" type="Texture" id=70]
 [ext_resource path="res://assets/sprites/ordi_wire_off.png" type="Texture" id=71]
 [ext_resource path="res://assets/instances/SkinButtonTable.tscn" type="PackedScene" id=72]
+[ext_resource path="res://assets/sprites/cross.png" type="Texture" id=73]
 
 [sub_resource type="Curve" id=44]
 max_value = 12.0
@@ -208,9 +209,9 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="Curve2D" id=81]
+[sub_resource type="Curve2D" id=70]
 _data = {
-"points": PoolVector2Array( -99.1595, 564.447, 99.1595, -564.447, 1151.58, 392.284, 308.899, -14.2463, -308.899, 14.2463, 341.102, 117.046, -981.425, -124.585, 981.425, 124.585, 326.816, -308.669, 357.181, -24.0256, -357.181, 24.0256, 105.864, -406.764, -695.749, -89.9383, 695.749, 89.9383, 285.864, -484.859, 615.993, 23.7573, -615.993, -23.7573, 277.292, -543.907, -66.1811, 18.6664, 66.1811, -18.6664, -11.279, -634.383, 10.1397, 303.531, -10.1397, -303.531, 498.245, -960.097 )
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 99.8871, 239.729, -99.8871, -239.729, 347.771, 229.427, 19.9774, 228.313, -19.9774, -228.313, 642.056, -266.764, 11.4157, -273.976, -11.4157, 273.976, 84.9134, -469.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
 [sub_resource type="Curve2D" id=49]
@@ -258,11 +259,6 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 165.527, 191.213, -165.527, -191.213, -35.0866, 237.998, -142.696, 165.527, 142.696, -165.527, -92.2294, -415.335, -91.3254, -142.696, 91.3254, 142.696, 427.771, -361.05, -128.426, -71.348, 128.426, 71.348, 453.485, 69.4266, -62.7862, 111.303, 62.7862, -111.303, 730.628, 49.4266, 171.235, 8.56175, -171.235, -8.56175, 670.628, -412.478, 176.943, -19.9774, -176.943, 19.9774, 530.628, 3.71228, 25.6853, -436.649, -25.6853, 436.649, 67.7706, -478.192, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
-[sub_resource type="Curve2D" id=65]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 134.134, 19.9774, -134.134, -19.9774, 806.818, 83.7123, 125.572, 71.348, -125.572, -71.348, -75.0866, 63.7123, -88.4715, 208.336, 88.4715, -208.336, -83.658, -318.192, -208.336, -282.538, 208.336, 282.538, 650.628, -383.907, 162.673, -11.4157, -162.673, 11.4157, 596.342, 37.998, 136.988, 0, -136.988, 0, 576.342, -372.478, 119.865, 2.85392, -119.865, -2.85392, 499.199, 109.427, -17.1235, 136.988, 17.1235, -136.988, 324.913, -463.907, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
-}
-
 [sub_resource type="Curve2D" id=67]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 122.718, 168.381, -122.718, -168.381, 436.342, 235.141, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
@@ -281,11 +277,6 @@ _data = {
 [sub_resource type="Curve2D" id=69]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 85.6175, 114.157, -85.6175, -114.157, -359.848, 260.855, -111.303, 39.9549, 111.303, -39.9549, -254.134, 49.4266, -94.1793, 34.247, 94.1793, -34.247, 13.4849, 49.4266, -156.965, 17.1235, 156.965, -17.1235, -136.991, -529.621, -156.965, -85.6175, 156.965, 85.6175, 404.913, -169.621, -91.3254, -2.85392, 91.3254, 2.85392, 719.199, -529.621, 51.3705, -22.8313, -51.3705, 22.8313, 716.342, 37.998, 99.8871, -11.4157, -99.8871, 11.4157, 599.199, -295.335, -57.0784, -85.6175, 57.0784, 85.6175, 370.628, 37.998, -91.3254, 51.3705, 91.3254, -51.3705, 656.342, 72.2837, 171.235, 2.85392, -171.235, -2.85392, 427.771, -489.621, -8.56175, 214.044, 8.56175, -214.044, -23.658, -349.621, -71.348, 85.6175, 71.348, -85.6175, 490.628, -372.478, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
-}
-
-[sub_resource type="Curve2D" id=70]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 99.8871, 239.729, -99.8871, -239.729, 347.771, 229.427, 19.9774, 228.313, -19.9774, -228.313, 642.056, -266.764, 11.4157, -273.976, -11.4157, 273.976, 84.9134, -469.621, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
 [sub_resource type="Curve2D" id=74]
@@ -431,7 +422,7 @@ tracks/9/keys = {
 "values": [ 0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../POPUPExclusivePopupNode:mouse_filter")
+tracks/10/path = NodePath("../../../PopupExclusive:mouse_filter")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -515,7 +506,7 @@ tracks/16/keys = {
 "values": [ false ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("../../../POPUPExclusivePopupNode:visible")
+tracks/17/path = NodePath("../../../PopupExclusive:visible")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -1241,7 +1232,7 @@ tracks/6/keys = {
 "values": [ 0, 157 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../POPUPExclusivePopupNode:mouse_filter")
+tracks/7/path = NodePath("../../../PopupExclusive:mouse_filter")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1265,7 +1256,7 @@ tracks/8/keys = {
 "values": [ true, false ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../POPUPExclusivePopupNode:visible")
+tracks/9/path = NodePath("../../../PopupExclusive:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1552,7 +1543,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../../../POPUPExclusivePopupNode:mouse_filter")
+tracks/4/path = NodePath("../../../PopupExclusive:mouse_filter")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1564,7 +1555,7 @@ tracks/4/keys = {
 "values": [ 2 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../../../POPUPExclusivePopupNode:visible")
+tracks/5/path = NodePath("../../../PopupExclusive:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1656,7 +1647,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("../../../POPUPExclusivePopupNode:mouse_filter")
+tracks/4/path = NodePath("../../../PopupExclusive:mouse_filter")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1668,7 +1659,7 @@ tracks/4/keys = {
 "values": [ 0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../../../POPUPExclusivePopupNode:visible")
+tracks/5/path = NodePath("../../../PopupExclusive:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1735,7 +1726,6 @@ script/source = "extends TextureButton
 
 
 func _on_TextureButton_pressed():
-	print(\"aaaa\")
 	GameData.ventil_level += 1
 "
 
@@ -1994,21 +1984,6 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 1.5 )
 }
 
-[sub_resource type="GDScript" id=25]
-script/source = "extends Label
-
-
-func _process(_delta):
-	text = JSON.print(GameData.datas, \" - \")
-"
-
-[sub_resource type="GDScript" id=28]
-script/source = "extends Label
-
-func _ready():
-	text = JSON.print(GameData.upgrades_data, \" - \")
-"
-
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 10 )
 
@@ -2057,24 +2032,12 @@ tracks/2/keys = {
 "values": [ 2 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:visible")
+tracks/3/path = NodePath("..:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("..:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -2117,7 +2080,7 @@ tracks/2/keys = {
 "values": [ 2, 0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:visible")
+tracks/3/path = NodePath("..:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2128,17 +2091,80 @@ tracks/3/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("..:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
+
+[sub_resource type="StyleBoxFlat" id=86]
+bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=84]
+draw_center = false
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxLine" id=85]
+color = Color( 0.707031, 0.707031, 0.707031, 1 )
+thickness = 3
+
+[sub_resource type="Animation" id=87]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:rect_scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=88]
+resource_name = "open_settings"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.4, 0.00129242, 1, -0.3, 1.20435, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 1.1 )
 }
 
 [node name="Racine" type="Control"]
@@ -2204,7 +2230,7 @@ position = Vector2( -68, -200 )
 scale = Vector2( 7, 7 )
 texture = ExtResource( 71 )
 script = ExtResource( 14 )
-popup_path = NodePath("../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../PopupExclusive/Popup")
 texture_wire_off = ExtResource( 71 )
 texture_wire_ok = ExtResource( 67 )
 texture_wire_wrong = ExtResource( 70 )
@@ -2339,7 +2365,7 @@ vframes = 11
 
 [node name="Virus" type="Node2D" parent="OrdiOffset/Computer"]
 script = ExtResource( 40 )
-popup_path = NodePath("../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../PopupExclusive/Popup")
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="OrdiOffset/Computer/Virus"]
 copy_mode = 2
@@ -2350,6 +2376,7 @@ position = Vector2( 7.258, -43.405 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
+frame = 3
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -2377,15 +2404,15 @@ flip_h = true
 [node name="VirusMovePath" type="Path2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
 position = Vector2( -31.451, 145.586 )
 scale = Vector2( 0.15, 0.15 )
-curve = SubResource( 81 )
+curve = SubResource( 70 )
 script = ExtResource( 55 )
-virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
+virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
 virus_pirate_curves = [ SubResource( 74 ) ]
 virus_bug_curves = [ SubResource( 80 ) ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath"]
 position = Vector2( 1253.48, 586.569 )
-rotation = -1.39915
+rotation = 2.70384
 
 [node name="poulpe" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
 visible = false
@@ -2798,7 +2825,7 @@ margin_bottom = 401.0
 mouse_filter = 1
 script = ExtResource( 9 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonMouse"]
 modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
@@ -2870,7 +2897,7 @@ margin_bottom = 550.0
 mouse_filter = 1
 script = ExtResource( 28 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonVentil"]
 margin_right = 710.0
@@ -2941,7 +2968,7 @@ margin_bottom = 727.0
 mouse_filter = 1
 script = ExtResource( 29 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAutoclick"]
 margin_right = 710.0
@@ -3012,7 +3039,7 @@ margin_bottom = 904.0
 mouse_filter = 1
 script = ExtResource( 27 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonAntivirus"]
 margin_right = 710.0
@@ -3083,7 +3110,7 @@ margin_bottom = 1081.0
 mouse_filter = 1
 script = ExtResource( 3 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpdateButtonAntivirus"]
 margin_right = 710.0
@@ -3158,7 +3185,7 @@ margin_bottom = 1230.0
 mouse_filter = 1
 script = ExtResource( 30 )
 upgrade_menu_path = NodePath("../../../../..")
-popup_path = NodePath("../../../../../../../POPUPExclusivePopupNode/Popup")
+popup_path = NodePath("../../../../../../../PopupExclusive/Popup")
 
 [node name="Button" type="TextureButton" parent="UPGRADEMENUOffsetNode/UpgradeMenu/MenuBackgroundOutline/MarginContainer/ScrollContainer/UpgradeList/UpgradeButtonTable"]
 margin_right = 710.0
@@ -3735,24 +3762,14 @@ __meta__ = {
 [node name="Label4" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
 margin_top = 518.0
 margin_right = 128.0
-margin_bottom = 1024.0
+margin_bottom = 1098.0
 size_flags_vertical = 7
 
 [node name="Label2" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
-margin_top = 1044.0
-margin_right = 128.0
-margin_bottom = 1550.0
-size_flags_vertical = 7
-
-[node name="ResetGame" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
-margin_top = 1570.0
+margin_top = 1118.0
 margin_right = 128.0
 margin_bottom = 1698.0
-rect_min_size = Vector2( 128, 128 )
-size_flags_horizontal = 3
-texture_normal = ExtResource( 38 )
-expand = true
-stretch_mode = 5
+size_flags_vertical = 7
 
 [node name="OptionMenu" type="TextureButton" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons"]
 margin_top = 1718.0
@@ -3806,44 +3823,7 @@ margin_bottom = -31.0
 texture = ExtResource( 8 )
 expand = true
 
-[node name="AcceptDialog" type="WindowDialog" parent="SKINMENUOffsetNode2/SkinMenu"]
-margin_right = 820.0
-margin_bottom = 1200.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ScrollContainer" type="ScrollContainer" parent="SKINMENUOffsetNode2/SkinMenu/AcceptDialog"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/AcceptDialog/ScrollContainer"]
-margin_right = 101.0
-margin_bottom = 68.0
-
-[node name="Label" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_right = 101.0
-margin_bottom = 28.0
-custom_fonts/font = ExtResource( 37 )
-text = "tralala"
-script = SubResource( 25 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HSeparator" type="HSeparator" parent="SKINMENUOffsetNode2/SkinMenu/AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 32.0
-margin_right = 101.0
-margin_bottom = 36.0
-
-[node name="Label2" type="Label" parent="SKINMENUOffsetNode2/SkinMenu/AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 40.0
-margin_right = 101.0
-margin_bottom = 68.0
-custom_fonts/font = ExtResource( 37 )
-script = SubResource( 28 )
-
-[node name="POPUPExclusivePopupNode" type="Control" parent="."]
+[node name="PopupExclusive" type="Control" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -3853,8 +3833,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Popup" type="PanelContainer" parent="POPUPExclusivePopupNode"]
-visible = false
+[node name="Popup" type="PanelContainer" parent="PopupExclusive"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -3872,7 +3851,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="POPUPExclusivePopupNode/Popup"]
+[node name="MarginContainer" type="MarginContainer" parent="PopupExclusive/Popup"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 743.0
@@ -3882,14 +3861,14 @@ custom_constants/margin_top = 10
 custom_constants/margin_left = 10
 custom_constants/margin_bottom = 10
 
-[node name="PanelContainer" type="Panel" parent="POPUPExclusivePopupNode/Popup/MarginContainer"]
+[node name="PanelContainer" type="Panel" parent="PopupExclusive/Popup/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 726.0
 margin_bottom = 576.0
 custom_styles/panel = SubResource( 12 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="POPUPExclusivePopupNode/Popup/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupExclusive/Popup/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 726.0
@@ -3898,7 +3877,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupDesc" type="Label" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
+[node name="PopupDesc" type="Label" parent="PopupExclusive/Popup/MarginContainer/VBoxContainer"]
 margin_top = 121.0
 margin_right = 716.0
 margin_bottom = 232.0
@@ -3912,14 +3891,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PopupExclusive/Popup/MarginContainer/VBoxContainer"]
 margin_top = 358.0
 margin_right = 716.0
 margin_bottom = 566.0
 custom_constants/margin_top = 50
 custom_constants/margin_bottom = 50
 
-[node name="DismissPopupButton" type="Button" parent="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer"]
+[node name="DismissPopupButton" type="Button" parent="PopupExclusive/Popup/MarginContainer/VBoxContainer/MarginContainer"]
 margin_left = 265.0
 margin_top = 50.0
 margin_right = 451.0
@@ -3929,9 +3908,143 @@ size_flags_horizontal = 4
 theme = ExtResource( 12 )
 text = "OK"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="POPUPExclusivePopupNode/Popup"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PopupExclusive/Popup"]
 anims/RESET = SubResource( 7 )
 anims/show_popup = SubResource( 8 )
+
+[node name="SettingsExclusive" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Panel" parent="SettingsExclusive"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -658.0
+margin_right = 400.0
+margin_bottom = 658.0
+custom_styles/panel = SubResource( 86 )
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="SettingsExclusive/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_styles/panel = SubResource( 84 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingsExclusive/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsExclusive/Settings/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 780.0
+margin_bottom = 1296.0
+custom_constants/separation = 38
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_right = 760.0
+margin_bottom = 217.0
+
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 649.0
+margin_bottom = 217.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 20 )
+text = "parametre_menu_title"
+align = 1
+autowrap = true
+
+[node name="CloseSettingsButton" type="TextureButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 653.0
+margin_right = 760.0
+margin_bottom = 217.0
+rect_min_size = Vector2( 107, 107 )
+texture_normal = ExtResource( 73 )
+expand = true
+stretch_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 255.0
+margin_right = 760.0
+margin_bottom = 259.0
+custom_styles/separator = SubResource( 85 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 297.0
+margin_right = 760.0
+margin_bottom = 357.0
+
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_top = 3.0
+margin_right = 567.0
+margin_bottom = 57.0
+size_flags_horizontal = 10
+text = "langue_setting_name"
+align = 2
+
+[node name="OptionButton" type="OptionButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 571.0
+margin_right = 657.0
+margin_bottom = 60.0
+size_flags_horizontal = 2
+text = "fr"
+items = [ "fr", null, false, 0, null, "en", null, false, 1, null, "fr_CH", null, false, 2, null, "ja", null, false, 3, null, "it", null, false, 4, null ]
+selected = 0
+
+[node name="Label2" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 395.0
+margin_right = 760.0
+margin_bottom = 449.0
+text = "reset_game_setting_name"
+align = 1
+autowrap = true
+
+[node name="ReinitaliseButton" type="Button" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Label2"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 1248.0
+margin_right = 760.0
+margin_bottom = 1276.0
+size_flags_vertical = 10
+custom_fonts/font = ExtResource( 37 )
+text = "vtruc_debug"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SettingsExclusive/Settings"]
+anims/RESET = SubResource( 87 )
+anims/open_settings = SubResource( 88 )
 
 [connection signal="exploded" from="OrdiOffset/Computer" to="OrdiOffset/Computer/Virus" method="_on_Computer_exploded"]
 [connection signal="timeout" from="OrdiOffset/Computer/CoolTimer" to="OrdiOffset/Computer" method="_on_CoolTimer_timeout"]
@@ -3946,7 +4059,7 @@ anims/show_popup = SubResource( 8 )
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/bug/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="timeout" from="OrdiOffset/Computer/Virus/VirusCountDownTimer" to="OrdiOffset/Computer/Virus" method="_on_VirusCountDownTimer_timeout"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Virus/AnimationPlayer" to="OrdiOffset/Computer/Virus" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="tween_completed" from="OrdiOffset/Computer/Virus/Tween" to="OrdiOffset/Computer/Virus" method="_on_Tween_tween_completed"]
+[connection signal="tween_all_completed" from="OrdiOffset/Computer/Virus/Tween" to="OrdiOffset/Computer/Virus" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee/Tween" to="OrdiOffset/Computer/Fumees/Fumee" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee2/Tween" to="OrdiOffset/Computer/Fumees/Fumee2" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee3/Tween" to="OrdiOffset/Computer/Fumees/Fumee3" method="_on_Tween_tween_all_completed"]
@@ -3977,8 +4090,9 @@ anims/show_popup = SubResource( 8 )
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel/MouseSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_MouseSkinMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel2/ComputerSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_ComputerSkinMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/Panel3/TableSkinMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_TableSkinMenu_pressed"]
-[connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/ResetGame" to="SKINMENUOffsetNode2/SkinMenu" method="_on_ResetGame_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/OptionMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_OptionMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle" to="SKINMENUOffsetNode2/SkinMenu" method="_on_UpgradeMenuHandle_pressed"]
-[connection signal="popup_hide" from="SKINMENUOffsetNode2/SkinMenu/AcceptDialog" to="SKINMENUOffsetNode2/SkinMenu" method="_on_AcceptDialog_popup_hide"]
-[connection signal="pressed" from="POPUPExclusivePopupNode/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="POPUPExclusivePopupNode/Popup" method="_on_DismissPopupButton_pressed"]
+[connection signal="pressed" from="PopupExclusive/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="PopupExclusive/Popup" method="_on_DismissPopupButton_pressed"]
+[connection signal="pressed" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2/CloseSettingsButton" to="SettingsExclusive/Settings" method="_on_CloseSettingsButton_pressed"]
+[connection signal="item_selected" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer/OptionButton" to="SettingsExclusive/Settings" method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Label2/ReinitaliseButton" to="SettingsExclusive/Settings" method="_on_ReinitaliseButton_pressed"]

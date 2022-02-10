@@ -19,6 +19,9 @@ func virus_move_along_curve():
 	var duration = $BackBufferCopy/VirusMovePath.curve.get_baked_length() / current_virus_speed
 	print("Virus starting to move with tween")
 	
+	$BackBufferCopy/MaskVirusOutPolygon.show()
+	$BackBufferCopy/MaskVirusInPolygon.hide()
+	
 	$Tween.interpolate_property(
 		$BackBufferCopy/VirusMovePath/PathFollow2D,
 		"unit_offset", 0, 1, duration)
@@ -97,38 +100,37 @@ func _on_Mouse_pressed():
 
 func _on_VirusOutScreenButton_pressed():
 	print("Le virus a été écrasé, well done")
-	$Tween.stop_all()
+	$Tween.remove_all()
 	$AnimationPlayer.play("virus_ecrase")
 
 func _on_Computer_exploded():
 	$AnimationPlayer.play("RESET")
-	$Tween.stop_all()
+	$Tween.remove_all()
 	can_come = false
 
 
 
-func _on_Tween_tween_completed(object, key):
-	if object == $BackBufferCopy/VirusMovePath/PathFollow2D:
-		print("Un virus a penetre l'ordinateur")
+func _on_Tween_tween_all_completed():
+	print("Un virus a penetre l'ordinateur")
+	
+	if randf() > GameData.antivirus_proba_tue_virus:
+		print("Le virus est passé (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
 		
-		if randf() > GameData.antivirus_proba_tue_virus:
-			print("Le virus est passé (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
+		match current_virus_name:
+			"poulpe":
+				$AnimationPlayer.play("poulpe_take_control_of_computer")
 			
-			match current_virus_name:
-				"poulpe":
-					$AnimationPlayer.play("poulpe_take_control_of_computer")
-				
-				"pirate":
-					$AnimationPlayer.play("pirate_passed_antivirus")
-				
-				"bug":
-					can_come = true
-					TranslationServer.set_locale("fr_CH")
+			"pirate":
+				$AnimationPlayer.play("pirate_passed_antivirus")
+			
+			"bug":
+				can_come = true
+				TranslationServer.set_locale("fr_CH" if randi() % 1 == 0 else "ja")
+	
+	else:
+		print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
 		
-		else:
-			print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
-			
-			$AnimationPlayer.play("antivirus_wins")
+		$AnimationPlayer.play("antivirus_wins")
 	
 
 
@@ -138,8 +140,11 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$BackBufferCopy/VirusMovePath/PathFollow2D.unit_offset = 0
 	
 	elif anim_name == "pirate_passed_antivirus":
-		popup.set_text("pirate_vol_souris_message")
+		var vol = 5
+		
+		GameData.mouse_level = max(GameData.mouse_level-5, 1)
+		
+		popup.set_text(tr("pirate_vol_souris_message") % vol)
 		popup.popup()
 		
 		can_come = true
-

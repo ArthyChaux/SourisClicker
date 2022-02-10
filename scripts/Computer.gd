@@ -82,6 +82,7 @@ func _ready():
 
 func data_loaded():
 	backup = GameData.datas
+	backup.locale = OS.get_locale_language()
 
 func data_saved(is_error):
 	if GameData.upgrades_data.mouse[GameData.mouse_skin]["wireless"]:

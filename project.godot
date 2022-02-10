@@ -12,6 +12,8 @@ config_version=4
 
 config/name="SourisClicker"
 run/main_scene="res://Game.tscn"
+boot_splash/image="res://assets/sprites/Fond01.png"
+boot_splash/use_filter=false
 config/icon="res://icon.png"
 config/windows_native_icon="res://assets/sprites/icons/IconeDuJeu196.ico"
 config/quit_on_go_back=false
@@ -42,8 +44,8 @@ theme/custom_font="res://assets/fonts/dynamicfont_64-global.tres"
 [locale]
 
 test="fr"
-locale_filter=[ 0, [ "en", "fr", "fr_CH", "ja" ] ]
-translations=PoolStringArray( "res://assets/translation/translations.en.translation", "res://assets/translation/translations.fr.translation", "res://assets/translation/translations.fr_CH.translation", "res://assets/translation/translations.ja.translation" )
+locale_filter=[ 0, [ "en", "fr", "fr_CH", "it", "ja" ] ]
+translations=PoolStringArray( "res://assets/translation/translations.en.translation", "res://assets/translation/translations.fr.translation", "res://assets/translation/translations.fr_CH.translation", "res://assets/translation/translations.ja.translation", "res://assets/translation/translations.it.translation" )
 
 [physics]
 

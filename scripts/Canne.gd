@@ -8,7 +8,7 @@ func _ready():
 
 func set_canne_timer():
 	#Finale 600 - 3600
-	$Timer.start(10) #rand_range(30, 90))
+	$Timer.start(rand_range(45, 240))
 
 func set_canne_up_timer():
 	$Timer.start(10)
