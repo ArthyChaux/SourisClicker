@@ -1,11 +1,27 @@
 extends Panel
 
 
+func _ready():
+	GameData.connect("locale_changed", self, "locale_changed")
 
 func popup():
 	if not $AnimationPlayer.is_playing():
 		$AnimationPlayer.play("open_settings")
 
+func locale_changed(new_locale):
+#	print("locale changed for ", new_locale)
+	for idx in range($MarginContainer/VBoxContainer/HBoxContainer/OptionButton.get_item_count()):
+#		print("testing locale ", $MarginContainer/VBoxContainer/HBoxContainer/OptionButton.get_item_text(idx))
+		if $MarginContainer/VBoxContainer/HBoxContainer/OptionButton.get_item_text(idx) == new_locale:
+#			print("right one, selecting it !")
+			$MarginContainer/VBoxContainer/HBoxContainer/OptionButton.select(idx)
+	
+	
+
+
+func _on_OptionButton_item_selected(index):
+	var l = $MarginContainer/VBoxContainer/HBoxContainer/OptionButton.get_item_text(index)
+	GameData.locale = l
 
 func _on_CloseSettingsButton_pressed():
 	if not $AnimationPlayer.is_playing():
@@ -21,9 +37,3 @@ func _on_ReinitaliseButton_pressed():
 	print("Saved base_data as datas : ", JSON.print(GameData.base_data, "\t"))
 	print("Reloading scene")
 	get_tree().reload_current_scene()
-
-
-
-func _on_OptionButton_item_selected(index):
-	var l = $MarginContainer/VBoxContainer/HBoxContainer/OptionButton.get_item_text(index)
-	GameData.locale = l

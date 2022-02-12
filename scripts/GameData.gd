@@ -10,6 +10,7 @@ extends Node
 
 
 var can_save_data: bool = true
+var is_currently_saving: bool = false
 
 #### MEMBERS ####
 
@@ -331,7 +332,9 @@ func load_datas():
 	emit_signal("_data_loaded")
 
 func save_datas(other_datas = null, force_saving = false):
-	if can_save_data or force_saving:
+	if (can_save_data and not is_currently_saving) or force_saving:
+		is_currently_saving = true
+		
 		if other_datas == null:
 			var save_datas = self.datas
 			
@@ -352,6 +355,8 @@ func save_datas(other_datas = null, force_saving = false):
 		
 		else:
 			emit_signal("_data_saved", false)
+		
+		is_currently_saving = false
 
 #####################
 #### CONST DATAS ####
@@ -644,9 +649,9 @@ const upgrades_data = {
 }
 
 const virus_datas: Dictionary = {
-	total_proba_weight = 6,
+	total_proba_weight = 8,
 	
-	virus_liste = ["poulpe", "pirate", "bug"],
+	virus_liste = ["poulpe", "pirate", "bug", "spider"],
 	poulpe = {
 		nominal_speed = 1000,
 		proba_weight = 2
@@ -657,6 +662,10 @@ const virus_datas: Dictionary = {
 	},
 	bug = {
 		nominal_speed = 2000,
+		proba_weight = 2
+	},
+	spider = {
+		nominal_speed = 1000,
 		proba_weight = 2
 	}
 }

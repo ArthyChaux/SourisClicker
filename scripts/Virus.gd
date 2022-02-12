@@ -60,6 +60,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 		
 			"pirate":
 				$BackBufferCopy/VirusMovePath.set_new_curve_pirate()
@@ -67,6 +68,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				virus_move_along_curve()
 			
 			"bug":
@@ -75,8 +77,17 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.show()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				virus_move_along_curve()
+			
+			"spider":
+				$BackBufferCopy/VirusMovePath.set_new_curve_spider()
 				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.show()
+				virus_move_along_curve()
 	
 	elif can_come:
 		print("Virus Not coming")
@@ -124,8 +135,10 @@ func _on_Tween_tween_all_completed():
 				$AnimationPlayer.play("pirate_passed_antivirus")
 			
 			"bug":
-				can_come = true
-				TranslationServer.set_locale("fr_CH" if randi() % 1 == 0 else "ja")
+				$AnimationPlayer.play("bug_passed_antivirus")
+			
+			"spider":
+				$AnimationPlayer.play("spider_passed_antivirus")
 	
 	else:
 		print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
@@ -147,4 +160,13 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		popup.set_text(tr("pirate_vol_souris_message") % vol)
 		popup.popup()
 		
+		can_come = true
+	
+	elif anim_name == "bug_passed_antivirus":
+		var locales = TranslationServer.get_loaded_locales()
+		GameData.set_locale(locales[randi() % len(locales)])
+		
+		can_come = true
+	
+	elif anim_name == "spider_passed_antivirus":
 		can_come = true
