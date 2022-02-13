@@ -2597,6 +2597,7 @@ position = Vector2( 7.258, -43.405 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
+frame = 1
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -2631,6 +2632,7 @@ script = ExtResource( 55 )
 virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
 virus_pirate_curves = [ SubResource( 74 ) ]
 virus_bug_curves = [ SubResource( 80 ) ]
+virus_spider_curves = [ SubResource( 80 ) ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath"]
 position = Vector2( 1253.48, 586.569 )
@@ -4177,7 +4179,7 @@ anchor_bottom = 0.5
 margin_left = -400.0
 margin_top = -658.0
 margin_right = 400.0
-margin_bottom = 605.326
+margin_bottom = 605.33
 rect_clip_content = true
 custom_styles/panel = SubResource( 86 )
 script = ExtResource( 38 )

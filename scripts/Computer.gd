@@ -85,19 +85,20 @@ func data_loaded():
 	backup.locale = OS.get_locale_language()
 
 func data_saved(is_error):
-	if GameData.upgrades_data.mouse[GameData.mouse_skin]["wireless"]:
-		if is_error:
-			texture = texture_wireless_wrong
+	if not $Feu/FeuAnimationPlayer.is_playing():
+		if GameData.upgrades_data.mouse[GameData.mouse_skin]["wireless"]:
+			if is_error:
+				texture = texture_wireless_wrong
+			else:
+				texture = texture_wireless_ok
+			$ResetComputerSkinTimer.start()
+		
 		else:
-			texture = texture_wireless_ok
-		$ResetComputerSkinTimer.start()
-	
-	else:
-		if is_error:
-			texture = texture_wire_wrong
-		else:
-			texture = texture_wire_ok
-		$ResetComputerSkinTimer.start()
+			if is_error:
+				texture = texture_wire_wrong
+			else:
+				texture = texture_wire_ok
+			$ResetComputerSkinTimer.start()
 
 func set_new_wireless(new_mouse_skin: String):
 	if GameData.upgrades_data.mouse[new_mouse_skin]["wireless"]:

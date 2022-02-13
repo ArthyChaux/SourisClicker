@@ -149,5 +149,6 @@ func _on_TableSkinMenu_pressed():
 
 func _on_OptionMenu_pressed():
 	hide_menu()
+	get_parent().get_parent().get_node("UPGRADEMENUOffsetNode/UpgradeMenu").hide_menu()
 	get_parent().get_parent().get_node("SettingsExclusive/Settings").popup()
 
