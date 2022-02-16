@@ -1,20 +1,15 @@
 extends Control
 
 
-"""
-  -- TODO --
-
-regler problemes de pixel perfect ecran
-chemins virus
-
-"""
-
 #### MEMBERS ####
 
 func _ready():
 	randomize()
 	
 	GameData.load_datas()
+	
+	GameData.is_currently_saving = false
+	GameData.can_save_data = true
 
 func _input(event):
 	if event.is_action_pressed("toggle_fullscreen"):

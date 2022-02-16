@@ -2,6 +2,7 @@ extends TextureRect
 
 var is_down: bool = false
 
+
 func _ready():
 	set_canne_timer()
 
@@ -15,7 +16,11 @@ func set_canne_up_timer():
 
 
 func _on_CanneButton_pressed():
-	OS.shell_open("https://fr.wikipedia.org/wiki/Hame%C3%A7onnage")
+	if GameData.locale == "en" or GameData.locale == "ja" or GameData.locale == "it":
+		OS.shell_open("https://en.wikipedia.org/wiki/Phishing")
+	else:
+		OS.shell_open("https://fr.wikipedia.org/wiki/Hame%C3%A7onnage")
+	
 	$AnimationPlayer.play_backwards("canne_descends")
 
 func _on_AnimationPlayer_animation_finished(anim_name):

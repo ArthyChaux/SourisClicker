@@ -131,6 +131,9 @@ func _on_Mouse_pressed():
 	self.heat += GameData.heat_increase_on_click * GameData.wealth_increase_on_click
 	$MouseAudioStreamPlayer.random_play()
 
+func _spider_heat_thing():
+	self.heat += GameData.heat_increase_on_click * GameData.wealth_increase_on_click
+
 func _on_CoolTimer_timeout():
 	self.heat -= heat_loose_factor * (heat - 20.0)
 

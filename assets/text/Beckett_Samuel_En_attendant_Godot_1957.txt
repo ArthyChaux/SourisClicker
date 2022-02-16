@@ -2,26 +2,18 @@ SAMUEL BECKETT
 
 	En attendant Godot
 
-LES ÉDITIONS DE MINUIT
-
-1952 by LES ÉDITIONS DE MINUIT
-7, rue Bernard Palissy, 75006 Paris
-En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou partiellement le présent. ouvrage sans autorisation de l'éditeur ou du Centre français d'exploitation du droit de copie,
-20, rue des Grands-Augustins, 75006 Paris.
-ISBN 2 7073 0148 5
-
 	Acte premier
 
-Route à la campagne, avec arbre.
-Soir.
-Estragon, assis sur une pierre, essaie d'enlever sa chaussure. Il s'y acharne des deux mains, en ahanant. Il s'arrête, à bout de forces, se repose en haletant, recommence. Même jeu.
-Entre Vladimir .
+  Route à la campagne, avec arbre.
+  Soir.
+  Estragon, assis sur une pierre, essaie d'enlever sa chaussure. Il s'y acharne des deux mains, en ahanant. Il s'arrête, à bout de forces, se repose en haletant, recommence. Même jeu.
+  Entre Vladimir .
 ESTRAGON (renonçant à nouveau). - Rien à faire.
 VLADIMIR (s'approchant à petits pas raides, les jambes écartées). - Je commence à le croire. (Il s'immobilise.) J'ai longtemps résisté à cette pensée, en me disant, Vladimir, sois raisonnable. tu n'as pas encore tout essayé. Et je reprenais le combat. (Il se recueille, songeant au combat. A Estragon.) - Alors, te revoilà, toi.
 ESTRAGON. - Tu crois ?
 VLADIMIR. - Je suis content de te revoir. Je te croyais parti pour toujours.
 ESTRAGON. - Moi aussi.
-VLADIMIR. - Que faire pour fêter cette réu­nion ? (Il réfléchit.) Lève -toi que je t'embrasse. (Il tend la main à Estragon.)
+VLADIMIR. - Que faire pour fêter cette réunion ? (Il réfléchit.) Lève -toi que je t'embrasse. (Il tend la main à Estragon.)
 ESTRAGON (avec irritation). - Tout à l'heure, tout à l'heure.
 
 		Silence.
@@ -37,7 +29,7 @@ ESTRAGON. - Les mêmes ? Je ne sais pas.
 
 		Silence.
 
-VLADIMIR. - Quand j'y pense... depuis le temps... je me demande... ce que tu serais deve­nu... sans moi... (Avec décision.) Tu ne serais plus qu'un petit tas d'ossements à l'heure qu'il est, pas d'erreur.
+VLADIMIR. - Quand j'y pense... depuis le temps... je me demande... ce que tu serais devenu... sans moi... (Avec décision.) Tu ne serais plus qu'un petit tas d'ossements à l'heure qu'il est, pas d'erreur.
 ESTRAGON (piqué au vif). - Et après ?
 VLADIMIR (accablé). - C'est trop pour un seul homme. (Un temps. Avec vivacité.) D'un autre côté, à quoi bon se décourager à présent, voilà ce que je me dis. Il fallait y penser il y a une éternité, vers 1900.
 ESTRAGON. - Assez. Aide-moi à enlever cette saloperie. 
@@ -92,7 +84,6 @@ ESTRAGON. - Non.
 VLADIMIR. - Ça passera le temps. (Un temps.) C'étaient deux voleurs, crucifiés en même temps que le Sauveur. On...
 ESTRAGON. - Le quoi?
 VLADIMIR. - Le Sauveur. Deux voleurs. On dit que l'un fut sauvé et l'autre... (il cherche le contraire de sauvé) ...damné.
-
 ESTRAGON.- Sauvé de quoi?
 VLADIMIR. - De l'enfer.
 ESTRAGON. - Je m'en vais. (Il ne bouge pas.)
@@ -118,9 +109,9 @@ VLADIMIR. - Ils étaient là tous les quatre. Et un seul parle d'un larron de sa
 ESTRAGON. - Qui le croit?
 VLADIMIR. - Mais tout le monde. On ne connaît que cette version-là.
 ESTRAGON. - Les gens sont des cons.
-Il se lève péniblement, va en boitillant vers la coulisse gauche, s'arrête, regarde au loin, la main en écran devant les yeux, se retourne, va vers la coulisse droite, regarde au loin. Vladimir le suit des yeux, puis va ramasser la chaussure, regarde dedans, la lâche précipitamment.
+  Il se lève péniblement, va en boitillant vers la coulisse gauche, s'arrête, regarde au loin, la main en écran devant les yeux, se retourne, va vers la coulisse droite, regarde au loin. Vladimir le suit des yeux, puis va ramasser la chaussure, regarde dedans, la lâche précipitamment.
 VLADIMIR. - Pah! (Il crache par terre.)
-Estragon revient au centre de la scène, regarde vers le fond.
+  Estragon revient au centre de la scène, regarde vers le fond.
 ESTRAGON. - Endroit délicieux. (Il se re­tourne, avance jusqu'à la rampe, regarde vers le public.) Aspects riants. (Il se tourne vers Vladimir.) Allons-nous-en.
 VLADIMIR. - On ne peut pas.
 ESTRAGON. - Pourquoi ?
@@ -196,7 +187,7 @@ ESTRAGON. - Raconte-la-moi.
 VLADIMIR. - Assez.
 ESTRAGON. - Un Anglais s'étant enivré se rend au bordel. La sous-maîtresse lui demande s'il désire une blonde, une brune ou une rousse. Continue.
 VLADIMIR. - ASSEZ!
-Vladimir sort. Estragon se lève et le suit jusqu'à la limite de la scène. Mimique d'Estra­gon, analogue à celle qu'arrachent au spectateur les efforts du pugiliste. Vladimir revient, passe devant Estragon, traverse la scène, les yeux bais­sés. Estragon fait quelques pas vers lui, s'arrête.
+  Vladimir sort. Estragon se lève et le suit jusqu'à la limite de la scène. Mimique d'Estra­gon, analogue à celle qu'arrachent au spectateur les efforts du pugiliste. Vladimir revient, passe devant Estragon, traverse la scène, les yeux bais­sés. Estragon fait quelques pas vers lui, s'arrête.
 ESTRAGON (avec douceur). - Tu voulais me parler? (Vladimir ne répond pas. Estragon fait un pas en avant.) Tu avais quelque chose à me dire? (Silence. Autre pas en avant.) Dis, Didi...
 VLADIMIR (sans se retourner). - Je n'ai rien à te dire.
 ESTRAGON (pas en avant). - Tu es fâché? (Silence. Pas en avant). Pardon! (Silence. Pas en avant. Il lui touche l'épaule.) Voyons, Didi. (Silence.) Donne ta main! (Vladimir se retourne.) Embrasse-moi! (Vladimir se raidit.) Laisse-toi faire! (Vladimir s'amollit. Ils s'embrassent. Estragon recule.) Tu pues l'ail!
@@ -276,20 +267,19 @@ VLADIMIR. - Notre rôle? Celui du suppliant.
 ESTRAGON. - A ce point-là?
 VLADIMIR. - Monsieur a des exigences à faire valoir?
 ESTRAGON. - On n'a plus de droits?
-Rire de Vladimir, auquel il coupe court comme au précédent. Même jeu, moins le sourire.
+   Rire de Vladimir, auquel il coupe court comme au précédent. Même jeu, moins le sourire.
 VLADIMIR. - Tu me ferais rire, si cela m'était permis.
 ESTRAGON. - Nous les avons perdus?
 VLADIMIR (avec netteté). - Nous les avons bazardés.
-Silence. Ils demeurent immobiles, bras ballants, tête sur la poitrine, cassés aux genoux.
+   Silence. Ils demeurent immobiles, bras ballants, tête sur la poitrine, cassés aux genoux.
 ESTRAGON (faiblement). - On n'est pas liés? (Un temps.) Hein?
 VLADIMIR (levant la main). - Ecoute!
 
 		Ils écoutent, grotesquement figés.
 
 ESTRAGON. - Je n'entends rien.
-VLADIMIR. - Hsst! (Ils écoutent. Estragon perd l'équilibre, manque de tomber. Il s'agrippe,
-au bras de Vladimir qui chancelle. Ils écoutent, tassés l'un contre l'autre, les yeux dans les yeux.) Moi non plus.
-Soupirs de soulagement. Détente. Ils s'éloignent l'un de l'autre.
+VLADIMIR. - Hsst! (Ils écoutent. Estragon perd l'équilibre, manque de tomber. Il s'agrippe, au bras de Vladimir qui chancelle. Ils écoutent, tassés l'un contre l'autre, les yeux dans les yeux.) Moi non plus.
+  Soupirs de soulagement. Détente. Ils s'éloignent l'un de l'autre.
 ESTRAGON. - Tu m'as fait peur.
 VLADIMIR. - J'ai cru que c'était lui.
 ESTRAGON. - Qui?
@@ -312,2334 +302,604 @@ ESTRAGON. - J'ai faim.
 VLADIMIR. - Veux-tu une carotte?
 ESTRAGON. - Il n'y a pas autre chose?
 VLADIMIR. - Je dois avoir quelques navets.
-ESTRAGON. - Donne-moi une carotte. (Vladimir fouille dans ses poch es, en retire un navet
-et le donne à Estragon.) Merci. (Il mord dedans.
-Plaintivement.) C'est un navet!
-
-VLADIMIR. - Oh pardon! j'aurais juré une
-carotte. (Il fouille à nouveau dans ses poches,
-n'y trouve que des navets.) Tout ça c'est des
-na vets. (Il cherche toujours.) Tu a s dû manger
-la dernière. (Il cherche.) Attends, ça y est. (Il
-sort enfin une carotte et la donne à Estragon.)
-Voilà, mon cher. (Estragon l'essuie sur sa man­
-che et commence à la manger.) Rends-moi le
-navet. (Estragon lui rend le navet.) Fais-la durer,
-il rry en a plus.
-ESTRAGON (tout en mâchant). - Je t'a i posé
-une question.
+ESTRAGON. - Donne-moi une carotte. (Vladimir fouille dans ses poches, en retire un navet et le donne à Estragon.) Merci. (Il mord dedans. Plaintivement.) C'est un navet!
+VLADIMIR. - Oh pardon! j'aurais juré une carotte. (Il fouille à nouveau dans ses poches, n'y trouve que des navets.) Tout ça c'est des navets. (Il cherche toujours.) Tu as dû manger la dernière. (Il cherche.) Attends, ça y est. (Il sort enfin une carotte et la donne à Estragon.) Voilà, mon cher. (Estragon l'essuie sur sa manche et commence à la manger.) Rends-moi le navet. (Estragon lui rend le navet.) Fais-la durer, il n'y en a plus.
+ESTRAGON (tout en mâchant). - Je t'ai posé une question.
 VLADIMIR. - Ah.
 ESTRAGON. - Est-ce que tu m'as répondu?
 VLADIMIR. - Elle est bonne, ta carotte?
 ESTRAGON. - Elle est sucrée.
-VLADIMIR. - Tant mieux, tant mieux. (Un
-temps.) Qu'est-ce que tu voulais savoir?
-esTRAGON. - Je ne me rappelle plus. (Il
-mâche.) C'est ça qui m'embête. (Il regarde la
-carotte avec appréciation, la fait tourner en l'oir
-du bout des doigts.) Délicieuse, ta carotte (Il
-
-EN ATTENDANT GODOT
-en suce méditativement le bout.) Attends, ça
-revient. (Il arrache une bouchée.)
+VLADIMIR. - Tant mieux, tant mieux. (Un temps.) Qu'est-ce que tu voulais savoir?
+ESTRAGON. - Je ne me rappelle plus. (Il mâche.) C'est ça qui m'embête. (Il regarde la carotte avec appréciation, la fait tourner en l'air du bout des doigts.) Délicieuse, ta carotte (Il en suce méditativement le bout.) Attends, ça revient. (Il arrache une bouchée.)
 VLADIMIR. - Alors?
-
-ESTRAGON (la bouche pleine, distraitement).
-
-27
-me
-
--
-
-On n' est p as lié s ?
+ESTRAGON (la bouche pleine, distraitement). - On n'est pas liés ?
 VLADIMIR. - Je n'entends rien.
-ESTRAGON (mâche, aval e). - Je demande si
-on est liés.
+ESTRAGON (mâche, avale). - Je demande si on est liés.
 VLADIMIR. - Liés?
 ESTRAGON. - Li-és .
 VLADIMIR. - Comment, liés?
-
-- Pieds et p oings.
-- Mais à qui? Par qui?
-ESTRAGON. - A ton b onhomm e.
-VLADIMIR. - A Godot? Liés à Godot?
-ESTRAGON.
-
-VLADIMIR.
-
-Quelle idée? Jamais de la vie! (Un temps.)
-Pas encore. (Il ne fait pas la liaison.)
+ESTRAGON. - Pieds et poings.
+VLADIMIR. - Mais à qui? Par qui?
+ESTRAGON. - A ton bonhomme.
+VLADIMIR. - A Godot? Liés à Godot? Quelle idée? Jamais de la vie! (Un temps.) Pas encore. (Il ne fait pas la liaison.)
 ESTRAGON. - Il s'appelle Godot?
 VLADIMIR. - Je crois.
-ESTRAGON. - Tiens! (Il soulève le restant de
-carotte par le bout de fane et le fait tourner
-devant ses yeux.) C'est curieux, plus on va, moins
-
-c'est
-
-bon.
-
-VLADIMIR.
-
-ESTRAGON.
-
-VLADIMIR.
-
-mesure.
-
-- Pour moi c'est le contraire.
-- C'est-à-dire?
-- Je me fais au goût au fur et à
-
-ESTRAGON (ayant longuement réfléchI).
-C'est ça, le contraire?
+ESTRAGON. - Tiens! (Il soulève le restant de carotte par le bout de fane et le fait tourner devant ses yeux.) C'est curieux, plus on va, moins c'est bon.
+VLADIMIR. - Pour moi c'est le contraire.
+ESTRAGON. - C'est-à-dire?
+VLADIMIR. - Je me fais au goût au fur et à mesure.
+ESTRAGON (ayant longuement réfléchi). - C'est ça, le contraire?
 VLADIMIR. - Question de tempérament.
-
-EN
-
-28
-
-ATTENDANT GODOT
-
 ESTRAGON. - De caractère.
-VLADIMIR.
-
--
-
-On n'y peut rien.
-
-On a beau se démener.
+VLADIMIR. - On n'y peut rien.
+ESTRAGON. - On a beau se démener.
 VLADIMIR. - On reste ce qu'on est.
 ESTRAGON. - On a beau se tortiller.
-VLADIMIR.
-Le fond ne change pas.
-ESTRAGON. - Rien à faire. (Il tend le restant
-de caro tte à Vladimir.) Veux - tu la finir?
-
-ESTRAGON.
-
--
-
--
-
-Un cr; terrible retentit, t out proche. Estragon
-lâche la carotte. Ils se figent, pu is se précipitent
-vers la coulisse Estragon s'arrête à mi-chemin,
-ret o u rn e sur ses pas, ramasse la ca rotte, la fourre
-dans sa poche, s'élance vers V ladimir qui l'at­
-tend, s'arrête à nouveau, retourne sur ses pas,
-ramas se sa ch aussure puis court rejoindre Vla­
-dimir. Enlacés, la tête dans les épaules, se détour­
-nant de la m enace, ils attendent.
-Entrent Pozzo et Lucky. Celui-là dirige celui­
-ci au moyen d une corde passée autour du cou,
-de sorte qu'on ne voit d'abord que LllCky suivi
-de la corde, assez longue pour qu'il puisse arri­
-ver au milieu du plateau avant que Pozzo débou­
-che de la coulisse. L uc ky porte une lourde valise,
-un siège pliant, un panier à provisions et un
-m an teau (sur le bras); Pozzo un foue t
-POZZO (en coulisse).
-Plus vite! (Bruit de
-fouet. Pozzo paraît. Ils t raversent la scène.
-Lucky passe devant Vladimir et Estragon et sort.
-Pozzo, ayant vu Vladimir et Estragon, s'arrête.
-La corde se tend. Pozzo tire violemment dessus.)
-.
-
-,
-
-'
-
-.
-
--
-
-EN ATTENDANT GODOT
-
-29
-
-Arrière! (Bruit de chute. C'est Lucky qui tombe
-avec tout son chargement. Vladimi r et Estragon
-le regardent, p artagés entre l'envie d'aller à son
-secours et la peur de se mêler de ce qui ne les
-regarde pas. Vladimir fait un pas vers Lucky,
-Estragon le retient par la manche.)
+VLADIMIR. - Le fond ne change pas.
+ESTRAGON. - Rien à faire. (Il tend le restant de carotte à Vladimir.) Veux-tu la finir?
+  Un cri terrible retentit, tout proche. Estragon lâche la carotte. Ils se figent, puis se précipitent vers la coulisse Estragon s'arrête à mi-chemin, retourne sur ses pas, ramasse la carotte, la fourre dans sa poche, s'élance vers Vladimir qui l'attend, s'arrête à nouveau, retourne sur ses pas, ramasse sa chaussure puis court rejoindre Vladimir. Enlacés, la tête dans les épaules, se détournant de la menace, ils attendent.
+  Entrent Pozzo et Lucky. Celui-là dirige celui­ci au moyen d'une corde passée autour du cou, de sorte qu'on ne voit d'abord que Lucky suivi de la corde, assez longue pour qu'il puisse arriver au milieu du plateau avant que Pozzo débouche de la coulisse. Lucky porte une lourde valise, un siège pliant, un panier à provisions et un manteau (sur le bras); Pozzo un fouet.
+POZZO (en coulisse). - Plus vite! (Bruit de fouet. Pozzo paraît. Ils traversent la scène. Lucky passe devant Vladimir et Estragon et sort. Pozzo, ayant vu Vladimir et Estragon, s'arrête. La corde se tend. Pozzo tire violemment dessus.) Arrière! (Bruit de chute. C'est Lucky qui tombe avec tout son chargement. Vladimir et Estragon le regardent, partagés entre l'envie d'aller à son secours et la peur de se mêler de ce qui ne les regarde pas. Vladimir fait un pas vers Lucky, Estragon le retient par la manche.)
 VLADIMIR. - Lâche-moi!
 ESTRAGON. - Reste tranquille.
-Pozzo. - Attention! Il est méchant. (Estra­
-
-gon et Vladimir le regardent.) Avec les étran­
-gers.
+POZZO. - Attention! Il est méchant. (Estragon et Vladimir le regardent.) Avec les étrangers.
 ESTRAGON (bas). - C'est lui?
-
 VLADIMIR. - Qui?
-ESTRAGON. - Voyons ..
+ESTRAGON. - Voyons...
 VLADIMIR. - Godot?
 ESTRAGON. - Voilà.
-Pozzo.
-Pozzo. - Je me présente
+POZZO. - Je me présente Pozzo.
 VLADIMIR. - Mais non.
 ESTRAGON. - Il a dit Godot.
 VLADIMIR. - Mais non.
-ESTRAGON (à Pozzo). - Vous n'êtes pas
-monsieur Godot, monsielij."?
-Pozzo ( d une voix terrible). - Je suis Pozzo!
-(Silence.) Ce nom ne vous dit rien? (Silence.)
-Je vous demande si ce nom ne vous dit rien?
-.
-
-'
-
-Vladimir et Estragon
-
-s'interrogent du regard.
-
-ESTRAGON (faisant semblant de
-
-Bazza... Bazza ...
-VLADIMIR (de même).
-
-Pozzo. - PpPozzo !
-
--
-
-chercher).
-
-Pozzo . .
-.
-
--
-
-30
-
-EN ATTENDANT GODOT
-
-esTRAGON. - Ah! Pozzo... voyons ... Pozzo ...
+ESTRAGON (à Pozzo). - Vous n'êtes pas monsieur Godot, monsieur?
+POZZO (d'une voix terrible). - Je suis Pozzo! (Silence.) Ce nom ne vous dit rien? (Silence.) Je vous demande si ce nom ne vous dit rien?
+  Vladimir et Estragon s'interrogent du regard.
+ESTRAGON (faisant semblant de chercher). - Bozzo... Bozzo...
+VLADIMIR (de même). - Pozzo...
+POZZO. - Pppozzo !
+ESTRAGON. - Ah! Pozzo... voyons... Pozzo ...
 VLADIMIR. - C'est Pozzo ou Bozzo?
 ESTRAGON. - Pozzo... non, je ne vois pas.
-VLADIMIR (conciliant). - J'ai connu une
+VLADIMIR (conciliant). - J'ai connu une famille Gozzo. La mère brodait au tambour.
 
-famille Gozzo. La mère brodait au tambour.
+		Pozzo avance, menaçant.
 
-Pozzo avance, menaçant.
-
-ESTRAGON (vivement). - Nous ne sommes
-pas d'ici, monsieur.
-POZZO (s'arrêtant). - Vous êtes bien des êtres
-humains cependant. (Il met ses lunettes.) A ce
-que je vois. (Il enlève ses lunettes.) De la même
-espèce que moi. (Il éclate d'un rire énorme. )
-De la même espèce que POZZO! D'origine divine!
+ESTRAGON (vivement). - Nous ne sommes pas d'ici, monsieur.
+POZZO (s'arrêtant). - Vous êtes bien des êtres humains cependant. (Il met ses lunettes.) A ce que je vois. (Il enlève ses lunettes.) De la même espèce que moi. (Il éclate d'un rire énorme. ) De la même espèce que Pozzo! D'origine divine!
 VLADIMIR. - C'est-à-dire ...
-Pozzo (tranchant). - Qui est Godot?
+POZZO (tranchant). - Qui est Godot?
 ESTRAGON. - Godot?
-Pozzo. - Vous m'avez pris pour Godot.
-VLADIMIR. - Oh non, monsieur, pas un seul
-instant, monsieur.
-Pozzo. - Qui est-ce?
-VLADIMIR. - Eh bien , c'est un ... c'est une
-connaissance.
-ESTRAGON. - Mais non, voyons, on le con­
-naît à peine.
-VLADIMIR. - Evidemment... on ne le con­
-naît pas très bien ... mais tout de même ...
-ESTRAGON. - Pour ma part je ne le recon­
-naîtrais même pas.
-Pozzo. - Vous m'avez pris pour lui.
-ESTRAGON. - C'est-à-dire. . . l'obscurité . . . la
-
-EN ATTENDANT GODOT
-fatigue . . . la faiblesse ... l'attente ... j'avoue . . .
-
-cru... un instant. ..
-
-31
-
-j'ai
-
-VLADIMIR. - Ne l'écoutez pas, monsieur, ne
-l'écoutez pas !
-Pozzo. - L'attente? Vou s l'attendiez donc?
+POZZO. - Vous m'avez pris pour Godot.
+VLADIMIR. - Oh non, monsieur, pas un seul instant, monsieur.
+POZZO. - Qui est-ce?
+VLADIMIR. - Eh bien , c'est un... c'est une connaissance.
+ESTRAGON. - Mais non, voyons, on le connaît à peine.
+VLADIMIR. - Evidemment... on ne le connaît pas très bien... mais tout de même...
+ESTRAGON. - Pour ma part je ne le reconnaîtrais même pas.
+POZZO. - Vous m'avez pris pour lui.
+ESTRAGON. - C'est-à-dire... l'obscurité... la fatigue... la faiblesse... l'attente... j'avoue... j'ai cru... un instant...
+VLADIMIR. - Ne l'écoutez pas, monsieur, ne l'écoutez pas !
+POZZO. - L'attente? Vous l'attendiez donc?
 VLADIMIR. - C'est-à-dire...
-Pozzo. - Ici ? Sur mes terres?
+POZZO. - Ici ? Sur mes terres?
 VLADIMIR. - On ne pensait pas à mal.
 ESTRAGON. - C'était dans une bonne intention.
 POZZO. - La route est à tout le monde.
 VLADIMIR. - C'est ce qu'on se disait.
 Pozzo. - C'est une honte, mais c'est ainsi.
-'
-ESTRAGON. - On n y peut rien.
-
-POZZO (d'un geste large). - Ne parlons plus
-de ça. (Il tire sur la corde.) Debout ! (Un temps.)
-Ch aq ue fois qu'il tombe il s'endort. (Il tire sur
-la corde.) Debout, charogne! (Bruit de Lucky
-
-qui se relève et ramasse ses affaires. Pozzo tire
-sur la corde.) Arrière ! (Lucky entre à reculons.)
-Arêt ! (Lucky s'arrête.) Tourne ! (Lucky se
-retourne. A Vladimir et Estragon, affablement.)
-
-Mes amis, je suis heureux de vous avoir ren­
-contrés. (Devant leur expression incrédule.) Mais
-oui, sincèrement heureux. (Il tire sur la corde.)
-Plus près ! (Lucky avance.) Arrêt ! (Lucky s'ar­
-rête . A Vladimir et Estragon.) Voyez-vous, la
-route est longue quand on chemine tout seul
-pendant. . . (il regarde sa montre) . . . pendant (il
-calcule) . . . six heures, oui, c'est bien ça, six heures
-
-32
-
-EN ATTENDANT GODOT
-
-à la file, sans rencontrer âme qui vive. (A Lucky.)
-Manteau ! (Lucky dépose la valise, avance,
-donne le mantea u, recule, reprend la valise.)
-Tiens ça. (Pozzo lui tend le fouet, Lucky avance
-et, n'ayant plus de mains, se penche et prend
-le fouet entre ses dents, puis recule . Pozzo com­
-mence à mettre son manteau, s'arrête.) Man­
-teau ! (Lucky dépose tout, avance, aide Pozzo
-à mettre son manteau, recule, reprend tout.)
-Le fond de l'air est frais. (Il finit de boutonner
-son manteau, se penche, s'inspe cte, se relève.)
-Fouet! (Lucky avance, se penche, Pozzo lui
-arrache le fouet de la bouche, Lucky recule.)
-Voyez-vous, mes amis, je ne peux me passer
-ongtemps de la société de mes semblables, (il
-"egarde les deux semblables) même quand ils
-ne me ressemblent qu'imparfaitement. (A Lucky.)
-Pliant! (Lucky dépose valise et panier, avance,
-ouvre le pliant, le pose par terre, recule, repren d
-valise et panier . Pozzo regarde le pliant.) Plus
-près ! (Lucky dépose valise et panier, avance,
-
-déplace le pliant, recule, rep re nd valise et panier.
-Pozzo s'assied, pose le bout de son f ouet contre
-la poitrine de Lucky et pousse.) Arrière ! (Lucky
-recule.) Encore. (Lucky recule encore .) Arrêt!
-(Lucky s'arrête . A Vladimir et Estragon.) C'est
-
-pourquoi, avec votre permission, je m'en vais
-rester un moment auprès de vous, avant de
-m'aventurer plus avant. (A Lucky.) Panier!
-(Luckyavance, donne le panier, recule.) Le grand
-
-EN
-
-ATTENDANT GODOT
-
-33
-
-air, ça creuse. (Il ouvre le panier, en retire un
-morceau de poulet, un morceau de pain et une
-bouteille de vin. A Lucky.) Panier! (Lucky
-avance, pren d le panier, recule , s' immobilise. )
-Plus loin ! (Lucky recule.) Là ! (Lucky s'arrête.)
-li pue. (Il boit une rasade à même le goulot.)
-A la bonne nôtre. (Il dépose la bouteile et se
-met à manger.)
-Silence. Estragon et Vladimir, s'enhardissant
-peu à peu, tournent autour de Lucky, l'inspec­
-tent sur toutes les coutures. Pozzo mord dans
-son poulet avec voracité, jette les os après les
-avoir sucés. Lucky ploie len tem en t, jusqu'à ce
-que la valise frôle le sol, se redresse brusque­
-ment, recommence à ployer. Rythme de celui
-qui dort debout.
+ESTRAGON. - On n'y peut rien.
+POZZO (d'un geste large). - Ne parlons plus de ça. (Il tire sur la corde.) Debout ! (Un temps.) Chaque fois qu'il tombe il s'endort. (Il tire sur la corde.) Debout, charogne! (Bruit de Lucky qui se relève et ramasse ses affaires. Pozzo tire sur la corde.) Arrière ! (Lucky entre à reculons.) Arrêt ! (Lucky s'arrête.) Tourne ! (Lucky se retourne. A Vladimir et Estragon, affablement.) Mes amis, je suis heureux de vous avoir rencontrés. (Devant leur expression incrédule.) Mais oui, sincèrement heureux. (Il tire sur la corde.) Plus près ! (Lucky avance.) Arrêt ! (Lucky s'arrête. A Vladimir et Estragon.) Voyez-vous, la route est longue quand on chemine tout seul pendant... (il regarde sa montre) ...pendant (il calcule) . . . six heures, oui, c'est bien ça, six heures à la file, sans rencontrer âme qui vive. (A Lucky.) Manteau ! (Lucky dépose la valise, avance, donne le manteau, recule, reprend la valise.) Tiens ça. (Pozzo lui tend le fouet, Lucky avance et, n'ayant plus de mains, se penche et prend le fouet entre ses dents, puis recule. Pozzo commence à mettre son manteau, s'arrête.) Manteau ! (Lucky dépose tout, avance, aide Pozzo à mettre son manteau, recule, reprend tout.) Le fond de l'air est frais. (Il finit de boutonner son manteau, se penche, s'inspecte, se relève.) Fouet! (Lucky avance, se penche, Pozzo lui arrache le fouet de la bouche, Lucky recule.) Voyez-vous, mes amis, je ne peux me passer longtemps de la société de mes semblables, (il regarde les deux semblables) même quand ils ne me ressemblent qu'imparfaitement. (A Lucky.) Pliant! (Lucky dépose valise et panier, avance, ouvre le pliant, le pose par terre, recule, reprend valise et panier . Pozzo regarde le pliant.) Plus près ! (Lucky dépose valise et panier, avance, déplace le pliant, recule, reprend valise et panier. Pozzo s'assied, pose le bout de son fouet contre la poitrine de Lucky et pousse.) Arrière ! (Lucky recule.) Encore. (Lucky recule encore .) Arrêt! (Lucky s'arrête. A Vladimir et Estragon.) C'est pourquoi, avec votre permission, je m'en vais rester un moment auprès de vous, avant de m'aventurer plus avant. (A Lucky.) Panier! (Lucky avance, donne le panier, recule.) Le grand air, ça creuse. (Il ouvre le panier, en retire un morceau de poulet, un morceau de pain et une bouteille de vin. A Lucky.) Panier! (Lucky avance, prend le panier, recule, s' immobilise.) Plus loin ! (Lucky recule.) Là ! (Lucky s'arrête.) Il pue. (Il boit une rasade à même le goulot.) A la bonne nôtre. (Il dépose la bouteille et se met à manger.) Silence. Estragon et Vladimir, s'enhardissant peu à peu, tournent autour de Lucky, l'inspectent sur toutes les coutures. Pozzo mord dans son poulet avec voracité, jette les os après les avoir sucés. Lucky ploie lentement, jusqu'à ce que la valise frôle le sol, se redresse brusquement, recommence à ployer. Rythme de celui qui dort debout.
 ESTRAGON. - Qu'est-ce qu'il a?
-VLADIMIR. - Il a l'air fa tigué.
-ESTRAGON. - Po urquo i ne dépose-t-il p as
-ses ba ga ges ?
-VLADIMIR. - Est-ce que je sais? (Ils le se rrent de plus près.) Attention !
+VLADIMIR. - Il a l'air fatigué.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+VLADIMIR. - Est-ce que je sais? (Ils le serrent de plus près.) Attention !
 ESTRAGON. - Si on lui parlait ?
-VLADIMIR. - Re garde -mo i ça!
-ESTRAGON. - Qu oi ?
-VLADIMIR (indiquant). - Le co u.
-ESTRAGON (regardant le cou). - Je ne vo is
-rien.
+VLADIMIR. - Regarde-moi ça!
+ESTRAGON. - Quoi ?
+VLADIMIR (indiquant). - Le cou.
+ESTRAGON (regardant le cou). - Je ne vois rien.
 VLADIMIR. - Mets-toi ici.
-Estragon se met à la place de Vladimir.
-
-EN ATTENDANT GODOT
-
-34
-
-ESTRAGON.
-
-VLADIMIR.
-ESTRAGON.
-
-VLADIMIR.
-ESTRAGON.
-
-VLADIMIR.
-ESTRAGON.
-
-E n e ffe t.
-A vif.
-- C'est la cord e.
-A f orce de fr ot te r.
-- Qu'est-ce qu e t u veu x.
-- C'e st l e nœud.
-- C'es t fa tal.
--
-
--
-
--
-
-Ils reprennent leur inspection, s'arrêtent au
-visage.
-VLADIMIR.
-Il n 'e s t pa s m a l
-ESTRAGON (levant les épaules, faisant la moue).
--
-
-.
-
-- Tu trouve s?
+  Estragon se met à la place de Vladimir.
+ESTRAGON. - En effet.
+VLADIMIR. - A vif.
+ESTRAGON. - C'est la corde.
+VLADIMIR. - A force de frotter.
+ESTRAGON. - Qu'est-ce que tu veux.
+VLADIMIR. - C'est le nœud.
+ESTRAGON. - C'est fatal.
+  Ils reprennent leur inspection, s'arrêtent au visage.
+VLADIMIR. - Il n 'est pas mal
+ESTRAGON (levant les épaules, faisant la moue). - Tu trouves?
 VLADIMIR. - Un peu efféminé.
-Es TRAGON . - Il bav e.
-VLADIMIR. - C' est f orcé.
-ESTRAGON.
-Il écum e.
-VLADIMIR.
-C'est peut- êtr e un i di ot.
-ESTRAGON.
-Un cré ti n.
-VLADIMIR (avançant la tête).
-On dirait un
-g oit re.
-ESTRAGON (même jeu). - Ce n'est pas sûr .
-VLADIMIR. - Il hal ète.
-ESTRAGON. - C'est n orma l.
-VLADIMIR.
-Et ses yeux!
-ESTRAGON. - Qu'es t-ce qu ' il s ont ?
-VLADIMIR. - Ils s ort ent.
-ESTRAGON.
-P our m oi, il est en tr ai n de
-cr eve r.
-VLADIMIR. - C e n 'e st pas s ûr. (Un temps.)
-Pose- lui un e questi on.
--
-
--
-
--
-
--
-
--
-
--
-
-EN ATTENDANT GODOT
-
-35
-
+Es TRAGON . - Il bave.
+VLADIMIR. - C'est forcé.
+ESTRAGON. - Il écume.
+VLADIMIR. - C'est peut-être un idiot.
+ESTRAGON. - Un crétin.
+VLADIMIR (avançant la tête). - On dirait un goitre.
+ESTRAGON (même jeu). - Ce n'est pas sûr.
+VLADIMIR. - Il halète.
+ESTRAGON. - C'est normal.
+VLADIMIR. - Et ses yeux!
+ESTRAGON. - Qu'est-ce qu'ils ont ?
+VLADIMIR. - Ils sortent.
+ESTRAGON. - Pour moi, il est entrain de crever.
+VLADIMIR. - Ce n'est pas sûr. (Un temps.) Pose-lui une question.
 ESTRAGON. - Tu crois?
-VLADIMIR. - Qu'est-ce qu'on
-
-risque?
-ESTRAGON (timidement). - Monsieur. . .
-VLADIMIR. - Plus fort.
-ESTRAGON (plus fort). -- Monsieur ...
-Pozzo. - Foutez-lui la paix! (Ils se tou rnent
-
-vers
-
-Pozzo
-
-qui, ayant fini de manger, s'essuie
-
-la bou ch e du revers de la main.) Vous ne voyez
-pas qu'il veut se reposer? (Il sort sa pipe et
-commence à la bourrer. Estrag o n remarque les
-os de poulet par terre, les fixe a v ec avidité. Pozzo
-frotte une allumette et com mence à allumer sa
-pipe.) Panier! (Lucky ne bougeant pas, Pozzo
-jette l 'allumette avec emportement et tire sur
-la corde . ) Panier! (Lucky manque de tomber,
-revient à lui, avance, met la bouteille dans le
-panier, retourn e à sa place, reprend son attitude.
-Estragon fixe les os, Pozzo frotte une seconde
-allu met te et allume sa pipe.) Que voulez-vous,
-ce n'est pas son travail. (Il aspire une bouffée,
-allonge les jambes.) Ah! ça va mieux.
+VLADIMIR. - Qu'est-ce qu'on risque?
 ESTRAGON (timidement). - Monsieur...
-Pozzo. - Qu'est-ce que c'est, mon brave?
-ESTRAGON. - Heu... vous ne mangez pas...
-heu... vous n'avez plus besoin... des os . . . mon­
-sieur ?
-VLADIMIR (outré). - Tu ne pouvais pas
-attendre?
-POZZO.
-naturel. Si
-
-- Mais non,
-j'ai besoin des
-
-mais non, c'est tout
-os? (Il les remue du
-
-36
-
-EN ATTENDANT GODOT
-
-bout de son fouet.) Non, personnellement je
-
-n'en ai plu s besoin. (Estragon fait un pas v ers
-les os.) Mais . . . (Estragon s'arrête) mais en prin­
-cipe les os reviennent au porteur. C'est donc à
-lui qu'il faut demander. (Estragon se tourne vers
-Lucky, hésite.) Mais demandez-lui, demandez-lui,
-
-n'ayez pas peur, il vous le dira.
-Estrag on va vers Lucky, s'arrête devant lui.
-ESTRAGON. - Monsieur . . . pardon, monsieur. . .
-
-Lucky n e réagit pas. Pozzo fait claquer son
-fo ue t . L u c ky relève la tête.
-
-Pozzo. - On te parle,
-
-porc. Réponds. (A
-
-Estragon.) Allez-y.
-ESTRAPON. - Pardon, m ons ieur , les os, vous
-
-les voulez ?
-
-Lucky regarde Estragon longuement.
-
-- Monsieur ! (L u cky
-! Tu les veux ou tu ne
-les veux pas ? (Silence de Lucky. A Estragon . )
-Ils sont à vo us . (Estragon se jette sur les os, les
-ramasse et comm e n ce à les ronger.) C'est pour­
-tant bizarre. C'est bien la première fois qu'il me
-refuse u n os. (lI regarde L ucky avec inquiétude.)
-J'espère qu'il ne va pas me faire l a blague de
-tomber malade. (Il tire sur sa pipe.)
+VLADIMIR. - Plus fort.
+ESTRAGON (plus fort). -- Monsieur...
+POZZO. - Foutez-lui la paix! (Ils se tournent vers Pozzo qui, ayant fini de manger, s'essuie la bouche du revers de la main.) Vous ne voyez pas qu'il veut se reposer? (Il sort sa pipe et commence à la bourrer. Estragon remarque les os de poulet par terre, les fixe avec avidité. Pozzo frotte une allumette et commence à allumer sa pipe.) Panier! (Lucky ne bougeant pas, Pozzo jette l'allumette avec emportement et tire sur la corde . ) Panier! (Lucky manque de tomber, revient à lui, avance, met la bouteille dans le panier, retourne à sa place, reprend son attitude. Estragon fixe les os, Pozzo frotte une seconde allumette et allume sa pipe.) Que voulez-vous, ce n'est pas son travail. (Il aspire une bouffée, allonge les jambes.) Ah! ça va mieux. 
+ESTRAGON (timidement). - Monsieur...
+POZZO. - Qu'est-ce que c'est, mon brave?
+ESTRAGON. - Heu... vous ne mangez pas... heu... vous n'avez plus besoin... des os... monsieur ?
+VLADIMIR (outré). - Tu ne pouvais pas attendre?
+POZZO. - Mais non, mais non, c'est tout naturel. Si j'ai besoin des os? (Il les remue du bout de son fouet.) Non, personnellement je n'en ai plus besoin. (Estragon fait un pas vers les os.) Mais... (Estragon s'arrête) mais en principe les os reviennent au porteur. C'est donc à lui qu'il faut demander. (Estragon se tourne vers Lucky, hésite.) Mais demandez-lui, demandez-lui, n'ayez pas peur, il vous le dira.
+  Estragon va vers Lucky, s'arrête devant lui.
+ESTRAGON. - Monsieur... pardon, monsieur...
+  Lucky ne réagit pas. Pozzo fait claquer son fouet . Lucky relève la tête.
+POZZO. - On te parle, porc. Réponds. (A Estragon.) Allez-y.
+ESTRAPON. - Pardon, monsieur , les os, vous les voulez ?
+  Lucky regarde Estragon longuement.
+Pozzo (aux anges). - Monsieur ! (Lucky baisse la tête). Réponds ! Tu les veux ou tu ne les veux pas ? (Silence de Lucky. A Estragon.)  Ils sont à vous . (Estragon se jette sur les os, les ramasse et commence à les ronger.) C'est pourtant bizarre. C'est bien la première fois qu'il me refuse un os. (Il regarde Lucky avec inquiétude.) J'espère qu'il ne va pas me faire la blague de tomber malade. (Il tire sur sa pipe.)
 VLADIMIR (éclatant). - C'est une honte !
-Pozzo (aux anges).
-baisse la tê te) . Réponds
-
-Silence. Estragon , stupéfait, s'arrête de ron­
-ger, re[?arde Vladimir e t Pozzo tour à tour. Pozzo
-très calme. Vladimir de plus en plus gên é .
-
-EN
-
-ATTENDANT GODOT
-
-37
-
-Pozzo (à Vladimir). - Faites-vous allusion
-à quelque chos e de particulier 1
-VLADIMIR (résolu et bafouillant). - Traiter
-un homme (geste vers Lucky) de cette façon . ..
-je trouve ça . . . un être humain . . . non . . . c'est une
-honte !
-
-ESTRAGON (ne voulant pas être en reste).
-
--
-
-Un scandale ! (Il se rem et à ronger .)
-Pozzo. - Vous êtes sévères. (A Vladimir).
-Quel âge avez-vous, sans indiscrétion ? (Silence.)
-So i x ante 1 . . . Soixante-dix 1 . . . (A Estragon.) Quel
-âge peut-il bien avoir 1
+  Silence. Estragon, stupéfait, s'arrête de ronger, regarde Vladimir et Pozzo tour à tour. Pozzo très calme. Vladimir de plus en plus gêné.
+POZZO (à Vladimir). - Faites-vous allusion à quelque chose de particulier ?
+VLADIMIR (résolu et bafouillant). - Traiter un homme (geste vers Lucky) de cette façon... je trouve ça... un être humain... non... c'est une honte !
+ESTRAGON (ne voulant pas être en reste). - Un scandale ! (Il se remet à ronger .)
+POZZO. - Vous êtes sévères. (A Vladimir). Quel âge avez-vous, sans indiscrétion ? (Silence.) Soixante ?... Soixante-dix ?... (A Estragon.) Quel âge peut-il bien avoir ?
 ESTRAGON. - Demandez-lui.
-
-Pozzo. - Je su i s indiscret. (Il vide sa pipe
-en la tapant contre son fo u et , se lève.) Je vais
-
-vo u s q u i tte r . Merci de m'avoir t enu compagnie.
-(Il réfléchit.) A moins que j e ne fume encore
-une pipe a v e c vous. Qu'en dites-vous ? ( Ils n'en
-disent rien . ) Oh, je ne suis qu'un petit fumeur,
-un tout p etit fumeur, il n 'est pas dans mes habi­
-tu des de fumer de u x pipes coup sur coup, ça (il
-porte sa main au cœur) fait battre mon cœur.
-(Un temps.) C'est la ni cot i ne , on en ab sorbe ,
-malgré ses p récautions . (Il soupire.) Que voul e z­
-vous. (Silence.) M a i s peut-être que vous n'êtes
-pas des fumeurs. Si ? Non ? Enfin, c'est un détail .
-(Silence.) M a i s comment me r a ss eoi r maintenant
-avec n aturel, maintenant que je me suis m i s
-debout ? Sans a vo i r l'air de - comment d i re de flécbir ? (A Vladimir.) Vou s di t e s? (Silence.)
-
-38
-
-E N ATTENDANT GODOT
-
-Peut-être n'avez-vous rien dit ? (Silence.) C'est
-sans importance. Voyons . . . (Il réfléchit.)
-ESTRAGON. - Ah ! Ça va mieux. (11 jette
-les os.)
+POZZO. - Je suis indiscret. (Il vide sa pipe en la tapant contre son fouet, se lève.) Je vais vous quitter. Merci de m'avoir tenu compagnie. (Il réfléchit.) A moins que je ne fume encore une pipe avec vous. Qu'en dites-vous ? (Ils n'en disent rien.) Oh, je ne suis qu'un petit fumeur, un tout petit fumeur, il n'est pas dans mes habitudes de fumer deux pipes coup sur coup, ça (il porte sa main au cœur) fait battre mon cœur. (Un temps.) C'est la nicotine, on en absorbe, malgré ses précautions. (Il soupire.) Que voulez­vous. (Silence.) Mais peut-être que vous n'êtes pas des fumeurs. Si ? Non ? Enfin, c'est un détail. (Silence.) Mais comment me rasseoir maintenant avec naturel, maintenant que je me suis mis debout ? Sans avoir l'air de - comment dire - de fléchir ? (A Vladimir.) Vous dites? (Silence.) Peut-être n'avez-vous rien dit ? (Silence.) C'est sans importance. Voyons... (Il réfléchit.)
+ESTRAGON. - Ah ! Ça va mieux. (Il jette les os.)
 VLADIMIR. - Partons.
 ESTRAGON. - Déjà?
-Pozzo. - Un instant ! (Il tire sur la corde.)
-Pliant ! (II montre avec son fouet. Lucky déplace
-le pliant.) Encore ! Là ! (Il se rassied. Lucky
-recule, reprend valise et panier.) Me voilà réins­
-tallé ! (Il commence à bourrer sa pipe.)
-VLADIMIR. - P arton s .
-POZZO. - J ' espère que ce n'est pas moi qui
-vous chasse ? Restez encore un peu, vous ne le
-regretterez pas.
-ESTRAGON (flairant l'aumône). - Nous avons
-le temp s.
-POZZO (ayant allumé sa pipe). - La deu xième
-est toujours moins bonne (il enlève la pipe de
-sa bouche, la contemple) que la première, je veux
-dire. (Il remet la pipe dans sa bouche.) Mais elle
-est bonne quand même.
+POZZO. - Un instant ! (Il tire sur la corde.) Pliant ! (Il montre avec son fouet. Lucky déplace le pliant.) Encore ! Là ! (Il se rassied. Lucky recule, reprend valise et panier.) Me voilà réinstallé ! (Il commence à bourrer sa pipe.)
+VLADIMIR. - Partons .
+POZZO. - J'espère que ce n'est pas moi qui vous chasse ? Restez encore un peu, vous ne le regretterez pas.
+ESTRAGON (flairant l'aumône). - Nous avons le temps.
+POZZO (ayant allumé sa pipe). - La deuxième est toujours moins bonne (il enlève la pipe de sa bouche, la contemple) que la première, je veux dire. (Il remet la pipe dans sa bouche.) Mais elle est bonne quand même.
 VLADIMIR. - Je m'en vais.
-POZZO. - Il ne peut plus supporter ma pré­
-sence. Je suis sans doute peu humain, mais est-ce
-une raison ? (A Vladimir.) Réfléchissez, avant de
-commettre une imprudence. Mettons que vou s
-partiez maintenant, pen d ant qu 'il fait encore jour,
-car m algré tout il fait encore jour. (Tous les
-trois regardent le ciel.) Bon. Que devient en ce
-
-EN ATTENDANT GODOT
-
-39
-
-cas - (il ôte sa pipe de la bouche, la regarde)
-je suis éteint
-(il rallume sa pipe) - en ce
-cas. . . en ce cas. . . que devient en ce cas votre
-rendez-vous avec ce ... Godet ... Godot. . . Godin .
-(silence) . . enfin vous voyez qui je veux dire,
-dont votre avenir dépend (silence) . enfin votre
-avenir immédiat.
-ESTRAGON.
-Il a raison.
-VLADIMIR.
-Comment le saviez-vous ?
-Pozzo. - Voilà qu'il m'adresse à nouveau la
-parole ! Nous finirons par nous prendre en affec­
-tion.
-ESTRAGON.
-Pourquoi ne dépose-t-il pas ses
-bagages ?
-POZZO. - Moi aussi je serais heureux de le
-rencontrer. Plus je rencontre de gens, plus je
-suis heureux. Avec la moindre créature on s'ins­
-truit, on s'enrichit, on goûte mieux son bonheur.
-Vous-mêmes (il les regarde attentivement l'un
-après l'autre, afin qu'ils se sachent visés tous les
-deux) vous-mêmes, qui sait, vous m'aurez peut­
-être apporté quelque chose.
-ESTRAGON. - Pourquoi ne dépose-t-il pas ses
-bagages ?
+POZZO. - Il ne peut plus supporter ma présence. Je suis sans doute peu humain, mais est-ce une raison ? (A Vladimir.) Réfléchissez, avant de commettre une imprudence. Mettons que vous partiez maintenant, pendant qu il fait encore jour, car malgré tout il fait encore jour. (Tous les trois regardent le ciel.) Bon. Que devient en ce cas - (il ôte sa pipe de la bouche, la regarde) - je suis éteint - (il rallume sa pipe) - en ce cas... en ce cas... que devient en ce cas votre rendez-vous avec ce... Godet... Godot... Godin... (silence) ...enfin vous voyez qui je veux dire, dont votre avenir dépend (silence) ...enfin votre avenir immédiat.
+ESTRAGON. - Il a raison.
+VLADIMIR. - Comment le saviez-vous ?
+POZZO. - Voilà qu'il m'adresse à nouveau la parole ! Nous finirons par nous prendre en affection.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+POZZO. - Moi aussi je serais heureux de le rencontrer. Plus je rencontre de gens, plus je suis heureux. Avec la moindre créature on s'instruit, on s'enrichit, on goûte mieux son bonheur. Vous-mêmes (il les regarde attentivement l'un après l'autre, afin qu'ils se sachent visés tous les deux) vous-mêmes, qui sait, vous m'aurez peut­être apporté quelque chose.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
 POZZO. - Mais ça m'étonnerait.
 VLADIMIR. - On vous pose une question.
-Pozzo (ravi).
-Une question ? Qui ? Laquelle ? (Silence.) Tout à l'heure vous me disiez
-Monsieur, en tremblant. Maintenant vous me
-posez des questions. Ça va mal finir.
--
-
---
-
-..
-
-.
-
-..
-
--
-
--
-
--
-
--
-
-40
-
-EN ATTENDANT GODOT
-
-VLADIMIR (à
-
-Estragon).
-
-Je
-
-t'écoute.
-
-crois
-
-qu'il
-
-ESTRAGON (qui s'est remis à tourner autour
-de Lucky). - Quoi ?
-VLADIMIR. - Tu peux lui demander mainte­
-
-nant. Il est alerté.
-ESTRAGON.
-Lui demander quoi ?
-VLADIMIR. - Pourquoi il ne dépose pas ses
-bagages.
+POZZO (ravi). - Une question ? Qui ? Laquelle ? (Silence.) Tout à l'heure vous me disiez Monsieur, en tremblant. Maintenant vous me posez des questions. Ça va mal finir.
+VLADIMIR (à Estragon). - Je crois qu'il t'écoute.
+ESTRAGON (qui s'est remis à tourner autour de Lucky). - Quoi ?
+VLADIMIR. - Tu peux lui demander maintenant. Il est alerté.
+ESTRAGON. - Lui demander quoi ?
+VLADIMIR. - Pourquoi il ne dépose pas ses bagages.
 ESTRAGON. - Je me le demande.
 VLADIMIR. - Mais demande-lui, voyons.
-Pozzo (qui a suivi ses échanges avec une
-attention anxieuse, cra ign ant que la question ne
-se perde). - Vous me dem andez pourquoi il ne
-dépose pas ses bagages, c om m e vous dites ?
-VLADIMIR. - V oi l à
-POZZO (à Estragon). - Vous êtes bien d'ac­
-c o rd ?
-ESTRAGON (continuant à tourner autour de
-L uc ky) . - Il souffle comme un phoque.
-Pozzo. - Je v ai s vous répondre. (A Estra­
-gon .) Mais restez tranquille, je vous en supplie,
-vous me rendez nerveux .
+POZZO (qui a suivi ses échanges avec une attention anxieuse, craignant que la question ne se perde). - Vous me demandez pourquoi il ne dépose pas ses bagages, comme vous dites ?
+VLADIMIR. - Voilà
+POZZO (à Estragon). - Vous êtes bien d'accord ?
+ESTRAGON (continuant à tourner autour de Lucky). - Il souffle comme un phoque.
+POZZO. - Je vais vous répondre. (A Estragon.) Mais restez tranquille, je vous en supplie, vous me rendez nerveux .
 VLADIMIR. - Viens ici.
-ESTRAGON .
-Qu'est-ce qu'il y a ?
-VL ADIMIR.
-Il va p arl e r
--
-
-.
-
--
-
--
-
-.
-
-Imm obiles, l'un contre l'autre, ils attendent.
-Pozzo.
-C 'est parfait. T o u t le m o n de y est ?
-Tout le monde me re g a r d e ? (Il regarde Lucky,
-tire sur la corde. Lucky lève la tête.) Regarde-
-
-EN ATTENDANT GODOT
-
-41
-
-moi, porc ! (Lucky le regarde.) Parfait. (Il met
-la p ipe dans sa poche, sort un petit vaporisateur
-et se vaporise la gorge, remet le vaporisateur
-dans sa poche, se râcle la gorge, crach e, ressort
-
-le vaporisateur, se revaporise la gorge, remet le
-vaporisateur dans sa poche.) Je su is prêt. Tout
-le monde m'écoute ? (Il regarde Lucky, tire sur
-la corde.) Avance ! (Lucky avance.) Là ! (Lucky
-$'arrête.) Tout le monde est prêt ? (11 les regarde
-tous les trois, Lucky en dernier, tire sur la corde . )
-Alors quoi ? (Lucky lève la tête) . Je n'aime p as
-p arler dans le vide. Bon. Voyons. (Il réfléchit. )
-ESTRAGON. - Je m'en vais .
-POZZO. - Qu'est-ce que vous m'avez demandé
-au juste ?
-VLADIMIR. - Pourquoi il . . .
-POZZO (avec colère). - N e me coupez pas
-la p arole ! (Un temps. Plus calme.) Si nous par­
-
-lons tous en même temps nous n'en sortirons
-j am ais . (Un temps.) Qu'est-ce que je disais ?
-(Un temps. Plus fort.) Qu'est-ce que je disais ?
-
-Vladimir mime celui qui porte une lourde
-charge. Pozzo le regarde sans compren dre.
-ESTRAGON (avec force). - B agages ! (Il pointe
-son doigt vers Lucky.) Pourquoi ? Touj ours
-tenir. (Il fait celui qui ploie, en h aletan t.) Jamais
-déposer. (Il ouvre les mains, se redresse avec sou­
-lagement.) Pourquoi ?
-Pozzo. - J'y suis. Il falait me le dire plus
-tôt. Pourquoi il ne se met pas à son. aise. Esayons
-
-EN ATTENDANT GODOT
-
-42
-
-d'y voir clair. N'en a-t-il pas le droit ? Si . C'est
-donc qu'il ne veut pas ? Voilà qui est raisonné.
-Et pourquoi ne veut-il pas ? (Un temps.) Mes­
-sieurs, je vais vous le dire.
+ESTRAGON. - Qu'est-ce qu'il y a ?
+VLADIMIR. - Il va parler
+  Immobiles, l'un contre l'autre, ils attendent.
+POZZO. - C'est parfait. Tout le monde y est ? Tout le monde me regarde ? (Il regarde Lucky, tire sur la corde. Lucky lève la tête.) Regarde-moi, porc ! (Lucky le regarde.) Parfait. (Il met la pipe dans sa poche, sort un petit vaporisateur et se vaporise la gorge, remet le vaporisateur dans sa poche, se râcle la gorge, crache, ressort le vaporisateur, se revaporise la gorge, remet le vaporisateur dans sa poche.) Je suis prêt. Tout le monde m'écoute ? (Il regarde Lucky, tire sur la corde.) Avance ! (Lucky avance.) Là ! (Lucky s'arrête.) Tout le monde est prêt ? (Il les regarde tous les trois, Lucky en dernier, tire sur la corde.) Alors quoi ? (Lucky lève la tête) . Je n'aime pas parler dans le vide. Bon. Voyons. (Il réfléchit.)
+ESTRAGON. - Je m'en vais.
+POZZO. - Qu'est-ce que vous m'avez demandé au juste ?
+VLADIMIR. - Pourquoi il...
+POZZO (avec colère). - Ne me coupez pas la parole ! (Un temps. Plus calme.) Si nous parlons tous en même temps nous n'en sortirons jamais. (Un temps.) Qu'est-ce que je disais ? (Un temps. Plus fort.) Qu'est-ce que je disais ?
+  Vladimir mime celui qui porte une lourde charge. Pozzo le regarde sans comprendre.
+ESTRAGON (avec force). - Bagages ! (Il pointe son doigt vers Lucky.) Pourquoi ? Toujours tenir. (Il fait celui qui ploie, en haletant.) Jamais déposer. (Il ouvre les mains, se redresse avec soulagement.) Pourquoi ?
+POZZO. - J'y suis. Il fallait me le dire plus tôt. Pourquoi il ne se met pas à son aise. Essayons d'y voir clair. N'en a-t-il pas le droit ? Si. C'est donc qu'il ne veut pas ? Voilà qui est raisonné. Et pourquoi ne veut-il pas ? (Un temps.) Messieurs, je vais vous le dire.
 VLADIMIR. - Attention !
-POZZO. - C'est p our m'impressionner, p our
-
-que je le garde.
+POZZO. - C'est pour m'impressionner, pour que je le garde.
 ESTRAGON. - Comment ?
-POZZO. - Je me sui s peut-être mal exprimé .
-n cherche à m' ap itoyer, pour que je renonce à
-me séparer de lui. Non, ce n'est pas tout à fait
+POZZO. - Je me suis peut-être mal exprimé. Il cherche à m'apitoyer, pour que je renonce à me séparer de lui. Non, ce n'est pas tout à fait ça.
+VLADIMIR. - Vous voulez vous en débarasser ?
+POZZO. - Il veut m'avoir, mais il ne m' aura pas.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Il s'imagine qu'en le voyant bon porteur je serai tenté de remployer à l'avenir dans cette capacité.
+ESTRAGON. - Vous n'en voulez plus ?
+POZZO. - En réalité il porte comme un porc. Ce n'est pas son métier.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Il se figure qu'en le voyant infatigable je vais regretter ma décision. Tel est son misérable calcul. Comme si j'étais à court d'hommes de peine ! (Tous les trois regardent Lucky.) Atlas, fils de Jupiter ! (Silence.) Et voilà. Je pense avoir répondu à votre question. En avez­vous d'autres ? (Jeu du vaporisateur.)
+VLADIMIR. - Vous voulez vous en débarraser ?
+POZZO. - Remarquez que j'aurais pu être à sa place et lui à la mienne. Si le hasard ne s'y était pas opposé. A chacun son dû.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Vous dites ?
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - En effet. Mais au lieu de le chasser, comme j'aurais pu, je veux dire au lieu de le mettre tout simplement à la porte, à coups de pied dans le cul, je l'emmène, telle est ma bonté, au marché de Saint-Sauveur, où je compte bien en tirer quelque chose. A vrai dire, chasser de tels êtres, ce n'est pas possible. Pour bien faire, il faudrait les tuer.
 
-ça.
+        Lucky pleure.
 
-VLADIMIR. - Vous voulez vous
+ESTRAGON. - Il pleure.
+POZZO. - Les vieux chiens ont plus de dignité. (Il tend son mouchoir à Estragon.) Consolez-le, puisque vous le plaignez. (Estragon hésite.) Prenez. (Estragon prend le mouchoir.) Essuyez-lui les yeux. Comme ça il se sentira moins abandonné.
 
-rasser ?
-Pozzo.
-
-- Il veut m'avoir, mais il
-
-en débar­
-ne m' aura
-
-pas.
-VLADIMIR. - Vous voulez vous en débar­
-rasser ?
-Pozzo. - Il s'imagine qu'en le voyant bon
-p orteur je serai tenté de remployer à l'avenir
-
-dans cette capacité.
-ESTRAGON. -
-
-Pozzo.
-
--
-
-Vous n'en voulez plus ?
-En réalité il porte comme un porc.
-
-Ce n'est pas son métier.
-VLADIMIR. - Vous voulez vous
-
-en débar­
-
-rasser ?
-Pozzo. - Il se figure qu'en le voyant infa­
-tigable je vais regretter ma décision. Tel est
-son misérable calcul. Comme si j'étais à court
-d'hommes de peine ! (Tous les trois regardent
-
-EN ATTENDANT GODOT
-
-43
-
-LucAy.) Atlas, fils de Jupiter ! (Silence.) Et voilà.
-Je pense avoir répondu à votre question. En avez­
-vous d'autres ? (Jeu du vaporisateur.)
-VLADIMIR. - Vous voulez vous en débar­
-
-rasr ?
-Pozzo.
-Remarquez que j'aurais pu être à
-sa place et lui à la mienne. Si le hasard ne s'y
-était pas opposé A chacun son dû.
-VLADIMIR. - Vous voulez vous en débar­
-rasr ?
-Pozzo. - Vous dites ?
-VLADIMIR. - Vous voulez vous en débar­
-rasr ?
-Pozzo.
-En effet Mais au lieu de le chas­
-ser, comme j'aurais pu, je veux dire au lieu de
-le mettre tout simplement à la porte, à coups de
--
-
-.
-
--
-
-.
-
-pied dans le cul, je l'emmène, telle est ma bonté,
-au marché de Saint-Sauveur, où je compte bien
-en tirer quelque chose. A vrai dire, chasr de
-tels êtres, ce n'est pas possible. Pour bien faire,
-il faudrait les tuer.
-Lucky pleure.
-ESTRAGON. - n pleure.
-Pozzo.
-Les vieux chiens ont plus de dignité.
-(Il tend son mouchoir à Estragon.) Consolez-Ie,
-puisque vous le plaignez. (Estragon hésite.) Pre­
-nez. (Estragon prend le mouchoir.) Esyez-lui
-les yeux. Comme ça il se sentira moins aban­
-donné.
-Estragon hésite toujoun.
--
-
-44
-
-EN ATTENDANT GODOT
+        Estragon hésite toujours.
 
 VLADIMIR. - Donne, je le ferai, moi.
-Estragon ne veut pas donner le mouchoir.
-Gestes d'enfant.
-POZZO. - Dépêchez-vous. Bientôt il ne pleu­
-rera plus. (Estragon s'approche de Lucky et se
-met en posture de lui essuyer les yeux. Lucky
-lui décoche un violent coup de pied dans les
-tibias. Estragon lâche le mouchoir, se jette en
-arrière, fait le tour du plateau en boitant et en
-hurlant de douleur.) Mouchoir. (Lucky dépose
-valise et panier, ramasse le mouchoir, avance, le
-donne à Pozzo, recule, reprend valise et panier.)
-ESTRAGON. - Le salaud ! La vache ! (Il relève
-son pantalon.) Il m'a estropié !
-Pozzo. - Je vous avais dit qu'il n'aime pas
-les étrangers.
-VLADIMIR (à Estragon). - Fais voir. (Estra­
-gon lui montre sa jambe. A Pozzo, avec colère.)
-n s aigne !
-Pozzo. - C'est bon signe.
-ESTRAGON (la jambe blessée en l'air). - Je ne
-pourrai plus marcher !
-VLADIMIR (tendrement). - Je te porterai. (Un
-temps.) Le cas échéant.
-Pozzo. - Il ne pleure plus . (A Estragon.)
-Vous l'avez remplacé, en quelque sorte. (Rêveu­
-sement.) Les larmes du monde sont immuables.
-Pour chacun qui se met à pleurer, quelque part
-un autre s'arête. Il en va de même du rire. (Il
-rit.) Ne disons donc pas de mal de notre époque,
-
-EN
-
-ATTENDANT
-
-GODOT
-
-45
-
-elle n'est pas plus malheureuse que les prece­
-dentes. (Silence.) N'en disons pas de bien non
-plus. (Silence.) N'en parlons pas. (Silence.) Il
-est vrai que la population a augmenté.
+  Estragon ne veut pas donner le mouchoir. Gestes d'enfant.
+POZZO. - Dépêchez-vous. Bientôt il ne pleurera plus. (Estragon s'approche de Lucky et se met en posture de lui essuyer les yeux. Lucky lui décoche un violent coup de pied dans les tibias. Estragon lâche le mouchoir, se jette en arrière, fait le tour du plateau en boitant et en hurlant de douleur.) Mouchoir. (Lucky dépose valise et panier, ramasse le mouchoir, avance, le donne à Pozzo, recule, reprend valise et panier.)
+ESTRAGON. - Le salaud ! La vache ! (Il relève son pantalon.) Il m'a estropié !
+POZZO. - Je vous avais dit qu'il n'aime pas les étrangers.
+VLADIMIR (à Estragon). - Fais voir. (Estragon lui montre sa jambe. A Pozzo, avec colère.) Il saigne !
+POZZO. - C'est bon signe.
+ESTRAGON (la jambe blessée en l'air). - Je ne pourrai plus marcher !
+VLADIMIR (tendrement). - Je te porterai. (Un temps.) Le cas échéant.
+POZZO. - Il ne pleure plus. (A Estragon.) Vous l'avez remplacé, en quelque sorte. (Rêveusement.) Les larmes du monde sont immuables. Pour chacun qui se met à pleurer, quelque part un autre s'arrête. Il en va de même du rire. (Il rit.) Ne disons donc pas de mal de notre époque elle n'est pas plus malheureuse que les précédentes. (Silence.) N'en disons pas de bien non plus. (Silence.) N'en parlons pas. (Silence.) Il est vrai que la population a augmenté.
 VLADIMIR. - Essaie de marcher.
+  Estragon part en boitillant, s'arrête devant Lucky et crache sur lui, puis va s'asseoir là où il était assis au lever du rideau.
+POZZO. - Savez-vous qui m'a appris toutes ces belles choses ? (Un temps. Dardant son doigt vers Lucky.) Lui !
+VLADIMIR (regardant le ciel). - La nuit ne viendra-t-elle donc jamais ?
+POZZO. - Sans lui je n'aurais jamais pensé, jamais senti, que des choses basses, ayant trait à mon métier de - peu importe. La beauté, la grâce, la vérité de première classe, je m'en savais incapable. Alors j'ai pris un knouk.
+VLADIMIR (malgré lui, cessant d'interroger le ciel). - Un knouk ?
+POZZO. - Il y aura bientôt soixante ans que ça dure... (il calcule mentalement) ...oui, bientôt soixante. (Se redressant fièrement.) On ne me les donnerait pas, n'est-ce pas ? (Vladimir regarde Lucky). A côté de lui j'ai l'air d'un jeune homme, non ? (Un temps. A Lucky.) Chapeau ! (Lucky dépose le panier, enlève son chapeau. Une abondante chevelure blanche lui tombe autour du visage. Il met son chapeau sous le bras et reprend le panier.) Maintenant, regardez. (Pozzo ôte son chapeau. Il est complètement chauve. Il remet son chapeau.) Vous avez vu ?
+VLADIMIR. - Qu'est-ce que c'est, un knouk ?
+POZZO. - Vous n'êtes pas d'ici . Etes vous seulement du siècle ? Autrefois on avait des bouffons. Maintenant on a des knouks. Ceux qui peuvent se le permettre.
+VLADIMIR. - Et vous le chassez à présent ? Un si vieux, un si fidèle serviteur ?
+ESTRAGON. - Fumier !
 
-Estragon part en boitillant, s'arrête devant
-crache sur lui, puis va s'asseoir là où
-il était assis au lever du rideau.
-Pozzo. - Savez-vous qui m' a app ris toutes
-ces belle s choses ? (Un temps. Dardant son doigt
-vers Lucky.) Lui !
-VLADIMIR (regardant le ciel). - La nuit ne
-L ucky et
+        Pozzo de plus en plus agité.
 
-viendra-t-elle donc jamais ?
-Pozzo. - Sans lui je n'aurais j amais pensé,
-j amais senti, que des choses b asses, ayant trait
-à mon métier de - peu i mp orte . La beauté, la
-grâce, la vérité de première cl asse , je m'en s av ai s
-incapable. Alors j'ai pris un knouk.
-VLADIMIR (malgré lui, cessan t d'interroger le
-ciel). - Un knouk ?
+VLADIMIR. - Après en avoir sucé la substance vous le jetez comme un... (il cherche) ...comme une peau de banane. Avouez que...
+Pozzo (gémissant, portant ses mains à sa tête). - Je n'en peux plus... plus supporter... ce qu'il fait... pouvez pas savoir... c'est affreux... faut qu'il s'en aille... (il brandit les bras) ...je deviens fou (Il s'effondre, la tête dans les bras.) Je n'en peux plus... peux plus...
 
-Pozzo. - Il y aura bientôt soixante ans que
-ça dure . . . (il calcule m en talement) . . . oui, bientôt
-soixante. (Se redressant fièrem en t . ) On ne me les
-donnerait pas, n'est-ce p as ? (Vladimir regarde
-Lucky). A côté de lui j'ai l'air d'un jeune homme,
-non ? ( Un temps. A Lucky.) Chape au ! (Lucky
-dépose le panier, enlève son chapeau . Une abon­
+        Silence. Tous regardent Pozzo. Lucky tressaille.
 
-dante chevelu re blanche lui tom be autour du
-visage. Il met son chapeau sous le bras et reprend
-le pan ier.) Maintenant, re g ardez . (Pozzo ôte son
-
-46
-
-EN ATTENDANT GODOT
-
-chapeau
-
-(1) . Il est complètement chauve. Il remet
-
-son chapeau.) Vous avez vu ?
-VLADIMIR.
-Qu'est-ce que c'est, un knouk ?
-Pozzo .
-Vous n'êtes pas d'ici . Et es v ous
-seulement du siè c le ? Autrefois on avait des
-bouffons. M aintenant on a des knouks. Ceux qui
-peuvent se le permettre.
-VLADIMIR.
-Et vous le chassez à présent ?
-Un si vieux, un s i fidèle serviteur ?
-ESTRAGON.
-Fumier !
--
-
--
-
--
-
--
-
--
-
-Pozzo de plus en plus agité.
-
-VLADIMIR.
-Après en avoi r sucé la
-vous le jetez comme un . . . (il cherche)
-une p eau de b anan e . A vouez que . . .
--
-
-substance
-..
-
-. comme
-
-Pozzo (gémissant, p ortant ses mains à sa
-tête) .
-Je n'en peux pl u s . . . plus supporter . ce
-qu'il fait . . . pouvez p as savoir. . . c'est affreux . . .
-faut qu'il s'en aille . . (il brandit les bras) . . .je
-deviens fou (Il s'effondre, la tête dans les bras.)
-Je n'en peux p lu s . . . peux plus . .
--
-
-..
-
-.
-
-. . .
-
-.
-
-Silence.
-
-saille.
-
-Tous regarden t Pozzo. Lucky tres-
-
-VLADIMIR.
-ESTRAGON.
-VLADIMIR.
-ESTRAGON.
-VLADIMIR (à
-
--
-
--
-
--
-
-Il n'en peut pl u s
-C'est affreux.
-II devient fou
-
-.
-
-.
-
-C'est dégoûtant.
-Lucky).
-Comment osez-vous ?
-
--
-
-(1) Tous ces personnages
-
--
-
-portent le chapeau melon.
-
-EN ATTENDANT GODOT
-
-47
-
-C'est honteux ! Un si bon maître ! Le faire souf­
-frir ainsi ! Après tant d'années ! Vraiment !
-Pozzo (sanglotant).
-Autrefois . . . il était gen­
-til. . . il m'aidait. . . me distrayait. . . il me rendait
-meilleur . . . maintenant. .. il m'assassine . . .
-ESTRAGON (à Vladimir).
-Est-ce qu'il veut
-le remplacer ?
-VLADIMIR.
-Comment ?
-ESTRAGON. - Je n'ai p as compris s'il veut le
-remplacer ou s'il n'en veut plus après lui.
+VLADIMIR. - Il n'en peut plus.
+ESTRAGON. - C'est affreux.
+VLADIMIR. - II devient fou.
+ESTRAGON. - C'est dégoûtant.
+VLADIMIR (à Lucky). - Comment osez-vous ? C'est honteux ! Un si bon maître ! Le faire souffrir ainsi ! Après tant d'années ! Vraiment !
+POZZO (sanglotant). - Autrefois... il était gentil... il m'aidait... me distrayait... il me rendait meilleur... maintenant... il m'assassine...
+ESTRAGON (à Vladimir). - Est-ce qu'il veut le remplacer ?
+VLADIMIR. - Comment ?
+ESTRAGON. - Je n'ai pas compris s'il veut le remplacer ou s'il n'en veut plus après lui.
 VLADIMIR. - Je ne crois pas.
-ESTRAGON.
-Comment ?
+ESTRAGON. - Comment ?
 VLADIMIR. - Je ne sais pas.
 ESTRAGON. - Faut lui demander.
-Pozzo (calmé).
-Messieurs, je ne sais p as
-ce qui m'est arrivé. Je vous demande pardon.
-Oubliez tout ça. (De plus en plus maître de lui.)
-Je ne sais plus très bien ce que j'ai dit, mais vous
-pouvez être sûrs qu'il n'y avait pas un mot de
-vrai là-dedans. (Se redresse, se frappe la poitri­
-ne.) Est-ce que j'ai l'air d'un homme qu'on fait
-souffrir, moi ? Voyons ! (Il fouille dans ses po­
-ches.) Qu'est-ce que j'ai fait de ma pipe ?
-VLADIMIR.
-Charmante soirée.
+POZZO (calmé). - Messieurs, je ne sais pas ce qui m'est arrivé. Je vous demande pardon. Oubliez tout ça. (De plus en plus maître de lui.) Je ne sais plus très bien ce que j'ai dit, mais vous pouvez être sûrs qu'il n'y avait pas un mot de vrai là-dedans. (Se redresse, se frappe la poitrine.) Est-ce que j'ai l'air d'un homme qu'on fait souffrir, moi ? Voyons ! (Il fouille dans ses poches.) Qu'est-ce que j'ai fait de ma pipe ?
+VLADIMIR. - Charmante soirée.
 ESTRAGON. - Inoubliable.
-VLADIMIR.
-Et ce n'est pas fini.
+VLADIMIR. - Et ce n'est pas fini.
 ESTRAGON. - On dirait que non.
 VLADIMIR. - Ça ne fait que commencer.
-ESTRAGON.
-C'est terrible.
-VLADIMIR.
-On se croirait au spectacle.
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
-E N ATTENDANT GODOT
-
-48
-
+ESTRAGON. - C'est terrible.
+VLADIMIR. - On se croirait au spectacle.
 ESTRAGON. - Au cirque.
-VLADIMIR.
-Au music-hal.
+VLADIMIR. - Au music-hal.
 ESTRAGON . - Au cirque.
---
+POZZO. -- Mais qu'ai-je donc fait de ma bruyère !
+ESTRAGON. - Il est marant ! Il a perdu sa bouffarde ! (Rit bruyamment.)
+VLADIMIR. - Je reviens. (Il se dirige vers la coulisse.)
+ESTRAGON. - Au fond du couloir, à gauche.
+VLADIMIR. - Garde ma place. (Il sort.)
+POZZO. - J'ai perdu mon Abdullah !
+ESTRAGON (se tordant). - Il est tordant !
+POZZO (levant la tête). - Vous n'auriez pas vu - (Il s'aperçoit de l'absence de Vladimir. Désolé.) Oh ! Il est parti !... Sans me dire au revoir ! Ce n'est pas chic ! Vous auriez dû le retenir.
+ESTRAGON. - II s'est retenu tout seul.
+POZZO. - Oh ! (Un temps.) A la bonne heure .
+ESTRAGON (se levant). - Venez par ici.
+POZZO. - Pourquoi faire ?
+ESTRAGON. - Vous allez voir.
+POZZO. - Vous voulez que je me lève ?
+ESTRAGON. - Venez... venez... vite.
 
-Pozzo. -- Mais qu'ai-je donc fait de ma
-bruyère !
-ESTRAGON. - Il est marant ! Il a perdu sa
-bou ffarde ! (Rit bruyamment.)
-VLADIMIR. - Je reviens. (Il se dirige vers la
-
-coulisse.)
-
-ESTRAGON.
-Au fond du couloir, à gauche.
-VLADIMIR.
-Garde ma place. (Il sort.)
-POZZO.
-J'ai perdu mon Abdullah !
-ESTRAGON (se tordant).
-Il est tordant !
-POZZO (levant la tête).
-Vous n'auriez pas
--
-
--
-
---
-
--
-
--
-
-(Il s'aperçoit de l'absence de Vladimir.
-vu
-Désolé.) Oh ! Il est p arti ! . Sans me dire au
-revoir ! Ce n'est pas chic ! Vous auriez dû le
--
-
-..
-
-retenir.
-
-ESTRAGON.
-POZZO.
-
---
-
-II s'est retenu tout seul.
-Oh ! (Un temps.) A la bonne
-
---
-
-heure .
-ESTRAGON (se levant).
-Venez p ar ici.
-Pozzo. -- Pour qu oi fai re ?
-ESTRAGON.
-Vous allez voir.
-POZZO.
-Vous voulez que je me lève ?
-ESTRAGON.
-Venez . . . venez . . . vite.
--
-
--
-
---
-
--
-
-Pozzo se lève et va vers Estragon.
-ESTRAGON.
-Regardez !
--
-
-Pozzo. -- Oh là là !
-
+        Pozzo se lève et va vers Estragon.
+     
+ESTRAGON. - Regardez !
+POZZO. - Oh là là !
 ESTRAGON. - C'est fini.
+  Vladimir revient, sombre, bouscule Lucky, renverse le pliant d'un coup de pied, va et vient avec agitation.
+POZZO. - Il n'est pas content ?
+ESTRAGON. - Tu as raté des choses formidables. Dommage.
+  Vladimir s'arrête, redresse le pliant, reprend son va-et-vient, plus calme.
+POZZO. - Il s'apaise. (Regard circulaire.) D'ailleurs, tout s'apaise, je le sens. Une grande paix descend. Ecoutez. (Il lève la main.) Pan dort.
+VLADIMIR (s'arrêtant). - La nuit ne viendra-t-elle jamais ?
 
-EN ATTENDANT GODOT
+        Tous les trois regardent le ciel.
 
-49
-
-Vladimir rev ient, sombre, bouscule Lucky,
-renverse ie pliant d'un coup de pied, va et vient
-avec agitation.
-Pozzo. - Il n'est pas content ?
-ESTRAGON. - Tu as raté des choses formida­
-bles. Dommage.
-Vladimir s'arrête , redresse le pliant, reprend
-son va-el-vient, plus calme.
-POZZO. - Il s'apaise. (Regard circulaire.) D'ail­
-leurs, tout s'apaise, je le sens. Une grande paix
-descend. Ecoutez. (Il lève la main.) Pan dort.
-VLADIMIR (s'arrêtant). - La nuit ne vien­
-dra-t-elle jamais ?
-Tous les trois regardent le ciel.
-Pozzo. - Vous ne tenez pas à partir avant ?
-ESTRAGON. - C'est-à-dire . . . Vous comprenez . . .
-Pozzo. - Mais c'est tout naturel, c'est tout
-naturel. Moi-même, à votre plac e , si j'avais ren­
-dez-vous avec un Godin . . . Godet... Godot... enfin
-vous voyez qui je veux dire, j'attendrais qu'il
-fasse nuit noire avant d' ab andonner. (Il regarde
-le pliant.) J'aimerais bien me rasseoir, mais je ne
-sais pas trop comment m'y pren dre .
+POZZO. - Vous ne tenez pas à partir avant ?
+ESTRAGON. - C'est-à-dire... Vous comprenez...
+POZZO. - Mais c'est tout naturel, c'est tout naturel. Moi-même, à votre place, si j'avais rendez-vous avec un Godin... Godet... Godot... enfin vous voyez qui je veux dire, j'attendrais qu'il fasse nuit noire avant d'abandonner. (Il regarde le pliant.) J'aimerais bien me rasseoir, mais je ne sais pas trop comment m'y prendre.
 ESTRAGON. - Puis-je vous aider ?
-Pozzo. - Si vous me demandiez, peut- être ?
+POZZO. - Si vous me demandiez, peut-être ?
 ESTRAGON. - Quoi ?
-POZZO. - Si vous me demandiez de me ras­
-seoir.
+POZZO. - Si vous me demandiez de me rasseoir.
 ESTRAGON. - Ça vous aiderait ?
 POZZO. - Il me semble.
-
-50
-
-EN ATTENDANT GODOT
-
-ESTRAGON. - Allons-y. Rasseyez-vous, mon­
-sieur, je vous en prie.
-Pozzo. - Non non, ce n'est pas la peine. (Un
-temps. A voix basse.) In sistez un peu.
-ESTRAGON. - Mais voyons, ne restez p as
-debout comme ça, vous allez attraper froid.
-
-POZZO.
-
--
-
-Vous croyez ?
-
-Mais c'est absolument certain.
-avez sans doute raison. (Il
-se rassied.) Merci, mon cher. Me voilà réinstallé.
-(Estragon se rassied. Pozzo regarde sa montre.)
-Mais il est temps que je vous quitte, si je ne
-veux pas me mettre en retard.
+ESTRAGON. - Allons-y. Rasseyez-vous, monsieur, je vous en prie.
+POZZO. - Non non, ce n'est pas la peine. (Un temps. A voix basse.) Insistez un peu.
+ESTRAGON. - Mais voyons, ne restez pas debout comme ça, vous allez attraper froid.
+POZZO. - Vous croyez ?
+ESTRAGON. - Mais c'est absolument certain.
+POZZO. - Vous avez sans doute raison. (Il se rassied.) Merci, mon cher. Me voilà réinstallé. (Estragon se rassied. Pozzo regarde sa montre.) Mais il est temps que je vous quitte, si je ne veux pas me mettre en retard.
 VLADIMIR. - Le temps s'est arrêté.
-Pozzo (mettant sa montre contre son oreille).
-- Ne croyez pas ça, mon si eu r, ne croyez pas ça.
-(Il remet la montre dans sa poche.) Tout ce que
-vou s voulez, mais pas ça.
-ESTRAGON (à Pozzo). - Il voit tout en noir
-aujourd'hui.
-Pozzo. - Sauf le firmament. (Il rit, content
-de ce bon mot.) Patience, ça va venir. Mais je
-vois ce que c'est, vous n'êtes pas d'ici, v ou s ne
-savez pas encore ce que c'est que le crépuscule
-chez nous. Voulez-vous que je vous le dise ?
-(Silence. Estragon et Vladimir se sont remis à
-examiner, celui-là sa chaussure, celui-ci son cha­
-peau. Le chapeau de Lucky tombe, sans qu'il
-s'en aperçoive.) Je veux bien vous s atisfaire. (Jeu
-du vaporisateur.) Un peu d'attention, s'il vous
-
-ESTRAGON.
-
--
-
-Pozzo.
-
-Vous
-
--
-
-EN
-
-ATTENDANT
-
-GODOT
-
-51
-
-plaît. (Estrago n e t Vladimir continuent leur ma­
-nège, L uc ky dort à moitié. Pozzo fait claquer
-son fouet, qui ne ren d qu'un bru it très faible.)
-Qu'est-ce qu'il a, ce fouet ? (Il se lève et le fait
-
-claquer plus vigoureusement, finalement avec
-su ccès . Lucky sursaute. La chaussure d'Estragon,
-
-le chapeau de Vladimir, leur tombent des mains.
-Pozzo jette le fouet.) Il ne vaut plus rien, ce
-fouet. (Il regarde son auditoire.) Qu'est-ce que
-
-je disais ?
-
+POZZO (mettant sa montre contre son oreille). - Ne croyez pas ça, monsieur, ne croyez pas ça. (Il remet la montre dans sa poche.) Tout ce que vous voulez, mais pas ça.
+ESTRAGON (à Pozzo). - Il voit tout en noir aujourd'hui.
+POZZo. - Sauf le firmament. (Il rit, content de ce bon mot.) Patience, ça va venir. Mais je vois ce que c'est, vous n'êtes pas d'ici, vous ne savez pas encore ce que c'est que le crépuscule chez nous. Voulez-vous que je vous le dise ? (Silence. Estragon et Vladimir se sont remis à examiner, celui-là sa chaussure, celui-ci son chapeau. Le chapeau de Lucky tombe, sans qu'il s'en aperçoive.) Je veux bien vous satisfaire. (Jeu du vaporisateur.) Un peu d'attention, s'il vous plaît. (Estragon et Vladimir continuent leur manège, Lucky dort à moitié. Pozzo fait claquer son fouet, qui ne rend qu'un bruit très faible.) Qu'est-ce qu'il a, ce fouet ? (Il se lève et le fait claquer plus vigoureusement, finalement avec succès. Lucky sursaute. La chaussure d'Estragon, le chapeau de Vladimir, leur tombent des mains. Pozzo jette le fouet.) Il ne vaut plus rien, ce fouet. (Il regarde son auditoire.) Qu'est-ce que je disais ?
 VLADIMIR. - Partons.
-ESTRAGON. - Mais ne restez pas debout
-comme ça, vous allez attraper la crève.
-Pozzo. - C'est vrai. (Il se rassied . A Estra­
-gon . ) Comment vous appelez-vous ?
+ESTRAGON. - Mais ne restez pas debout comme ça, vous allez attraper la crève.
+POZZO. - C'est vrai. (Il se rassied. A Estragon.) Comment vous appelez-vous ?
 ESTRAGON (du tic au tac) . - Catulle.
+POZZO (qui n'a pas écouté). - Ah oui, la nuit. (Lève la tête.) Mais soyez donc un peu plus attentifs, sinon nous n'arriverons jamais à rien. (Regarde le ciel.) Regardez. (Tous regardent le ciel, sauf Lucky qui s'est remis à somnoler. Pozzo, s'en apercevant, tire sur la corde.) Veux-tu regarder le ciel, porc ! (Lucky renverse la tête.) Bon, ça suffit. (Ils baissent la tête.) Qu'est-ce qu'il a de si extraordinaire ? En tant que ciel ? Il est pâle et lumineux, comme n'importe quel ciel à cette heure de la journée. (Un temps.) Dans ces latitudes. (Un temps.) Quand il fait beau. (Sa voix se fait chantante.) Il y a une heure (il regarde sa montre, ton prosaïque) environ (ton à nouveau lyrique) après nous avoir versé depuis (il hésite, le ton baisse) mettons dix heures du matin (le ton s'élève) sans faiblir des torrents de lumière rouge et blanche, il s'est mis à perdre de son éclat, à pâlir (geste des deux mains qui descendent par paliers), à pâlir, toujours un peu plus, un peu plus, jusqu' à ce que (pause dramatique, large geste horizontal des deux mains qui s'écartent) vlan ! fini ! il ne bouge plus ! (Silence.) Mais (il lève une main admonitrice) - mais, derrière ce voile de douceur et de calme (il lève les yeux au ciel, les autres l'imitent, sauf Lucky) la nuit galope (la voix se fait plus vibrante) et viendra se jeter sur nous (il fait claquer ses doigts) pfft ! comme ça - (l'inspiration le quitte) au moment où nous nous y attendrons le moins. (Silence. Voix morne.) C'est comme ça que ça se passe sur cette putain de terre.
 
-Pozzo (q u i n'a pas écouté). - Ah oui, la
-nuit. (Lève la tê te . ) Mais soyez donc un peu plus
-attentifs, sinon nous n'arriverons jamais à rien.
-(Regarde le ciel.) Regardez. (Tous regardent le
-ciel, sauf Lucky q u i s'est remis à so mn oler.
-Pozzo, s'en ap erce vant, tire sur la corde.) Veux-tu
-regarder le ciel, porc ! (Lucky ren v e rse la tête.)
-Bon , ça suffit . (Ils baissent la tête.) Qu'est-ce
-qu'il a de si extraordinaire ? En tant que ciel ?
-Il est pâle et lumineux, comme n'importe quel
-ciel à cette heure de la journée. ( Un temps.)
-Dans ces latitudes. ( Un temps.) Quand il fait
-beau. (Sa voix se fait chantante.) Il y a une
-heure (il regarde sa montre, ton prosaïque) envi-
+        Long silence.
 
-EN
-
-52
-
-ATTENDANT GODOT
-
-ron (ton à nouveau lyrique) après nous avoir
-versé depuis (il hésite, le ton baisse) mettons dix
-heure s du m atin (le ton s élèv e ) sans faiblir des
-torre n t s de lumière rouge et blan che, il s'est mi s
-à perdre de son éclat, à pâlir (geste des deux
-mains qui descen den t par paliers), à p âl ir, tou­
-j ours un peu plus, un peu plus, jusqu' à ce que
-'
-
-(pause dram a tiq u e , large geste horizontal des
-deux m a ins qui s'écartent) vlan ! fini ! il ne
-bouge plus ! (Silence.) M a is (il lève une main
-admonitrice) - mais, derrière ce vo il e de dou­
-ceur et de calme (il lè ve les yeux au ciel, les
-autres l'imitent, sauf Lucky) la nuit galope (la
-voix se fait plus vibrante) et viendra se jeter su r
-nous (il fait claq u er ses do igts) pfft ! comme ça
-- (l'inspiration le q u itte) au m oment où nous
-no u s y a t tendrons le moins . (Silen ce . Voix morne.)
-C 'est comme ça que ça se p a s se sur cette pu t a in
-de terre.
-L ong silen ce.
-
-ESTRAGON.
-VLADIMIR.
-ESTRAGON.
-VLADIMIR.
-ESTRAGON.
-VLADIMIR.
-
-- D u moment qu ' on est prévenus .
-- On peut patienter.
-- On sait à q u oi s'en tenir.
-- Plus d'inquiétude à avoir.
-- II n'y a qu'à atte ndre.
-- Nous en avons l'habitude. (Il
-
-ramasse son chapeau, regarde dedans , le secoue,
-le remet.)
-Pozzo.
-(Estragon
-
-- Comment m' avez-vous trouvé ?
-et Vladimir le regardent sans COtn-
-
-EN
-
-ATTENDANT GODOT
-
-53
-
-prendre.) Bon ? Moyen ? Passable ? Quelcon­
-que ? Franchement mauvais ?
-VLADIMIR (comprenant le premier). - Oh,
-très bien, tout à fait bien.
-Pozzo (à Estragon). - Et vous, monsieur ?
-ESTRAGON (accent ang lais) . - Oh très bon,
-très très très bon.
-Pozzo (avec élan). - Merci, messieurs ! (Un
-temps). J'ai tant besoin d'encouragement (Il
-réfléchit.) J'ai un peu faibli sur la fin. Vous
-n'avez pas remarqué ?
+ESTRAGON. - Du moment qu'on est prévenus .
+VLADIMIR. - On peut patienter.
+ESTRAGON. - On sait à quoi s'en tenir.
+VLADIMIR. - Plus d'inquiétude à avoir.
+ESTRAGON. - II n'y a qu'à attendre.
+VLADIMIR. - Nous en avons l'habitude. (Il ramasse son chapeau, regarde dedans, le secoue, le remet.)
+POZZO. - Comment m' avez-vous trouvé ? (Estragon et Vladimir le regardent sans comprendre.) Bon ? Moyen ? Passable ? Quelconque ? Franchement mauvais ?
+VLADIMIR (comprenant le premier). - Oh, très bien, tout à fait bien.
+POZZO (à Estragon). - Et vous, monsieur ?
+ESTRAGON (accent anglais) . - Oh très bon, très très très bon.
+POZZO (avec élan). - Merci, messieurs ! (Un temps). J'ai tant besoin d'encouragement (Il réfléchit.) J'ai un peu faibli sur la fin. Vous n'avez pas remarqué ?
 VLADIMIR. - Oh, peut-être un tout petit peu.
 ESTRAGON. - J'ai cru que c'était exprès.
-Pozzo. - C'est que ma mémoire est défectueuse.
-Silence.
-ESTRAGON. - En attendant, il ne se passe
-rien.
-Pozzo (désolé). - Vous vous ennuyez ?
+POZZO. - C'est que ma mémoire est défectueuse.
+
+        Silence.
+
+ESTRAGON. - En attendant, il ne se passe rien.
+POZZO (désolé). - Vous vous ennuyez ?
 ESTRAGON. - Plutôt.
-Pozzo (à Vladimir). - Et vous, monsieur ?
+POZZO (à Vladimir). - Et vous, monsieur ?
 VLADIMIR. - Ce n'est pas folichon.
-Silence. Pozzo se livre une bataille intérieure.
-Pozzo. - Messieurs, vous avez été .. . (il cherche) . .. convenables avec moi.
+  Silence. Pozzo se livre une bataille intérieure.
+POZZO. - Messieurs, vous avez été... (il cherche) ... convenables avec moi.
 ESTRAGON. - Mais non !
 VLADIMIR. - Quelle idée !
-Pozzo. - Mais si, mais si, vous avez été
-corrects. De sorte que je me demande. . . Que
-
-54
-
-EN
-
-ATTENDANT GODOT
-
-p ui s-j e faire à m on tour pour ces braves gen s qui
-sont en train de s'ennuy er ?
-ESTRAGON. -- Même un lou i s serait le bien­
-venu.
-VLADIMIR. -- Nous ne sommes pas des men­
-diants.
-Pozzo. -- Que puis-je faire, voilà ce que je
-me dis, pour que le temps leur semble moins
-long ? Je leur ai donné des os, je leur ai parlé
-de choses et d'autres, je leur ai expliqué le cré­
-puscule, c'est une afaire entendue. Et j 'en passe.
-Mais est-ce suffisant, voilà ce qui me torture,
-est-ce suffisant ?
+POZZO. - Mais si, mais si, vous avez été corrects. De sorte que je me demande... Que puis-je faire à mon tour pour ces braves gens qui sont en train de s'ennuyer ?
+ESTRAGON. -- Même un louis serait le bienvenu.
+VLADIMIR. -- Nous ne sommes pas des mendiants.
+POZZO. -- Que puis-je faire, voilà ce que je me dis, pour que le temps leur semble moins long ? Je leur ai donné des os, je leur ai parlé de choses et d'autres, je leur ai expliqué le crépuscule, c'est une afaire entendue. Et j'en passe. Mais est-ce suffisant, voilà ce qui me torture, est-ce suffisant ?
 ESTRAGON. -- Même cent sous.
 VLADIMIR. -- Tais-toi !
 ESTRAGON. -- J'en prends le chemin.
-Pozzo. -- Est-ce suffisant ? Sans doute. Mais
-je suis large. C'est m a n ature. Auj ourd'hui . Tant
-pis pour moi. (Il tire sur la corde. Lucky le
-regarde.) Car je v ais souffrir, cela est certain.
-(Sans se lever,
+POZZO. -- Est-ce suffisant ? Sans doute. Mais je suis large. C'est ma nature. Aujourd'hui. Tant pis pour moi. (Il tire sur la corde. Lucky le regarde.) Car je vais souffrir, cela est certain. (Sans se lever, il se penche et reprend son fouet.) Que préférez-vous ? Qu'il danse, qu'il chante, qu'il récite, qu'il pense, qu'il...
+ESTRAGON. -- Qui ?
+POZZO. -- Qui ! Vous savez penser, vous autres ?
+VLADIMIR. - Il pense ?
+POZZO. -- Parfaitement. A haute voix. Il pensait même très joliment autrefois, je pouvais l'écouter pendant des heures. Maintenant... (Il frissonne.) Enfin, tant pis. Alors, vous voulez qu'il nous pense quelque chose?
+ESTRAGON. - J'aimerais mieux qu'il danse, ce serait plus gai.
+POZZO. - Pas forcément.
+ESTRAGON. - N'est-ce pas, Didi, que ce serait plus gai ?
+VLADIMIR. - J'aimerais bien l'entendre penser.
+ESTRAGON. - Il pourrait peut-être danser et penser ensuite ? Si ce n'est pas trop lui demander.
+VLADIMIR (à Pozzo). - Est-ce possible ?
+POZZO. - Mais certainement, rien de plus facile. C'est d'ailleurs l'ordre naturel. (Rire bref.)
+VLADIMIR. - Alors, qu'il danse.
 
-il se penche et reprend son fouet.)
+        Silence.
 
-Que préférez-vous ? Qu'il danse, qu 'il chante,
-qu'il r écite, qu'il pense, qu'il.. .
-ESTRAGON. -- Q ui ?
-Pozzo. -- Qui ! Vous savez penser, vous
-autres ?
-VLADIMIR. - Il p ense ?
-Pozzo. -- Parfaitement. A h aut e voix. Il
-pensait même trè s joliment autrefois, je pouvais
-l' écouter pendant des heures. Maintenant. . . (Il
+POZZO (à Lucky). - Tu entends ?
+ESTRAGON. - Il ne refuse jamais ?
+POZZO. - Je vous expliquerai ça tout à l'heure. (A Lucky.) Danse, pouacre !
+  Lucky dépose valise et panier, avance un peu vers la rampe, se tourne vers Pozzo. Estragon se lève pour mieux voir. Lucky danse. Il s'arrête.
+ESTRAGON. - C'est tout ?
+POZZO. - Encore !
+  Lucky répète les mêmes mouvements, s'arrête.
+ESTRAGON. - Eh ben, mon cochon ! (Il imite les mouvements de Lucky.) J'en ferais autant. (Il imite, manque de tomber, se rassied.) Avec un peu d'entraînement.
 
-EN
-
-55
-
-ATTENDANT GODOT
-
-frissonne.) Enfin, tant pis. Alors , vous voulez
-qu'il nous pen se q u elqu e chose?
-ESTRAGON. - J'aimerais mieux qu'il danse,
-ce serait plus gai.
-Pozzo.
-Pas forcément.
-ESTRAGON. - N'est-ce pas, Didi, que ce serait
-plus gai ?
-VLADIMIR. - J'aimerais bien l'entendre p en­
--
-
-ser.
-
-ESTRAGON.
-Il pourrait p eu t être danser
-et penser ensuite ? Si ce n'est pas trop
-lui demander.
-VLADIMIR (à Pozzo).
-Est-ce possible ?
-Pozzo.
-Mais certainement, rien de plus
-facile. C'est d' aill e urs l'ordre n aturel . (Rire bref.)
-VLADIMIR. - Alors, qu'il d anse.
--
-
--
-
-d'abord
-
--
-
--
-
-POZZO (à Lucky).
-Tu entends ?
-ESTRAGON.
-Il ne refuse j amais ?
-Pozzo.
-Je vous expliquerai ça
-l'heure. (A Lucky.) Danse, pouacre !
-
-Silence.
-
--
-
--
-
--
-
-tout à
-
-Lucky dépose valise et panier, avance un
-peu vers la rampe, se tourne vers Pozzo. Estragon
-se lève pour mieux voir. Lucky danse. Il s'ar­
-rête.
-ESTRAGON.
-Pozzo. -
-
-C'est t ou t ?
-En core !
--
-
-Lucky répète les mêmes mouvements, s'arrête.
-ESTRAGON. - Eh ben, mon cochon ! (Il imite
-les mou vemen ts de Lucky.) J'en ferais autant.
-
-EN ATTENDANT GODOT
-
-56
-
-(Il imite, manque de tomber, se rassied.) Avec
-
-un peu
-
-d'entraînement.
-
-VLADIMIR. - n est
-Pozzo. - Au trefoi s,
-
-fatigué.
-il dansait la farandole,
-
-l'almée, le branle, la gigue, le fandango et même
-le hompipe. n bondiss ait. Maintenant il ne fait
-plus que ça. Savez-vous comment il l' appelle ?
+VLADIMIR. - Il est fatigué.
+POZZO. - Autrefois, il dansait la farandole, l'almée, le branle, la gigue, le fandango et même le hompipe. Il bondissait. Maintenant il ne fait plus que ça. Savez-vous comment il l'appelle ?
 ESTRAGON. - La mort du lampiste.
-VLADIMIR. - Le c ancer des vieillards.
-Pozzo. - La danse du filet. li se croit emp êtré dans un filet.
-VLADIMIR
-
-(avec des tortillements d'esthète).
-
-- li Y a quelque
-
-chose . . .
-
-Lucky s'apprête à retourner vers ses fardeaux.
-Pozzo (comme à un cheval). - Woooa !
-L ucky s'immobilise.
-
-- li ne refuse jamais ?
-- Je vais vous expliquer ça. (Il fouille
-dans ses poches.) Attendez. (Il fouille.) Qu'est -ce
-que j' ai fait de ma poire ? (Il fouille.) Ça alors !
-ESTRAGON.
-
-Pozzo.
-
-(Il lève une tête ahurie. D'une voix mourante.)
-
-J'ai
-
-perdu mon pulvérisateur !
-ESTRAGON (d'une voix mourante). - Mon
-poumon gauche est très faible. (Il tousse faible­
-ment. D'une voix tonitruante.) Mais mon p ou­
-mon droit est en parfai t état !
-POZZO (voix normale). - Tant pis, je m'en
-
-passerai. Qu'est-ce que je disais ? (Il réfléchit.)
-(Réfléchit.) Ça alors ! (Il lève la tête.)
-
-Attendez !
-
-Aidez-moi !
-
-EN ATTENDANT
-
-GODOT
-
-57
-
+VLADIMIR. - Le cancer des vieillards.
+POZZO. - La danse du filet. Il se croit empêtré dans un filet.
+VLADIMIR (avec des tortillements d'esthète). - Il y a quelque chose...
+  Lucky s'apprête à retourner vers ses fardeaux.
+POZZO (comme à un cheval). - Woooa !
+  Lucky s'immobilise.
+ESTRAGON. - Il ne refuse jamais ?
+POZZO. - Je vais vous expliquer ça. (Il fouille dans ses poches.) Attendez. (Il fouille.) Qu'est -ce que j'ai fait de ma poire ? (Il fouille.) Ça alors ! (Il lève une tête ahurie. D'une voix mourante.) J'ai perdu mon pulvérisateur !
+ESTRAGON (d'une voix mourante). - Mon poumon gauche est très faible. (Il tousse faiblement. D'une voix tonitruante.) Mais mon poumon droit est en parfait état !
+POZZO (voix normale). - Tant pis, je m'en passerai. Qu'est-ce que je disais ? (Il réfléchit.) Attendez ! (Réfléchit.) Ça alors ! (Il lève la tête.) Aidez-moi !
 ESTRAGON. - Je cherche.
-VLADIMIR.
-Moi aussi.
--
-
-Pozzo.
-Attendez !
-Tous les trois se découvrent simultanément.
-portent la main au front, se concentrent, crispés.
--
-
-Long silence.
-
+VLADIMIR. - Moi aussi.
+POZZO. - Attendez !
+  Tous les trois se découvrent simultanément, portent la main au front, se concentrent, crispés. Long silence.
 ESTRAGON (triomphant). - Ah !
 VLADIMIR. - Il a trouvé.
 POZZO (impatient). - Et alors ?
-ESTRAGON. - Pourquoi ne dépose-t-il pas ses
-bagages ?
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
 VLADIMIR. - Mais non !
-Pozzo.
-Vous êtes sûr ?
--
-
-VLADIMIR. - Mais voyons, vous nous l'avez
-déj à dit.
-Pozzo.
-Je vous l'ai déjà dit ?
+POZZO. - Vous êtes sûr ?
+VLADIMIR. - Mais voyons, vous nous l'avez déjà dit.
+POZZO. - Je vous l'ai déjà dit ?
 ESTRAGON. - Il nous l'a déjà dit ?
 VLADIMIR. - D'ailleurs, il les a déposés.
-ESTRAGON (coup d'œil v ers Lucky). - C'est
--
+ESTRAGON (coup d'œil vers Lucky). - C'est vrai. Et après ?
+VLADIMIR. - Puisqu'il a déposé ses bagages, il est impossible que nous ayons demandé pourquoi il ne les dépose pas.
+POZZO. - Fortement raisonné !
+ESTRAGON. - Et pourquoi les a-t-il déposés ?
+POZZO. - Voilà .
+VLADIMIR. - Afin de danser.
+ESTRAGON. - C'est vrai.
 
-vrai. Et après ?
-VLADIMIR.
-Puisqu'il a déposé ses b ag ages ,
-il est impossible que nous ayons dem a ndé pour­
-quoi il ne les dépose pas.
--
+        Long silence.
 
-POZZO.
-
--
-
-Fortement raisonné !
-
-ESTRAGON.
-Et pourquoi les a-t-il déposés ?
-POZZO.
-Vo ilà .
-VLADIMIR.
-Afin de danser.
--
-
--
-
--
-
-ESTRAGON.
-
--
-
-C'est vrai .
-
-Long silence.
-ESTRAGON (se levant). - Rien ne se p asse,
-
-EN ATTENDANT GODOT
-
-58
-
-personne ne vient, personne ne s'en va, c'est
-terrible.
-VLADIMIR (à Pozzo).
-Dites-lui de penser.
-Pozzo .
-Donnez-lui son chapeau.
-VLADIMIR.
-Son chapeau ?
-Pozzo.
-Il ne peut pas penser sans chapeau.
-VLADIMIR (à Estragon).
-Donne-lui son
--
-
--
-
--
-
--
-
--
-
-chapeau.
-
-ESTRAGON.
-
--
-
-Moi ? Après le coup qu'il m'a
-
-fait ? Jamais !
-VLADIMIR.
-
--
-
-ne bouge pas.)
-
-Je vais le lui donner, moi. (Il
-
-Qu'il aille le chercher.
-Pozzo.
-Il vaut mieux le lui donner.
-VLADIMIR.
-Je vais le lui donner.
-ESTRAGON.
-
--
-
--
-
--
-
-Il ramasse le chapeau et le tend à Lucky à
-bout de bras. Lucky ne bouge pas.
-Pozzo.
-Il faut le lui mettre.
-ESTRAGON (à Pozzo). - Dites-lui de le pren-
-
-dre.
-
-Pozzo.
-
--
-
-VLADIMIR.
-
-Il vaut mieux le lui mettre.
-Je vais le lui mt"ttre.
--
-
-Il contourne Lucky avec précaution, s'en ap­
-proche doucement par derrière, lui met le cha­
-peau sur la tête et recule vivement. Lucky ne
-bouge pas. Silence.
-ESTRAGON.
-Qu'est-ce qu'il attend ?
-Pozzo.
-Eloignez-vous. (Estragon et Vla­
-dimir s'éloignent de Lucky. Pozzo tire sur la
--
-
--
-
-EN ATTENDANT GODOT
-
-59
-
-corde. Lucky le regarde.) Pense, porc ! (Un
-temps. Lucky se met à danser.) Arrête ! (Lucky
-s'arrête.) Avance ! (Lucky va vers Pozzo.) Là !
-(Lucky s'arrête.) Pense ! ( Un temps.)
-
+ESTRAGON (se levant). - Rien ne se passe, personne ne vient, personne ne s'en va, c'est terrible.
+VLADIMIR (à Pozzo). - Dites-lui de penser.
+POZZO. - Donnez-lui son chapeau.
+VLADIMIR. - Son chapeau ?
+POZZO. - Il ne peut pas penser sans chapeau.
+VLADIMIR (à Estragon). - Donne-lui son chapeau.
+ESTRAGON. - Moi ? Après le coup qu'il m'a fait ? Jamais !
+VLADIMIR. - Je vais le lui donner, moi. (Il ne bouge pas.)
+ESTRAGON. - Qu'il aille le chercher.
+POZZO. - Il vaut mieux le lui donner.
+VLADIMIR. - Je vais le lui donner.
+  Il ramasse le chapeau et le tend à Lucky à bout de bras. Lucky ne bouge pas.
+POZZO. - Il faut le lui mettre.
+ESTRAGON (à Pozzo). - Dites-lui de le prendre.
+POZZO. - Il vaut mieux le lui mettre.
+VLADIMIR. - Je vais le lui mettre.
+  Il contourne Lucky avec précaution, s'en approche doucement par derrière, lui met le chapeau sur la tête et recule vivement. Lucky ne bouge pas. Silence.
+ESTRAGON. - Qu'est-ce qu'il attend ?
+POZZO. - Eloignez-vous. (Estragon et Vladimir s'éloignent de Lucky. Pozzo tire sur la corde. Lucky le regarde.) Pense, porc ! (Un temps. Lucky se met à danser.) Arrête ! (Lucky s'arrête.) Avance ! (Lucky va vers Pozzo.) Là ! (Lucky s'arrête.) Pense ! (Un temps.) 
 LUCKY. - D'autre part, pour ce qui est...
-Pozzo. - Arrête ! (Lucky se tait . ) Arrière !
-(Lucky recule.) Là ! (Lucky s'arrête.) Hue !
-(L ucky se tourne vers le public.) Pense !
-LUCKY (débit monotone). - Etant donné
-l'existence telle qu'elle jaillit des récents travaux
-publics de Poinçon et Wattmann d'un Dieu
-personnel quaquaquaqua à barbe blanche quaqua
-hors du temps de l'étendue qui du haut de sa I t h n l i on
-divine apathie sa divine athambie sa divine apha- �!E:,��g�:
-sie nous aime bien à quelques exceptions près .,I cIIadimir.
-cül.·
-on ne sait pourquoi mais ç a viendra et souffre :.'"1, :'
-à l'instar d e l a divine Miranda avec ceux qui Pe�:D. e
-sont on ne sait pourquoi mais on a le temps
-dans le tounnent dans les feux dont les feux les
-flammes pour peu que ça dure encore un peu
-et qui peut en douter mettront à la fin le feu
-aux poutres assavoir porteront l'enfer aux nues
-si bleues par moments encore aujourd'hui et calmes si calmes d'un calme qui pour être intennittent n'en est pas moins le bienvenu mais n'anti­
-cipons pas et attendu d'autre part qu'à la suite
-des recherches inachevées n'anticipons pas des
-recherches inachevées mais néanmoins couronnées par l'Acacacacadémie d'Anthropopopométrie de Berne-en-Bresse de Testu et Conard il
-
-60
-
-EN
-
-ATTENDANT GODOT
-
-:��:���: est établi sans autre p ossibilité d'erreur que celle
-:;:I��i��� afférente aux calculs humains qu'à la suite des
-Souffrancel re cherche s inachevées inachevées de Testu et
-accrusi
-de
-C o n ard il es t établi tabli tabli ce qui suit qui
-POllO.
-
-�r���� :!
-:8�lr:n�:!i
-�'écDUI,"
-g ���e :1:;
-8n plus, falt
-e ntendre
-�:�I�t�"'
-
-suit qui suit ass avo ir mais n'anticipons pas on
-ne s ait p ou rqu oi à l a suite des travaux de Poin­
-çon et Wattmann il app araît aussi clairement
-si clairem ent qu'en vue des l abeurs de Fartov
-et Belcher inachevés inachevés on ne sait pour­
-quoi de Testu et Conard inachevés inachevés il
-apparaît que l'homme contrairement à l'opinion
-contraire que l' h omme en Bresse de Testu et
-Conard que l'homme enfin bref que l'homme en
-bref enfin m alg ré les progrès de l'alimentation
-et de l'élimination des déchets est en train de
-m ai grir et en même temps p arallèl ement on ne
-sait pourquoi malgré l'essor de la culture physique de la p r atiqu e des sports tels tels tels le
-tennis le football la cou rs e et à pied et à bicy­
-clette l a natation l'équ it ation l'aviation la cona­
-tion le tennis le c arnogie le patinage et sur glace
-' }' "
-1 es sports 1es
-et su r asp h a1 te 1 e tenms
-spo rt s d'hiver d'été d'automne d'automne le tenni s
-sur gazon sur s ap in et sur t erre battue l'aviation
-le tennis le h o ckey sur terre sur mer et dans les
-airs la p é nicilli n e et succédanés bref je reprend s
-en même temps p arallèl eme nt de r apeti s ser on
-ne s ait pourquoi m algré le tennis je rep rends
-l'aviation le golf t an t à neuf qu'à dix-huit trous
-le tennis sur glace b ref on ne sait p ourqu oi en
-
-EN ATTENDANT GODOT
-
-61
-
-Seine Seine-et-Oise Seine-et-Marne Marne-et­
-Oise assavoir en même temps parallèlement on
-ne sait pourquoi de maigrir rétrécir je reprends
-Oise Marne bref la perte sèche p ar tête de pipe
-depuis la mort de Voltaire étant de l'ordre de
-deux doigts cent grames par tête de pipe envi­
-ron en moyenne à peu près chiffres ronds bon
-poids déshabilé en Nonnandie on ne sait pourquoi bref enfin peu importe les faits sont là 1 et ,ErC1"r
-1 QI
-1
-conSI'd erant
-'
-d' au tre part ce qUI est encore p us lIadlmlr Il
-hlral",
-grave qU'lI ressort ce qUl est encore plus grave P I l I I � a
-qu'à l a lumière l a lumière des expériences en �. t:
-lurllclll,
-cours de Steinweg et Petennann il ressort ce rHl
-lrilll
-qui est encore plus grave qu'il ressort ce qui est :'·'1 �
-encore plus grave à la lumière la lumière des .� =­
-expériences abandonnées de Steinweg et Peter- �ail l i
-IIr
-,
-mann qu a- l a campagne a 1a montagne et au bord
-qui
-de la mer et des cours et d'eau et de feu l'air est rurll·'�'!
-le même et la terre assavoir l'air et la terre par 11111,
-les grands froids l'air et la terre faits pour les
-pierres par les grands froids h élas au septième
-de leur ère l'éther la terre la mer pour les pierres
-par les grands fonds les grands froids sur mer
-sur terre et dans les airs peuchère je reprends on
-ne sait pourquoi malgré le tennis les faits sont
-là on ne sait pourquoi je reprends au suivant
-bref enfin hélas au suivant pour les pierres qui
-peut en douter je reprends mais n'anticipons pas
-je reprends la tête en même temps parallèlement
-on ne sait pourquoi malgré le tennis au suivant
-'
-
-.
-
-•
-
-'
-
-62
-
-EN ATTENDANT GODOT
-
-la b arbe les flammes les pleurs les pierres si
-bleue s si c almes hélas la tête la tête la tête la
-tê te en Normandie malgré le tennis les labeurs
-abandonnés inachevés plus grave les pierres bref
-je reprends hélas hélas abandonnés inachevés la
-tête la tête en Normandie malgré le tennis la
-tête hélas les pierres Conard Conard ... (Mêlée.
-
-Lucky pousse encore quelques vociférations.)
-
-Tennis ! . . . Les pierres ! . . . Si calmes ! . . . Conard ! . . .
-
-Inachevés
-
-! ...
-
-Pozzo. - Son chapeau !
-Vladim ir s empare du chapeau de Lucky qui
-'
-
-se tait et tombe. Grand silence. Halètement des
-vainqueurs.
-
-ESTRAGON. - Je suis
-
-vengé.
-
-Vladimir contemple le
-
-regarde dedans.
-
-Pozzo.
-
-chapeau de Lucky,
-
-ça ! (Il arrache le
-mains de Vladimir, le jette par
-dessus .) Comme ça il ne pensera
-
-- Donnez-moi
-
-chapeau des
-
-terre, saute
-
-plus !
+POZZO. - Arrête ! (Lucky se tait.) Arrière ! (Lucky recule.) Là ! (Lucky s'arrête.) Hue ! (Lucky se tourne vers le public.) Pense !
+LUCKY (débit monotone). - Etant donné l'existence telle qu'elle jaillit des récents travaux publics de Poinçon et Wattmann d'un Dieu personnel quaquaquaqua à barbe blanche quaqua hors du temps de l'étendue qui du haut de sa divine apathie sa divine athambie sa divine aphasie nous aime bien à quelques exceptions près on ne sait pourquoi mais ça viendra et souffre à l'instar de la divine Miranda avec ceux qui sont on ne sait pourquoi mais on a le temps dans le tourment dans les feux dont les feux les flammes pour peu que ça dure encore un peu et qui peut en douter mettront à la fin le feu aux poutres assavoir porteront l'enfer aux nues si bleues par moments encore aujourd'hui et calmes si calmes d'un calme qui pour être intermittent n'en est pas moins le bienvenu mais n'anticipons pas et attendu d'autre part qu'à la suite des recherches inachevées n'anticipons pas des recherches inachevées mais néanmoins couronnées par l'Acacacacadémie d'Anthropopopométrie de Berne-en-Bresse de Testu et Conard il est établi sans autre possibilité d'erreur que celle afférente aux calculs humains qu'à la suite des recherches inachevées inachevées de Testu et Conard il est établi tabli tabli ce qui suit qui suit qui suit assavoir mais n'anticipons pas on ne sait pourquoi à la suite des travaux de Poinçon et Wattmann il apparaît aussi clairement si clairement qu'en vue des labeurs de Fartov et Belcher inachevés inachevés on ne sait pourquoi de Testu et Conard inachevés inachevés il apparaît que l'homme contrairement à l'opinion contraire que l'homme en Bresse de Testu et Conard que l'homme enfin bref que l'homme en bref enfin malgré les progrès de l'alimentation et de l'élimination des déchets est en train de maigrir et en même temps parallèlement on ne sait pourquoi malgré l'essor de la culture physique de la pratique des sports tels tels tels le tennis le football la course et à pied et à bicyclette la natation l'équitation l'aviation la conation le tennis le camogie le patinage et sur glace et sur asphalte 1e tennis l'aviation 1es sports 1es sports d'hiver d'été d'automne d'automne le tennis sur gazon sur sapin et sur terre battue l'aviation le tennis le hockey sur terre sur mer et dans les airs la pénicillin e et succédanés bref je reprends en même temps parallèlement de rapetisser on ne sait pourquoi malgré le tennis je reprends l'aviation le golf tant à neuf qu'à dix-huit trous le tennis sur glace bref on ne sait pourquoi en Seine Seine-et-Oise Seine-et-Marne Marne-et­Oise assavoir en même temps parallèlement on ne sait pourquoi de maigrir rétrécir je reprends Oise Marne bref la perte sèche par tête de pipe depuis la mort de Voltaire étant de l'ordre de deux doigts cent grammes par tête de pipe environ en moyenne à peu près chiffres ronds bon poids déshabillé en Normandie on ne sait pourquoi bref enfin peu importe les faits sont là et conidérant d'autre part ce qui est encore plus grave qu'il ressort ce qui est encore plus grave qu'à la lumière la lumière des expériences en cours de Steinweg et Petennann il ressort ce qui est encore plus grave qu'il ressort ce qui est encore plus grave à la lumière la lumière des expériences abandonnées de Steinweg et Petermann qu'à  la campagne a 1a montagne et au bord de la mer et des cours et d'eau et de feu l'air est le même et la terre assavoir l'air et la terre par les grands froids l'air et la terre faits pour les pierres par les grands froids hélas au septième de leur ère l'éther la terre la mer pour les pierres par les grands fonds les grands froids sur mer sur terre et dans les airs peuchère je reprends on ne sait pourquoi malgré le tennis les faits sont là on ne sait pourquoi je reprends au suivant bref enfin hélas au suivant pour les pierres qui peut en douter je reprends mais n'anticipons pas je reprends la tête en même temps parallèlement on ne sait pourquoi malgré le tennis au suivant la barbe les flammes les pleurs les pierres si bleues si calmes hélas la tête la tête la tête la tête en Normandie malgré le tennis les labeurs abandonnés inachevés plus grave les pierres bref je reprends hélas hélas abandonnés inachevés la tête la tête en Normandie malgré le tennis la tête hélas les pierres Conard Conard... (Mêlée. Lucky pousse encore quelques vociférations.) Tennis !... Les pierres !... Si calmes !... Conard !... Inachevés !...
+POZZO. - Son chapeau !
+  Vladimir s empare du chapeau de Lucky qui se tait et tombe. Grand silence. Halètement des vainqueurs.
+ESTRAGON. - Je suis vengé.
+  Vladimir contemple le chapeau de Lucky, regarde dedans.
+POZZO. - Donnez-moi ça ! (Il arrache le chapeau des mains de Vladimir, le jette par terre, saute dessus.) Comme ça il ne pensera plus !
 VLADIMIR. - Mais va-t-il pouvoir s'orienter ?
-Pozzo.
-C'est moi qui l'orienterai. (Il donne
-des coups de p ied à Lucky.) Deb o ut ! Porc !
+POZZO. - C'est moi qui l'orienterai. (Il donne des coups de pied à Lucky.) Debout ! Porc !
 ESTRAGON. - Il est peut-être mort.
 VLADIMIR. - Vous allez le tuer.
-Pozzo.
-Debout ! Charogne ! (Il tire sur la
-corde, Lucky glisse un peu. A Estragon et Vla­
-dim ir ) Aidez-moi.
+POZZO. - Debout ! Charogne ! (Il tire sur la corde, Lucky glisse un peu. A Estragon et Vladimir) Aidez-moi.
 VLADIMIR. - Mais comment faire ?
--
-
--
-
-.
-
-EN ATTENDANT
-
-GODOT
-
-63
-
-Pozzo. - Soulevez-le !
-Estragon et Vladimir' mettent Lucky debout,
-
-le soutiennent un moment, puis le lâchent. Il
-retombe.
-ESTRAGON. - Il fait exprès .
-Pozzo. - Il faut le soutenir.
-
-(Un temps . )
-Alez, allez, soulevez-le !
+POZZO. - Soulevez-le !
+Estragon et Vladimir mettent Lucky debout, le soutiennent un moment, puis le lâchent. Il retombe.
+ESTRAGON. - Il fait exprès.
+POZZO. - Il faut le soutenir. (Un temps.) Allez, allez, soulevez-le !
 ESTRAGON. - Moi j'en ai mare.
-VLADIMIR. - Allons, essayons encore une
-fois.
-
-ESTRAGON. -
-
-Pour qui nous prend-il ?
-Allons.
-Ils mettent Lucky de b out, le soutiennent.
-Pozzo. - Ne le lâchez pas ! (Estragon et
-Vladimir chancellent.) Ne bougez pas ! (Pozzo
-va prendre la valise et le panier et les apporte
-vers Lucky.) Tenez-le bien ! (Il met la valise
-dans la main de Lucky, qui la lâche aussitôt.)
-Ne le lâchez pas ! (Il recommence . Peu à peu,
-au contact de la valise, Lucky reprend ses esprits
-et ses doigts finissent pas se resserrer autour
-de la poignée.) Tenez-le toujours ! (Même jeu
-avec le p anier. ) Voilà, vous pouvez le lâcher.
-(Estragon et Vladimir s'écartent de L ucky qui
-trébuche, chancelle, ploie, mais reste debout,
-valise et pan ier à la main. Pozzo recule, fait
-claquer son fouet . ) En avant ! (Lucky avance.)
-Arière ! (Lucky recule .) Tourne ! (Lucky se
-retourne.) Ça y est, il peut marcher, (Se tour­
-nant vers Estragon et Vladimir.) Merci, mesVLADIMIR.
-
--
-
-64
-
-EN ATTENDANT GODOT
-
-sieurs, et laissez-moi vous - (il fouille dans
-ses poches) - vous souhaiter - (il fouille) vous so u h aite r - (il fouille) - mais où ai-je
-donc mis ma montre ? (Il fouille.) Ça alors !
-(Il lèv e une tête défaite.) Une véritable savon­
-messieurs, à secondes trotteuses. C'est
-pépé qui me l'a donnée. (Il fouille.) Elle
-est p e ut êt re tombée. (Il cherche par terre, ainsi
-que Vladimir et Estragon. Pozzo retourne de
-son pied les restes du ch ap eau de Lucky.) Ça, par
-nette,
-
-mon
-
--
-
-exemple !
-
-VLADIMIR. - Elle est peu t être dans v ot re
--
-
-gousset.
-
-Pozzo.
-Attendez. (Il se plie en deux, appro­
-che sa tête de son ventre, écoute . ) Je n'entends
-rien ! (Il leu r fait sign e de s'approcher.) V e nez
-voir. (Estragon et Vladimir vont vers lui, se
-penchent sur son ventre. Silence.) Il me semble
-q u 'on d evrai t entendre l e ti c t ac .
+VLADIMIR. - Allons, essayons encore une fois.
+ESTRAGON. - Pour qui nous prend-il ?
+VLADIMIR. - Allons.
+  Ils mettent Lucky debout, le soutiennent.
+POZZO. - Ne le lâchez pas ! (Estragon et Vladimir chancellent.) Ne bougez pas ! (Pozzo va prendre la valise et le panier et les apporte vers Lucky.) Tenez-le bien ! (Il met la valise dans la main de Lucky, qui la lâche aussitôt.) Ne le lâchez pas ! (Il recommence. Peu à peu, au contact de la valise, Lucky reprend ses esprits et ses doigts finissent pas se resserrer autour de la poignée.) Tenez-le toujours ! (Même jeu avec le panier.) Voilà, vous pouvez le lâcher. (Estragon et Vladimir s'écartent de Lucky qui trébuche, chancelle, ploie, mais reste debout, valise et panier à la main. Pozzo recule, fait claquer son fouet.) En avant ! (Lucky avance.) Arrière ! (Lucky recule.) Tourne ! (Lucky se retourne.) Ça y est, il peut marcher, (Se tournant vers Estragon et Vladimir.) Merci, messieurs, et laissez-moi vous - (il fouille dans ses poches) - vous souhaiter - (il fouille) vous souhaiter - (il fouille) - mais où ai-je donc mis ma montre ? (Il fouille.) Ça alors ! (Il lève une tête défaite.) Une véritable savonnette, messieurs, à secondes trotteuses. C'est pépé qui me l'a donnée. (Il fouille.) Elle est peut-être tombée. (Il cherche par terre, ainsi que Vladimir et Estragon. Pozzo retourne de son pied les restes du chapeau de Lucky.) Ça, par exemple !
+VLADIMIR. - Elle est peut être dans votre gousset.
+POZZO. - Attendez. (Il se plie en deux, approche sa tête de son ventre, écoute.) Je n'entends rien ! (Il leur fait signe de s'approcher.) Venez voir. (Estragon et Vladimir vont vers lui, se penchent sur son ventre. Silence.) Il me semble qu'on devrait entendre le tic tac.
 VLADIMIR. - Silence !
-Tous écoutent, penchés.
-ESTRAGON.
-J'entends quelque chose.
-Pozzo . - Où ?
+
+        Tous écoutent, penchés.
+        
+ESTRAGON. - J'entends quelque chose.
+POZZO. - Où ?
 VLADIMIR. - C'est le cœur.
 P ozzo (déçu). - Merde alors !
 VLADIMIR. - Silence !
--
 
--
+        Ils écoutent.
 
--
+ESTRAGON. - Peut-être qu'elle s'est arrêtée.
 
-Ils écou tent.
+        Ils se redressent.
 
-ESTRAGON.
-
-qu'elle s'est arrêtée.
-Ils se redressent.
-Pozzo. - Lequel de vous sent si mauvais ?
--
-
-Peut-être
-
-65
-
-EN ATTENDANT GODOT
-
-ESTRAGON.
-p i ed s .
-
-- Lui
-
-pue de
-
-la
-
-bouche,
-
-moi des
-
-vais vous quitter.
-Et votre savonnette ?
-Pozzo. - J'ai dû la lais s er au château.
+POZZO. - Lequel de vous sent si mauvais ?
+ESTRAGON. - Lui pue de la bouche, moi des pieds . 
+POZZO. - Je vais vous quitter.
+ESTRAGON. - Et votre savonnette ?
+POZZO. - J'ai dû la laisser au château.
 ESTRAGON. - Alors, adieu.
-
-POZZO. - Je
-ESTRAGON.
-
--
-
 POZZO. - Adieu.
-
 VLADIMIR. - Adieu
 ESTRAGON. - Adieu.
-.
 
-Silence. Personne ne bouge.
+        Silence. Personne ne bouge.
+
 VLADIMIR. - Adieu.
-Pozzo. - Adieu.
-ESTRAGON.
-Adieu.
--
+POZZO. - Adieu.
+ESTRAGON. - Adieu.
 
-Silence.
-Pozzo. - Et m erci .
+        Silence.
+
+POZZO. - Et merci .
 VLADIMIR. - Merci à vous .
-Pozzo. - De rien.
-ESTRAGON.
-Mais si.
-Pozzo. - Mais non.
+POZZO. - De rien.
+ESTRAGON. - Mais si.
+POZZO. - Mais non.
 VLADIMIR. - Mais si.
 ESTRAGON. - Mais non.
--
 
-Pozzo.
+        Silence.
 
-- Je n'arrive pas .
-.
-
-.
-
-Silence.
-(il hésite) . à
-.
-
-.
-
-partir.
-ESTRAGON.
-
--
-
-C'est la vie.
-
-Pozzo se retourne, s'éloigne de Lucky, vers
-la coulisse, filant la corde au fur et à mesure.
-VLADIMIR.
-Vous allez dans le mauvais
--
-
-sens.
-Pozzo. - Il me faut de
-
-l'élan. (Arrivé au
-
-EN ATTENDANT
-
-66
-
-GODOT
-
-bout de la corde, c'est-à-dire dans la coulisse, il
-s'arrête, se retourne, crie.) Ecartez-vous ! (Estra­
-gon et Vladimir se rangent au fond, regardent
-vers Pozzo. Bruit de fouet.) En avant ! (Lucky
-ne bouge pas.)
-En avant !
+POZZO. - Je n'arrive pas... (il hésite) ...à partir.
+ESTRAGON. - C'est la vie.
+  Pozzo se retourne, s'éloigne de Lucky, vers la coulisse, filant la corde au fur et à mesure.
+VLADIMIR. - Vous allez dans le mauvais sens.
+POZZO. - Il me faut de l'élan. (Arrivé au bout de la corde, c'est-à-dire dans la coulisse, il s'arrête, se retourne, crie.) Ecartez-vous ! (Estragon et Vladimir se rangent au fond, regardent vers Pozzo. Bruit de fouet.) En avant ! (Lucky ne bouge pas.) 
+ESTRAGON. - En avant !
 VLADIMIR. - En avant !
 
-ESTRAGON.
+        Bruit de fouet. Lucky s'ébranle.
 
--
+POZZO. - Plus vite ! (Il sort de la coulisse, traverse la scène à la suite de Lucky. Estragon et Vladimir se découvrent, agitent la main. Lucky sort. Pozzo fait claquer corde et fouet.) Plus vite ! Plus vite ! (Au moment de disparaître à son tour, Pozzo s'arrête, se retourne. La corde se tend. Bruit de Lucky qui tombe.) Mon pliant ! (Vladimir va chercher le pliant et le donne à Pozzo qui le jette vers Lucky.) Adieu !
+ESTRAGON, VLADIMIR (agitant la main). - Adieu ! Adieu !
+POZZO. - Debout ! Porc ! (Bruit de Lucky qui se lève.) En avant ! (Pozzo sort. Bruit de fouet.) En avant ! Adieu ! Plus vite ! Porc ! Hue ! Adieu !
 
-Bruit de fouet. Lucky s'ébranle.
-POZZO. - Plus vite ! (Il sort de la coulisse,
+        Silence.
 
-traverse la scène à la suite de Lucky. Estragon
-Vladimir se découvrent, agitent la main.
-Lucky sort. Pozzo fait claquer corde et fouet.)
-Plus vite ! Plus vite ! (Au moment de disparaî­
-tre à son tour, Pozzo s'arrête, se retourne. La
-corde se tend. Bruit de Lucky qui tombe.) Mon
-pli an t ! ( Vladimir va chercher le pliant et le
-donne à Pozzo qui le jette vers Lucky.) Adieu !
-ESTRAGON, VLADIMIR (agitant la main) .
-Adieu ! Adieu !
-Pozzo. - Debout ! Porc ! (Bruit de Lucky
-qui se lève.) En avant ! (Pozzo sort. Bruit de
-fouet.) En avant ! Adieu ! Plus vite ! Porc ! Hue !
-et
-
--
-
-Adieu !
-
-Silence.
 VLADIMIR. - Ça a fait passer le temps.
 ESTRAGON - Il serait passé sans ça.
-VLADIMIR.
-Oui. Mais moins vite.
-Un temps.
-ESTRAGON. - Qu'est-ce qu'on fait mainte­
-nant ?
-.
+VLADIMIR. - Oui. Mais moins vite.
 
--
+        Un temps.
 
-EN ATTENDANT GODOT
-
-67
-
+ESTRAGON. - Qu'est-ce qu'on fait maintenant ?
 VLADIMIR. - Je ne sais pas.
-
-ESTRAGON.
-
-VLADIMIR.
-
-- Allons-nous-en.
-On ne peut pas.
-
--
-
+ESTRAGON. - Allons-nous-en.
+VLADIMIR. - On ne peut pas.
 ESTRAGON. - Pourquoi ?
 VLADIMIR. - On attend Godot.
 ESTRAGON. - C'est vrai.
 
-VLADIMIR.
+        Un temps.
 
--
-
-Ils ont
-
-Un temps.
-beaucoup ch angé
-.
-
-ESTRAGON.
-
-- Qui ?
-VLADIMIR.
-Ces deux-là.
-ESTRAGON. - C'est ça, faisons un peu
--
-
-de
-
-conversation.
-
-VLADIMIR. - N'est-ce pas qu'ils ont beau­
-changé ?
-ESTRAGON.
-
-coup
-
-C'est probable. Il n'y a que
-nous qui n'y arrivons pas.
-VLADIMIR. - Probable ? C'est certain. Tu les
-as bien vus ?
-ESTRAGON. - Si tu veux. Mais je ne les
-connais pas.
+VLADIMIR. - Ils ont beaucoup changé
+ESTRAGON. - Qui ?
+VLADIMIR. - Ces deux-là.
+ESTRAGON. - C'est ça, faisons un peu de conversation.
+VLADIMIR. - N'est-ce pas qu'ils ont beaucoup changé ?
+ESTRAGON. - C'est probable. Il n'y a que nous qui n'y arrivons pas.
+VLADIMIR. - Probable ? C'est certain. Tu les as bien vus ?
+ESTRAGON. - Si tu veux. Mais je ne les connais pas.
 VLADIMIR. - Mais si, tu les connais.
 ESTRAGON. - Mais non.
-VLADIMIR. - Nous les c onn ais s ons je te dis.
-Tu oublies tout. (Un temps.) A moins que ce
-ne soient pas les mêmes.
-ESTRAGON.
-La preuve, ils ne nous ont
-pas reconnus.
-VLADIMIR.
-Ça ne veut rien dire. Moi aussi
-j'ai fait semblant de ne pas les reconnaître. Et
-puis, nous, on ne nous reconnaît jamais.
--
-
-,
-
--
-
--
-
-EN ATTENDANT
-
-68
-
-GODOT
-
-ESTRAGON. - Assez. Ce qu'il faut - Aïe !
-(Vladimir ne bronch e pas.) Aïe !
-
-VLADIMIR. - A moins que ce ne soient pas
-les mêmes.
-ESTRAGON. - Didi ! C'est l'autre pied ! (Il
-
-se dirige en boitillant vers l'endroit où il était
-
-assis au lever du rideau.)
+VLADIMIR. - Nous les connaissons je te dis. Tu oublies tout. (Un temps.) A moins que ce ne soient pas les mêmes.
+ESTRAGON. - La preuve, ils ne nous ont pas reconnus.
+VLADIMIR. - Ça ne veut rien dire. Moi aussi j'ai fait semblant de ne pas les reconnaître. Et puis, nous, on ne nous reconnaît jamais.
+ESTRAGON. - Assez. Ce qu'il faut - Aïe ! (Vladimir ne bronche pas.) Aïe !
+VLADIMIR. - A moins que ce ne soient pas les mêmes.
+ESTRAGON. - Didi ! C'est l'autre pied ! (Il se dirige en boitillant vers l'endroit où il était assis au lever du rideau.)
 VOIX EN COULISSE . - Monsieur !
-Estragon s'arrête. Tous les deux regardent en
-direction de la voix.
+  Estragon s'arrête. Tous les deux regardent en direction de la voix.
 ESTRAGON. - Ça recommence.
 VLADIMIR. - Approche, mon enfant.
-
-Entre un jeune garçon , craintivement. Il s'arrête.
-
+  Entre un jeune garçon , craintivement. Il s'arrête.
 GARÇON. - Monsieur Albert ?
 VLADIMIR. - C'est moi .
 ESTRAGON. - Qu'est-ce que tu veux ?
 VLADIMIR. - Avance.
-Le garçon n e bouge pas.
-(avec force). - Avance, on te dit !
-Le garçon avance craintivement, s'arrête.
 
-ESTRAGON
+        Le garçon ne bouge pas.
+
+ESTRAGON (avec force). - Avance, on te dit !
+
+        Le garçon avance craintivement, s'arrête.
 
 VLADIMIR. - Qu'est-ce que c'est ?
-GARÇON. - C'est monsieur Godot -
+GARÇON. - C'est monsieur Godot - (Il se tait.)
+VLADIMIR. - Evidemment. (Un temps.) Approche.
 
-(Il se
+        Le garçon ne bouge pas.
 
-tait.)
-VLADIMIR.
-Approche.
-
-Evidemment.
-
-( Un
-
-temps.)
-
-Le garçon ne bouge pas.
-ESTRAGON (avec force). - Approche, on te
-dit ! (Le garçon avance craintivement, s'arrête .)
-Pourquoi tu viens si t ard ?
-
-EN
-
-VLADIMIR.
-
--
-
-ATTENDANT GODOT
-
-69
-
-Tu as un message de monsieur
-
-Godot ?
-
+ESTRAGON (avec force). - Approche, on te dit ! (Le garçon avance craintivement, s'arrête.) Pourquoi tu viens si tard ?
+VLADIMIR. - Tu as un message de monsieur Godot ?
 GARÇON. - Oui monsieur.
 VLADIMIR. - Eh bien, dis-le.
 ESTRAGON. - Pourquoi tu viens si tard ?
-Le garçon les regarde l'un après l'autre, ne
-sachant à qui répondre.
-VLADIMIR (à Estragon). - Laiss�-le tran­
-
-quille.
-
-ESTRAGON (à Vladimir). - Fous-moi la paix,
-toi. (A vançant, au garçon .) Tu sais l'heure qu'il
-est ?
-GARÇON (reculant) . - Ce n'est pas ma faute,
-monsieur !
+  Le garçon les regarde l'un après l'autre, ne sachant à qui répondre.
+VLADIMIR (à Estragon). - Laisse-le tranquille.
+ESTRAGON (à Vladimir). - Fous-moi la paix, toi. (Avançant, au garçon.) Tu sais l'heure qu'il est ?
+GARÇON (reculant). - Ce n'est pas ma faute, monsieur !
 ESTRAGON. - C'est la mienne peut-être ?
-GARÇON. - J'avais p eu r, monsieur.
-ESTRAGON. - Peur de quoi ? De nous ? ( Un
-temps.) Réponds !
-VLADIMIR. - Je vois ce que c'est, ce sont
-les autres qui lui ont fait peur.
-ESTRAGON. - Il Y a combien de temps que
-tu es là ?
-GARÇON. - Il Y a un moment, monsieur.
+GARÇON. - J'avais peur, monsieur.
+ESTRAGON. - Peur de quoi ? De nous ? (Un temps.) Réponds !
+VLADIMIR. - Je vois ce que c'est, ce sont les autres qui lui ont fait peur.
+ESTRAGON. - Il y a combien de temps que tu es là ?
+GARÇON. - Il y a un moment, monsieur.
 VLADIMIR. - Tu as eu peur du fouet ?
 GARÇON. - Oui monsieur.
 VLADIMIR. - Des cris ?
@@ -2647,394 +907,125 @@ GARÇON. - Oui monsieur.
 VLADIMIR. - Des deux messieurs ?
 GARÇON. - Oui monsieur.
 VLADIMIR. - Tu les connais.
-
-70
-
-EN ATTENDANT GODOT
-
-GA RÇON . - Non monsieur.
+GARÇON . - Non monsieur.
 VLADIMIR. - Tu es d'ici ?
-GARÇO N . - Oui monsieur.
-ESTRAGON. - Tout ça c'est des mensonges !
-(lI prend le garçon par le bras, le secoue.) Dis­
-nous la vérité !
-GARÇON ( tre m b lan t) . - Mais c'est la vérité,
-monsieur.
-VLADIMIR. - Mais l ai s s e -le donc tranquille !
-Qu'est-ce que tu as ? (Estragon lâche le garçon,
-
-recule, porte ses mains au visage. Vladimir et
-le garçon le regardent. Estragon découvre son
-visage, décomposé.) Qu'est-ce que tu as ?
+GARÇON . - Oui monsieur.
+ESTRAGON. - Tout ça c'est des mensonges ! (Il prend le garçon par le bras, le secoue.) Dis­nous la vérité !
+GARÇON (tremblant). - Mais c'est la vérité, monsieur.
+VLADIMIR. - Mais laisse-le donc tranquille ! Qu'est-ce que tu as ? (Estragon lâche le garçon, recule, porte ses mains au visage. Vladimir et le garçon le regardent. Estragon découvre son visage, décomposé.) Qu'est-ce que tu as ?
 ESTRAGON. - Je suis malheureux.
 VLADIMIR. - Sans blague ! Depuis quand ?
-
 ESTRAGON. - J'avais oublié.
-VLADIMIR. - La mémoire nous j oue de ces
-tours. (Estragon veut parler, y renonce, va en
-
-boitillant s'asseoir et commence à se déchausser.
-Au garçon .) Eh bien ?
-
-GARÇON. - Monsieur Godot . . .
-VLADIMIR (l'interrompant). - J e t'ai déj à vu ,
-n'est-ce pas ?
+VLADIMIR. - La mémoire nous joue de ces tours. (Estragon veut parler, y renonce, va en boitillant s'asseoir et commence à se déchausser. Au garçon.) Eh bien ? 
+GARÇON. - Monsieur Godot...
+VLADIMIR (l'interrompant). - Je t'ai déjà vu, n'est-ce pas ?
 GARÇON. - Je ne sais pas, monsieur.
 VLADIMIR. - Tu ne me connais pas ?
-GARÇO N . - Non monsieur.
+GARÇON. - Non monsieur.
 VLADIMIR. - Tu n'es pas venu hier ?
 GARÇON. - Non monsieur.
-VLADIMIR. - C'est la première fois que tu
-viens ?
+VLADIMIR. - C'est la première fois que tu viens ?
+GARÇON. - Oui monsieur.
 
-EN ATTENDANT GODOT
+        Silence.
 
-GARÇON.
-
--
-
-VLADIMIR.
-
-71
-
-Oui monsieur.
-
--
-
-On dit ça.
-
-Silence.
-
-(Un temps.) Eh bien,
-
-continue.
-
-GARÇON (d'un trait). - Monsieur Godot m'a
-dit de vous dire qu'il ne viendra pas ce soir mais
-sûrement demain.
+VLADIMIR. - On dit ça. (Un temps.) Eh bien, continue.
+GARÇON (d'un trait). - Monsieur Godot m'a dit de vous dire qu'il ne viendra pas ce soir mais sûrement demain.
 VLADIMIR. - C'est tout ?
-GARÇON.
-Oui monsieur.
-VLADIMIR.
-Tu travailles pour monsieur
-Godot ?
-GARÇON.
-Oui monsieur.
-VLADIMIR.
-Qu'est-ce que tu fais ?
-GARÇON.
-Je garde les chèvres, monsieur.
-VLADIMIR.
-Il est gentil avec toi ?
-GARÇON.
-Oui monsieur.
-VLADIMIR.
-II ne te bat p as ?
-GARÇON.
-Non monsieur, pas moi.
-VLADIMIR.
-Qui est-ce qu'il bat ?
-GARÇON.
-Il bat mon frère, monsieur.
-VLADIMIR.
-Ah tu as un frère ?
-GARÇON.
-Oui, monsieur.
-VLADIMIR.
-Qu'est-ce qu'il fait ?
-GARÇON.
-Il garde les brebis, monsieur.
-VLADIMIR. - Et pourquoi il ne te bat pas,
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
--
-
-toi ?
-
-GARÇON.
-Je ne sais pas, monsieur.
+GARÇON. - Oui monsieur.
+VLADIMIR. - Tu travailles pour monsieur Godot ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Qu'est-ce que tu fais ?
+GARÇON. - Je garde les chèvres, monsieur.
+VLADIMIR. - Il est gentil avec toi ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - II ne te bat pas ?
+GARÇON. - Non monsieur, pas moi.
+VLADIMIR. - Qui est-ce qu'il bat ?
+GARÇON. - Il bat mon frère, monsieur.
+VLADIMIR. - Ah tu as un frère ?
+GARÇON. - Oui, monsieur.
+VLADIMIR. - Qu'est-ce qu'il fait ?
+GARÇON. - Il garde les brebis, monsieur.
+VLADIMIR. - Et pourquoi il ne te bat pas, toi ?
+GARÇON. - Je ne sais pas, monsieur.
 VLADIMIR. - Il doit t'aimer.
-GARÇON.
-Je ne sais pas, monsieur.
-VLADIMIR.
-Il te donne assez à manger ?
--
-
--
-
--
-
-72
-
-EN
-
-ATTENDANT GODOT
-
-(Le garçon hésite.) Est-ce qu'il te donne bien à
-
-manger
-
-?
-
-- Assez bien, monsieur.
-- Tu n ' es p as malheureux ? (Le
-garçon hésite.) Tu entends ?
+GARÇON. - Je ne sais pas, monsieur.
+VLADIMIR. - Il te donne assez à manger ? (Le garçon hésite.) Est-ce qu'il te donne bien à manger ?
+GARÇON. - Assez bien, monsieur.
+VLADIMIR. - Tu n ' es p as malheureux ? (Le garçon hésite.) Tu entends ?
 GARÇON. - Oui monsieur.
 VLADIMIR. - Et alors ?
-GARÇON. - Je ne sais pas, monsieur .
+GARÇON. - Je ne sais pas, monsieur.
 VLADIMIR. - Tu ne sais pas si tu es malheureux ou non ?
 GARÇON. - Non monsieur.
-VLADIMIR. - C'est comme moi. (Un temps.)
-Où c'est que tu couches ?
+VLADIMIR. - C'est comme moi. (Un temps.) Où c'est que tu couches ?
 GARÇON. - Dans le grenier, monsieur.
 VLADIMIR. - Avec ton frère ?
-GARÇON.
-
-VLADIMIR.
-
 GARÇON. - Oui monsieur.
 VLADIMIR. - Dans le foin ?
 GARÇON. - Oui monsieur.
-VLADIMIR. - B on , v a-t'e n .
-GARÇON. - Qu'est-ce que je dois
-sieur Godot, monsieur ?
-VLADIMIR. - Dis-lui. . . (Il h ésite . )
-tu nous as vus. ( Un temps . ) Tu nous
-n'est-ce pas ?
-
-Un temps.
-dire
-
-à mon­
-
-Dis-lui
-a bi e n
-
-que
-vus,
-
-GARÇON. - Oui monsieur. (Il recule, hésite,
-se retourne et sort en courant.)
-La lumière se met brusquement à baisser. En
-un instan t il fait nuit. La lune se lève, au fond,
-
-EN ATTENDANT GODOT
-
-73
-
-monte dans le ciel, s'immobilise, baignant la
-scène d'une clarté argentée.
-VLADIMIR. - Enfin ! (Estragon se lève et va
-ver.s Vladimir, ses deux chaussures à la main. Il
-les dépose près de la rampe, se redresse et regarde
-la lune.) Qu'est-ce que tu fais ?
-ESTRAGON. - Je fais comme toi, je regarde
-la blafarde.
-
+VLADIMIR. - Bon , va-t'en .
+GARÇON. - Qu'est-ce que je dois dire à monsieur Godot, monsieur ?
+VLADIMIR. - Dis-lui... (Il hésite.) Dis-lui que tu nous as vus. (Un temps.) Tu nous a bien vus, n'est-ce pas ?
+GARÇON. - Oui monsieur. (Il recule, hésite, se retourne et sort en courant.)
+  La lumière se met brusquement à baisser. En un instant il fait nuit. La lune se lève, au fond, monte dans le ciel, s'immobilise, baignant la scène d'une clarté argentée.
+VLADIMIR. - Enfin ! (Estragon se lève et va vers Vladimir, ses deux chaussures à la main. Il les dépose près de la rampe, se redresse et regarde la lune.) Qu'est-ce que tu fais ?
+ESTRAGON. - Je fais comme toi, je regarde la blafarde.
 VLADIMIR. - Je veux dire, avec tes chaussures.
-ESTRAGON. - Je les laisse là. (Un temps.) Un
-autre viendra, aussi . . . aussi. . . que moi, mais
-chaussant moins grand, et elles feront son bon­
-heur.
-VLADIMIR. - Mais tu ne peux pas aller pieds
-nus.
+ESTRAGON. - Je les laisse là. (Un temps.) Un autre viendra, aussi... aussi... que moi, mais chaussant moins grand, et elles feront son bonheur.
+VLADIMIR. - Mais tu ne peux pas aller pieds nus.
 ESTRAGON. - Jésus l'a fait.
-VLADIMIR. - Jésus ! Qu'est-ce que tu vas
-chercher là ! Tu ne vas tout de même pas te
-comparer à lui ?
-ESTRAGON. - Toute ma vie je me suis com­
-paré à lui.
-VLADIMIR. - Mais là-bas il faisait chaud ! Il
-f? :sait bon !
-' STRAGON. - Oui. Et on crucifiait vite .
+VLADIMIR. - Jésus ! Qu'est-ce que tu vas chercher là ! Tu ne vas tout de même pas te comparer à lui ?
+ESTRAGON. - Toute ma vie je me suis comparé à lui.
+VLADIMIR. - Mais là-bas il faisait chaud ! Il faisait bon !
+ESTRAGON. - Oui. Et on crucifiait vite .
 
-Silence.
+        Silence.
 
-VLADIMIR. - Nous n'avons plus rien à faire
-ici.
+VLADIMIR. - Nous n'avons plus rien à faire ici.
 ESTRAGON. - Ni ailleurs.
-VLADIMIR. - Voyons, Gogo, ne
-comme ça. Demain tout ira mieux.
-
-sois
-
-pas
-
-74
-
-EN
-
-ESTRAGON.
-VLADLmR.
-gosse a dit ?
-
-ATTENDANT GODOT
-
--
-
-Comment ça ?
-
-- Tu n'as pas entendu ce que le
-
+VLADIMIR. - Voyons, Gogo, ne sois pas comme ça. Demain tout ira mieux. 
+ESTRAGON. - Comment ça ?
+VLADIMIR. - Tu n'as pas entendu ce que le gosse a dit ?
 ESTRAGON. - Non.
-
-VLADIMIR.
-li a dit que Godot viendra
-sûrement demain. (Un temps.) Ça ne te dit rien ?
+VLADIMIR. - Il a dit que Godot viendra sûrement demain. (Un temps.) Ça ne te dit rien ?
 ESTRAGON. - Alors il n'y a qu'à attendre ici.
-VLADIMIR.
-Tu es fou ! Il faut s'abriter. (Il
--
-
---
-
-orend Estragon par le bras.) Viens . (Il le tire.
-Estragon cède d'abord, puis résiste. Ils s'arrê­
-tent.)
-ESTRAGON (regardant l'arbre).
-Dommage
--
-
-qu'on n'ait pas un bout de corde.
-VLADIM1R.
-Viens. li commence à faire
-froid. (Il le tire. Même jeu.)
-ESTRAGON.
-Fais-moi penser d'apporter une
-corde demain.
-VLADIMIR. - Oui. Viens. (Il le tire. Même
--
-
--
-
-jeu.)
-
-ESTRAGON. - Ça fait combien de temps que
-nous sommes tout le temps ensemble ?
-VLADIMIR. - Je ne sais pas. Cinquante ans
-peut-être.
-ESTRAGON. - Tu te rappelles le jour où je
-me suis jeté dans la Durance ?
-VLADIMIR.
-On faisait les vendanges.
-ESTRAGON.
-Tu m'as repêché.
+VLADIMIR. - Tu es fou ! Il faut s'abriter. (Il prend Estragon par le bras.) Viens. (Il le tire. Estragon cède d'abord, puis résiste. Ils s'arrêtent.)
+ESTRAGON (regardant l'arbre). - Dommage qu'on n'ait pas un bout de corde.
+VLADIMIR. - Viens. Il commence à faire froid. (Il le tire. Même jeu.)
+ESTRAGON. - Fais-moi penser d'apporter une corde demain.
+VLADIMIR. - Oui. Viens. (Il le tire. Même jeu.)
+ESTRAGON. - Ça fait combien de temps que nous sommes tout le temps ensemble ?
+VLADIMIR. - Je ne sais pas. Cinquante ans peut-être.
+ESTRAGON. - Tu te rappelles le jour où je me suis jeté dans la Durance ?
+VLADIMIR. - On faisait les vendanges.
+ESTRAGON. - Tu m'as repêché.
 VLADIMIR. - Tout ça est mort et enterré.
-ESTRAGON. - Mes vêtements ont séché au
--
+ESTRAGON. - Mes vêtements ont séché au soleil.
 
--
+VLADIMIR. - N'y pense plus, va. Viens. (Même jeu.)
+ESTRAGON. - Attends.
+VLADIMIR. - J'ai froid.
+ESTRAGON. -- Je me demande si on n'aurait pas mieux fait de rester seuls, chacun de son côté. (Un temps). On n'était pas fait pour le même chemin.
+VLADIMIR (sans se fâcher). - Ce n'est pas sûr.
+ESTRAGON. - Non, rien n'est sûr.
+VLADIMIR. - On peut toujours se quitter, si tu crois que ça vaut mieux.
+ESTRAGON. - Maintenant ce n'est plus la peine.
 
-soleil.
+        Silence.
 
-EN
+VLADIMIR. - C'est vrai, maintenant ce n'est plus la peine.
 
-VLADIMIR.
+        Silence.
 
-(Même jeu.)
+ESTRAGON. - Alors, on y va ?
+VLADIMIR. - Allons-y .
 
-ESTRAGON.
+        Ils ne bougent pas.
 
-VLADIMIR.
-
-ATTENDANT
-
-N'y pense
-
--
-
-plus, va.
-
-75
-Viens.
-
-Attends.
-
--
-
--
-
-GODOT
-
-J'ai froid.
-
-ESTRAGON. -- Je me demande si on n'aurait
-pas mieux fait de rester seuls, chacun de son
-côté. (Un temps). On n'était pas fait pour le
-même chemin.
-VLADIMIR (sans se fâcher).
-Ce n'est pas
-sûr.
-ESTRAGON.
-Non, rien n'est sûr.
-VLADIMIR.
-On peut toujours se quitter, SI
-tu crois que ça vaut mieux.
-ESTRAGON.
-Maintenant ce n'est plus la
-peine.
--
-
--
-
--
-
--
-
-VLADIMIR.
-plus la peine.
-
-ESTRAGON.
-
-VLADIMIR.
-
--
-
--
-
--
-
-C'est vrai, maintenant
-
-Alors, on
-Allons-y .
-
-y va ?
-Ils
-
+        
 RIDEAU
-
-Silence.
-ce n'est
-Silence.
-
-ne bougent pas.
 
 Acte deuxième
 
@@ -3319,13 +1310,13 @@ déjà ?
 ESTRAGON. - Je suis comme ça. Ou j'oublie
 tout de suite ou je n'oublie j amais.
 VLADIMIR.
-Et Pozzo et Luclcy, tu as oublié
+Et POZZO et Luclcy, tu as oublié
 -
 
 aussi ?
 
 ESTRAGON.
-Pozzo et Lucky ?
+POZZO et Lucky ?
 VLADIMIR.
 Il a tout oublié !
 ESTRAGON.
@@ -3370,7 +1361,7 @@ VLADIMIR. -
 nais pas ?
 
 Il m'a donné des os.
-Pozzo !
+POZZO !
 Et tu dis que c'était hier, tout
 
 C'était
@@ -3775,8 +1766,8 @@ Tu
 n' a s rien remarqué
 
 ESTRAGON. - Hél as .
-VLADIMIR. - Et Pozzo
-ESTRAGON. - Pozzo ?
+VLADIMIR. - Et POZZO
+ESTRAGON. - POZZO ?
 
 d'inso-
 
@@ -3787,7 +1778,7 @@ ESTRAGON. - On aurai t dit
 
 des arêtes.
 
-VLADIMIR. - C'est Pozzo q u i te l es a donnés.
+VLADIMIR. - C'est POZZO q u i te l es a donnés.
 ESTRAGON. - Je n e s ai s p as .
 
 VLADIMIR. - Et le coup de pied ?
@@ -4350,7 +2341,7 @@ ESTRAGON.
 Je m'en vais.
 VLADIMIR. - Tu ne veux pas jouer ?
 ESTRAGON. - Jouer à quoi ?
-VLADIMIR. - On pourrait jouer à Pozzo
+VLADIMIR. - On pourrait jouer à POZZO
 -
 
 et
@@ -4359,7 +2350,7 @@ Lucky.
 
 ESTRAGON.
 VLADIMIR.
-Pozzo.
+POZZO.
 
 - Connais p as.
 -
@@ -4698,18 +2689,18 @@ VLADIMIR (vexe'). - Et moi ?
 ESTRAGON (de même).
 De moi ! De moi !
 Pitié ! De moi !
-Entrent Pozzo et Lucky. Pozzo est de ven u
+Entrent POZZO et Lucky. POZZO est de ven u
 aveugle. Lucky chargé comme au pre mier acte.
 Corde comme au premier acte, mais beaucoup
-plu s courte, pour perm e ttre à Pozzo de suivre
+plu s courte, pour perm e ttre à POZZO de suivre
 plus commodément. Lucky coiffé d'un nouveau
 chapeau . A la vue de Vladimir et Estragon il
 -
 
-s'arrête. Pozzo, continuant son chemin, vient se
+s'arrête. POZZO, continuant son chemin, vient se
 
 heurter contre lui. Vladimir et Estragon reculent.
-Pozzo (s'agrippant à Lucky qui, sous ce nou­
+POZZO (s'agrippant à Lucky qui, sous ce nou­
 veau poids, chancelle).
 Qu'y a-t-il ? Qui a
 -
@@ -4717,7 +2708,7 @@ Qu'y a-t-il ? Qui a
 crié ?
 
 Lucky tombe, en lâchant tout, et entraîne
-Pozzo dans sa chute. Ils restent étendus sans
+POZZO dans sa chute. Ils restent étendus sans
 mouvement au milieu des bagages.
 ESTRAGON .
 V LADIMIR.
@@ -4731,7 +2722,7 @@ C'est Godot ?
 Ça t omb e à pic . (Il va vers le
 
 tas, suivi d'Estragon .) Enfin du renfort !
-Pozzo (voix blanche).
+POZZO (voix blanche).
 Au secours.
 -
 
@@ -4748,19 +2739,19 @@ C'est Godot ?
 VLADIMIR. - Nous commencions à flancher.
 
 Voilà notre fin de so irée assurée.
-Pozzo. - A moi !
+POZZO. - A moi !
 ESTRAGON. - Il appelle à l'aide.
 VLADIMIR. - Nous ne sommes plus seuls, à
 attendre l a nuit, à attendre Godot, à attendre à attendre. Toute la soirée nous avons lu tté ,
 livrés à nos propres moyens. Maintenant c'est
 fini. Nou s sommes déj à demain.
 
-Pozzo. - A moi !
+POZZO. - A moi !
 VLADIMIR. - Déj à le temps coule tout autre­
 ment. Le soleil se couchera, la lune se lèvera et
 nous p arti ron s - d'ici.
-Pozzo. - Pitié !
-VLADIMIR. - Pauvre Pozzo !
+POZZO. - Pitié !
+VLADIMIR. - Pauvre POZZO !
 ES T RAGON . - Je savais que c'était lui.
 V L ADIMIR . - Qui ?
 ESTRAGON. - Godot.
@@ -4768,8 +2759,8 @@ VLADIMIR. - Mais ce n'est pas Godot.
 ESTRAGON. - Ce n'est pas Godot ?
 VLADIMIR. - Ce n 'est pas Godot .
 ESTRAGON. - Qui c'est alors ?
-VLADIMIR. - C'est Pozzo.
-Pozzo. - C'est moi ! C'est moi ! Relevezmoi !
+VLADIMIR. - C'est POZZO.
+POZZO. - C'est moi ! C'est moi ! Relevezmoi !
 VLADIMIR. - Il ne peut p as se relever.
 ESTRAGON. - Allons-nous-en.
 VLADIMIR. - On ne peut pas.
@@ -4805,7 +2796,7 @@ VLADIMIR. - Il ne peut pas.
 ESTRAGON. - Qu'est-ce qu'il a ?
 VLADIMIR.
 Je ne sais pas.
-Pozzo se tord, gémit, frappe le sol avec ses
+POZZO se tord, gémit, frappe le sol avec ses
 poings.
 ESTRAGON.
 Si on lu i demandait les os
@@ -4875,7 +2866,7 @@ VLADIMIR.
 C'est une bonne idée. Mais en
 sommes-nous capables ? Dort-il vraiment ? (Un
 temps.) Non, le mieux serait de profiter de ce que
-Pozzo appelle au secours pour le secourir, en
+POZZO appelle au secours pour le secourir, en
 tablant sur sa reconnaissance.
 ESTRAGON.
 Mais il ne . . .
@@ -4956,7 +2947,7 @@ ESTRAGON. - Je ne sais pas.
 VLADIMIR. - C ' e st po ssi ble .
 '
 
-Pozzo. - Au secours !
+POZZO. - Au secours !
 VLADIMIR. - Ce qui
 
 est certain, c'est que le
@@ -4976,22 +2967,22 @@ fonds, voilà ce que je me demande p arfo is. Tu
 suis mo n raisonnemen t ?
 ESTRAGON. - Nous naissons t ous fous. Quel­
 ques-uns le demeurent.
-Pozzo. - Au secours, je vous donnerai de
+POZZO. - Au secours, je vous donnerai de
 l ' arge n t !
 ESTRAGON. - Combien ?
-Pozzo. - Cent francs.
+POZZO. - Cent francs.
 ESTRAGON. - Ce n'est pas as se z .
 VLADIMIR. - Je n'irais pas ju sque-l à .
 ESTRAGON. - Tu trou ve s que c'est assez ?
 VLADIMIR. - Non, je veux dire j usqu' à affirmer que je n' avai s pas t ou te ma tête en venant
 au mon de. Mais la question n'est pas là.
-Pozzo. - Deux cents.
+POZZO. - Deux cents.
 VLADIMIR. - Nous attendons. Nous nou s
 ennuyons. (Il lève la main .) Non, ne proteste
 pas, nous nous ennuyons ferme, c'est incontes­
 table. Bon. Une diversion se p résent e et que
 faisons-nous ? Nous la laissons pourrir. Allons,
-au travail. (Il avance vers Pozzo, s'arrête.) Dans
+au travail. (Il avance vers POZZO, s'arrête.) Dans
 un instant, tout se dissipera, nou s serons à nou­
 veau seuls, au milieu des solitudes. (Il rêve.)
 
@@ -5002,7 +2993,7 @@ EN ATTENDANT GODOT
 POZZO . - Deux cents !
 VLADIMIR. - On arrive.
 
-Il essaie de soulever Pozzo, n'y arrive pas,
+Il essaie de soulever POZZO, n'y arrive pas,
 renouvelle ses efforts, trébuche dans les bagages,
 to mbe essaie de ·se relever, n'y arrive pas.
 ,
@@ -5021,7 +3012,7 @@ Au secours !
 Je m'en vais.
 Ne m'abandonne p as ! Ils me
 
-Pozzo. - Où suis-je ?
+POZZO. - Où suis-je ?
 VLADIMIR .
 Gogo !
 POZZO .
@@ -5038,14 +3029,14 @@ Jam ai s !
 ESTRAGON.
 Nous irons dans l'Ariège.
 VLADIMIR. - Où tu voudras.
-Pozzo.
+POZZO.
 Trois cents ! Quatre cents !
 ESTRAGON.
 J'ai touj ours voulu me balader dans l'Ariège.
 VLADIMIR.
 Tu t'y b aladeras.
 ESTRAGON. - Qui a pété ?
-VLADIMIR. - C'est Pozzo.
+VLADIMIR. - C'est POZZO.
 POZZO. - C'est moi ! C'est moi ! Pitié !
 -
 
@@ -5094,7 +3085,7 @@ ESTRAGON. - Voyons, Didi, ne sois pas têtu.
 de s'en saisir.) Allez, debout !
 VLADIMIR. - Tire !
 Estragon tire, trébuche, tom be . Long silence.
-Pozzo.
+POZZO.
 A moi !
 VLADIMIR. - Nous sommes là.
 ESTRAGON.
@@ -5157,7 +3148,7 @@ ESTRAGON. - Je crois.
 
 VLADIMIR.
 
-Pozzo !
+POZZO !
 lui
 
 -
@@ -5168,13 +3159,13 @@ ESTRAGON. - Dis-lui de la boucler ! C asse­
 
 la gueule !
 
-VLADIMIR (donnant des coups à Pozzo.) As-tu fini ? Veux-tu te t ai re ? Vermine ! (Pozzo
+VLADIMIR (donnant des coups à POZZO.) As-tu fini ? Veux-tu te t ai re ? Vermine ! (POZZO
 
 se dégage en poussant des cris de douleur et
 s'éloigne en rampant. De temps en temps, il
 s'arrête, scie l'air avec des gestes d'aveugle, en
 appelan t Lucky. Vladimir, s'appuyant sur le
-coude, le suit des yeux.) Il s'est s auvé ! (Pozzo
+coude, le suit des yeux.) Il s'est s auvé ! (POZZO
 s'effondre. Silence.) Il est tombé !
 Silence.
 ESTRAGON. - Qu'est-ce qu'on fait mainte­
@@ -5192,15 +3183,15 @@ je pouvais ramper jusqu'à lui.
 ESTRAGON. - Ne me quitte pas !
 VLADIMIR. - Si je l'appelais ?
 ESTRAGON. - C 'est ça, appelle-le.
-VLADIMIR. - Pozzo ! (Un temps.) Pozzo !
+VLADIMIR. - POZZO ! (Un temps.) POZZO !
 (Un temps.) Il ne répond pl u s .
 ESTRAGON. - Ensemble.
-VLADIMIR, ESTRAGON. - Pozzo ! Pozzo !
+VLADIMIR, ESTRAGON. - POZZO ! POZZO !
 VLADIMIR. - Il a bougé.
 ESTRAGON.
-Tu es sûr qu'il s'appelle Pozzo ?
+Tu es sûr qu'il s'appelle POZZO ?
 VLADIMIR (angoissé).
-Monsieur Pozzo !
+Monsieur POZZO !
 Reviens ! On ne te fera p a s de mal !
 -
 
@@ -5218,11 +3209,11 @@ ESTRAGON. - D'essayer avec d' autres noms,
 l'un après l'autre. Ça passerait le temps. On fini­
 rait bien par t o m be r sur le bon.
 VLADIMIR.
-Je te dis q u'il s'appelle Pozzo
+Je te dis q u'il s'appelle POZZO
 ESTRAGON.
 C'est ce que nous allons voir.
 Voyons. (Il réfléchit.) Abel ! Abel !
-Pozzo. - A m oi !
+POZZO. - A m oi !
 ESTRAGON. - Tu vois !
 VLADIMIR. - Je c o m m e n ce à en avoir a s se z
 de ce motif.
@@ -5239,7 +3230,7 @@ Caïn. (Il appelle.) Caïn ! C aïn !
 EN ATTENDANT GODOT
 
 1 18
-Pozzo.
+POZZO.
 
 -
 
@@ -5296,7 +3287,7 @@ Pas plus d i fficile que ça.
 VLADIMIR.
 Vouloir, tout est là.
 ES T R AG ON. - Et maintenant ?
-Pozzo. - Au secours !
+POZZO. - Au secours !
 ESTRAGON. - Allons-nous-en.
 VLADIMI R . - On ne peut pas.
 ESTRAGON.
@@ -5333,16 +3324,16 @@ ESTRAGON. - Eh bien, aidons-le. Qu'est-ce
 
 qu'on attend ?
 
-Ils aident Pozzo à se lever, s'écartent de lui.
+Ils aident POZZO à se lever, s'écartent de lui.
 Il retombe.
 
 VLADIMIR. - Il faut le soutenir. (Même jeu.
-Pozzo reste debout entre les deux, pendu à leur
+POZZO reste debout entre les deux, pendu à leur
 cou.) Il faut qu'il se réhabitue à la station debout.
-(A Pozzo.) Ça va mieux ?
-Pozzo. - Qui êtes-vous ?
+(A POZZO.) Ça va mieux ?
+POZZO. - Qui êtes-vous ?
 VLADIMIR. - Vous ne n ou s remettez pas ?
-Pozzo. - Je suis aveugle.
+POZZO. - Je suis aveugle.
 Silence.
 
 ESTRAGON.
@@ -5351,8 +3342,8 @@ l'avenir ?
 
 - Peut-être qu'il voit clair dans
 
-VLADIMIR (à Pozzo). - Depui s quand ?
-Pozzo. - J'avais une très b onne vue - mais
+VLADIMIR (à POZZO). - Depui s quand ?
+POZZO. - J'avais une très b onne vue - mais
 
 êtes-vous des amis ?
 
@@ -5392,7 +3383,7 @@ N'ergotons pas là-dessus.
 
 -
 
-Pozzo. - Vous n'êtes pas des brigands ?
+POZZO. - Vous n'êtes pas des brigands ?
 ESTRAGON. - Des brigands ! Est-ce qu'on a
 l'air de brigands ?
 V LADIMIR. - Voyons ! Il est aveugle.
@@ -5402,7 +3393,7 @@ Flûte ! C'est vrai. (Un temps.)
 
 Qu'il dit.
 
-Pozzo.
+POZZO.
 
 -
 
@@ -5423,7 +3414,7 @@ ESTRAGON. - Ça dépend de la saison.
 
 .
 
-Pozzo. - C'est le soir ?
+POZZO. - C'est le soir ?
 
 Silence.
 couchant.
@@ -5446,7 +3437,7 @@ Ne dis p as de bêtises.
 C'est
 l'ouest, par là.
 ESTRAGON. - Qu'est-ce que tu en sais ?
-Pozzo (avec angoisse). - Sommes-nous au
+POZZO (avec angoisse). - Sommes-nous au
 soir ?
 VLADIMIR.
 D'ailleurs, il n'a pas bougé.
@@ -5460,7 +3451,7 @@ D'ailleurs, il n'a pas bougé.
 
 ESTRAGON.
 J e te dis qu'il remonte.
-Pozzo. - P ou rq u oi ne répondez-vous p as ?
+POZZO. - P ou rq u oi ne répondez-vous p as ?
 -
 
 ESTRAGON.
@@ -5482,7 +3473,7 @@ n'est pas des cariatides.
 VLADIMIR .
 Vous disiez que vous aviez une
 bonne v ue, a ut re fo is , si j ' a i bien entendu ?
-Pozzo.
+POZZO.
 Oui, elle était bien bonne.
 Silence.
 ESTRAGON (avec irritation). - Dével opp e z !
@@ -5520,7 +3511,7 @@ POZZO .
 
 coup ?
 
-Pozzo . - Bien bonne.
+POZZO . - Bien bonne.
 
 .
 
@@ -5530,13 +3521,13 @@ EN ATTENDANT GODOT
 
 VLADIMIR. - Je vous demande si cela vous
 a pris tout d'un coup.
-Pozzo. - Un beau j our je me suis réveillé,
+POZZO. - Un beau j our je me suis réveillé,
 aveugle comme le destin. (Un temps . ) Je me
 demande parfois si je ne dors pas encore.
 VLADIMIR. - Quand ça ?
 POZZO. - Je ne sais pas.
 VLADIMIR. - Mais pas plus tard qu'hier . . .
-Pozzo. - Ne me questionnez pas. Les aveugles n'ont pas la notion du temps. (Un temps.)
+POZZO. - Ne me questionnez pas. Les aveugles n'ont pas la notion du temps. (Un temps.)
 Les choses du temps, ils ne les voient pas non
 pi us.
 VLADIMIR. - Tiens ! J'aurais juré le contraire.
@@ -5546,15 +3537,15 @@ VLADIMIR. - Je ne sais pas.
 POZZO. - Ne serait-on pas au lieudit l a
 Planche ?
 VLADIMIR. -- Je ne connais pas.
-Pozzo. - A quoi est-ce que ça ressemble ?
+POZZO. - A quoi est-ce que ça ressemble ?
 VLADIMIR (regard circulaire). - On ne peut
 pas le décrire. Ça ne ressemble à rien. Il n'y a
 rien. Il y a un arbre.
 POZZO. - Alors ce n'est pas la Planche.
 ESTRAGON (ployant). - Tu parles d'une diversion.
-Pozzo. - Où est mon domestique ?
+POZZO. - Où est mon domestique ?
 VLADIMIR. - Il est là.
-Pozzo. - Pourquoi ne répond-il pas quand
+POZZO. - Pourquoi ne répond-il pas quand
 je l' appelle ?
 
 EN ATTENDANT GODOT
@@ -5563,17 +3554,17 @@ je l' appelle ?
 
 VLADIMIR. - Je ne sais pas. Il semble dormir.
 est peut-être mort.
-Pozzo . - Que s'est-il passé, au juste ?
+POZZO . - Que s'est-il passé, au juste ?
 ESTRAGON. - Au juste !
 VLADIMIR. - Vous êtes tombés tous les deux.
-Pozzo .
+POZZO .
 Alle z voir s'il e st ble ssé.
 V L A D IM I R - Mais on ne peut pas vous
 quitter.
-Pozzo . - Vous n'avez pas besoin d'y aller
+POZZO . - Vous n'avez pas besoin d'y aller
 tous les deux.
 VLADIMIR (à Estragon). - Vas-y, toi.
-Pozzo . - C'est ça, que votre ami y aille. Il
+POZZO . - C'est ça, que votre ami y aille. Il
 sent si mauvais. (Un temps.) Qu'est-ce qu'il
 attend ?
 VLADIMIR (à Estragon). - Qu'est-ce que tu
@@ -5581,7 +3572,7 @@ attends ?
 ESTRAGON . - J'attends Godot.
 VLADIMIR. - Qu'est-ce qu'il doit faire au
 juste ?
-Pozzo .
+POZZO .
 Eh bien, qu'il tire d'abord sur la
 corde, en faisant attention naturellement de ne
 pas l'étrangler. En général, ça le fait ré agi r.
@@ -5592,7 +3583,7 @@ Tu vois, tu n'as
 rien à craindre. C'est même une occasion de te
 venger.
 ESTRAGON. - Et s'il se défend ?
-Pozzo . - Non non, il ne se défend j amais.
+POZZO . - Non non, il ne se défend j amais.
 VLADIMIR. - Je volerai à ton secours.
 Il
 
@@ -5642,23 +3633,23 @@ sures . Mais bien tô t il y ren on ce ra , se disp osera
 en chien de fusil, la tête entre les jam b es, les
 bras de va n t la tête.
 
-Pozzo. - Que s'est-il passé encore ?
+POZZO. - Que s'est-il passé encore ?
 VLADIMIR. - Mon ami s'est fait mal.
-Pozzo. - Et Lucky ?
+POZZO. - Et Lucky ?
 VLADIMIR. - Alors c'est bien lui ?
-Pozzo. - Comment ?
+POZZO. - Comment ?
 
 C'est bien Lucky ?
 Je ne comprends p as .
-VLADIMIR. - Et vous, vous êtes Pozzo ?
-Pozzo . - Certainement, je suis Pozzo.
+VLADIMIR. - Et vous, vous êtes POZZO ?
+POZZO . - Certainement, je suis POZZO.
 VLADIMIR. - Les mêmes qu'hier ?
-Pozzo. - Qu'hier ?
+POZZO. - Qu'hier ?
 VLADIMIR. - On s'est vus hier. (Silence). Vous
 ne vous rappelez pas ?
 VLADIMIR. -
 
-Pozzo.
+POZZO.
 
 -
 
@@ -5666,7 +3657,7 @@ Pozzo.
 
 1 25
 
-Pozzo. - Je ne me r ap pe l le avoir rencontré
+POZZO. - Je ne me r ap pe l le avoir rencontré
 pers onne hier. Mais dem ai n je ne me rappelle­
 rai avoir rencontré personne aujourd'hui. Ne
 comptez donc pas sur moi pou r vous renseigner.
@@ -5674,23 +3665,23 @@ Et puis assez là-dessus. Debout !
 VLADIMIR. - Vous l'emmeniez à Saint-S au­
 veur pour le vendre. Vous nous ave z parlé . . Il a
 dansé. Il a pensé. Vous voyiez clair.
-Pozzo. - Si vous y tenez. Lâchez-moi, s'il
+POZZO. - Si vous y tenez. Lâchez-moi, s'il
 vous plaît. (Vladimir s'écarte.) Debout !
 VLADIMIR. - Il se lève.
 Lucky se lève, ramasse les bagages.
-Pozzo. - Il fait bien.
+POZZO. - Il fait bien.
 V L ADIMIR. - Où allez-vous de ce pas ?
-Pozzo. - Je ne m'occupe pas de ça.
+POZZO. - Je ne m'occupe pas de ça.
 VLADIMIR. - Comme vous avez chang é !
 Lucky, ch argé des b agages, vient se placer
 
-devan t Pozzo.
+devan t POZZO.
 
-Pozzo. - Fouet ! (Lucky dépose les bagages,
-cherche le fouet, le trouve, le donne à Pozzo,
+POZZO. - Fouet ! (Lucky dépose les bagages,
+cherche le fouet, le trouve, le donne à POZZO,
 reprend les bagages.) Corde ! (Lucky dépose les
 bagages, met le b out de la corde dans la main
-de Pozzo, reprend les bagages.)
+de POZZO, reprend les bagages.)
 VLADIMIR.
 Q u'est ce qu 'i l y a dans la
 _
@@ -5700,14 +3691,14 @@ _
 
 valise ?
 
-Pozzo. - Du s able. (Il tire sur la corde.)
-En avant ! (Lucky s'ébranle, Pozzo le suit.)
+POZZO. - Du s able. (Il tire sur la corde.)
+En avant ! (Lucky s'ébranle, POZZO le suit.)
 VLADIMIR . -
 
 Ne partez pas encore.
 pars.
 
-Pozzo (s'arrêtant). - Je
+POZZO (s'arrêtant). - Je
 
 EN ATTENDANT GODOT
 
@@ -5716,12 +3707,12 @@ Pozzo (s'arrêtant). - Je
 VLADIMIR.
 Que faites-vous quand vous
 tombez loin de tout secours ?
-Pozzo .
+POZZO .
 Nous attendons de pouvoir nous
 relever. Puis nous repartons.
 VLADIMIR. - Avant de partir, dites-lui de
 c h ante r .
-Pozzo. - A qui ?
+POZZO. - A qui ?
 -
 
 -
@@ -5732,7 +3723,7 @@ VLADIMIR.
 
 -
 
-Pozzo.
+POZZO.
 
 VLADIMIR.
 
@@ -5754,10 +3745,10 @@ Mais il est muet.
 Muet !
 - P arfaitement . Il ne peut même
 
-Pozzo. -
+POZZO. -
 
 VLADIMIR.
-Pozzo.
+POZZO.
 
 pas gémir.
 
@@ -5778,7 +3769,7 @@ puis c'est la nuit à nouveau. (Il tire sur la corde.)
 En avant !
 Ils sortent. Vladimir les suit iusqu'à la limite
 VLADIMIR.
-Pozzo
+POZZO
 
 -
 
@@ -6312,4 +4303,14 @@ Samuel Beckett s'est vu attribuer en 1969 le prix
 
 Nobel de littérature.
 
-
+
+
+
+LES ÉDITIONS DE MINUIT
+
+1952 by LES ÉDITIONS DE MINUIT
+7, rue Bernard Palissy, 75006 Paris
+En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou partiellement le présent. ouvrage sans autorisation de l'éditeur ou du Centre français d'exploitation du droit de copie,
+20, rue des Grands-Augustins, 75006 Paris.
+ISBN 2 7073 0148 5
+

@@ -20,7 +20,7 @@ func _ready():
 	timer.wait_time = 5
 	timer.connect("timeout", self, "save_datas")
 	timer.start()
-	
+
 
 ###############
 #### DATAS ####
@@ -354,6 +354,7 @@ func save_datas(other_datas = null, force_saving = false):
 			emit_signal("_data_saved", true)
 		
 		else:
+			print("saved")
 			emit_signal("_data_saved", false)
 		
 		is_currently_saving = false
@@ -649,7 +650,7 @@ const upgrades_data = {
 }
 
 const virus_datas: Dictionary = {
-	total_proba_weight = 8,
+	total_proba_weight = 18,
 	
 	virus_liste = ["poulpe", "pirate", "bug", "spider"],
 	poulpe = {
@@ -666,6 +667,6 @@ const virus_datas: Dictionary = {
 	},
 	spider = {
 		nominal_speed = 1000,
-		proba_weight = 2
+		proba_weight = 12
 	}
 }
