@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=2]
+[gd_scene load_steps=161 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -2865,6 +2865,33 @@ colors = PoolColorArray( 0.0664062, 0.0664062, 0.0664062, 1, 0.375, 0.375, 0.375
 [sub_resource type="GradientTexture" id=11]
 gradient = SubResource( 10 )
 
+[sub_resource type="Shader" id=100]
+code = "shader_type canvas_item;
+
+uniform float lwc = 0.2; // line_width_constant
+uniform float peri = 10.0;
+uniform float inverse_speed = 2.;
+
+uniform vec4 colour = vec4(1,0.95,0,1);
+
+void fragment() {
+	if ((UV.x > 1.0 - lwc ||UV.x < lwc || UV.y > 1.0 - 0.25 * lwc || UV.y < 0.25 * lwc) && mod(TIME - (UV.x + UV.y) * inverse_speed, peri) < 1.0) {
+		COLOR = mix(colour, texture(TEXTURE, UV), mod(TIME - (UV.x + UV.y) * inverse_speed, peri));
+		
+	} else {
+		COLOR = texture(TEXTURE, UV);
+		
+	}
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=101]
+shader = SubResource( 100 )
+shader_param/lwc = 0.2
+shader_param/peri = 10.0
+shader_param/inverse_speed = 2.0
+shader_param/colour = Plane( 1, 0.95, 0, 1 )
+
 [sub_resource type="Animation" id=1]
 length = 0.001
 tracks/0/type = "bezier"
@@ -3017,6 +3044,33 @@ tracks/1/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
 }
+
+[sub_resource type="Shader" id=102]
+code = "shader_type canvas_item;
+
+uniform float lwc = 0.2; // line_width_constant
+uniform float peri = 10.0;
+uniform float inverse_speed = 2.;
+
+uniform vec4 colour = vec4(1,0.95,0,1);
+
+void fragment() {
+	if ((UV.x > 1.0 - lwc ||UV.x < lwc || UV.y > 1.0 - 0.25 * lwc || UV.y < 0.25 * lwc) && mod(TIME - (UV.x + UV.y) * inverse_speed, peri) < 1.0) {
+		COLOR = mix(colour, texture(TEXTURE, UV), mod(TIME - (UV.x + UV.y) * inverse_speed, peri));
+		
+	} else {
+		COLOR = texture(TEXTURE, UV);
+		
+	}
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=103]
+shader = SubResource( 102 )
+shader_param/lwc = 0.2
+shader_param/peri = 10.0
+shader_param/inverse_speed = 2.0
+shader_param/colour = Plane( 1, 0.95, 0, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 10 )
@@ -3430,7 +3484,6 @@ position = Vector2( 7.258, -43.405 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 3
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -4384,6 +4437,7 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="UPGRADEMENUOffsetNode/UpgradeMenu/UpgradeMenuHandle"]
+material = SubResource( 101 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 24.0
@@ -4935,6 +4989,7 @@ anims/open_skin_menu_little = SubResource( 22 )
 anims/open_skin_menu_total = SubResource( 23 )
 
 [node name="TextureRect" type="TextureRect" parent="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle"]
+material = SubResource( 103 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 20.0
@@ -4943,6 +4998,9 @@ margin_right = -20.0
 margin_bottom = -31.0
 texture = ExtResource( 8 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PopupExclusive" type="Control" parent="."]
 visible = false
