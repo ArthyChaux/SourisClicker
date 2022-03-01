@@ -40,8 +40,8 @@ var wealth: int = 0 setget set_wealth
 func set_wealth(new_wealth: int):
 	wealth = new_wealth
 	
-	if new_wealth < -100000:
-		print(new_wealth)
+	if new_wealth < -1000000000:
+		print("Clicks trop bas : ", new_wealth)
 		wealth = 9223372036854775807
 		print(wealth)
 	
@@ -404,7 +404,7 @@ const upgrades_data = {
 		
 		mouses_list = [
 			"base", "triangle", "blanche", "mieux", "amongus",
-			"coccinelle", "gold", "gamerwhite", "gamerviolet",
+			"coccinelle", "gold", "g", "gamerwhite", "gamerviolet",
 			"gamerpink", "gamerblue", "gamercyan", "gamergreen",
 			"gameryell", "gamerorange", "gamerred"
 		],
@@ -470,6 +470,15 @@ const upgrades_data = {
 			skin_menu_name = "gold_mouse_desc",
 			texture = "res://assets/sprites/souris_gold01.png",
 			tex_ture = "res://assets/sprites/souris_gold02.png"
+		},
+		g = {
+			unlock_level = 57,
+			unlock_message = "mouse_g_upgrade_message",
+			wireless = true,
+			
+			skin_menu_name = "g_mouse_desc",
+			texture = "res://assets/sprites/souris_de_jeu1.png",
+			tex_ture = "res://assets/sprites/souris_de_jeu2.png"
 		},
 		gamerblue = {
 			unlock_level = 60,
