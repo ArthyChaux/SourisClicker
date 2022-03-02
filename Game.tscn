@@ -76,7 +76,7 @@
 [ext_resource path="res://assets/sprites/araignee03.png" type="Texture" id=74]
 [ext_resource path="res://assets/fonts/Yatra_One/YatraOne-Regular - Ink kind OFLicense.ttf" type="DynamicFontData" id=75]
 [ext_resource path="res://assets/sprites/araignee_ecrase.png" type="Texture" id=76]
-[ext_resource path="res://assets/sprites/coxy12.png" type="Texture" id=77]
+[ext_resource path="res://assets/sprites/papillon.png" type="Texture" id=77]
 [ext_resource path="res://scripts/Butterfly.gd" type="Script" id=78]
 [ext_resource path="res://assets/texture/handles_material.tres" type="Material" id=79]
 
@@ -2808,6 +2808,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 3 ]
+}
 
 [sub_resource type="Animation" id=99]
 resource_name = "pass_by_screen"
@@ -2847,6 +2859,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1.7, 2.3, 3.7, 4.3, 5.7, 6.3, 7.7, 8.3, 9.7, 10.3, 11.7, 12.3, 13.7, 14.3, 15.7, 16.3, 17.7, 18.3, 19.7, 20.3, 21.7, 22.3, 23.7, 24.3, 25.6891, 26.2891, 27.6891, 28.2891, 29.7, 30.3, 31.7, 32.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0 ]
 }
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -3842,11 +3866,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -4416.0
 margin_top = -562.0
-margin_right = -4208.0
-margin_bottom = -389.001
-texture_normal = ExtResource( 77 )
-expand = true
-stretch_mode = 5
+margin_right = -4288.0
+margin_bottom = -434.0
 script = ExtResource( 78 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -3870,6 +3891,13 @@ anims/RESET = SubResource( 98 )
 anims/pass_by_screen = SubResource( 99 )
 
 [node name="Timer" type="Timer" parent="Butterfly"]
+
+[node name="Sprite" type="Sprite" parent="Butterfly"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 77 )
+centered = false
+hframes = 4
+frame = 3
 
 [node name="UPGRADEMENUOffsetNode" type="Control" parent="."]
 anchor_left = 1.0

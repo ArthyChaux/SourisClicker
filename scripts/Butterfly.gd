@@ -13,7 +13,7 @@ func _ready():
 	set_timer()
 
 func set_timer():
-	$Timer.start(rand_range(60, 500))
+	$Timer.start(1) #rand_range(60, 500))
 
 
 func select_new_article():

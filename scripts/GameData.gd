@@ -35,6 +35,7 @@ func _ready():
 
 # WEALTH #
 signal wealth_changed(new_wealth)
+signal max_wealth_achieved()
 var wealth: int = 0 setget set_wealth
 
 func set_wealth(new_wealth: int):
@@ -44,6 +45,7 @@ func set_wealth(new_wealth: int):
 		print("Clicks trop bas : ", new_wealth)
 		wealth = 9223372036854775807
 		print(wealth)
+		emit_signal("max_wealth_achieved")
 	
 	emit_signal("wealth_changed", wealth)
 
@@ -241,13 +243,13 @@ func get_datas() -> Dictionary:
 var wealth_increase_on_click: int setget , get_wealth_increase_on_click
 
 func get_wealth_increase_on_click():
-	return mouse_level * mouse_level
+	return 4 #mouse_level * mouse_level
 
 # HEAT INCREASE ON CLICK #
 var heat_increase_on_click: float setget , get_heat_increase_on_click
 
 func get_heat_increase_on_click():
-	return 0.5 * pow(float(ventil_level), -2)
+	return 1 #0.5 * pow(float(ventil_level), -2)
 
 # CLICKS PER SECONDS #
 var clicks_per_seconds: int setget , get_clicks_per_seconds
