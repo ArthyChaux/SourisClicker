@@ -2,7 +2,9 @@ extends TextureButton
 
 
 var wikipedia_pages = [
-	["https://en.wikipedia.org/wiki/Recursive_islands_and_lakes", "Recursive islands and lakes"]
+	["https://en.wikipedia.org/wiki/Recursive_islands_and_lakes", "Recursive islands and lakes"],
+	["https://fr.wikipedia.org/wiki/Jean_(tissu)", "Jean"],
+	["https://fr.wikipedia.org/wiki/Zeppelin", "Zeppelin"]
 ]
 
 var current_url: String
@@ -13,7 +15,7 @@ func _ready():
 	set_timer()
 
 func set_timer():
-	$Timer.start(1) #rand_range(60, 500))
+	$Timer.start(rand_range(60, 500))
 
 
 func select_new_article():

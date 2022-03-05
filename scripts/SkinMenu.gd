@@ -123,9 +123,6 @@ func _on_ComputerSkinMenu_pressed():
 		show_menu_big()
 
 func _on_TableSkinMenu_pressed():
-	get_parent().get_parent().get_node("Panel").show()
-	get_parent().get_parent().get_node("Panel/MarginContainer/ScrollContainer").scroll_vertical = 0
-	
 	$MenuBackgroundOutline/HBoxContainer/Control/MarginContainer/ScrollContainer/SkinList/Label.text = "table_skins_menu_title"
 	
 	for child in skin_list_node.get_children():

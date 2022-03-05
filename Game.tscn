@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=169 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -79,6 +79,21 @@
 [ext_resource path="res://assets/sprites/papillon.png" type="Texture" id=77]
 [ext_resource path="res://scripts/Butterfly.gd" type="Script" id=78]
 [ext_resource path="res://assets/texture/handles_material.tres" type="Material" id=79]
+[ext_resource path="res://assets/sprites/eve.png" type="Texture" id=80]
+[ext_resource path="res://assets/sprites/eve_ecrase.png" type="Texture" id=81]
+[ext_resource path="res://scripts/EnAttendantGodotLecture.gd" type="Script" id=82]
+[ext_resource path="res://RobotPopup.gd" type="Script" id=83]
+
+[sub_resource type="Shader" id=108]
+code = "shader_type canvas_item;
+
+void fragment() {
+	vec2 uv = vec2(1.0 - UV.x, 1.0 - UV.y);
+	COLOR = texture(TEXTURE, uv);
+}"
+
+[sub_resource type="ShaderMaterial" id=109]
+shader = SubResource( 108 )
 
 [sub_resource type="Curve" id=44]
 max_value = 12.0
@@ -295,9 +310,9 @@ _data = {
 "points": PoolVector2Array( -99.1595, 564.447, 99.1595, -564.447, 1151.58, 392.284, 522.473, 1.00896, -522.473, -1.00896, 403.007, 93.2361, -686.489, -63.5638, 686.489, 63.5638, 232.53, -247.716, 666.149, 68.6489, -666.149, -68.6489, 258.245, -362.002, -541.564, -55.9361, 541.564, 55.9361, 316.34, -425.811, 572.074, 63.5638, -572.074, -63.5638, 351.578, -497.24, -719.542, -88.9893, 719.542, 88.9893, 362.054, -567.716, 190.691, 22.883, -190.691, -22.883, 529.673, -616.288, 10.1397, 303.531, -10.1397, -303.531, 425.864, -967.716 )
 }
 
-[sub_resource type="Curve2D" id=80]
+[sub_resource type="Curve2D" id=115]
 _data = {
-"points": PoolVector2Array( -99.1595, 564.447, 99.1595, -564.447, 1151.58, 392.284, 565.697, -563.438, -565.697, 563.438, 616.34, -36.2877, -887.351, -71.1914, 887.351, 71.1914, 247.769, -354.383, 68.6489, 15.2553, -68.6489, -15.2553, 506.816, -646.764, 10.1397, 303.531, -10.1397, -303.531, 425.864, -967.716 )
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 122.718, 168.381, -122.718, -168.381, 436.342, 235.141, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
 [sub_resource type="AnimatedTexture" id=91]
@@ -790,7 +805,7 @@ tracks/39/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1253.48, 586.569 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/40/type = "value"
 tracks/40/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/pirate:rotation_degrees")
@@ -924,6 +939,54 @@ tracks/50/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
+tracks/51/type = "value"
+tracks/51/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:texture")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 80 ) ]
+}
+tracks/52/type = "value"
+tracks/52/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:modulate")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/53/type = "value"
+tracks/53/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:visible")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/54/type = "value"
+tracks/54/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve/VirusOutScreenButton:disabled")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=37]
 resource_name = "antivirus_wins"
@@ -971,7 +1034,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -983,7 +1046,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 6 ),
+"times": PoolRealArray( 5.9 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
@@ -1007,7 +1070,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -1019,7 +1082,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 135.0, 180.0 ]
@@ -1031,7 +1094,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -1043,7 +1106,7 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -1055,7 +1118,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ -120.0, 90.0 ]
@@ -1067,7 +1130,7 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 60.0, -90.0 ]
@@ -1079,10 +1142,22 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 6 ),
+"times": PoolRealArray( 0, 5.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BackBufferCopy/VirusMovePath:curve")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 49 ) ]
 }
 
 [sub_resource type="Curve2D" id=89]
@@ -1590,10 +1665,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ SubResource( 70 ) ]
+"values": [ SubResource( 70 ), SubResource( 49 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/spider:visible")
@@ -2243,10 +2318,10 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 9.9, 10, 15 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 9.9, 10, 14.9, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( -16.4846, -76.9275 ), Vector2( 1316.06, -953.211 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -16.4846, -76.9275 ), Vector2( 1316.06, -953.211 ), Vector2( 0, 0 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/spider:rotation_degrees")
@@ -2455,6 +2530,54 @@ tracks/15/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 76 ), SubResource( 91 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:texture")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 81 ), ExtResource( 80 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 2, 5, 5.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/eve/VirusOutScreenButton:disabled")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -2718,6 +2841,14 @@ func _process(_delta):
 	text = str(Engine.get_frames_per_second())
 "
 
+[sub_resource type="GDScript" id=107]
+script/source = "extends Label
+
+
+func _process(_delta):
+	text = str(GameData.heat_increase_on_click * GameData.wealth_increase_on_click)
+"
+
 [sub_resource type="Animation" id=82]
 length = 0.001
 tracks/0/type = "bezier"
@@ -2780,6 +2911,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="DynamicFont" id=97]
+size = 24
 font_data = ExtResource( 75 )
 
 [sub_resource type="Animation" id=98]
@@ -2820,6 +2952,26 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 3 ]
 }
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -4000, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:rect_position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 398, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=99]
 resource_name = "pass_by_screen"
@@ -2837,40 +2989,38 @@ tracks/0/keys = {
 "values": [ -4000.0, 4000.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_position:y")
-tracks/1/interp = 2
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 4, 6, 8, 10, 12, 14, 16.1, 18.1, 20, 22, 24, 26, 28, 30 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 200.0, 500.0, 200.0, 500.0, 200.0, 500.0, 200.0, 500.0, 200.0, 500.0, 200.0, 500.0, 200.0, 500.0, 200.0, 500.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0.1, 30 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:frame")
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 2.6, 2.9, 3.7, 4.3, 6.6, 6.9, 7.7, 8.3, 10.6, 10.9, 11.7, 12.3, 14.6, 14.9, 15.7, 16.3, 18.6, 18.9, 19.8, 20.4, 22.7, 23, 23.7, 24.3, 26.6, 26.9, 27.7, 28.3, 30.6, 30.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3 ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rect_position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 1.7, 2.3, 3.7, 4.3, 5.7, 6.3, 7.7, 8.3, 9.7, 10.3, 11.7, 12.3, 13.7, 14.3, 15.7, 16.3, 17.7, 18.3, 19.7, 20.3, 21.7, 22.3, 23.7, 24.3, 25.6891, 26.2891, 27.6891, 28.2891, 29.7, 30.3, 31.7, 32.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0, 0, 3, 3, 0 ]
+"points": PoolRealArray( 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 498.833, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.8, 4, 6.8, 8, 10.8, 12, 14.8, 16, 18.8, 20, 22.8, 24, 26.8, 28, 30.8 )
 }
 
 [sub_resource type="StyleBoxFlat" id=4]
@@ -2912,6 +3062,18 @@ tracks/1/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0 )
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "open_upgrade_menu"
@@ -2923,7 +3085,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -980, -0.25, 0, 0.25, 0, -750, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, -980, -0.25, 0, 0.25, 0, -750, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
 }
 tracks/1/type = "bezier"
@@ -2933,8 +3095,20 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0.01, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
 }
 
 [sub_resource type="StyleBoxFlat" id=27]
@@ -2978,6 +3152,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=20]
 resource_name = "open_skin_menu_big"
@@ -3002,6 +3188,18 @@ tracks/1/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1, 1.5 )
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
 
 [sub_resource type="Animation" id=22]
 resource_name = "open_skin_menu_little"
@@ -3013,10 +3211,22 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0.01, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 155, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.01, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
 }
 
 [sub_resource type="Animation" id=23]
@@ -3030,7 +3240,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 980, -0.25, 0, 0.25, 0, 750, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 1.5 )
+"times": PoolRealArray( 0.01, 1, 1.5 )
 }
 tracks/1/type = "bezier"
 tracks/1/path = NodePath("..:rect_position:y")
@@ -3040,7 +3250,19 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1, 1.5 )
+"times": PoolRealArray( 0.01, 1, 1.5 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MenuBackgroundOutline:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.01, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
 }
 
 [sub_resource type="DynamicFont" id=5]
@@ -3104,6 +3326,101 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=8]
+resource_name = "show_popup"
+length = 0.8
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.5, 0.8 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.5, 0.8 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("..:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=113]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("..:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=114]
 resource_name = "show_popup"
 length = 0.8
 tracks/0/type = "bezier"
@@ -3237,35 +3554,50 @@ bg_color = Color( 0.862745, 0.8, 0.588235, 1 )
 size = 32
 font_data = ExtResource( 75 )
 
-[sub_resource type="GDScript" id=95]
-script/source = "extends Button
+[sub_resource type="GDScript" id=106]
+script/source = "extends RichTextLabel
 
 
 
-func _on_Button_pressed():
-	get_parent().get_parent().get_parent().get_parent().hide()
+func _on_RichTextLabel_meta_clicked(_meta):
+	get_parent().get_parent().hide()
 "
 
-[sub_resource type="Shader" id=104]
+[sub_resource type="Shader" id=110]
 code = "shader_type canvas_item;
 
-void fragment() {
-    COLOR = texture(SCREEN_TEXTURE, SCREEN_UV);
-    float avg = (COLOR.r + COLOR.g + COLOR.b) / 3.0;
-    COLOR.rgb = vec3(avg);
-}
-"
 
-[sub_resource type="ShaderMaterial" id=105]
-shader = SubResource( 104 )
+uniform bool is_reverse;
+uniform bool is_bnw;
+
+void fragment() {
+	vec2 uv = SCREEN_UV;
+	
+	if(is_reverse) {
+		uv = vec2(1.0 - SCREEN_UV.x, 1.0 - SCREEN_UV.y);
+	}
+	
+	if(is_bnw) {
+		COLOR = texture(SCREEN_TEXTURE, uv);
+	    float avg = (COLOR.r + COLOR.g + COLOR.b) / 3.0;
+	    COLOR.rgb = vec3(avg);
+	} else {
+		COLOR = texture(SCREEN_TEXTURE, uv);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=111]
+shader = SubResource( 110 )
+shader_param/is_reverse = false
+shader_param/is_bnw = false
 
 [node name="Racine" type="Control"]
+material = SubResource( 109 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false,
 "_editor_description_": "																																							"
 }
 
@@ -3361,9 +3693,6 @@ align = 1
 valign = 1
 autowrap = true
 script = SubResource( 41 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AutoClickShower" type="Label" parent="OrdiOffset/Computer"]
 margin_left = -6.0
@@ -3458,6 +3787,7 @@ vframes = 11
 [node name="Virus" type="Node2D" parent="OrdiOffset/Computer"]
 script = ExtResource( 40 )
 popup_path = NodePath("../../../PopupExclusive/Popup")
+eve_popup_path = NodePath("../../../EveExclusive/Popup")
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="OrdiOffset/Computer/Virus"]
 copy_mode = 2
@@ -3503,10 +3833,10 @@ script = ExtResource( 55 )
 virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
 virus_pirate_curves = [ SubResource( 74 ) ]
 virus_bug_curves = [ SubResource( 96 ) ]
-virus_spider_curves = [ SubResource( 80 ) ]
+virus_spider_curves = [ SubResource( 96 ) ]
+virus_eve_curves = [ SubResource( 115 ) ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath"]
-position = Vector2( 1253.48, 586.569 )
 rotation = -1.64301
 
 [node name="poulpe" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
@@ -3574,6 +3904,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="eve" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
+visible = false
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = ExtResource( 80 )
+
+[node name="VirusOutScreenButton" type="TextureButton" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/eve"]
+margin_left = -53.0
+margin_top = -69.0
+margin_right = 55.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 64, 64 )
+
 [node name="MaskVirusOutPolygon" type="Polygon2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
 material = SubResource( 77 )
 polygon = PoolVector2Array( 128.143, 26, -91.429, 26, -94.1429, -132.429, 139.714, -136.571 )
@@ -3582,6 +3925,9 @@ polygon = PoolVector2Array( 128.143, 26, -91.429, 26, -94.1429, -132.429, 139.71
 visible = false
 material = SubResource( 77 )
 polygon = PoolVector2Array( 171.857, 98.4286, -155.714, 96.8571, -143.571, -146.857, 139.714, -136.571, 62, -83, -44.9, -83, -44.9, -3, 62, -3, 62, -82, 156.857, -112.571 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="VirusCountDownTimer" type="Timer" parent="OrdiOffset/Computer/Virus"]
 wait_time = 15.0
@@ -3598,6 +3944,17 @@ anims/spider_passed_antivirus = SubResource( 92 )
 anims/virus_ecrase = SubResource( 40 )
 
 [node name="Tween" type="Tween" parent="OrdiOffset/Computer/Virus"]
+
+[node name="Feu" type="Sprite" parent="OrdiOffset/Computer"]
+visible = false
+position = Vector2( -13.2263, 25.9698 )
+texture = ExtResource( 17 )
+hframes = 12
+
+[node name="FeuAnimationPlayer" type="AnimationPlayer" parent="OrdiOffset/Computer/Feu"]
+anims/RESET = SubResource( 15 )
+anims/burn = SubResource( 16 )
+anims/explode = SubResource( 17 )
 
 [node name="Fumees" type="Node2D" parent="OrdiOffset/Computer"]
 position = Vector2( -14.6582, 37.9975 )
@@ -3672,17 +4029,6 @@ script = ExtResource( 56 )
 
 [node name="Tween" type="Tween" parent="OrdiOffset/Computer/Fumees/Fumee7"]
 
-[node name="Feu" type="Sprite" parent="OrdiOffset/Computer"]
-visible = false
-position = Vector2( -13.2263, 25.9698 )
-texture = ExtResource( 17 )
-hframes = 12
-
-[node name="FeuAnimationPlayer" type="AnimationPlayer" parent="OrdiOffset/Computer/Feu"]
-anims/RESET = SubResource( 15 )
-anims/burn = SubResource( 16 )
-anims/explode = SubResource( 17 )
-
 [node name="MouseAudioStreamPlayer" type="AudioStreamPlayer" parent="OrdiOffset/Computer"]
 stream = ExtResource( 47 )
 volume_db = 7.0
@@ -3722,9 +4068,6 @@ margin_right = 59.1429
 margin_bottom = -24.0
 expand = true
 script = SubResource( 52 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton2" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.738201
@@ -3825,6 +4168,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label3" type="Label" parent="."]
+margin_right = 142.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 37 )
+text = "4"
+script = SubResource( 107 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Canne" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -3838,9 +4191,6 @@ texture = ExtResource( 63 )
 expand = true
 stretch_mode = 6
 script = ExtResource( 65 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CanneButton" type="TextureButton" parent="Canne"]
 margin_left = 5.0
@@ -3864,23 +4214,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -4416.0
+margin_left = -4540.0
 margin_top = -562.0
-margin_right = -4288.0
-margin_bottom = -434.0
+margin_right = -4412.0
+margin_bottom = -433.999
 script = ExtResource( 78 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Butterfly"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -339.0
-margin_right = 336.0
-margin_bottom = 54.0
+margin_left = -340.004
+margin_top = -52.8374
+margin_right = 334.996
+margin_bottom = 1.1626
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.505882, 0.505882, 0.505882, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 3
 custom_fonts/font = SubResource( 97 )
 text = "Recursive islands and lakes"
 align = 1
@@ -3904,7 +4256,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="UpgradeMenu" type="Control" parent="UPGRADEMENUOffsetNode"]
@@ -3912,10 +4264,11 @@ anchor_bottom = 1.0
 margin_right = 980.0
 script = ExtResource( 7 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="MenuBackgroundOutline" type="Panel" parent="UPGRADEMENUOffsetNode/UpgradeMenu"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 0.00146484
@@ -4445,7 +4798,7 @@ anchor_bottom = 1.0
 margin_left = -980.0
 margin_right = -980.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="SkinMenu" type="Control" parent="SKINMENUOffsetNode2"]
@@ -4453,7 +4806,7 @@ anchor_bottom = 1.0
 margin_right = 980.0
 script = ExtResource( 21 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 mouse_path = NodePath("../../MouseOffset/Mouse")
 table_path = NodePath("../../FondDuJeu")
@@ -4462,13 +4815,11 @@ button_computer_skin_choose = ExtResource( 15 )
 button_table_skin_choose = ExtResource( 72 )
 
 [node name="MenuBackgroundOutline" type="Panel" parent="SKINMENUOffsetNode2/SkinMenu"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline"]
 anchor_right = 1.0
@@ -5074,13 +5425,119 @@ text = "OK"
 anims/RESET = SubResource( 7 )
 anims/show_popup = SubResource( 8 )
 
+[node name="EveExclusive" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Popup" type="PanelContainer" parent="EveExclusive"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -375.0
+margin_top = -300.0
+margin_right = 375.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 750, 600 )
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 375, 300 )
+theme = SubResource( 6 )
+script = ExtResource( 83 )
+virus_path = NodePath("../../OrdiOffset/Computer/Virus")
+
+[node name="MarginContainer" type="MarginContainer" parent="EveExclusive/Popup"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 743.0
+margin_bottom = 593.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+
+[node name="PanelContainer" type="Panel" parent="EveExclusive/Popup/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 726.0
+margin_bottom = 576.0
+custom_styles/panel = SubResource( 12 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EveExclusive/Popup/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 726.0
+margin_bottom = 576.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupDesc" type="Label" parent="EveExclusive/Popup/MarginContainer/VBoxContainer"]
+margin_top = 100.0
+margin_right = 716.0
+margin_bottom = 211.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 11 )
+text = "Veuillez prouver que vous n'êtes pas un robot :"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EveExclusive/Popup/MarginContainer/VBoxContainer"]
+margin_left = 33.0
+margin_top = 316.0
+margin_right = 683.0
+margin_bottom = 354.0
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="EveExclusive/Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 416.0
+margin_bottom = 33.0
+custom_fonts/font = ExtResource( 37 )
+text = "100000000000 + 100000000000 = "
+
+[node name="LineEdit" type="LineEdit" parent="EveExclusive/Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_left = 420.0
+margin_right = 650.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 230, 0 )
+custom_fonts/font = ExtResource( 37 )
+text = "100000000000"
+
+[node name="MarginContainer" type="MarginContainer" parent="EveExclusive/Popup/MarginContainer/VBoxContainer"]
+margin_top = 358.0
+margin_right = 716.0
+margin_bottom = 566.0
+custom_constants/margin_top = 50
+custom_constants/margin_bottom = 50
+
+[node name="DismissPopupButton" type="Button" parent="EveExclusive/Popup/MarginContainer/VBoxContainer/MarginContainer"]
+margin_left = 222.0
+margin_top = 50.0
+margin_right = 493.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 186, 108 )
+size_flags_horizontal = 4
+theme = ExtResource( 12 )
+text = "confirmer"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EveExclusive/Popup"]
+anims/RESET = SubResource( 113 )
+anims/show_popup = SubResource( 114 )
+
 [node name="SettingsExclusive" type="Control" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Settings" type="Panel" parent="SettingsExclusive"]
 anchor_left = 0.5
@@ -5088,9 +5545,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -400.0
-margin_top = -658.0
+margin_top = -631.667
 margin_right = 400.0
-margin_bottom = 605.33
+margin_bottom = 631.663
 rect_clip_content = true
 custom_styles/panel = SubResource( 86 )
 script = ExtResource( 38 )
@@ -5130,11 +5587,11 @@ margin_right = 780.0
 margin_bottom = 1243.0
 custom_constants/separation = 38
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+[node name="Title" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
 margin_right = 760.0
 margin_bottom = 217.0
 
-[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Title"]
 margin_right = 649.0
 margin_bottom = 217.0
 size_flags_horizontal = 3
@@ -5143,7 +5600,7 @@ text = "parametre_menu_title"
 align = 1
 autowrap = true
 
-[node name="CloseSettingsButton" type="TextureButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="CloseSettingsButton" type="TextureButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Title"]
 margin_left = 653.0
 margin_right = 760.0
 margin_bottom = 217.0
@@ -5158,12 +5615,12 @@ margin_right = 760.0
 margin_bottom = 259.0
 custom_styles/separator = SubResource( 85 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+[node name="LangueBox" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
 margin_top = 297.0
 margin_right = 760.0
 margin_bottom = 357.0
 
-[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/LangueBox"]
 margin_top = 3.0
 margin_right = 567.0
 margin_bottom = 57.0
@@ -5171,21 +5628,21 @@ size_flags_horizontal = 10
 text = "langue_setting_name"
 align = 2
 
-[node name="OptionButton" type="OptionButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="LangueOptionButton" type="OptionButton" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/LangueBox"]
 margin_left = 571.0
 margin_right = 657.0
 margin_bottom = 60.0
 size_flags_horizontal = 2
 text = "fr"
-items = [ "fr", null, false, 0, null, "en", null, false, 1, null, "fr_CH", null, false, 2, null, "ja", null, false, 3, null, "it", null, false, 4, null ]
+items = [ "fr", null, false, 0, null, "en", null, false, 1, null, "fr_CH", null, false, 2, null, "ja_JP", null, false, 3, null, "it", null, false, 4, null, "fr_FR", null, false, 5, null ]
 selected = 0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+[node name="BlackNWhiteBox" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
 margin_top = 395.0
 margin_right = 760.0
 margin_bottom = 449.0
 
-[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/BlackNWhiteBox"]
 margin_left = 33.0
 margin_right = 378.0
 margin_bottom = 54.0
@@ -5193,7 +5650,7 @@ size_flags_horizontal = 10
 text = "Noir et blanc"
 align = 2
 
-[node name="CheckButton" type="Button" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer3"]
+[node name="BlackNWhiteToggle" type="Button" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/BlackNWhiteBox"]
 margin_left = 382.0
 margin_right = 516.0
 margin_bottom = 54.0
@@ -5201,6 +5658,51 @@ size_flags_horizontal = 2
 custom_fonts/font = ExtResource( 37 )
 toggle_mode = true
 text = "desactive"
+
+[node name="ReverseScreenBox" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 487.0
+margin_right = 760.0
+margin_bottom = 541.0
+
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/ReverseScreenBox"]
+margin_left = 25.0
+margin_right = 378.0
+margin_bottom = 54.0
+size_flags_horizontal = 10
+text = "Ecran inverse"
+align = 2
+
+[node name="ReverseScreenToggle" type="Button" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/ReverseScreenBox"]
+margin_left = 382.0
+margin_right = 516.0
+margin_bottom = 54.0
+size_flags_horizontal = 2
+custom_fonts/font = ExtResource( 37 )
+toggle_mode = true
+text = "desactive"
+
+[node name="SoundBox" type="HBoxContainer" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
+margin_top = 579.0
+margin_right = 760.0
+margin_bottom = 633.0
+
+[node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/SoundBox"]
+margin_left = 257.0
+margin_right = 378.0
+margin_bottom = 54.0
+size_flags_horizontal = 10
+text = "Sons"
+align = 2
+
+[node name="SoundToggle" type="Button" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer/SoundBox"]
+margin_left = 382.0
+margin_right = 474.0
+margin_bottom = 54.0
+size_flags_horizontal = 2
+custom_fonts/font = ExtResource( 37 )
+toggle_mode = true
+pressed = true
+text = "active"
 
 [node name="Label2" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
 margin_top = 1103.0
@@ -5215,9 +5717,6 @@ autowrap = true
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="SettingsExclusive/Settings/MarginContainer/VBoxContainer"]
 margin_top = 1195.0
@@ -5232,51 +5731,1079 @@ align = 1
 anims/RESET = SubResource( 87 )
 anims/open_settings = SubResource( 88 )
 
-[node name="Panel" type="Panel" parent="."]
+[node name="EnAttendantGodotLecture" type="Panel" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 93 )
+script = ExtResource( 82 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+virus_path = NodePath("../OrdiOffset/Computer/Virus")
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="EnAttendantGodotLecture"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 50
 custom_constants/margin_top = 50
 custom_constants/margin_left = 50
 custom_constants/margin_bottom = 50
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="EnAttendantGodotLecture/MarginContainer"]
 margin_left = 50.0
 margin_top = 50.0
 margin_right = 1030.0
 margin_bottom = 1870.0
-scroll_horizontal_enabled = false
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/ScrollContainer"]
-margin_right = 980.0
-margin_bottom = 85569.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_right = 968.0
-margin_bottom = 85505.0
 size_flags_vertical = 3
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 94 )
+bbcode_enabled = true
+bbcode_text = "SAMUEL BECKETT
+
+[center]En attendant Godot[/center]
+
+[center]Acte premier[/center]
+
+  Route à la campagne, avec arbre.
+  Soir.
+  Estragon, assis sur une pierre, essaie d'enlever sa chaussure. Il s'y acharne des deux mains, en ahanant. Il s'arrête, à bout de forces, se repose en haletant, recommence. Même jeu.
+  Entre Vladimir .
+ESTRAGON (renonçant à nouveau). - Rien à faire.
+VLADIMIR (s'approchant à petits pas raides, les jambes écartées). - Je commence à le croire. (Il s'immobilise.) J'ai longtemps résisté à cette pensée, en me disant, Vladimir, sois raisonnable. tu n'as pas encore tout essayé. Et je reprenais le combat. (Il se recueille, songeant au combat. A Estragon.) - Alors, te revoilà, toi.
+ESTRAGON. - Tu crois ?
+VLADIMIR. - Je suis content de te revoir. Je te croyais parti pour toujours.
+ESTRAGON. - Moi aussi.
+VLADIMIR. - Que faire pour fêter cette réunion ? (Il réfléchit.) Lève -toi que je t'embrasse. (Il tend la main à Estragon.)
+ESTRAGON (avec irritation). - Tout à l'heure, tout à l'heure.
+
+		Silence.
+
+VLADIMIR (froissé. froidement). - Peut-on savoir où monsieur a passé la nuit?
+ESTRAGON. - Dans un fossé.
+VLADIMIR (épaté). - Un fossé! Où ça ?
+ESTRAGON (sans geste). - Par là.
+VLADIMIR. - Et on ne t'a pas battu?
+ESTRAGON. - Si... Pas trop.
+VLADIMIR. - Toujours les mêmes?
+ESTRAGON. - Les mêmes ? Je ne sais pas.
+
+		Silence.
+
+VLADIMIR. - Quand j'y pense... depuis le temps... je me demande... ce que tu serais deve­nu... sans moi... (Avec décision.) Tu ne serais plus qu'un petit tas d'ossements à l'heure qu'il est, pas d'erreur.
+ESTRAGON (piqué au vif). - Et après ?
+VLADIMIR (accablé). - C'est trop pour un seul homme. (Un temps. Avec vivacité.) D'un autre côté, à quoi bon se décourager à présent, voilà ce que je me dis. Il fallait y penser il y a une éternité, vers 1900.
+ESTRAGON. - Assez. Aide-moi à enlever cette saloperie. 
+VLADIMIR. - La main dans la main on se serait jeté en bas de la tour Eiffel, parmi les premiers. On portait beau alors. Maintenant il est trop tard. On ne nous laisserait même pas monter. (Estragon s'acharne sur sa chaussure.) Qu'est-ce que tu fais?
+ESTRAGON. - Je me déchausse. Ça ne t'est jamais arrivé, à toi?
+VLADIMIR. - Depuis le temps que je te dis qu'il faut les enlever tous les jours. Tu ferais mieux de m'écouter.
+ESTRAGON (faiblement). - Aide-moi !
+VLADIMIR. - Tu as mal?
+ESTRAGON. - Mal! Il me demande si j'ai mal!
+VLADIMIR (avec emportement). - Il n'y a jamais que toi qui souffres ! Moi je ne compte pas. Je voudrais pourtant te voir à ma place. Tu m'en dirais des nouvelles.
+ESTRAGON. - Tu as eu mal?
+VLADIMIR. - Mal! Il me demande si j'ai mal §
+ESTRAGON (pointant l'index). - Ce n'est pas une raison pour ne pas te boutonner.
+VLADIMIR (se penchant). - C'est vrai. (Il se boutonne.) Pas de laisser-aller dans les petites choses.
+ESTRAGON. - Qu'est-ce que tu veux que je te dise, tu attends toujours le dernier moment.
+VLADIMIR (rêveusement). - Le dernier mo­ment... (Il médite.) C'est long, mais ce sera bon. Qui disait ça ?
+ESTRAGON. - Tu ne veux pas m'aider?
+VLADIMIR. - Des fois je me dis que ça vient quand même. Alors je me sens tout drôle. (Il ôte son chapeau, regarde dedans, y promène sa main, le secoue, le remet.) Comment dire? Soulagé et en même temps... (il cherche) ... épou­vanté. (Avec emphase.) E-POU-VAN-TÉ. (Il ôte à nouveau son chapeau, regarde dedans.) Ça alors! (Il tape dessus comme pour en faire tom­ber quelque chose, regarde à nouveau dedans, le remet.) Enfin... (Estragon, au prix d'un suprême effort, parvient à enlever sa chaussure. Il regarde dedans, y promène sa main, la retourne, la secoue, cherche par terre s'il n'en est pas tombé quelque chose, ne trouve rien, passe sa main à nouveau dans sa chaussure, les yeux vagues.) - Alors?
+ESTRAGON. - Rien.
+VLADIMIR. - Fais voir.
+ESTRAGON. - Il n'y a rien à voir.
+VLADIMIR. - Essaie de la remettre.
+ESTRAGON (ayant examiné son pied). - Je vais le laisser respirer un peu.
+VLADIMIR. - Voilà l'homme tout entier, s'en prenant à sa chaussure alors que c'est son pied le coupable. (Il enlève encore une fois son cha­peau, regarde dedans, y passe la main, le secoue, tape dessus, souffle dedans, le remet.) Ça devient inquiétant. (Silence. Estragon agite son pied, en faisant jouer les orteils, afin que l'air y circule mieux.) Un des larons fut sauvé. (Un temps.) C'est un pourcentage honnête. (Un temps.) Gogo...
+ESTRAGON. - Quoi?
+VLADIMIR. - Si on se repentait ?
+ESTRAGON. - De quoi?
+VLADIMIR. - Eh bien... (Il cherche.) On n'au­rait pas besoin d'entrer dans les détails.
+ESTRAGON. - D'être né?
+Vladimir part d'un bon rire qu'il réprime aus­sitôt, en portant sa main au pubis, le visage crispé.
+VLADIMIR. - On n'ose même plus rire.
+ESTRAGON. - Tu parles d'une privation.
+VLADIMIR. - Seulement sourire. (Son visage se fend dans un sourire maximum qui se fige, dure un bon moment, puis subitement s'éteint.) Ce n'est pas la même chose. Enfin... (Un temps.) Gogo . ..
+ESTRAGON (agacé). - Qu'est-ce qu'il y a?
+VLADIMIR. - Tu as lu la Bible?
+ESTRAGON. - La Bible... (Il réfléchit.) J'ai dû y jeter un coup d'œil.
+VLADIMIR (étonné). - A l'école sans Dieu ?
+ESTRAGON. - Sais pas si elle était sans ou avec.
+VLADIMIR. - Tu dois confondre avec la Roquette
+ESTRAGON. - Possible. Je me rappelle les cartes de la Terre sainte. En couleur. Très jolies. La mer Morte était bleu pâle. J'avais soif rien qu'en la regardant. Je me disais, c'est là que nous irons passer notre lune de miel. Nous nagerons. Nous serons heureux.
+VLADIMIR. - Tu aurais dû être poète.
+ESTRAGON. - Je l'ai été. (Geste vers ses hail­lons.) Ça ne se voit pas?
+
+		Silence.
+
+VLADIMIR. - Qu'est-ce que je disais... Com­ment va ton pied?
+ESTRAGON. - Il enfle.
+VLADIMIR. - Ah oui, j'y suis, cette histoire de larrons. Tu t'en souviens?
+ESTRAGON. - Non.
+VLADIMIR. - Tu veux que je te la raconte?
+ESTRAGON. - Non.
+VLADIMIR. - Ça passera le temps. (Un temps.) C'étaient deux voleurs, crucifiés en même temps que le Sauveur. On...
+ESTRAGON. - Le quoi?
+VLADIMIR. - Le Sauveur. Deux voleurs. On dit que l'un fut sauvé et l'autre... (il cherche le contraire de sauvé) ...damné.
+ESTRAGON.- Sauvé de quoi?
+VLADIMIR. - De l'enfer.
+ESTRAGON. - Je m'en vais. (Il ne bouge pas.)
+VLADIMIR. - Et cependant... (Un temps.) Comment se fait-il que... Je ne t'ennuie pas, j'espère?
+ESTRAGON. - Je n'écoute pas.
+VLADIMIR. - Comment se fait-il que des quatre évangélistes un seul présente les faits de cette façon? Ils étaient cependant là tous les quatre - enfin, pas loin. Et un seul parle d'un larron de sauvé. (Un temps.) Voyons, Gogo, il faut me renvoyer la balle de temps en temps.
+ESTRAGON. - J 'écoute.
+VLADIMIR. - Un sur quatre. Des trois autres, deux n'en parlent pas du tout et le troisième dit qu'ils l'ont engueulé tous les deux.
+ESTRAGON . - Qui?
+VLADIMIR. - Comment ?
+ESTRAGON. - Je ne comprends rien... (Un temps.) Engueulé qui ?
+VLADIMIR. - Le Sauveur.
+ESTRAGON. - Pourquoi?
+VLADIMIR. - Parce qu'il n'a pas voulu les sauver.
+ESTRAGON. - De l'enfer?
+VLADIMIR. - Mais non, voyons! De la mort.
+ESTRAGON. - Et alors?
+VLADIMIR. - Alors ils ont dû être damnés tous les deux.
+ESTRAGON. - Et après?
+VLADIMIR. - Mais l'autre dit qu'il y en a eu un de sauvé.
+ESTRAGON. - Eh bien? Ils ne sont pas d'ac­cord, un point c'est tout.
+VLADIMIR. - Ils étaient là tous les quatre. Et un seul parle d'un larron de sauvé. Pourquoi le croire plutôt que les autres ?
+ESTRAGON. - Qui le croit?
+VLADIMIR. - Mais tout le monde. On ne connaît que cette version-là.
+ESTRAGON. - Les gens sont des cons.
+  Il se lève péniblement, va en boitillant vers la coulisse gauche, s'arrête, regarde au loin, la main en écran devant les yeux, se retourne, va vers la coulisse droite, regarde au loin. Vladimir le suit des yeux, puis va ramasser la chaussure, regarde dedans, la lâche précipitamment.
+VLADIMIR. - Pah! (Il crache par terre.)
+  Estragon revient au centre de la scène, regarde vers le fond.
+ESTRAGON. - Endroit délicieux. (Il se re­tourne, avance jusqu'à la rampe, regarde vers le public.) Aspects riants. (Il se tourne vers Vladimir.) Allons-nous-en.
+VLADIMIR. - On ne peut pas.
+ESTRAGON. - Pourquoi ?
+VLADIMIR. - On attend Godot.
+ESTRAGON. - C'est vrai. (Un temps) Tu es sûr que c'est ici ?
+VLADIMIR. - Quoi?
+ESTRAGON. - Qu'il faut attendre.
+VLADIMIR. - Il a dit devant l'arbre. (Ils regardent l'arbre.) Tu en vois d'autres?
+ESTRAGON. - Qu'est-ce que c'est?
+VLADIMIR. - On dirait un saule.
+ESTRAGON. - Où sont les feuilles ?
+VLADIMIR. - Il doit être mort.
+ESTRAGON. - Finis les pleurs.
+VLADIMIR. - A moins que ce ne soit pas la saison.
+ESTRAGON. - Ce ne serait pas plutôt un arbrisseau ?
+VLADIMIR. - Un arbuste.
+ESTRAGON. - Un arbrisseau.
+VLADIMIR. - Un - (Il se reprend). Qu'est-ce que tu veux insinuer? Qu'on s'est trompé d'en­droit?
+ESTRAGON. - Il devrait être là.
+VLADIMIR. - Il n'a pas dit ferne qu'il viendrait.
+ESTRAGON. - Et s'il ne vient pas?
+VLADIMIR. - Nous reviendrons demain.
+ESTRAGON. - Et puis après-demain.
+VLADIMIR. - Peut-être.
+ESTRAGON. - Et ainsi de suite.
+VLADIMIR. - C'est-à-dire...
+ESTRAGON. - Jusqu'à ce qu'il vienne.
+VLADIMIR. - Tu es impitoyable.
+ESTRAGON. - Nous sommes déjà venus hier.
+VLADIMIR. - Ah non, là tu te goures.
+ESTRAGON. - Qu'est-ce que nous avons fait hier?
+VLADIMIR. - Ce que nous avons fait hier?
+ESTRAGON. - Oui.
+VLADIMIR. - Ma foi... (Se fâchant.) Pour jeter le doute, à toi le pompon.
+ESTRAGON. - Pour moi, nous étions ici.
+VLADIMIR (regard circulaire). - L'endroit te semble familier?
+ESTRAGON. - Je ne dis pas ça.
+VLADIMIR. - Alors?
+ESTRAGON. - Ça n'empêche pas.
+VLADIMIR. - Tout de même... cet arbre... (se tournant vers le public)... cette tourbière.
+ESTRAGON. - Tu es sûr que c'était ce soir?
+VLADIMIR. - Quoi?
+ESTRAGON. - Qu'il fallait attendre?
+VLADIMIR. - Il a dit samedi. (Un temps.) Il me semble.
+ESTRAGON. - Après le turbin.
+VLADIMIR. - J'ai dû le noter. (Il fouille dans ses poches, archibondées de saletés de toutes sortes.)
+ESTRAGON. - Mais quel samedi? Et sommes-nous samedi ? Ne serait-on pas plutôt diman­che? Ou lundi? Ou vendredi?
+VLADIMIR (regardant avec affolement autour de lui, comme si la date était inscrite dans le paysage). - Ce n'est pas possible.
+ESTRAGON. - Ou jeudi.
+VLADIMIR. - Comment faire?
+ESTRAGON. - S'il s'est dérangé pour rien hier soir, tu penses bien qu'il ne viendra pas aujourd'hui.
+VLADIMIR. - Mais tu dis que nous sommes venus hier soir.
+ESTRAGON. - Je peux me tromper. (Un temps.) Taisons-nous un peu, tu veux ?
+VLADIMIR (faiblement). - Je veux bien. (Estragon se rassied . Vladimir arpente la scène avec agitation, s'arrête de temps en temps pour scruter l'horizon. Estragon s'endort. Vladimir s'arrête devant Estragon.) Gogo... (Silence.) Gogo... (Silence.) GOGO!
+
+		Estragon se réveille en sursaut.
+
+ESTRAGON (rendu à toute l'horreur de sa situation). - Je dormais. (Avec reproche.) Pour­quoi tu ne me laisses jamais dormir?
+VLADIMIR. - Je me sentais seul.
+ESTRAGON. - J'ai fait un rêve.
+VLADIMIR. - Ne le raconte pas!
+ESTRAGON. - Je rêvais que...
+VLADIMIR. - NE LE RACONTE PAS!
+ESTRAGON (geste vers l'univers). - Celui-ci te suffit? (Silence.) Tu n'es pas gentil, Didi. A qui veux tu que je raconte mes cauchemars privés, sinon à toi?
+VLADIMIR. - Qu'ils restent privés. Tu sais bien que je ne supporte pas ça.
+ESTRAGON (froidement). - Il y a des moments où je me demande si on ne ferait pas mieux de se quitter.
+VLADIMIR. - Tu n'irais pas loin .
+ESTRAGON. - Ce serait là, en effet, un grave inconvénient. (Un temps.) N'est-ce pas, Didi, que ce serait là un grave inconvénient? (Un temps.) Etant donné la beauté du chemin. (Un temps.) Et la bonté des voyageurs. (Un temps. Câlin.) N'est-ce pas, Didi ?
+VLADIMIR. - Du calme.
+ESTRAGON (avec volupté). (Rêveusement). Les Anglais disent câââm. Ce sont des gens câââms. (Un temps.) Tu connais l'histoire de l'Anglais au bordel ?
+VLADIMIR. - Oui.
+ESTRAGON. - Raconte-la-moi.
+VLADIMIR. - Assez.
+ESTRAGON. - Un Anglais s'étant enivré se rend au bordel. La sous-maîtresse lui demande s'il désire une blonde, une brune ou une rousse. Continue.
+VLADIMIR. - ASSEZ!
+  Vladimir sort. Estragon se lève et le suit jusqu'à la limite de la scène. Mimique d'Estra­gon, analogue à celle qu'arrachent au spectateur les efforts du pugiliste. Vladimir revient, passe devant Estragon, traverse la scène, les yeux bais­sés. Estragon fait quelques pas vers lui, s'arrête.
+ESTRAGON (avec douceur). - Tu voulais me parler? (Vladimir ne répond pas. Estragon fait un pas en avant.) Tu avais quelque chose à me dire? (Silence. Autre pas en avant.) Dis, Didi...
+VLADIMIR (sans se retourner). - Je n'ai rien à te dire.
+ESTRAGON (pas en avant). - Tu es fâché? (Silence. Pas en avant). Pardon! (Silence. Pas en avant. Il lui touche l'épaule.) Voyons, Didi. (Silence.) Donne ta main! (Vladimir se retourne.) Embrasse-moi! (Vladimir se raidit.) Laisse-toi faire! (Vladimir s'amollit. Ils s'embrassent. Estragon recule.) Tu pues l'ail!
+VLADIMIR. - C'est pour les reins. (Silence. Estragon regarde l'arbre avec attention.) Qu'est­ce qu'on fait maintenant?
+ESTRAGON. - On attend.
+VLADIMIR. - Oui, mais en attendant?
+ESTRAGON. - Si on se pendait?
+VLADIMIR. - Ce serait un moyen de bander.
+ESTRAGON (aguiché). - On bande?
+VLADIMIR. - Avec tout ce qui s'ensuit. Là où ça tombe il pousse des mandragores. C'est pour ça qu'elles crient quand on les arrache. Tu ne savais pas ça?
+ESTRAGON. - Pendons-nous tout de suite.
+VLADIMIR. - A une branche? (Ils s'appro­chent de l'arbre et le regardent.) Je n'aurais pas confiance.
+ESTRAGON. - On peut toujours essayer.
+VLADIMIR. - Essaie.
+ESTRAGON. - Après toi.
+VLADIMIR. - Mais non, toi d'abord.
+ESTRAGON. - Pourquoi?
+VLADIMIR. - Tu pèses moins lourd que moi.
+ESTRAGON. - Justement.
+VLADIMIR. - Je ne comprends pas.
+ESTRAGON. - Mais réfléchis un peu, voyons.
+
+		Vladimir réfléchit.
+
+VLADIMIR (finalement). - Je ne comprends pas.
+ESTRAGON. - Je vais t'expliquer. (Il réflé­chit.) La branche... la branche... (Avec colère.) Mais essaie donc de comprendre !
+VLADIMIR. - Je ne compte plus que sur toi.
+ESTRAGON (avec effort). - Gogo léger - branche pas casser - Gogo mort. Didi lourd - branche casser - Didi seul. (Un temps.) Tandis que... (Il cherche l'expression juste.)
+VLADIMIR. - Je n'avais pas pensé à ça.
+ESTRAGON (ayant trouvé). - Qui peut le plus peut le moins.
+VLADIMIR. - Mais est-ce que je pèse plus lourd que toi ?
+ESTRAGON. - C'est toi qui le dis. Moi je n'en sais rien. Il y a une chance sur deux. Ou presque.
+VLADIMIR. - Alors, quoi faire?
+ESTRAGON. - Ne faisons rien. C'est plus prudent.
+VLADIMIR. - Attendons voir ce qu'il va nous dire.
+ESTRAGON. - Qui ?
+VLADIMIR. - Godot.
+ESTRAGON. - Voilà.
+VLADIMIR. - Attendons d'être fixés d'abord.
+ESTRAGON. - D'un autre côté, on ferait peut-être mieux de battre le fer avant qu'il soit glacé.
+VLADIMIR. - Je suis curieux de savoir ce qu'il va nous dire. Ça ne nous engage à rien.
+ESTRAGON. - Qu'est-ce qu'on lui a demandé au juste?
+VLADIMIR. - Tu n'étais pas là?
+ESTRAGON. - Je n'ai pas fait attention.
+VLADIMIR. - Eh bien... Rien de bien précis.
+ESTRAGON. - Une sorte de prière.
+VLADIMIR. - Voilà.
+ESTRAGON. - Une vague supplique.
+VLADIMIR. - Si tu veux.
+ESTRAGON. - Et qu'a-t-il répondu?
+VLADIMIR. - Qu'il verrait.
+ESTRAGON. - Qu'il ne pouvait rien promettre.
+VLADIMIR. - Qu'il lui fallait réfléchir.
+ESTRAGON. - A tête reposée
+VLADIMIR. - Consulter sa famille.
+ESTRAGON. - Ses amis.
+VLADIMIR. - Ses agents.
+ESTRAGON. - Ses correspondants.
+VLADIMIR. - Ses registres.
+ESTRAGON. - Son compte en banque.
+VLADIMIR. - Avant de se prononcer.
+ESTRAGON. - C'est normal.
+VLADIMIR. - N'est-ce pas?
+ESTRAGON. - Il me semble.
+VLADIMIR. - A moi aussi.
+
+		Repos.
+
+ESTRAGON (inquiet). - Et nous?
+VLADIMIR. - Plaît-il?
+ESTRAGON. - Je dis, Et nous ?
+VLADIMIR. - Je ne comprends pas.
+ESTRAGON. - Quel est notre rôle là-dedans?
+VLADIMIR. - Notre rôle?
+ESTRAGON. - Prends ton temps.
+VLADIMIR. - Notre rôle? Celui du suppliant.
+ESTRAGON. - A ce point-là?
+VLADIMIR. - Monsieur a des exigences à faire valoir?
+ESTRAGON. - On n'a plus de droits?
+   Rire de Vladimir, auquel il coupe court comme au précédent. Même jeu, moins le sourire.
+VLADIMIR. - Tu me ferais rire, si cela m'était permis.
+ESTRAGON. - Nous les avons perdus?
+VLADIMIR (avec netteté). - Nous les avons bazardés.
+   Silence. Ils demeurent immobiles, bras ballants, tête sur la poitrine, cassés aux genoux.
+ESTRAGON (faiblement). - On n'est pas liés? (Un temps.) Hein?
+VLADIMIR (levant la main). - Ecoute!
+
+		Ils écoutent, grotesquement figés.
+
+ESTRAGON. - Je n'entends rien.
+VLADIMIR. - Hsst! (Ils écoutent. Estragon perd l'équilibre, manque de tomber. Il s'agrippe, au bras de Vladimir qui chancelle. Ils écoutent, tassés l'un contre l'autre, les yeux dans les yeux.) Moi non plus.
+  Soupirs de soulagement. Détente. Ils s'éloignent l'un de l'autre.
+ESTRAGON. - Tu m'as fait peur.
+VLADIMIR. - J'ai cru que c'était lui.
+ESTRAGON. - Qui?
+VLADIMIR. - Godot.
+ESTRAGON. - Pah ! Le vent dans les roseaux.
+VLADIMIR. - J'aurais juré des cris.
+ESTRAGON. - Et pourquoi crierait-il?
+VLADIMIR. - Après son cheval.
+
+		Silence
+
+ESTRAGON. - Allons-nous-en.
+VLADIMIR. - Où? (Un temps.) Ce soir on couchera peut-être chez lui, au chaud, au sec, le ventre plein, sur la paille. Ça vaut la peine qu'on attende. Non?
+ESTRAGON. - Pas toute la nuit.
+VLADIMIR. - Il fait encore jour.
+
+		Silence.
+
+ESTRAGON. - J'ai faim.
+VLADIMIR. - Veux-tu une carotte?
+ESTRAGON. - Il n'y a pas autre chose?
+VLADIMIR. - Je dois avoir quelques navets.
+ESTRAGON. - Donne-moi une carotte. (Vladimir fouille dans ses poches, en retire un navet et le donne à Estragon.) Merci. (Il mord dedans. Plaintivement.) C'est un navet!
+VLADIMIR. - Oh pardon! j'aurais juré une carotte. (Il fouille à nouveau dans ses poches, n'y trouve que des navets.) Tout ça c'est des navets. (Il cherche toujours.) Tu as dû manger la dernière. (Il cherche.) Attends, ça y est. (Il sort enfin une carotte et la donne à Estragon.) Voilà, mon cher. (Estragon l'essuie sur sa manche et commence à la manger.) Rends-moi le navet. (Estragon lui rend le navet.) Fais-la durer, il n'y en a plus.
+ESTRAGON (tout en mâchant). - Je t'ai posé une question.
+VLADIMIR. - Ah.
+ESTRAGON. - Est-ce que tu m'as répondu?
+VLADIMIR. - Elle est bonne, ta carotte?
+ESTRAGON. - Elle est sucrée.
+VLADIMIR. - Tant mieux, tant mieux. (Un temps.) Qu'est-ce que tu voulais savoir?
+ESTRAGON. - Je ne me rappelle plus. (Il mâche.) C'est ça qui m'embête. (Il regarde la carotte avec appréciation, la fait tourner en l'air du bout des doigts.) Délicieuse, ta carotte (Il en suce méditativement le bout.) Attends, ça revient. (Il arrache une bouchée.)
+VLADIMIR. - Alors?
+ESTRAGON (la bouche pleine, distraitement). - On n'est pas liés ?
+VLADIMIR. - Je n'entends rien.
+ESTRAGON (mâche, avale). - Je demande si on est liés.
+VLADIMIR. - Liés?
+ESTRAGON. - Li-és .
+VLADIMIR. - Comment, liés?
+ESTRAGON. - Pieds et poings.
+VLADIMIR. - Mais à qui? Par qui?
+ESTRAGON. - A ton bonhomme.
+VLADIMIR. - A Godot? Liés à Godot? Quelle idée? Jamais de la vie! (Un temps.) Pas encore. (Il ne fait pas la liaison.)
+ESTRAGON. - Il s'appelle Godot?
+VLADIMIR. - Je crois.
+ESTRAGON. - Tiens! (Il soulève le restant de carotte par le bout de fane et le fait tourner devant ses yeux.) C'est curieux, plus on va, moins c'est bon.
+VLADIMIR. - Pour moi c'est le contraire.
+ESTRAGON. - C'est-à-dire?
+VLADIMIR. - Je me fais au goût au fur et à mesure.
+ESTRAGON (ayant longuement réfléchi). - C'est ça, le contraire?
+VLADIMIR. - Question de tempérament.
+ESTRAGON. - De caractère.
+VLADIMIR. - On n'y peut rien.
+ESTRAGON. - On a beau se démener.
+VLADIMIR. - On reste ce qu'on est.
+ESTRAGON. - On a beau se tortiller.
+VLADIMIR. - Le fond ne change pas.
+ESTRAGON. - Rien à faire. (Il tend le restant de carotte à Vladimir.) Veux-tu la finir?
+  Un cri terrible retentit, tout proche. Estragon lâche la carotte. Ils se figent, puis se précipitent vers la coulisse Estragon s'arrête à mi-chemin, retourne sur ses pas, ramasse la carotte, la fourre dans sa poche, s'élance vers Vladimir qui l'attend, s'arrête à nouveau, retourne sur ses pas, ramasse sa chaussure puis court rejoindre Vladimir. Enlacés, la tête dans les épaules, se détournant de la menace, ils attendent.
+  Entrent Pozzo et Lucky. Celui-là dirige celui­ci au moyen d'une corde passée autour du cou, de sorte qu'on ne voit d'abord que Lucky suivi de la corde, assez longue pour qu'il puisse arriver au milieu du plateau avant que Pozzo débouche de la coulisse. Lucky porte une lourde valise, un siège pliant, un panier à provisions et un manteau (sur le bras); Pozzo un fouet.
+POZZO (en coulisse). - Plus vite! (Bruit de fouet. Pozzo paraît. Ils traversent la scène. Lucky passe devant Vladimir et Estragon et sort. Pozzo, ayant vu Vladimir et Estragon, s'arrête. La corde se tend. Pozzo tire violemment dessus.) Arrière! (Bruit de chute. C'est Lucky qui tombe avec tout son chargement. Vladimir et Estragon le regardent, partagés entre l'envie d'aller à son secours et la peur de se mêler de ce qui ne les regarde pas. Vladimir fait un pas vers Lucky, Estragon le retient par la manche.)
+VLADIMIR. - Lâche-moi!
+ESTRAGON. - Reste tranquille.
+POZZO. - Attention! Il est méchant. (Estragon et Vladimir le regardent.) Avec les étrangers.
+ESTRAGON (bas). - C'est lui?
+VLADIMIR. - Qui?
+ESTRAGON. - Voyons...
+VLADIMIR. - Godot?
+ESTRAGON. - Voilà.
+POZZO. - Je me présente Pozzo.
+VLADIMIR. - Mais non.
+ESTRAGON. - Il a dit Godot.
+VLADIMIR. - Mais non.
+ESTRAGON (à Pozzo). - Vous n'êtes pas monsieur Godot, monsieur?
+POZZO (d'une voix terrible). - Je suis Pozzo! (Silence.) Ce nom ne vous dit rien? (Silence.) Je vous demande si ce nom ne vous dit rien?
+  Vladimir et Estragon s'interrogent du regard.
+ESTRAGON (faisant semblant de chercher). - Bozzo... Bozzo...
+VLADIMIR (de même). - Pozzo...
+POZZO. - Pppozzo !
+ESTRAGON. - Ah! Pozzo... voyons... Pozzo ...
+VLADIMIR. - C'est Pozzo ou Bozzo?
+ESTRAGON. - Pozzo... non, je ne vois pas.
+VLADIMIR (conciliant). - J'ai connu une famille Gozzo. La mère brodait au tambour.
+
+		Pozzo avance, menaçant.
+
+ESTRAGON (vivement). - Nous ne sommes pas d'ici, monsieur.
+POZZO (s'arrêtant). - Vous êtes bien des êtres humains cependant. (Il met ses lunettes.) A ce que je vois. (Il enlève ses lunettes.) De la même espèce que moi. (Il éclate d'un rire énorme. ) De la même espèce que Pozzo! D'origine divine!
+VLADIMIR. - C'est-à-dire ...
+POZZO (tranchant). - Qui est Godot?
+ESTRAGON. - Godot?
+POZZO. - Vous m'avez pris pour Godot.
+VLADIMIR. - Oh non, monsieur, pas un seul instant, monsieur.
+POZZO. - Qui est-ce?
+VLADIMIR. - Eh bien , c'est un... c'est une connaissance.
+ESTRAGON. - Mais non, voyons, on le connaît à peine.
+VLADIMIR. - Evidemment... on ne le connaît pas très bien... mais tout de même...
+ESTRAGON. - Pour ma part je ne le reconnaîtrais même pas.
+POZZO. - Vous m'avez pris pour lui.
+ESTRAGON. - C'est-à-dire... l'obscurité... la fatigue... la faiblesse... l'attente... j'avoue... j'ai cru... un instant...
+VLADIMIR. - Ne l'écoutez pas, monsieur, ne l'écoutez pas !
+POZZO. - L'attente? Vous l'attendiez donc?
+VLADIMIR. - C'est-à-dire...
+POZZO. - Ici ? Sur mes terres?
+VLADIMIR. - On ne pensait pas à mal.
+ESTRAGON. - C'était dans une bonne intention.
+POZZO. - La route est à tout le monde.
+VLADIMIR. - C'est ce qu'on se disait.
+Pozzo. - C'est une honte, mais c'est ainsi.
+ESTRAGON. - On n'y peut rien.
+POZZO (d'un geste large). - Ne parlons plus de ça. (Il tire sur la corde.) Debout ! (Un temps.) Chaque fois qu'il tombe il s'endort. (Il tire sur la corde.) Debout, charogne! (Bruit de Lucky qui se relève et ramasse ses affaires. Pozzo tire sur la corde.) Arrière ! (Lucky entre à reculons.) Arrêt ! (Lucky s'arrête.) Tourne ! (Lucky se retourne. A Vladimir et Estragon, affablement.) Mes amis, je suis heureux de vous avoir rencontrés. (Devant leur expression incrédule.) Mais oui, sincèrement heureux. (Il tire sur la corde.) Plus près ! (Lucky avance.) Arrêt ! (Lucky s'arrête. A Vladimir et Estragon.) Voyez-vous, la route est longue quand on chemine tout seul pendant... (il regarde sa montre) ...pendant (il calcule) . . . six heures, oui, c'est bien ça, six heures à la file, sans rencontrer âme qui vive. (A Lucky.) Manteau ! (Lucky dépose la valise, avance, donne le manteau, recule, reprend la valise.) Tiens ça. (Pozzo lui tend le fouet, Lucky avance et, n'ayant plus de mains, se penche et prend le fouet entre ses dents, puis recule. Pozzo commence à mettre son manteau, s'arrête.) Manteau ! (Lucky dépose tout, avance, aide Pozzo à mettre son manteau, recule, reprend tout.) Le fond de l'air est frais. (Il finit de boutonner son manteau, se penche, s'inspecte, se relève.) Fouet! (Lucky avance, se penche, Pozzo lui arrache le fouet de la bouche, Lucky recule.) Voyez-vous, mes amis, je ne peux me passer longtemps de la société de mes semblables, (il regarde les deux semblables) même quand ils ne me ressemblent qu'imparfaitement. (A Lucky.) Pliant! (Lucky dépose valise et panier, avance, ouvre le pliant, le pose par terre, recule, reprend valise et panier . Pozzo regarde le pliant.) Plus près ! (Lucky dépose valise et panier, avance, déplace le pliant, recule, reprend valise et panier. Pozzo s'assied, pose le bout de son fouet contre la poitrine de Lucky et pousse.) Arrière ! (Lucky recule.) Encore. (Lucky recule encore .) Arrêt! (Lucky s'arrête. A Vladimir et Estragon.) C'est pourquoi, avec votre permission, je m'en vais rester un moment auprès de vous, avant de m'aventurer plus avant. (A Lucky.) Panier! (Lucky avance, donne le panier, recule.) Le grand air, ça creuse. (Il ouvre le panier, en retire un morceau de poulet, un morceau de pain et une bouteille de vin. A Lucky.) Panier! (Lucky avance, prend le panier, recule, s' immobilise.) Plus loin ! (Lucky recule.) Là ! (Lucky s'arrête.) Il pue. (Il boit une rasade à même le goulot.) A la bonne nôtre. (Il dépose la bouteille et se met à manger.) Silence. Estragon et Vladimir, s'enhardissant peu à peu, tournent autour de Lucky, l'inspectent sur toutes les coutures. Pozzo mord dans son poulet avec voracité, jette les os après les avoir sucés. Lucky ploie lentement, jusqu'à ce que la valise frôle le sol, se redresse brusquement, recommence à ployer. Rythme de celui qui dort debout.
+ESTRAGON. - Qu'est-ce qu'il a?
+VLADIMIR. - Il a l'air fatigué.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+VLADIMIR. - Est-ce que je sais? (Ils le serrent de plus près.) Attention !
+ESTRAGON. - Si on lui parlait ?
+VLADIMIR. - Regarde-moi ça!
+ESTRAGON. - Quoi ?
+VLADIMIR (indiquant). - Le cou.
+ESTRAGON (regardant le cou). - Je ne vois rien.
+VLADIMIR. - Mets-toi ici.
+  Estragon se met à la place de Vladimir.
+ESTRAGON. - En effet.
+VLADIMIR. - A vif.
+ESTRAGON. - C'est la corde.
+VLADIMIR. - A force de frotter.
+ESTRAGON. - Qu'est-ce que tu veux.
+VLADIMIR. - C'est le nœud.
+ESTRAGON. - C'est fatal.
+  Ils reprennent leur inspection, s'arrêtent au visage.
+VLADIMIR. - Il n 'est pas mal
+ESTRAGON (levant les épaules, faisant la moue). - Tu trouves?
+VLADIMIR. - Un peu efféminé.
+Es TRAGON . - Il bave.
+VLADIMIR. - C'est forcé.
+ESTRAGON. - Il écume.
+VLADIMIR. - C'est peut-être un idiot.
+ESTRAGON. - Un crétin.
+VLADIMIR (avançant la tête). - On dirait un goitre.
+ESTRAGON (même jeu). - Ce n'est pas sûr.
+VLADIMIR. - Il halète.
+ESTRAGON. - C'est normal.
+VLADIMIR. - Et ses yeux!
+ESTRAGON. - Qu'est-ce qu'ils ont ?
+VLADIMIR. - Ils sortent.
+ESTRAGON. - Pour moi, il est entrain de crever.
+VLADIMIR. - Ce n'est pas sûr. (Un temps.) Pose-lui une question.
+ESTRAGON. - Tu crois?
+VLADIMIR. - Qu'est-ce qu'on risque?
+ESTRAGON (timidement). - Monsieur...
+VLADIMIR. - Plus fort.
+ESTRAGON (plus fort). -- Monsieur...
+POZZO. - Foutez-lui la paix! (Ils se tournent vers Pozzo qui, ayant fini de manger, s'essuie la bouche du revers de la main.) Vous ne voyez pas qu'il veut se reposer? (Il sort sa pipe et commence à la bourrer. Estragon remarque les os de poulet par terre, les fixe avec avidité. Pozzo frotte une allumette et commence à allumer sa pipe.) Panier! (Lucky ne bougeant pas, Pozzo jette l'allumette avec emportement et tire sur la corde . ) Panier! (Lucky manque de tomber, revient à lui, avance, met la bouteille dans le panier, retourne à sa place, reprend son attitude. Estragon fixe les os, Pozzo frotte une seconde allumette et allume sa pipe.) Que voulez-vous, ce n'est pas son travail. (Il aspire une bouffée, allonge les jambes.) Ah! ça va mieux. 
+ESTRAGON (timidement). - Monsieur...
+POZZO. - Qu'est-ce que c'est, mon brave?
+ESTRAGON. - Heu... vous ne mangez pas... heu... vous n'avez plus besoin... des os... monsieur ?
+VLADIMIR (outré). - Tu ne pouvais pas attendre?
+POZZO. - Mais non, mais non, c'est tout naturel. Si j'ai besoin des os? (Il les remue du bout de son fouet.) Non, personnellement je n'en ai plus besoin. (Estragon fait un pas vers les os.) Mais... (Estragon s'arrête) mais en principe les os reviennent au porteur. C'est donc à lui qu'il faut demander. (Estragon se tourne vers Lucky, hésite.) Mais demandez-lui, demandez-lui, n'ayez pas peur, il vous le dira.
+  Estragon va vers Lucky, s'arrête devant lui.
+ESTRAGON. - Monsieur... pardon, monsieur...
+  Lucky ne réagit pas. Pozzo fait claquer son fouet . Lucky relève la tête.
+POZZO. - On te parle, porc. Réponds. (A Estragon.) Allez-y.
+ESTRAPON. - Pardon, monsieur , les os, vous les voulez ?
+  Lucky regarde Estragon longuement.
+Pozzo (aux anges). - Monsieur ! (Lucky baisse la tête). Réponds ! Tu les veux ou tu ne les veux pas ? (Silence de Lucky. A Estragon.)  Ils sont à vous . (Estragon se jette sur les os, les ramasse et commence à les ronger.) C'est pourtant bizarre. C'est bien la première fois qu'il me refuse un os. (Il regarde Lucky avec inquiétude.) J'espère qu'il ne va pas me faire la blague de tomber malade. (Il tire sur sa pipe.)
+VLADIMIR (éclatant). - C'est une honte !
+  Silence. Estragon, stupéfait, s'arrête de ronger, regarde Vladimir et Pozzo tour à tour. Pozzo très calme. Vladimir de plus en plus gêné.
+POZZO (à Vladimir). - Faites-vous allusion à quelque chose de particulier ?
+VLADIMIR (résolu et bafouillant). - Traiter un homme (geste vers Lucky) de cette façon... je trouve ça... un être humain... non... c'est une honte !
+ESTRAGON (ne voulant pas être en reste). - Un scandale ! (Il se remet à ronger .)
+POZZO. - Vous êtes sévères. (A Vladimir). Quel âge avez-vous, sans indiscrétion ? (Silence.) Soixante ?... Soixante-dix ?... (A Estragon.) Quel âge peut-il bien avoir ?
+ESTRAGON. - Demandez-lui.
+POZZO. - Je suis indiscret. (Il vide sa pipe en la tapant contre son fouet, se lève.) Je vais vous quitter. Merci de m'avoir tenu compagnie. (Il réfléchit.) A moins que je ne fume encore une pipe avec vous. Qu'en dites-vous ? (Ils n'en disent rien.) Oh, je ne suis qu'un petit fumeur, un tout petit fumeur, il n'est pas dans mes habitudes de fumer deux pipes coup sur coup, ça (il porte sa main au cœur) fait battre mon cœur. (Un temps.) C'est la nicotine, on en absorbe, malgré ses précautions. (Il soupire.) Que voulez­vous. (Silence.) Mais peut-être que vous n'êtes pas des fumeurs. Si ? Non ? Enfin, c'est un détail. (Silence.) Mais comment me rasseoir maintenant avec naturel, maintenant que je me suis mis debout ? Sans avoir l'air de - comment dire - de fléchir ? (A Vladimir.) Vous dites? (Silence.) Peut-être n'avez-vous rien dit ? (Silence.) C'est sans importance. Voyons... (Il réfléchit.)
+ESTRAGON. - Ah ! Ça va mieux. (Il jette les os.)
+VLADIMIR. - Partons.
+ESTRAGON. - Déjà?
+POZZO. - Un instant ! (Il tire sur la corde.) Pliant ! (Il montre avec son fouet. Lucky déplace le pliant.) Encore ! Là ! (Il se rassied. Lucky recule, reprend valise et panier.) Me voilà réinstallé ! (Il commence à bourrer sa pipe.)
+VLADIMIR. - Partons .
+POZZO. - J'espère que ce n'est pas moi qui vous chasse ? Restez encore un peu, vous ne le regretterez pas.
+ESTRAGON (flairant l'aumône). - Nous avons le temps.
+POZZO (ayant allumé sa pipe). - La deuxième est toujours moins bonne (il enlève la pipe de sa bouche, la contemple) que la première, je veux dire. (Il remet la pipe dans sa bouche.) Mais elle est bonne quand même.
+VLADIMIR. - Je m'en vais.
+POZZO. - Il ne peut plus supporter ma présence. Je suis sans doute peu humain, mais est-ce une raison ? (A Vladimir.) Réfléchissez, avant de commettre une imprudence. Mettons que vous partiez maintenant, pendant qu il fait encore jour, car malgré tout il fait encore jour. (Tous les trois regardent le ciel.) Bon. Que devient en ce cas - (il ôte sa pipe de la bouche, la regarde) - je suis éteint - (il rallume sa pipe) - en ce cas... en ce cas... que devient en ce cas votre rendez-vous avec ce... Godet... Godot... Godin... (silence) ...enfin vous voyez qui je veux dire, dont votre avenir dépend (silence) ...enfin votre avenir immédiat.
+ESTRAGON. - Il a raison.
+VLADIMIR. - Comment le saviez-vous ?
+POZZO. - Voilà qu'il m'adresse à nouveau la parole ! Nous finirons par nous prendre en affection.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+POZZO. - Moi aussi je serais heureux de le rencontrer. Plus je rencontre de gens, plus je suis heureux. Avec la moindre créature on s'instruit, on s'enrichit, on goûte mieux son bonheur. Vous-mêmes (il les regarde attentivement l'un après l'autre, afin qu'ils se sachent visés tous les deux) vous-mêmes, qui sait, vous m'aurez peut­être apporté quelque chose.
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+POZZO. - Mais ça m'étonnerait.
+VLADIMIR. - On vous pose une question.
+POZZO (ravi). - Une question ? Qui ? Laquelle ? (Silence.) Tout à l'heure vous me disiez Monsieur, en tremblant. Maintenant vous me posez des questions. Ça va mal finir.
+VLADIMIR (à Estragon). - Je crois qu'il t'écoute.
+ESTRAGON (qui s'est remis à tourner autour de Lucky). - Quoi ?
+VLADIMIR. - Tu peux lui demander maintenant. Il est alerté.
+ESTRAGON. - Lui demander quoi ?
+VLADIMIR. - Pourquoi il ne dépose pas ses bagages.
+ESTRAGON. - Je me le demande.
+VLADIMIR. - Mais demande-lui, voyons.
+POZZO (qui a suivi ses échanges avec une attention anxieuse, craignant que la question ne se perde). - Vous me demandez pourquoi il ne dépose pas ses bagages, comme vous dites ?
+VLADIMIR. - Voilà
+POZZO (à Estragon). - Vous êtes bien d'accord ?
+ESTRAGON (continuant à tourner autour de Lucky). - Il souffle comme un phoque.
+POZZO. - Je vais vous répondre. (A Estragon.) Mais restez tranquille, je vous en supplie, vous me rendez nerveux .
+VLADIMIR. - Viens ici.
+ESTRAGON. - Qu'est-ce qu'il y a ?
+VLADIMIR. - Il va parler
+  Immobiles, l'un contre l'autre, ils attendent.
+POZZO. - C'est parfait. Tout le monde y est ? Tout le monde me regarde ? (Il regarde Lucky, tire sur la corde. Lucky lève la tête.) Regarde-moi, porc ! (Lucky le regarde.) Parfait. (Il met la pipe dans sa poche, sort un petit vaporisateur et se vaporise la gorge, remet le vaporisateur dans sa poche, se râcle la gorge, crache, ressort le vaporisateur, se revaporise la gorge, remet le vaporisateur dans sa poche.) Je suis prêt. Tout le monde m'écoute ? (Il regarde Lucky, tire sur la corde.) Avance ! (Lucky avance.) Là ! (Lucky s'arrête.) Tout le monde est prêt ? (Il les regarde tous les trois, Lucky en dernier, tire sur la corde.) Alors quoi ? (Lucky lève la tête) . Je n'aime pas parler dans le vide. Bon. Voyons. (Il réfléchit.)
+ESTRAGON. - Je m'en vais.
+POZZO. - Qu'est-ce que vous m'avez demandé au juste ?
+VLADIMIR. - Pourquoi il...
+POZZO (avec colère). - Ne me coupez pas la parole ! (Un temps. Plus calme.) Si nous parlons tous en même temps nous n'en sortirons jamais. (Un temps.) Qu'est-ce que je disais ? (Un temps. Plus fort.) Qu'est-ce que je disais ?
+  Vladimir mime celui qui porte une lourde charge. Pozzo le regarde sans comprendre.
+ESTRAGON (avec force). - Bagages ! (Il pointe son doigt vers Lucky.) Pourquoi ? Toujours tenir. (Il fait celui qui ploie, en haletant.) Jamais déposer. (Il ouvre les mains, se redresse avec soulagement.) Pourquoi ?
+POZZO. - J'y suis. Il fallait me le dire plus tôt. Pourquoi il ne se met pas à son aise. Essayons d'y voir clair. N'en a-t-il pas le droit ? Si. C'est donc qu'il ne veut pas ? Voilà qui est raisonné. Et pourquoi ne veut-il pas ? (Un temps.) Messieurs, je vais vous le dire.
+VLADIMIR. - Attention !
+POZZO. - C'est pour m'impressionner, pour que je le garde.
+ESTRAGON. - Comment ?
+POZZO. - Je me suis peut-être mal exprimé. Il cherche à m'apitoyer, pour que je renonce à me séparer de lui. Non, ce n'est pas tout à fait ça.
+VLADIMIR. - Vous voulez vous en débarasser ?
+POZZO. - Il veut m'avoir, mais il ne m' aura pas.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Il s'imagine qu'en le voyant bon porteur je serai tenté de remployer à l'avenir dans cette capacité.
+ESTRAGON. - Vous n'en voulez plus ?
+POZZO. - En réalité il porte comme un porc. Ce n'est pas son métier.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Il se figure qu'en le voyant infatigable je vais regretter ma décision. Tel est son misérable calcul. Comme si j'étais à court d'hommes de peine ! (Tous les trois regardent Lucky.) Atlas, fils de Jupiter ! (Silence.) Et voilà. Je pense avoir répondu à votre question. En avez­vous d'autres ? (Jeu du vaporisateur.)
+VLADIMIR. - Vous voulez vous en débarraser ?
+POZZO. - Remarquez que j'aurais pu être à sa place et lui à la mienne. Si le hasard ne s'y était pas opposé. A chacun son dû.
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - Vous dites ?
+VLADIMIR. - Vous voulez vous en débarrasser ?
+POZZO. - En effet. Mais au lieu de le chasser, comme j'aurais pu, je veux dire au lieu de le mettre tout simplement à la porte, à coups de pied dans le cul, je l'emmène, telle est ma bonté, au marché de Saint-Sauveur, où je compte bien en tirer quelque chose. A vrai dire, chasser de tels êtres, ce n'est pas possible. Pour bien faire, il faudrait les tuer.
+
+        Lucky pleure.
+
+ESTRAGON. - Il pleure.
+POZZO. - Les vieux chiens ont plus de dignité. (Il tend son mouchoir à Estragon.) Consolez-le, puisque vous le plaignez. (Estragon hésite.) Prenez. (Estragon prend le mouchoir.) Essuyez-lui les yeux. Comme ça il se sentira moins abandonné.
+
+        Estragon hésite toujours.
+
+VLADIMIR. - Donne, je le ferai, moi.
+  Estragon ne veut pas donner le mouchoir. Gestes d'enfant.
+POZZO. - Dépêchez-vous. Bientôt il ne pleurera plus. (Estragon s'approche de Lucky et se met en posture de lui essuyer les yeux. Lucky lui décoche un violent coup de pied dans les tibias. Estragon lâche le mouchoir, se jette en arrière, fait le tour du plateau en boitant et en hurlant de douleur.) Mouchoir. (Lucky dépose valise et panier, ramasse le mouchoir, avance, le donne à Pozzo, recule, reprend valise et panier.)
+ESTRAGON. - Le salaud ! La vache ! (Il relève son pantalon.) Il m'a estropié !
+POZZO. - Je vous avais dit qu'il n'aime pas les étrangers.
+VLADIMIR (à Estragon). - Fais voir. (Estragon lui montre sa jambe. A Pozzo, avec colère.) Il saigne !
+POZZO. - C'est bon signe.
+ESTRAGON (la jambe blessée en l'air). - Je ne pourrai plus marcher !
+VLADIMIR (tendrement). - Je te porterai. (Un temps.) Le cas échéant.
+POZZO. - Il ne pleure plus. (A Estragon.) Vous l'avez remplacé, en quelque sorte. (Rêveusement.) Les larmes du monde sont immuables. Pour chacun qui se met à pleurer, quelque part un autre s'arrête. Il en va de même du rire. (Il rit.) Ne disons donc pas de mal de notre époque elle n'est pas plus malheureuse que les précédentes. (Silence.) N'en disons pas de bien non plus. (Silence.) N'en parlons pas. (Silence.) Il est vrai que la population a augmenté.
+VLADIMIR. - Essaie de marcher.
+  Estragon part en boitillant, s'arrête devant Lucky et crache sur lui, puis va s'asseoir là où il était assis au lever du rideau.
+POZZO. - Savez-vous qui m'a appris toutes ces belles choses ? (Un temps. Dardant son doigt vers Lucky.) Lui !
+VLADIMIR (regardant le ciel). - La nuit ne viendra-t-elle donc jamais ?
+POZZO. - Sans lui je n'aurais jamais pensé, jamais senti, que des choses basses, ayant trait à mon métier de - peu importe. La beauté, la grâce, la vérité de première classe, je m'en savais incapable. Alors j'ai pris un knouk.
+VLADIMIR (malgré lui, cessant d'interroger le ciel). - Un knouk ?
+POZZO. - Il y aura bientôt soixante ans que ça dure... (il calcule mentalement) ...oui, bientôt soixante. (Se redressant fièrement.) On ne me les donnerait pas, n'est-ce pas ? (Vladimir regarde Lucky). A côté de lui j'ai l'air d'un jeune homme, non ? (Un temps. A Lucky.) Chapeau ! (Lucky dépose le panier, enlève son chapeau. Une abondante chevelure blanche lui tombe autour du visage. Il met son chapeau sous le bras et reprend le panier.) Maintenant, regardez. (Pozzo ôte son chapeau. Il est complètement chauve. Il remet son chapeau.) Vous avez vu ?
+VLADIMIR. - Qu'est-ce que c'est, un knouk ?
+POZZO. - Vous n'êtes pas d'ici . Etes vous seulement du siècle ? Autrefois on avait des bouffons. Maintenant on a des knouks. Ceux qui peuvent se le permettre.
+VLADIMIR. - Et vous le chassez à présent ? Un si vieux, un si fidèle serviteur ?
+ESTRAGON. - Fumier !
+
+        Pozzo de plus en plus agité.
+
+VLADIMIR. - Après en avoir sucé la substance vous le jetez comme un... (il cherche) ...comme une peau de banane. Avouez que...
+Pozzo (gémissant, portant ses mains à sa tête). - Je n'en peux plus... plus supporter... ce qu'il fait... pouvez pas savoir... c'est affreux... faut qu'il s'en aille... (il brandit les bras) ...je deviens fou (Il s'effondre, la tête dans les bras.) Je n'en peux plus... peux plus...
+
+        Silence. Tous regardent Pozzo. Lucky tressaille.
+
+VLADIMIR. - Il n'en peut plus.
+ESTRAGON. - C'est affreux.
+VLADIMIR. - II devient fou.
+ESTRAGON. - C'est dégoûtant.
+VLADIMIR (à Lucky). - Comment osez-vous ? C'est honteux ! Un si bon maître ! Le faire souffrir ainsi ! Après tant d'années ! Vraiment !
+POZZO (sanglotant). - Autrefois... il était gentil... il m'aidait... me distrayait... il me rendait meilleur... maintenant... il m'assassine...
+ESTRAGON (à Vladimir). - Est-ce qu'il veut le remplacer ?
+VLADIMIR. - Comment ?
+ESTRAGON. - Je n'ai pas compris s'il veut le remplacer ou s'il n'en veut plus après lui.
+VLADIMIR. - Je ne crois pas.
+ESTRAGON. - Comment ?
+VLADIMIR. - Je ne sais pas.
+ESTRAGON. - Faut lui demander.
+POZZO (calmé). - Messieurs, je ne sais pas ce qui m'est arrivé. Je vous demande pardon. Oubliez tout ça. (De plus en plus maître de lui.) Je ne sais plus très bien ce que j'ai dit, mais vous pouvez être sûrs qu'il n'y avait pas un mot de vrai là-dedans. (Se redresse, se frappe la poitrine.) Est-ce que j'ai l'air d'un homme qu'on fait souffrir, moi ? Voyons ! (Il fouille dans ses poches.) Qu'est-ce que j'ai fait de ma pipe ?
+VLADIMIR. - Charmante soirée.
+ESTRAGON. - Inoubliable.
+VLADIMIR. - Et ce n'est pas fini.
+ESTRAGON. - On dirait que non.
+VLADIMIR. - Ça ne fait que commencer.
+ESTRAGON. - C'est terrible.
+VLADIMIR. - On se croirait au spectacle.
+ESTRAGON. - Au cirque.
+VLADIMIR. - Au music-hal.
+ESTRAGON . - Au cirque.
+POZZO. -- Mais qu'ai-je donc fait de ma bruyère !
+ESTRAGON. - Il est marant ! Il a perdu sa bouffarde ! (Rit bruyamment.)
+VLADIMIR. - Je reviens. (Il se dirige vers la coulisse.)
+ESTRAGON. - Au fond du couloir, à gauche.
+VLADIMIR. - Garde ma place. (Il sort.)
+POZZO. - J'ai perdu mon Abdullah !
+ESTRAGON (se tordant). - Il est tordant !
+POZZO (levant la tête). - Vous n'auriez pas vu - (Il s'aperçoit de l'absence de Vladimir. Désolé.) Oh ! Il est parti !... Sans me dire au revoir ! Ce n'est pas chic ! Vous auriez dû le retenir.
+ESTRAGON. - II s'est retenu tout seul.
+POZZO. - Oh ! (Un temps.) A la bonne heure .
+ESTRAGON (se levant). - Venez par ici.
+POZZO. - Pourquoi faire ?
+ESTRAGON. - Vous allez voir.
+POZZO. - Vous voulez que je me lève ?
+ESTRAGON. - Venez... venez... vite.
+
+        Pozzo se lève et va vers Estragon.
+     
+ESTRAGON. - Regardez !
+POZZO. - Oh là là !
+ESTRAGON. - C'est fini.
+  Vladimir revient, sombre, bouscule Lucky, renverse le pliant d'un coup de pied, va et vient avec agitation.
+POZZO. - Il n'est pas content ?
+ESTRAGON. - Tu as raté des choses formidables. Dommage.
+  Vladimir s'arrête, redresse le pliant, reprend son va-et-vient, plus calme.
+POZZO. - Il s'apaise. (Regard circulaire.) D'ailleurs, tout s'apaise, je le sens. Une grande paix descend. Ecoutez. (Il lève la main.) Pan dort.
+VLADIMIR (s'arrêtant). - La nuit ne viendra-t-elle jamais ?
+
+        Tous les trois regardent le ciel.
+
+POZZO. - Vous ne tenez pas à partir avant ?
+ESTRAGON. - C'est-à-dire... Vous comprenez...
+POZZO. - Mais c'est tout naturel, c'est tout naturel. Moi-même, à votre place, si j'avais rendez-vous avec un Godin... Godet... Godot... enfin vous voyez qui je veux dire, j'attendrais qu'il fasse nuit noire avant d'abandonner. (Il regarde le pliant.) J'aimerais bien me rasseoir, mais je ne sais pas trop comment m'y prendre.
+ESTRAGON. - Puis-je vous aider ?
+POZZO. - Si vous me demandiez, peut-être ?
+ESTRAGON. - Quoi ?
+POZZO. - Si vous me demandiez de me rasseoir.
+ESTRAGON. - Ça vous aiderait ?
+POZZO. - Il me semble.
+ESTRAGON. - Allons-y. Rasseyez-vous, monsieur, je vous en prie.
+POZZO. - Non non, ce n'est pas la peine. (Un temps. A voix basse.) Insistez un peu.
+ESTRAGON. - Mais voyons, ne restez pas debout comme ça, vous allez attraper froid.
+POZZO. - Vous croyez ?
+ESTRAGON. - Mais c'est absolument certain.
+POZZO. - Vous avez sans doute raison. (Il se rassied.) Merci, mon cher. Me voilà réinstallé. (Estragon se rassied. Pozzo regarde sa montre.) Mais il est temps que je vous quitte, si je ne veux pas me mettre en retard.
+VLADIMIR. - Le temps s'est arrêté.
+POZZO (mettant sa montre contre son oreille). - Ne croyez pas ça, monsieur, ne croyez pas ça. (Il remet la montre dans sa poche.) Tout ce que vous voulez, mais pas ça.
+ESTRAGON (à Pozzo). - Il voit tout en noir aujourd'hui.
+POZZo. - Sauf le firmament. (Il rit, content de ce bon mot.) Patience, ça va venir. Mais je vois ce que c'est, vous n'êtes pas d'ici, vous ne savez pas encore ce que c'est que le crépuscule chez nous. Voulez-vous que je vous le dise ? (Silence. Estragon et Vladimir se sont remis à examiner, celui-là sa chaussure, celui-ci son chapeau. Le chapeau de Lucky tombe, sans qu'il s'en aperçoive.) Je veux bien vous satisfaire. (Jeu du vaporisateur.) Un peu d'attention, s'il vous plaît. (Estragon et Vladimir continuent leur manège, Lucky dort à moitié. Pozzo fait claquer son fouet, qui ne rend qu'un bruit très faible.) Qu'est-ce qu'il a, ce fouet ? (Il se lève et le fait claquer plus vigoureusement, finalement avec succès. Lucky sursaute. La chaussure d'Estragon, le chapeau de Vladimir, leur tombent des mains. Pozzo jette le fouet.) Il ne vaut plus rien, ce fouet. (Il regarde son auditoire.) Qu'est-ce que je disais ?
+VLADIMIR. - Partons.
+ESTRAGON. - Mais ne restez pas debout comme ça, vous allez attraper la crève.
+POZZO. - C'est vrai. (Il se rassied. A Estragon.) Comment vous appelez-vous ?
+ESTRAGON (du tic au tac) . - Catulle.
+POZZO (qui n'a pas écouté). - Ah oui, la nuit. (Lève la tête.) Mais soyez donc un peu plus attentifs, sinon nous n'arriverons jamais à rien. (Regarde le ciel.) Regardez. (Tous regardent le ciel, sauf Lucky qui s'est remis à somnoler. Pozzo, s'en apercevant, tire sur la corde.) Veux-tu regarder le ciel, porc ! (Lucky renverse la tête.) Bon, ça suffit. (Ils baissent la tête.) Qu'est-ce qu'il a de si extraordinaire ? En tant que ciel ? Il est pâle et lumineux, comme n'importe quel ciel à cette heure de la journée. (Un temps.) Dans ces latitudes. (Un temps.) Quand il fait beau. (Sa voix se fait chantante.) Il y a une heure (il regarde sa montre, ton prosaïque) environ (ton à nouveau lyrique) après nous avoir versé depuis (il hésite, le ton baisse) mettons dix heures du matin (le ton s'élève) sans faiblir des torrents de lumière rouge et blanche, il s'est mis à perdre de son éclat, à pâlir (geste des deux mains qui descendent par paliers), à pâlir, toujours un peu plus, un peu plus, jusqu' à ce que (pause dramatique, large geste horizontal des deux mains qui s'écartent) vlan ! fini ! il ne bouge plus ! (Silence.) Mais (il lève une main admonitrice) - mais, derrière ce voile de douceur et de calme (il lève les yeux au ciel, les autres l'imitent, sauf Lucky) la nuit galope (la voix se fait plus vibrante) et viendra se jeter sur nous (il fait claquer ses doigts) pfft ! comme ça - (l'inspiration le quitte) au moment où nous nous y attendrons le moins. (Silence. Voix morne.) C'est comme ça que ça se passe sur cette putain de terre.
+
+        Long silence.
+
+ESTRAGON. - Du moment qu'on est prévenus .
+VLADIMIR. - On peut patienter.
+ESTRAGON. - On sait à quoi s'en tenir.
+VLADIMIR. - Plus d'inquiétude à avoir.
+ESTRAGON. - II n'y a qu'à attendre.
+VLADIMIR. - Nous en avons l'habitude. (Il ramasse son chapeau, regarde dedans, le secoue, le remet.)
+POZZO. - Comment m' avez-vous trouvé ? (Estragon et Vladimir le regardent sans comprendre.) Bon ? Moyen ? Passable ? Quelconque ? Franchement mauvais ?
+VLADIMIR (comprenant le premier). - Oh, très bien, tout à fait bien.
+POZZO (à Estragon). - Et vous, monsieur ?
+ESTRAGON (accent anglais) . - Oh très bon, très très très bon.
+POZZO (avec élan). - Merci, messieurs ! (Un temps). J'ai tant besoin d'encouragement (Il réfléchit.) J'ai un peu faibli sur la fin. Vous n'avez pas remarqué ?
+VLADIMIR. - Oh, peut-être un tout petit peu.
+ESTRAGON. - J'ai cru que c'était exprès.
+POZZO. - C'est que ma mémoire est défectueuse.
+
+        Silence.
+
+ESTRAGON. - En attendant, il ne se passe rien.
+POZZO (désolé). - Vous vous ennuyez ?
+ESTRAGON. - Plutôt.
+POZZO (à Vladimir). - Et vous, monsieur ?
+VLADIMIR. - Ce n'est pas folichon.
+  Silence. Pozzo se livre une bataille intérieure.
+POZZO. - Messieurs, vous avez été... (il cherche) ... convenables avec moi.
+ESTRAGON. - Mais non !
+VLADIMIR. - Quelle idée !
+POZZO. - Mais si, mais si, vous avez été corrects. De sorte que je me demande... Que puis-je faire à mon tour pour ces braves gens qui sont en train de s'ennuyer ?
+ESTRAGON. -- Même un louis serait le bienvenu.
+VLADIMIR. -- Nous ne sommes pas des mendiants.
+POZZO. -- Que puis-je faire, voilà ce que je me dis, pour que le temps leur semble moins long ? Je leur ai donné des os, je leur ai parlé de choses et d'autres, je leur ai expliqué le crépuscule, c'est une afaire entendue. Et j'en passe. Mais est-ce suffisant, voilà ce qui me torture, est-ce suffisant ?
+ESTRAGON. -- Même cent sous.
+VLADIMIR. -- Tais-toi !
+ESTRAGON. -- J'en prends le chemin.
+POZZO. -- Est-ce suffisant ? Sans doute. Mais je suis large. C'est ma nature. Aujourd'hui. Tant pis pour moi. (Il tire sur la corde. Lucky le regarde.) Car je vais souffrir, cela est certain. (Sans se lever, il se penche et reprend son fouet.) Que préférez-vous ? Qu'il danse, qu'il chante, qu'il récite, qu'il pense, qu'il...
+ESTRAGON. -- Qui ?
+POZZO. -- Qui ! Vous savez penser, vous autres ?
+VLADIMIR. - Il pense ?
+POZZO. -- Parfaitement. A haute voix. Il pensait même très joliment autrefois, je pouvais l'écouter pendant des heures. Maintenant... (Il frissonne.) Enfin, tant pis. Alors, vous voulez qu'il nous pense quelque chose?
+ESTRAGON. - J'aimerais mieux qu'il danse, ce serait plus gai.
+POZZO. - Pas forcément.
+ESTRAGON. - N'est-ce pas, Didi, que ce serait plus gai ?
+VLADIMIR. - J'aimerais bien l'entendre penser.
+ESTRAGON. - Il pourrait peut-être danser et penser ensuite ? Si ce n'est pas trop lui demander.
+VLADIMIR (à Pozzo). - Est-ce possible ?
+POZZO. - Mais certainement, rien de plus facile. C'est d'ailleurs l'ordre naturel. (Rire bref.)
+VLADIMIR. - Alors, qu'il danse.
+
+        Silence.
+
+POZZO (à Lucky). - Tu entends ?
+ESTRAGON. - Il ne refuse jamais ?
+POZZO. - Je vous expliquerai ça tout à l'heure. (A Lucky.) Danse, pouacre !
+  Lucky dépose valise et panier, avance un peu vers la rampe, se tourne vers Pozzo. Estragon se lève pour mieux voir. Lucky danse. Il s'arrête.
+ESTRAGON. - C'est tout ?
+POZZO. - Encore !
+  Lucky répète les mêmes mouvements, s'arrête.
+ESTRAGON. - Eh ben, mon cochon ! (Il imite les mouvements de Lucky.) J'en ferais autant. (Il imite, manque de tomber, se rassied.) Avec un peu d'entraînement.
+
+VLADIMIR. - Il est fatigué.
+POZZO. - Autrefois, il dansait la farandole, l'almée, le branle, la gigue, le fandango et même le hompipe. Il bondissait. Maintenant il ne fait plus que ça. Savez-vous comment il l'appelle ?
+ESTRAGON. - La mort du lampiste.
+VLADIMIR. - Le cancer des vieillards.
+POZZO. - La danse du filet. Il se croit empêtré dans un filet.
+VLADIMIR (avec des tortillements d'esthète). - Il y a quelque chose...
+  Lucky s'apprête à retourner vers ses fardeaux.
+POZZO (comme à un cheval). - Woooa !
+  Lucky s'immobilise.
+ESTRAGON. - Il ne refuse jamais ?
+POZZO. - Je vais vous expliquer ça. (Il fouille dans ses poches.) Attendez. (Il fouille.) Qu'est -ce que j'ai fait de ma poire ? (Il fouille.) Ça alors ! (Il lève une tête ahurie. D'une voix mourante.) J'ai perdu mon pulvérisateur !
+ESTRAGON (d'une voix mourante). - Mon poumon gauche est très faible. (Il tousse faiblement. D'une voix tonitruante.) Mais mon poumon droit est en parfait état !
+POZZO (voix normale). - Tant pis, je m'en passerai. Qu'est-ce que je disais ? (Il réfléchit.) Attendez ! (Réfléchit.) Ça alors ! (Il lève la tête.) Aidez-moi !
+ESTRAGON. - Je cherche.
+VLADIMIR. - Moi aussi.
+POZZO. - Attendez !
+  Tous les trois se découvrent simultanément, portent la main au front, se concentrent, crispés. Long silence.
+ESTRAGON (triomphant). - Ah !
+VLADIMIR. - Il a trouvé.
+POZZO (impatient). - Et alors ?
+ESTRAGON. - Pourquoi ne dépose-t-il pas ses bagages ?
+VLADIMIR. - Mais non !
+POZZO. - Vous êtes sûr ?
+VLADIMIR. - Mais voyons, vous nous l'avez déjà dit.
+POZZO. - Je vous l'ai déjà dit ?
+ESTRAGON. - Il nous l'a déjà dit ?
+VLADIMIR. - D'ailleurs, il les a déposés.
+ESTRAGON (coup d'œil vers Lucky). - C'est vrai. Et après ?
+VLADIMIR. - Puisqu'il a déposé ses bagages, il est impossible que nous ayons demandé pourquoi il ne les dépose pas.
+POZZO. - Fortement raisonné !
+ESTRAGON. - Et pourquoi les a-t-il déposés ?
+POZZO. - Voilà .
+VLADIMIR. - Afin de danser.
+ESTRAGON. - C'est vrai.
+
+        Long silence.
+
+ESTRAGON (se levant). - Rien ne se passe, personne ne vient, personne ne s'en va, c'est terrible.
+VLADIMIR (à Pozzo). - Dites-lui de penser.
+POZZO. - Donnez-lui son chapeau.
+VLADIMIR. - Son chapeau ?
+POZZO. - Il ne peut pas penser sans chapeau.
+VLADIMIR (à Estragon). - Donne-lui son chapeau.
+ESTRAGON. - Moi ? Après le coup qu'il m'a fait ? Jamais !
+VLADIMIR. - Je vais le lui donner, moi. (Il ne bouge pas.)
+ESTRAGON. - Qu'il aille le chercher.
+POZZO. - Il vaut mieux le lui donner.
+VLADIMIR. - Je vais le lui donner.
+  Il ramasse le chapeau et le tend à Lucky à bout de bras. Lucky ne bouge pas.
+POZZO. - Il faut le lui mettre.
+ESTRAGON (à Pozzo). - Dites-lui de le prendre.
+POZZO. - Il vaut mieux le lui mettre.
+VLADIMIR. - Je vais le lui mettre.
+  Il contourne Lucky avec précaution, s'en approche doucement par derrière, lui met le chapeau sur la tête et recule vivement. Lucky ne bouge pas. Silence.
+ESTRAGON. - Qu'est-ce qu'il attend ?
+POZZO. - Eloignez-vous. (Estragon et Vladimir s'éloignent de Lucky. Pozzo tire sur la corde. Lucky le regarde.) Pense, porc ! (Un temps. Lucky se met à danser.) Arrête ! (Lucky s'arrête.) Avance ! (Lucky va vers Pozzo.) Là ! (Lucky s'arrête.) Pense ! (Un temps.) 
+LUCKY. - D'autre part, pour ce qui est...
+POZZO. - Arrête ! (Lucky se tait.) Arrière ! (Lucky recule.) Là ! (Lucky s'arrête.) Hue ! (Lucky se tourne vers le public.) Pense !
+LUCKY (débit monotone). - Etant donné l'existence telle qu'elle jaillit des récents travaux publics de Poinçon et Wattmann d'un Dieu personnel quaquaquaqua à barbe blanche quaqua hors du temps de l'étendue qui du haut de sa divine apathie sa divine athambie sa divine aphasie nous aime bien à quelques exceptions près on ne sait pourquoi mais ça viendra et souffre à l'instar de la divine Miranda avec ceux qui sont on ne sait pourquoi mais on a le temps dans le tourment dans les feux dont les feux les flammes pour peu que ça dure encore un peu et qui peut en douter mettront à la fin le feu aux poutres assavoir porteront l'enfer aux nues si bleues par moments encore aujourd'hui et calmes si calmes d'un calme qui pour être intermittent n'en est pas moins le bienvenu mais n'anticipons pas et attendu d'autre part qu'à la suite des recherches inachevées n'anticipons pas des recherches inachevées mais néanmoins couronnées par l'Acacacacadémie d'Anthropopopométrie de Berne-en-Bresse de Testu et Conard il est établi sans autre possibilité d'erreur que celle afférente aux calculs humains qu'à la suite des recherches inachevées inachevées de Testu et Conard il est établi tabli tabli ce qui suit qui suit qui suit assavoir mais n'anticipons pas on ne sait pourquoi à la suite des travaux de Poinçon et Wattmann il apparaît aussi clairement si clairement qu'en vue des labeurs de Fartov et Belcher inachevés inachevés on ne sait pourquoi de Testu et Conard inachevés inachevés il apparaît que l'homme contrairement à l'opinion contraire que l'homme en Bresse de Testu et Conard que l'homme enfin bref que l'homme en bref enfin malgré les progrès de l'alimentation et de l'élimination des déchets est en train de maigrir et en même temps parallèlement on ne sait pourquoi malgré l'essor de la culture physique de la pratique des sports tels tels tels le tennis le football la course et à pied et à bicyclette la natation l'équitation l'aviation la conation le tennis le camogie le patinage et sur glace et sur asphalte 1e tennis l'aviation 1es sports 1es sports d'hiver d'été d'automne d'automne le tennis sur gazon sur sapin et sur terre battue l'aviation le tennis le hockey sur terre sur mer et dans les airs la pénicillin e et succédanés bref je reprends en même temps parallèlement de rapetisser on ne sait pourquoi malgré le tennis je reprends l'aviation le golf tant à neuf qu'à dix-huit trous le tennis sur glace bref on ne sait pourquoi en Seine Seine-et-Oise Seine-et-Marne Marne-et­Oise assavoir en même temps parallèlement on ne sait pourquoi de maigrir rétrécir je reprends Oise Marne bref la perte sèche par tête de pipe depuis la mort de Voltaire étant de l'ordre de deux doigts cent grammes par tête de pipe environ en moyenne à peu près chiffres ronds bon poids déshabillé en Normandie on ne sait pourquoi bref enfin peu importe les faits sont là et conidérant d'autre part ce qui est encore plus grave qu'il ressort ce qui est encore plus grave qu'à la lumière la lumière des expériences en cours de Steinweg et Petennann il ressort ce qui est encore plus grave qu'il ressort ce qui est encore plus grave à la lumière la lumière des expériences abandonnées de Steinweg et Petermann qu'à  la campagne a 1a montagne et au bord de la mer et des cours et d'eau et de feu l'air est le même et la terre assavoir l'air et la terre par les grands froids l'air et la terre faits pour les pierres par les grands froids hélas au septième de leur ère l'éther la terre la mer pour les pierres par les grands fonds les grands froids sur mer sur terre et dans les airs peuchère je reprends on ne sait pourquoi malgré le tennis les faits sont là on ne sait pourquoi je reprends au suivant bref enfin hélas au suivant pour les pierres qui peut en douter je reprends mais n'anticipons pas je reprends la tête en même temps parallèlement on ne sait pourquoi malgré le tennis au suivant la barbe les flammes les pleurs les pierres si bleues si calmes hélas la tête la tête la tête la tête en Normandie malgré le tennis les labeurs abandonnés inachevés plus grave les pierres bref je reprends hélas hélas abandonnés inachevés la tête la tête en Normandie malgré le tennis la tête hélas les pierres Conard Conard... (Mêlée. Lucky pousse encore quelques vociférations.) Tennis !... Les pierres !... Si calmes !... Conard !... Inachevés !...
+POZZO. - Son chapeau !
+  Vladimir s empare du chapeau de Lucky qui se tait et tombe. Grand silence. Halètement des vainqueurs.
+ESTRAGON. - Je suis vengé.
+  Vladimir contemple le chapeau de Lucky, regarde dedans.
+POZZO. - Donnez-moi ça ! (Il arrache le chapeau des mains de Vladimir, le jette par terre, saute dessus.) Comme ça il ne pensera plus !
+VLADIMIR. - Mais va-t-il pouvoir s'orienter ?
+POZZO. - C'est moi qui l'orienterai. (Il donne des coups de pied à Lucky.) Debout ! Porc !
+ESTRAGON. - Il est peut-être mort.
+VLADIMIR. - Vous allez le tuer.
+POZZO. - Debout ! Charogne ! (Il tire sur la corde, Lucky glisse un peu. A Estragon et Vladimir) Aidez-moi.
+VLADIMIR. - Mais comment faire ?
+POZZO. - Soulevez-le !
+Estragon et Vladimir mettent Lucky debout, le soutiennent un moment, puis le lâchent. Il retombe.
+ESTRAGON. - Il fait exprès.
+POZZO. - Il faut le soutenir. (Un temps.) Allez, allez, soulevez-le !
+ESTRAGON. - Moi j'en ai mare.
+VLADIMIR. - Allons, essayons encore une fois.
+ESTRAGON. - Pour qui nous prend-il ?
+VLADIMIR. - Allons.
+  Ils mettent Lucky debout, le soutiennent.
+POZZO. - Ne le lâchez pas ! (Estragon et Vladimir chancellent.) Ne bougez pas ! (Pozzo va prendre la valise et le panier et les apporte vers Lucky.) Tenez-le bien ! (Il met la valise dans la main de Lucky, qui la lâche aussitôt.) Ne le lâchez pas ! (Il recommence. Peu à peu, au contact de la valise, Lucky reprend ses esprits et ses doigts finissent pas se resserrer autour de la poignée.) Tenez-le toujours ! (Même jeu avec le panier.) Voilà, vous pouvez le lâcher. (Estragon et Vladimir s'écartent de Lucky qui trébuche, chancelle, ploie, mais reste debout, valise et panier à la main. Pozzo recule, fait claquer son fouet.) En avant ! (Lucky avance.) Arrière ! (Lucky recule.) Tourne ! (Lucky se retourne.) Ça y est, il peut marcher, (Se tournant vers Estragon et Vladimir.) Merci, messieurs, et laissez-moi vous - (il fouille dans ses poches) - vous souhaiter - (il fouille) vous souhaiter - (il fouille) - mais où ai-je donc mis ma montre ? (Il fouille.) Ça alors ! (Il lève une tête défaite.) Une véritable savonnette, messieurs, à secondes trotteuses. C'est pépé qui me l'a donnée. (Il fouille.) Elle est peut-êt re tombée. (Il cherche par terre, ainsi que Vladimir et Estragon. Pozzo retourne de son pied les restes du chapeau de Lucky.) Ça, par exemple !
+VLADIMIR. - Elle est peut être dans votre gousset.
+POZZO. - Attendez. (Il se plie en deux, approche sa tête de son ventre, écoute.) Je n'entends rien ! (Il leur fait signe de s'approcher.) Venez voir. (Estragon et Vladimir vont vers lui, se penchent sur son ventre. Silence.) Il me semble qu'on devrait entendre le tic tac.
+VLADIMIR. - Silence !
+
+        Tous écoutent, penchés.
+        
+ESTRAGON. - J'entends quelque chose.
+POZZO. - Où ?
+VLADIMIR. - C'est le cœur.
+P ozzo (déçu). - Merde alors !
+VLADIMIR. - Silence !
+
+        Ils écoutent.
+
+ESTRAGON. - Peut-être qu'elle s'est arrêtée.
+
+        Ils se redressent.
+
+POZZO. - Lequel de vous sent si mauvais ?
+ESTRAGON. - Lui pue de la bouche, moi des pieds . 
+POZZO. - Je vais vous quitter.
+ESTRAGON. - Et votre savonnette ?
+POZZO. - J'ai dû la laisser au château.
+ESTRAGON. - Alors, adieu.
+POZZO. - Adieu.
+VLADIMIR. - Adieu
+ESTRAGON. - Adieu.
+
+        Silence. Personne ne bouge.
+
+VLADIMIR. - Adieu.
+POZZO. - Adieu.
+ESTRAGON. - Adieu.
+
+        Silence.
+
+POZZO. - Et merci .
+VLADIMIR. - Merci à vous .
+POZZO. - De rien.
+ESTRAGON. - Mais si.
+POZZO. - Mais non.
+VLADIMIR. - Mais si.
+ESTRAGON. - Mais non.
+
+        Silence.
+
+POZZO. - Je n'arrive pas... (il hésite) ...à partir.
+ESTRAGON. - C'est la vie.
+  Pozzo se retourne, s'éloigne de Lucky, vers la coulisse, filant la corde au fur et à mesure.
+VLADIMIR. - Vous allez dans le mauvais sens.
+POZZO. - Il me faut de l'élan. (Arrivé au bout de la corde, c'est-à-dire dans la coulisse, il s'arrête, se retourne, crie.) Ecartez-vous ! (Estragon et Vladimir se rangent au fond, regardent vers Pozzo. Bruit de fouet.) En avant ! (Lucky ne bouge pas.) 
+ESTRAGON. - En avant !
+VLADIMIR. - En avant !
+
+        Bruit de fouet. Lucky s'ébranle.
+
+POZZO. - Plus vite ! (Il sort de la coulisse, traverse la scène à la suite de Lucky. Estragon et Vladimir se découvrent, agitent la main. Lucky sort. Pozzo fait claquer corde et fouet.) Plus vite ! Plus vite ! (Au moment de disparaître à son tour, Pozzo s'arrête, se retourne. La corde se tend. Bruit de Lucky qui tombe.) Mon pliant ! (Vladimir va chercher le pliant et le donne à Pozzo qui le jette vers Lucky.) Adieu !
+ESTRAGON, VLADIMIR (agitant la main). - Adieu ! Adieu !
+POZZO. - Debout ! Porc ! (Bruit de Lucky qui se lève.) En avant ! (Pozzo sort. Bruit de fouet.) En avant ! Adieu ! Plus vite ! Porc ! Hue ! Adieu !
+
+        Silence.
+
+VLADIMIR. - Ça a fait passer le temps.
+ESTRAGON - Il serait passé sans ça.
+VLADIMIR. - Oui. Mais moins vite.
+
+        Un temps.
+
+ESTRAGON. - Qu'est-ce qu'on fait maintenant ?
+VLADIMIR. - Je ne sais pas.
+ESTRAGON. - Allons-nous-en.
+VLADIMIR. - On ne peut pas.
+ESTRAGON. - Pourquoi ?
+VLADIMIR. - On attend Godot.
+ESTRAGON. - C'est vrai.
+
+        Un temps.
+
+VLADIMIR. - Ils ont beaucoup changé
+ESTRAGON. - Qui ?
+VLADIMIR. - Ces deux-là.
+ESTRAGON. - C'est ça, faisons un peu de conversation.
+VLADIMIR. - N'est-ce pas qu'ils ont beaucoup changé ?
+ESTRAGON. - C'est probable. Il n'y a que nous qui n'y arrivons pas.
+VLADIMIR. - Probable ? C'est certain. Tu les as bien vus ?
+ESTRAGON. - Si tu veux. Mais je ne les connais pas.
+VLADIMIR. - Mais si, tu les connais.
+ESTRAGON. - Mais non.
+VLADIMIR. - Nous les connaissons je te dis. Tu oublies tout. (Un temps.) A moins que ce ne soient pas les mêmes.
+ESTRAGON. - La preuve, ils ne nous ont pas reconnus.
+VLADIMIR. - Ça ne veut rien dire. Moi aussi j'ai fait semblant de ne pas les reconnaître. Et puis, nous, on ne nous reconnaît jamais.
+ESTRAGON. - Assez. Ce qu'il faut - Aïe ! (Vladimir ne bronche pas.) Aïe !
+VLADIMIR. - A moins que ce ne soient pas les mêmes.
+ESTRAGON. - Didi ! C'est l'autre pied ! (Il se dirige en boitillant vers l'endroit où il était assis au lever du rideau.)
+VOIX EN COULISSE . - Monsieur !
+  Estragon s'arrête. Tous les deux regardent en direction de la voix.
+ESTRAGON. - Ça recommence.
+VLADIMIR. - Approche, mon enfant.
+  Entre un jeune garçon , craintivement. Il s'arrête.
+GARÇON. - Monsieur Albert ?
+VLADIMIR. - C'est moi .
+ESTRAGON. - Qu'est-ce que tu veux ?
+VLADIMIR. - Avance.
+
+        Le garçon ne bouge pas.
+
+ESTRAGON (avec force). - Avance, on te dit !
+
+        Le garçon avance craintivement, s'arrête.
+
+VLADIMIR. - Qu'est-ce que c'est ?
+GARÇON. - C'est monsieur Godot - (Il se tait.)
+VLADIMIR. - Evidemment. (Un temps.) Approche.
+
+        Le garçon ne bouge pas.
+
+ESTRAGON (avec force). - Approche, on te dit ! (Le garçon avance craintivement, s'arrête.) Pourquoi tu viens si tard ?
+VLADIMIR. - Tu as un message de monsieur Godot ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Eh bien, dis-le.
+ESTRAGON. - Pourquoi tu viens si tard ?
+  Le garçon les regarde l'un après l'autre, ne sachant à qui répondre.
+VLADIMIR (à Estragon). - Laisse-le tranquille.
+ESTRAGON (à Vladimir). - Fous-moi la paix, toi. (Avançant, au garçon.) Tu sais l'heure qu'il est ?
+GARÇON (reculant). - Ce n'est pas ma faute, monsieur !
+ESTRAGON. - C'est la mienne peut-être ?
+GARÇON. - J'avais peur, monsieur.
+ESTRAGON. - Peur de quoi ? De nous ? (Un temps.) Réponds !
+VLADIMIR. - Je vois ce que c'est, ce sont les autres qui lui ont fait peur.
+ESTRAGON. - Il y a combien de temps que tu es là ?
+GARÇON. - Il y a un moment, monsieur.
+VLADIMIR. - Tu as eu peur du fouet ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Des cris ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Des deux messieurs ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Tu les connais.
+GARÇON . - Non monsieur.
+VLADIMIR. - Tu es d'ici ?
+GARÇON . - Oui monsieur.
+ESTRAGON. - Tout ça c'est des mensonges ! (Il prend le garçon par le bras, le secoue.) Dis­nous la vérité !
+GARÇON (tremblant). - Mais c'est la vérité, monsieur.
+VLADIMIR. - Mais laisse-le donc tranquille ! Qu'est-ce que tu as ? (Estragon lâche le garçon, recule, porte ses mains au visage. Vladimir et le garçon le regardent. Estragon découvre son visage, décomposé.) Qu'est-ce que tu as ?
+ESTRAGON. - Je suis malheureux.
+VLADIMIR. - Sans blague ! Depuis quand ?
+ESTRAGON. - J'avais oublié.
+VLADIMIR. - La mémoire nous joue de ces tours. (Estragon veut parler, y renonce, va en boitillant s'asseoir et commence à se déchausser. Au garçon.) Eh bien ? 
+GARÇON. - Monsieur Godot...
+VLADIMIR (l'interrompant). - Je t'ai déjà vu, n'est-ce pas ?
+GARÇON. - Je ne sais pas, monsieur.
+VLADIMIR. - Tu ne me connais pas ?
+GARÇON. - Non monsieur.
+VLADIMIR. - Tu n'es pas venu hier ?
+GARÇON. - Non monsieur.
+VLADIMIR. - C'est la première fois que tu viens ?
+GARÇON. - Oui monsieur.
+
+        Silence.
+
+VLADIMIR. - On dit ça. (Un temps.) Eh bien, continue.
+GARÇON (d'un trait). - Monsieur Godot m'a dit de vous dire qu'il ne viendra pas ce soir mais sûrement demain.
+VLADIMIR. - C'est tout ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Tu travailles pour monsieur Godot ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Qu'est-ce que tu fais ?
+GARÇON. - Je garde les chèvres, monsieur.
+VLADIMIR. - Il est gentil avec toi ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - II ne te bat pas ?
+GARÇON. - Non monsieur, pas moi.
+VLADIMIR. - Qui est-ce qu'il bat ?
+GARÇON. - Il bat mon frère, monsieur.
+VLADIMIR. - Ah tu as un frère ?
+GARÇON. - Oui, monsieur.
+VLADIMIR. - Qu'est-ce qu'il fait ?
+GARÇON. - Il garde les brebis, monsieur.
+VLADIMIR. - Et pourquoi il ne te bat pas, toi ?
+GARÇON. - Je ne sais pas, monsieur.
+VLADIMIR. - Il doit t'aimer.
+GARÇON. - Je ne sais pas, monsieur.
+VLADIMIR. - Il te donne assez à manger ? (Le garçon hésite.) Est-ce qu'il te donne bien à manger ?
+GARÇON. - Assez bien, monsieur.
+VLADIMIR. - Tu n ' es p as malheureux ? (Le garçon hésite.) Tu entends ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Et alors ?
+GARÇON. - Je ne sais pas, monsieur.
+VLADIMIR. - Tu ne sais pas si tu es malheureux ou non ?
+GARÇON. - Non monsieur.
+VLADIMIR. - C'est comme moi. (Un temps.) Où c'est que tu couches ?
+GARÇON. - Dans le grenier, monsieur.
+VLADIMIR. - Avec ton frère ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Dans le foin ?
+GARÇON. - Oui monsieur.
+VLADIMIR. - Bon , va-t'en .
+GARÇON. - Qu'est-ce que je dois dire à monsieur Godot, monsieur ?
+VLADIMIR. - Dis-lui... (Il hésite.) Dis-lui que tu nous as vus. (Un temps.) Tu nous a bien vus, n'est-ce pas ?
+GARÇON. - Oui monsieur. (Il recule, hésite, se retourne et sort en courant.)
+  La lumière se met brusquement à baisser. En un instant il fait nuit. La lune se lève, au fond, monte dans le ciel, s'immobilise, baignant la scène d'une clarté argentée.
+VLADIMIR. - Enfin ! (Estragon se lève et va vers Vladimir, ses deux chaussures à la main. Il les dépose près de la rampe, se redresse et regarde la lune.) Qu'est-ce que tu fais ?
+ESTRAGON. - Je fais comme toi, je regarde la blafarde.
+VLADIMIR. - Je veux dire, avec tes chaussures.
+ESTRAGON. - Je les laisse là. (Un temps.) Un autre viendra, aussi... aussi... que moi, mais chaussant moins grand, et elles feront son bonheur.
+VLADIMIR. - Mais tu ne peux pas aller pieds nus.
+ESTRAGON. - Jésus l'a fait.
+VLADIMIR. - Jésus ! Qu'est-ce que tu vas chercher là ! Tu ne vas tout de même pas te comparer à lui ?
+ESTRAGON. - Toute ma vie je me suis comparé à lui.
+VLADIMIR. - Mais là-bas il faisait chaud ! Il faisait bon !
+ESTRAGON. - Oui. Et on crucifiait vite .
+
+        Silence.
+
+VLADIMIR. - Nous n'avons plus rien à faire ici.
+ESTRAGON. - Ni ailleurs.
+VLADIMIR. - Voyons, Gogo, ne sois pas comme ça. Demain tout ira mieux. 
+ESTRAGON. - Comment ça ?
+VLADIMIR. - Tu n'as pas entendu ce que le gosse a dit ?
+ESTRAGON. - Non.
+VLADIMIR. - Il a dit que Godot viendra sûrement demain. (Un temps.) Ça ne te dit rien ?
+ESTRAGON. - Alors il n'y a qu'à attendre ici.
+VLADIMIR. - Tu es fou ! Il faut s'abriter. (Il prend Estragon par le bras.) Viens. (Il le tire. Estragon cède d'abord, puis résiste. Ils s'arrêtent.)
+ESTRAGON (regardant l'arbre). - Dommage qu'on n'ait pas un bout de corde.
+VLADIMIR. - Viens. Il commence à faire froid. (Il le tire. Même jeu.)
+ESTRAGON. - Fais-moi penser d'apporter une corde demain.
+VLADIMIR. - Oui. Viens. (Il le tire. Même jeu.)
+ESTRAGON. - Ça fait combien de temps que nous sommes tout le temps ensemble ?
+VLADIMIR. - Je ne sais pas. Cinquante ans peut-être.
+ESTRAGON. - Tu te rappelles le jour où je me suis jeté dans la Durance ?
+VLADIMIR. - On faisait les vendanges.
+ESTRAGON. - Tu m'as repêché.
+VLADIMIR. - Tout ça est mort et enterré.
+ESTRAGON. - Mes vêtements ont séché au soleil.
+
+VLADIMIR. - N'y pense plus, va. Viens. (Même jeu.)
+ESTRAGON. - Attends.
+VLADIMIR. - J'ai froid.
+ESTRAGON. -- Je me demande si on n'aurait pas mieux fait de rester seuls, chacun de son côté. (Un temps). On n'était pas fait pour le même chemin.
+VLADIMIR (sans se fâcher). - Ce n'est pas sûr.
+ESTRAGON. - Non, rien n'est sûr.
+VLADIMIR. - On peut toujours se quitter, si tu crois que ça vaut mieux.
+ESTRAGON. - Maintenant ce n'est plus la peine.
+
+        Silence.
+
+VLADIMIR. - C'est vrai, maintenant ce n'est plus la peine.
+
+        Silence.
+
+ESTRAGON. - Alors, on y va ?
+VLADIMIR. - Allons-y .
+
+        Ils ne bougent pas.
+
+        
+RIDEAU
+
+
+[center]LES ÉDITIONS DE MINUIT
+
+1952 by LES ÉDITIONS DE MINUIT
+7, rue Bernard Palissy, 75006 Paris
+En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou partiellement le présent. ouvrage sans autorisation de l'éditeur ou du Centre français d'exploitation du droit de copie,
+20, rue des Grands-Augustins, 75006 Paris.
+ISBN 2 7073 0148 5[/center]
+
+[center][url][font=res://assets/fonts/dynamicfont_128.tres]FIN[/font][/url][/center]"
 tab_size = 8
 text = "SAMUEL BECKETT
 
-	En attendant Godot
+En attendant Godot
 
-	Acte premier
+Acte premier
 
   Route à la campagne, avec arbre.
   Soir.
@@ -6308,27 +7835,24 @@ LES ÉDITIONS DE MINUIT
 7, rue Bernard Palissy, 75006 Paris
 En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou partiellement le présent. ouvrage sans autorisation de l'éditeur ou du Centre français d'exploitation du droit de copie,
 20, rue des Grands-Augustins, 75006 Paris.
-ISBN 2 7073 0148 5"
-fit_content_height = true
+ISBN 2 7073 0148 5
+
+FIN"
+script = SubResource( 106 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 85509.0
-margin_right = 968.0
-margin_bottom = 85569.0
-text = "Fin"
-script = SubResource( 95 )
+[node name="ScreenEffectsCanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
-material = SubResource( 105 )
+[node name="ScreenEffects" type="ColorRect" parent="ScreenEffectsCanvasLayer"]
+material = SubResource( 111 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="exploded" from="OrdiOffset/Computer" to="OrdiOffset/Computer/Virus" method="_on_Computer_exploded"]
 [connection signal="timeout" from="OrdiOffset/Computer/CoolTimer" to="OrdiOffset/Computer" method="_on_CoolTimer_timeout"]
@@ -6342,9 +7866,11 @@ mouse_filter = 2
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/pirate/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/bug/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/spider/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
+[connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/eve/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="timeout" from="OrdiOffset/Computer/Virus/VirusCountDownTimer" to="OrdiOffset/Computer/Virus" method="_on_VirusCountDownTimer_timeout"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Virus/AnimationPlayer" to="OrdiOffset/Computer/Virus" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Virus/Tween" to="OrdiOffset/Computer/Virus" method="_on_Tween_tween_all_completed"]
+[connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee/Tween" to="OrdiOffset/Computer/Fumees/Fumee" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee2/Tween" to="OrdiOffset/Computer/Fumees/Fumee2" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee3/Tween" to="OrdiOffset/Computer/Fumees/Fumee3" method="_on_Tween_tween_all_completed"]
@@ -6352,7 +7878,6 @@ mouse_filter = 2
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee5/Tween" to="OrdiOffset/Computer/Fumees/Fumee5" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee6/Tween" to="OrdiOffset/Computer/Fumees/Fumee6" method="_on_Tween_tween_all_completed"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Fumees/Fumee7/Tween" to="OrdiOffset/Computer/Fumees/Fumee7" method="_on_Tween_tween_all_completed"]
-[connection signal="animation_finished" from="OrdiOffset/Computer/Feu/FeuAnimationPlayer" to="OrdiOffset/Computer" method="_on_FeuAnimationPlayer_animation_finished"]
 [connection signal="finished" from="OrdiOffset/Computer/FanAudioStreamPlayer" to="OrdiOffset/Computer/FanAudioStreamPlayer" method="_on_FanAudioStreamPlayer_finished"]
 [connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton" to="OrdiOffset/Computer/DebugKeys/TextureButton" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="OrdiOffset/Computer/DebugKeys/TextureButton2" to="OrdiOffset/Computer/DebugKeys/TextureButton2" method="_on_TextureButton_pressed"]
@@ -6381,8 +7906,12 @@ mouse_filter = 2
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/MenuBackgroundOutline/HBoxContainer/OptionButtons/OptionMenu" to="SKINMENUOffsetNode2/SkinMenu" method="_on_OptionMenu_pressed"]
 [connection signal="pressed" from="SKINMENUOffsetNode2/SkinMenu/SkinMenuHandle" to="SKINMENUOffsetNode2/SkinMenu" method="_on_UpgradeMenuHandle_pressed"]
 [connection signal="pressed" from="PopupExclusive/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="PopupExclusive/Popup" method="_on_DismissPopupButton_pressed"]
-[connection signal="pressed" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer2/CloseSettingsButton" to="SettingsExclusive/Settings" method="_on_CloseSettingsButton_pressed"]
-[connection signal="item_selected" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer/OptionButton" to="SettingsExclusive/Settings" method="_on_OptionButton_item_selected"]
-[connection signal="toggled" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/HBoxContainer3/CheckButton" to="SettingsExclusive/Settings" method="_on_CheckButton_toggled"]
+[connection signal="pressed" from="EveExclusive/Popup/MarginContainer/VBoxContainer/MarginContainer/DismissPopupButton" to="EveExclusive/Popup" method="_on_DismissPopupButton_pressed"]
+[connection signal="pressed" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Title/CloseSettingsButton" to="SettingsExclusive/Settings" method="_on_CloseSettingsButton_pressed"]
+[connection signal="item_selected" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/LangueBox/LangueOptionButton" to="SettingsExclusive/Settings" method="_on_LangueOptionButton_item_selected"]
+[connection signal="toggled" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/BlackNWhiteBox/BlackNWhiteToggle" to="SettingsExclusive/Settings" method="_on_BlackNWhiteToggle_toggled"]
+[connection signal="toggled" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/ReverseScreenBox/ReverseScreenToggle" to="SettingsExclusive/Settings" method="_on_ReverseScreenToggle_toggled"]
+[connection signal="toggled" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/SoundBox/SoundToggle" to="SettingsExclusive/Settings" method="_on_SoundToggle_toggled"]
 [connection signal="pressed" from="SettingsExclusive/Settings/MarginContainer/VBoxContainer/Label2/ReinitaliseButton" to="SettingsExclusive/Settings" method="_on_ReinitaliseButton_pressed"]
-[connection signal="pressed" from="Panel/MarginContainer/ScrollContainer/VBoxContainer/Button" to="Panel/MarginContainer/ScrollContainer/VBoxContainer/Button" method="_on_Button_pressed"]
+[connection signal="meta_clicked" from="EnAttendantGodotLecture/MarginContainer/RichTextLabel" to="OrdiOffset/Computer/Virus" method="_on_LectureEnAttendantGodot_meta_clicked"]
+[connection signal="meta_clicked" from="EnAttendantGodotLecture/MarginContainer/RichTextLabel" to="EnAttendantGodotLecture/MarginContainer/RichTextLabel" method="_on_RichTextLabel_meta_clicked"]

@@ -3,6 +3,8 @@ extends Node2D
 
 export var popup_path: NodePath
 onready var popup: PanelContainer = get_node(popup_path)
+export var eve_popup_path: NodePath
+onready var eve_popup: PanelContainer = get_node(eve_popup_path)
 
 
 onready var computer = get_parent()
@@ -55,12 +57,14 @@ func _on_VirusCountDownTimer_timeout():
 			"poulpe":
 				print("playing poulpe animation")
 				$AnimationPlayer.play("poulpe_discrete_look")
-				$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
 				
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				
+				$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
 		
 			"pirate":
 				$BackBufferCopy/VirusMovePath.set_new_curve_pirate()
@@ -69,6 +73,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
 				virus_move_along_curve()
 			
 			"bug":
@@ -78,6 +83,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
 				virus_move_along_curve()
 			
 			"spider":
@@ -87,6 +93,17 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.show()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				virus_move_along_curve()
+			
+			"eve":
+				$BackBufferCopy/VirusMovePath.set_new_curve_eve()
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.show()
 				virus_move_along_curve()
 	
 	elif can_come:
@@ -102,7 +119,7 @@ func _on_Mouse_pressed():
 		
 		match current_virus_name:
 			"poulpe":
-				var malus = int(5.0*GameData.wealth/6.0)
+				var malus = int(GameData.wealth/2.0)
 				GameData.wealth -= malus
 				
 				computer.popup.set_text(tr("paye_rancon_au_rnasomware_message") % str(malus))
@@ -139,6 +156,15 @@ func _on_Tween_tween_all_completed():
 			
 			"spider":
 				$AnimationPlayer.play("spider_passed_antivirus")
+			
+			"eve":
+				can_come = false
+				is_infested = true
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				
+				eve_popup.popup()
+				
 	
 	else:
 		print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")
@@ -153,20 +179,46 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$BackBufferCopy/VirusMovePath/PathFollow2D.unit_offset = 0
 	
 	elif anim_name == "pirate_passed_antivirus":
-		var vol = 5
+		if GameData.mouse_level <= 1:
+			pass
 		
-		GameData.mouse_level = max(GameData.mouse_level-5, 1)
-		
-		popup.set_text(tr("pirate_vol_souris_message") % vol)
-		popup.popup()
+		else:
+			GameData.mouse_level = GameData.mouse_level-1
+			
+			popup.set_text(tr("pirate_vol_souris_message") % 1)
+			popup.popup()
 		
 		can_come = true
 	
 	elif anim_name == "bug_passed_antivirus":
-		var locales = TranslationServer.get_loaded_locales()
-		GameData.set_locale(locales[randi() % len(locales)])
+		print("Un bug est passé")
+		var r = randf()
 		
-		can_come = true
+		if r < 0.6:
+			can_come = true
+			
+			var locales = TranslationServer.get_loaded_locales()
+			var new_locale = locales[randi() % len(locales)]
+			GameData.set_locale(new_locale)
+			print("Langue changée en : ", new_locale)
+			print("Et tout de suite, un peu de lecture")
+		
+		elif r < 0.67:
+			can_come = true
+			
+			GameData.is_reverse_screen = not GameData.is_reverse_screen
+			print("Maintenant ecran renverse : ", GameData.is_reverse_screen)
+		
+		elif r < 0.93:
+			can_come = true
+			
+			GameData.is_blacknwhite = not GameData.is_blacknwhite
+			print("Maintenant ecran en noir et blanc : ", GameData.is_blacknwhite)
 	
 	elif anim_name == "spider_passed_antivirus":
 		can_come = true
+
+
+func _on_LectureEnAttendantGodot_meta_clicked(meta):
+	is_infested = false
+	can_come = true

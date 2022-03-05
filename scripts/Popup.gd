@@ -16,6 +16,3 @@ func _on_DismissPopupButton_pressed():
 		$AnimationPlayer.play_backwards("show_popup")
 		emit_signal("_popup_closed")
 
-
-func _on_OptionButton_item_selected(index):
-	pass # Replace with function body.

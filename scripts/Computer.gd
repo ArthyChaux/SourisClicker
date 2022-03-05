@@ -78,11 +78,13 @@ func _ready():
 	GameData.connect("mouse_skin_changed", self, "set_new_wireless")
 	GameData.connect("ventil_skin_changed", self, "set_textures")
 	
-	$FanAudioStreamPlayer.start_fanning()
 
 func data_loaded():
 	backup = GameData.datas
 	backup.locale = OS.get_locale_language()
+	
+	if GameData.is_audio:
+		$FanAudioStreamPlayer.start_fanning()
 
 func data_saved(is_error):
 	if not $Feu/FeuAnimationPlayer.is_playing():
@@ -115,6 +117,8 @@ func set_textures(new_ventil_skin: String):
 	texture_wireless_ok = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wireless_ok"])
 	texture_wireless_wrong = load(GameData.upgrades_data.ventil[new_ventil_skin]["texture_wireless_wrong"])
 	
+	$Screen.texture = load(GameData.upgrades_data.ventil[new_ventil_skin]["fond_texture"])
+	
 	set_new_wireless(GameData.mouse_skin)
 
 func _on_ResetComputerSkinTimer_timeout():
@@ -129,7 +133,9 @@ func _on_ResetComputerSkinTimer_timeout():
 func _on_Mouse_pressed():
 	GameData.wealth += GameData.wealth_increase_on_click
 	self.heat += GameData.heat_increase_on_click * GameData.wealth_increase_on_click
-	$MouseAudioStreamPlayer.random_play()
+	
+	if GameData.is_audio:
+		$MouseAudioStreamPlayer.random_play()
 
 func _spider_heat_thing():
 	self.heat += GameData.heat_increase_on_click * GameData.wealth_increase_on_click

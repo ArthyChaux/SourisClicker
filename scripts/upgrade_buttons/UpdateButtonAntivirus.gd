@@ -22,7 +22,8 @@ func buy_an_upgrade():
 		GameData.wealth -= self.price
 		
 		GameData.antivirus_duration += 120
-		$AudioStreamPlayer.play()
+		if GameData.is_audio:
+			$AudioStreamPlayer.play()
 	
 	else:
 		popup.set_text("economise_un_peu_message")

@@ -23,7 +23,7 @@ func _on_CanneButton_pressed():
 	
 	$AnimationPlayer.play_backwards("canne_descends")
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	if is_down:
 		set_canne_timer()
 		is_down = false
