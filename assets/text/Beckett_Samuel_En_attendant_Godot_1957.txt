@@ -1,30 +1,30 @@
 SAMUEL BECKETT
 
-	En attendant Godot
+[center]En attendant Godot[/center]
 
-	Acte premier
+[center]Acte premier[/center]
 
   Route à la campagne, avec arbre.
   Soir.
   Estragon, assis sur une pierre, essaie d'enlever sa chaussure. Il s'y acharne des deux mains, en ahanant. Il s'arrête, à bout de forces, se repose en haletant, recommence. Même jeu.
-  Entre Vladimir .
+  Entre Vladimir.
 ESTRAGON (renonçant à nouveau). - Rien à faire.
-VLADIMIR (s'approchant à petits pas raides, les jambes écartées). - Je commence à le croire. (Il s'immobilise.) J'ai longtemps résisté à cette pensée, en me disant, Vladimir, sois raisonnable. tu n'as pas encore tout essayé. Et je reprenais le combat. (Il se recueille, songeant au combat. A Estragon.) - Alors, te revoilà, toi.
+VLADIMIR (s'approchant à petits pas raides, les jambes écartées). - Je commence à le croire. (Il s'immobilise.) J'ai longtemps résisté à cette pensée, en me disant, Vladimir, sois raisonnable. Tu n'as pas encore tout essayé. Et je reprenais le combat. (Il se recueille, songeant au combat. A Estragon.) Alors, te revoilà, toi.
 ESTRAGON. - Tu crois ?
 VLADIMIR. - Je suis content de te revoir. Je te croyais parti pour toujours.
 ESTRAGON. - Moi aussi.
-VLADIMIR. - Que faire pour fêter cette réunion ? (Il réfléchit.) Lève -toi que je t'embrasse. (Il tend la main à Estragon.)
+VLADIMIR. - Que faire pour fêter cette réunion ? (Il réfléchit.) Lève-toi que je t'embrasse. (Il tend la main à Estragon.)
 ESTRAGON (avec irritation). - Tout à l'heure, tout à l'heure.
 
 		Silence.
 
-VLADIMIR (froissé. froidement). - Peut-on savoir où monsieur a passé la nuit?
+VLADIMIR (froissé. froidement). - Peut-on savoir où monsieur a passé la nuit ?
 ESTRAGON. - Dans un fossé.
 VLADIMIR (épaté). - Un fossé! Où ça ?
 ESTRAGON (sans geste). - Par là.
-VLADIMIR. - Et on ne t'a pas battu?
+VLADIMIR. - Et on ne t'a pas battu ?
 ESTRAGON. - Si... Pas trop.
-VLADIMIR. - Toujours les mêmes?
+VLADIMIR. - Toujours les mêmes ?
 ESTRAGON. - Les mêmes ? Je ne sais pas.
 
 		Silence.
@@ -768,7 +768,7 @@ VLADIMIR. - Allons, essayons encore une fois.
 ESTRAGON. - Pour qui nous prend-il ?
 VLADIMIR. - Allons.
   Ils mettent Lucky debout, le soutiennent.
-POZZO. - Ne le lâchez pas ! (Estragon et Vladimir chancellent.) Ne bougez pas ! (Pozzo va prendre la valise et le panier et les apporte vers Lucky.) Tenez-le bien ! (Il met la valise dans la main de Lucky, qui la lâche aussitôt.) Ne le lâchez pas ! (Il recommence. Peu à peu, au contact de la valise, Lucky reprend ses esprits et ses doigts finissent pas se resserrer autour de la poignée.) Tenez-le toujours ! (Même jeu avec le panier.) Voilà, vous pouvez le lâcher. (Estragon et Vladimir s'écartent de Lucky qui trébuche, chancelle, ploie, mais reste debout, valise et panier à la main. Pozzo recule, fait claquer son fouet.) En avant ! (Lucky avance.) Arrière ! (Lucky recule.) Tourne ! (Lucky se retourne.) Ça y est, il peut marcher, (Se tournant vers Estragon et Vladimir.) Merci, messieurs, et laissez-moi vous - (il fouille dans ses poches) - vous souhaiter - (il fouille) vous souhaiter - (il fouille) - mais où ai-je donc mis ma montre ? (Il fouille.) Ça alors ! (Il lève une tête défaite.) Une véritable savonnette, messieurs, à secondes trotteuses. C'est pépé qui me l'a donnée. (Il fouille.) Elle est peut-être tombée. (Il cherche par terre, ainsi que Vladimir et Estragon. Pozzo retourne de son pied les restes du chapeau de Lucky.) Ça, par exemple !
+POZZO. - Ne le lâchez pas ! (Estragon et Vladimir chancellent.) Ne bougez pas ! (Pozzo va prendre la valise et le panier et les apporte vers Lucky.) Tenez-le bien ! (Il met la valise dans la main de Lucky, qui la lâche aussitôt.) Ne le lâchez pas ! (Il recommence. Peu à peu, au contact de la valise, Lucky reprend ses esprits et ses doigts finissent pas se resserrer autour de la poignée.) Tenez-le toujours ! (Même jeu avec le panier.) Voilà, vous pouvez le lâcher. (Estragon et Vladimir s'écartent de Lucky qui trébuche, chancelle, ploie, mais reste debout, valise et panier à la main. Pozzo recule, fait claquer son fouet.) En avant ! (Lucky avance.) Arrière ! (Lucky recule.) Tourne ! (Lucky se retourne.) Ça y est, il peut marcher, (Se tournant vers Estragon et Vladimir.) Merci, messieurs, et laissez-moi vous - (il fouille dans ses poches) - vous souhaiter - (il fouille) vous souhaiter - (il fouille) - mais où ai-je donc mis ma montre ? (Il fouille.) Ça alors ! (Il lève une tête défaite.) Une véritable savonnette, messieurs, à secondes trotteuses. C'est pépé qui me l'a donnée. (Il fouille.) Elle est peut-êt re tombée. (Il cherche par terre, ainsi que Vladimir et Estragon. Pozzo retourne de son pied les restes du chapeau de Lucky.) Ça, par exemple !
 VLADIMIR. - Elle est peut être dans votre gousset.
 POZZO. - Attendez. (Il se plie en deux, approche sa tête de son ventre, écoute.) Je n'entends rien ! (Il leur fait signe de s'approcher.) Venez voir. (Estragon et Vladimir vont vers lui, se penchent sur son ventre. Silence.) Il me semble qu'on devrait entendre le tic tac.
 VLADIMIR. - Silence !
@@ -979,7 +979,7 @@ ESTRAGON. - Jésus l'a fait.
 VLADIMIR. - Jésus ! Qu'est-ce que tu vas chercher là ! Tu ne vas tout de même pas te comparer à lui ?
 ESTRAGON. - Toute ma vie je me suis comparé à lui.
 VLADIMIR. - Mais là-bas il faisait chaud ! Il faisait bon !
-ESTRAGON. - Oui. Et on crucifiait vite .
+ESTRAGON. - Oui. Et on crucifiait vite.
 
         Silence.
 
@@ -1027,528 +1027,233 @@ VLADIMIR. - Allons-y .
         
 RIDEAU
 
-Acte deuxième
 
-Lendemain. Même heure. Même endroit.
-Chaussures d'Estragon près de la rampe,
-talons joints, bouts écartés. Chapeau de Lucky
-à la même place .
+[center]Acte deuxième[/center]
 
-L'arbre porte quelques feuilles.
-Entre Vladimir, vivement. Il s'arrête et regarde
-longuement l'arbre. Puis brusquement il se met
-à arpenter vivement la scène dans to us les sens.
-Il s'immobilise à nouveau devant les chaussures,
-se baisse, en ramasse une, l'examine, la renifle,
-la remet soigneusement à sa place. Il reprend
-son va-et-vient précipité. Il s'arrête près de la
-coulisse droite, regarde longuement au loin, la
-main en écran devant les yeux. Va et vient.
-S'arrête près de la coulisse gauche, même jeu.
-Va et vien t S'arrête brusquement, joint les mains
-sur la poitrin e rejette la tête en arrière et se met
-à chanter à tue-tête.
-.
 
-,
+  Lendemain. Même heure. Même endroit.
+
+  Chaussures d'Estragon près de la rampe, talons joints, bouts écartés. Chapeau de Lucky à la même place.
+
+  L'arbre porte quelques feuilles.
+
+  Entre Vladimir, vivement. Il s'arrête et regarde longuement l'arbre. Puis brusquement il se met à arpenter vivement la scène dans tous les sens. Il s'immobilise à nouveau devant les chaussures, se baisse, en ramasse une, l'examine, la renifle, la remet soigneusement à sa place. Il reprend son va-et-vient précipité. Il s'arrête près de la coulisse droite, regarde longuement au loin, la main en écran devant les yeux. Va et vient. S'arrête près de la coulisse gauche, même jeu. Va et vient. S'arrête brusquement, joint les mains sur la poitrine, rejette la tête en arrière et se met à chanter à tue-tête.
 
 VLADIMIR
-Un chien vint dans . . .
 
-80
+        Un chien vint dans . . .
 
-E N ATTENDANT GODOT
+  Ayant commencé trop bas, il s'arrête, tousse, reprend plus haut
 
-Ayant commencé trop bas, il s'arrête, tousse,
-reprend plus haut
+        Un chien vint dans l'office
+        Et prit une andouillette.
+        Alors à coups de louche
+        Le chef le mit en miettes.
+        Les autres chiens ce voyant
+        Vite vite l'ensevelirent...
 
-Un chien vint dans l'office
-Et prit une andouillette.
-Alors à coups de louche
-Le chef le mit en miettes.
-Les autres chiens ce voyant
-Vite vite l'ensevelirent...
-Il s'arrête, se recueille, puis reprend
+  Il s'arrête, se recueille, puis reprend
 
-Les autres chiens ce voyant
-Vite vite l'ensevelirent
-Au pied d'une croix en bois blanc
-Où le passant pouvait lire
-Un chien vint dans l'office
-Et prit une andouillette.
-Alors à coups de louche
-Le chef le mit en miettes.
-Les autres chiens ce voyant
-Vite vite l'ensevelirent. . .
+        Les autres chiens ce voyant
+        Vite vite l'ensevelirent
+        Au pied d'une croix en bois blanc
+        Où le passant pouvait lire
+        Un chien vint dans l'office
+        Et prit une andouillette.
+        Alors à coups de louche
+        Le chef le mit en miettes.
+        Les autres chiens ce voyant
+        Vite vite l'ensevelirent...
 
-Il s'arrête. Même jeu .
+  Il s'arrête. Même jeu .
 
-Les autres chiens ce voyant
-Vite vite l'ensevelirent. . .
-Il s'arrête. Même jeu. Plus bas.
+        Les autres chiens ce voyant
+        Vite vite l'ensevelirent...
 
-Vite vite l'ensevelirent...
-I l se tait, reste un moment immobile, puis se
-remet à arpenter fébrilement la scène dans tous
+  Il s'arrête. Même jeu. Plus bas.
 
-EN ATTENDANT GODOT
+        Vite vite l'ensevelirent...
 
-81
-
-les sens. Il s'arrête à nou veau devant l'arbre, va
-et vient, devan t les chaussures, va et vient, court
-à la coulisse gauche, regarde au loin, à la coulisse
-droite, regarde au loin . A ce moment Estragon
-entre par la coulisse gauche, pieds nus, tête
-basse, et traverse lentement la scène. Vladimir
-se retou rne et le voit.
-
-VLADIMIR.
-
--
-
-ESTRAGON.
-
-- Ne me touche
-
-Encore toi ! (Estragon s'arrête
-
-mais ne lève pas la tête. Vladimir va vers lui.)
-Viens que je t'embrasse !
-pas !
-
-Vladimir suspen d son vol, peiné. Silence.
-
-VLADIMIR. - Veux-tu que je m'en aile ?
-(Un temps) . Gogo ! (Un temps. Vladimir le
-regarde avec attention.) On t'a battu ? ( Un
-temps.) Gogo ! (Estragon se tait toujours, la tête
-basse.) Où as-tu passé la nuit ? (Silence . Vladim ir
-avan ce . )
-ESTRAGON. - Ne me touche pas ! Ne me
-demande rien ! Ne me dis rien ! Reste avec moi !
+  Il se tait, reste un moment immobile, puis se remet à arpenter fébrilement la scène dans tous les sens. Il s'arrête à nouveau devant l'arbre, va et vient, devant les chaussures, va et vient, court à la coulisse gauche, regarde au loin, à la coulisse droite, regarde au loin. A ce moment Estragon entre par la coulisse gauche, pieds nus, tête basse, et traverse lentement la scène. Vladimir se retourne et le voit.
+VLADIMIR. - Encore toi ! (Estragon s'arrête mais ne lève pas la tête. Vladimir va vers lui.) Viens que je t'embrasse !
+ESTRAGON. - Ne me touche pas !
+  Vladimir suspend son vol, peiné. Silence.
+VLADIMIR. - Veux-tu que je m'en aile ? (Un temps). Gogo ! (Un temps. Vladimir le regarde avec attention.) On t'a battu ? (Un temps.) Gogo ! (Estragon se tait toujours, la tête basse.) Où as-tu passé la nuit ? (Silence. Vladimir avance.)
+ESTRAGON. - Ne me touche pas ! Ne me demande rien ! Ne me dis rien ! Reste avec moi !
 VLADIMIR. - Est-ce que je t'ai jamais quitté ?
 ESTRAGON. - Tu m'as laissé partir.
-VLADIMIR. - Regarde-moi ! (Estragon ne
-bouge pas. D'une voix tonnante.) Regarde-moi,
-je te dis !
-Estragon lève la tête. Ils se regarden t longue­
-
-ment, en reculant, avançant et penchant la tête
-comme devan t un objet d'art, tremb lant de plus
-en plus l'un vers l'autre, puis soudain s'étrei­
-gnent, en se tapant sur le dos. Fin de l'étreinte.
-
-82
-
-EN
-
-ATTENDANT GODOT
-
-Estragon, n'étant plus soutenu, manque de tom­
-ber.
-
+VLADIMIR. - Regarde-moi ! (Estragon ne bouge pas. D'une voix tonnante.) Regarde-moi, je te dis !
+  Estragon lève la tête. Ils se regardent longuement, en reculant, avançant et penchant la tête comme devant un objet d'art, tremblant de plus en plus l'un vers l'autre, puis soudain s'étreignent, en se tapant sur le dos. Fin de l'étreinte. Estragon, n'étant plus soutenu, manque de tomber.
 ESTRAGON. - Quelle journée !
 VLADIMIR. - Qui t'a esquinté ? Raconte-moi.
-ESTRAGON. - Voilà encore une journée de
-
-tirée.
-
+ESTRAGON. - Voilà encore une journée de tirée.
 VLADIMIR. - Pas encore.
-ESTRAGON. - Pour moi elle est terminée,
-quoi qu'il arrive. (Silence.) Tout à l'heure, tu
-chantais, je t'ai entendu.
+ESTRAGON. - Pour moi elle est terminée, quoi qu'il arrive. (Silence.) Tout à l'heure, tu chantais, je t'ai entendu.
 VLADIMIR. - C'est vrai, je me rappelle.
-ESTRAGON. - Cela m'a fait de la peine. Je
-me disais, Il est seul, il me croit parti pour tou­
-jours et il chante.
-VLADIMIR. - On ne commande pas à son
-humeur. Toute la journée je me suis senti dans
-une forme extraordinaire. (Un temps). Je ne me
-suis pas levé de la nuit, pas une seule fois.
-ESTRAGON (tristement).
-Tu vois, tu pisses
-mieux quand je ne suis pas là.
-VLADIMIR. - Tu me manquais - et en même
-temps j'étais content. N'est-ce pas curieux ?
+ESTRAGON. - Cela m'a fait de la peine. Je me disais, Il est seul, il me croit parti pour toujours et il chante.
+VLADIMIR. - On ne commande pas à son humeur. Toute la journée je me suis senti dans une forme extraordinaire. (Un temps). Je ne me suis pas levé de la nuit, pas une seule fois.
+ESTRAGON (tristement). - Tu vois, tu pisses mieux quand je ne suis pas là.
+VLADIMIR. - Tu me manquais - et en même temps j'étais content. N'est-ce pas curieux ?
 ESTRAGON (outré). - Content ?
-VLADIMIR (ayant réfléchi).
-Ce n'est peut­
-être pas le mot.
+VLADIMIR (ayant réfléchi). - Ce n'est peut-être pas le mot.
 ESTRAGON. - Et maintenant ?
-VLADIMIR (s'étant consulte').
-Maintenant. . .
-(joyeux) te revoilà... (neutre) nous revoilà . .
-(triste) me revoilà.
--
-
--
-
--
-
-.
-
-EN ATTENDANT GODOT
-
-83
-
-ESTRAGON. - Tu voi s , t u vas moins bien
-qu an d je suis là. Moi aus si , je me sens mieux
-
-seul.
-
-VLADIMIR
-quer ?
-
-(piqué).
-
--
-
-Alors pourquoi
-
-rappli­
-
+VLADIMIR (s'étant consulté). - Maintenant... (joyeux) te revoilà... (neutre) nous revoilà... (triste) me revoilà.
+ESTRAGON. - Tu vois, tu vas moins bien quand je suis là. Moi aussi , je me sens mieux seul.
+VLADIMIR (piqué). - Alors pourquoi rappliquer ?
 ESTRAGON. - Je ne sais pas.
-VLADIMIR. - M ais moi je le sais. Parce que
-tu ne sais pas te d é fendre . Moi je ne t'aurais
-pas laissé battre.
-ESTRAGON. -- Tu n' aurais pas pu 1'empêcher.
+VLADIMIR. - Mais moi je le sais. Parce que tu ne sais pas te défendre. Moi je ne t'aurais pas laissé battre.
+ESTRAGON. -- Tu n'aurais pas pu 1'empêcher.
 VLADIMIR. - Pourquoi ?
 ESTRAGON. - Ils étaient dix.
-VLADIMIR. - Mais non, je ve ux di re qu e j e
-t'aurais empêché de t ' exp oser à ê tre battu.
-ESTRAGON. - Je ne fai s ai s rien.
-VLADIMIR. - Alors po u rqu o i ils t ' ont battu ?
+VLADIMIR. - Mais non, je veux dire que je t'aurais empêché de t'exposer à être battu.
+ESTRAGON. - Je ne faisais rien.
+VLADIMIR. - Alors pourquoi ils t'ont battu ?
 ESTRAGON. - Je ne sais pas.
-VLADIMIR. - Non , vois-tu, G o go , il y a d es
-choses qui t'échappent qui ne m'échappent pas
-à moi. Tu dois le sentir.
-ESTRAGON. - Je te d i s que je ne fai s a i s rien.
-VLADIMIR. - Peut-être bien que non. Mais il
-y a la m anière , il y a la m a niè re , si on t i ent à
-sa p e au . Enfin, ne pa rl o ns plus de ça. Te voilà
-revenu, et j'en suis bien c o nt en t .
-ESTRAGON. - Ils ét ai e nt dix.
-VLADIMIR. - Toi aussi, tu dois être c onten t ,
-au fond, avoue-le.
-ESTRAGON. - Content de qu o i ?
-VLADIMIR. - De m' avoi r retrouvé.
-
-84
-
-EN
-
-ESTRAGON.
-
-ATTENDANT GODOT
-
-- Tu crois ?
-
+VLADIMIR. - Non, vois-tu, Gogo, il y a des choses qui t'échappent qui ne m'échappent pas à moi. Tu dois le sentir.
+ESTRAGON. - Je te dis que je ne faisais rien.
+VLADIMIR. - Peut-être bien que non. Mais il y a la manière, il y a la manière, si on tient à sa peau. Enfin, ne parlons plus de ça. Te voilà revenu, et j'en suis bien content.
+ESTRAGON. - Ils étaient dix.
+VLADIMIR. - Toi aussi, tu dois être content, au fond, avoue-le.
+ESTRAGON. - Content de quoi ?
+VLADIMIR. - De m'avoir retrouvé.
+ESTRAGON. - Tu crois ?
 VLADIMIR. - Dis-le, même si ce n'est pas vrai.
-ESTRAGON.
-
-- Qu'est-ce que je dois dire ?
-
-VLADIMIR. - Dis, Je suis content .
+ESTRAGON. - Qu'est-ce que je dois dire ?
+VLADIMIR. - Dis, Je suis content.
 
 ESTRAGON. - Je suis content.
 VLADIMIR. - Moi aussi.
 ESTRAGON. - Moi aussi.
 VLADIMIR. - Nous sommes contents.
-ESTRAGON. - Nous sommes contents. (Silence.) Qu'est-ce qu'on fait, m aintenant qu'on est
-content ?
+ESTRAGON. - Nous sommes contents. (Silence.) Qu'est-ce qu'on fait,  aintenant qu'on est content ?
 VLADIMIR. - On attend Godot.
 ESTRAGON. - C'est vrai.
 
-Silence.
+        Silence.
 
-VLADIMIR. - Il Y
-
-hier.
-
-a du nouveau ici, depuis
-
+VLADIMIR. - Il y a du nouveau ici, depuis hier.
 ESTRAGON. - Et s'il ne vient pas ?
-VLADIMIR (après un moment d'incompréhen­
-
-sion). - Nous aviserons. ( Un temps). Je te dis
-qu'il y a du nouveau ici, depuis hier.
+VLADIMIR (après un moment d'incompréhension). - Nous aviserons. ( Un temps). Je te dis qu'il y a du nouveau ici, depuis hier.
 ESTRAGON. - Tout suinte.
 V LADIMIR. - Regarde-moi l'arbre.
-ESTRAGON. - On ne descend pas
+ESTRAGON. - On ne descend pas deux fois dans le même pus.
+VLADIMIR. - L'arbre, je te dis, regarde-le. 
 
-deux fois
-dans le même pus.
-VLADIMIR. - L'arbre, je te dis, regarde-le.
-Estragon regarde ['arbre.
+        Estragon regarde ['arbre.
 
 ESTRAGON. - Il n'était pas là hier ?
-VLADIMIR. - Mais si. Tu ne te rapp ell es
-
-pas.
-Il s'en est fallu d'un cheveu qu'on ne s'y soit
-pendu. (Il réfléchit.) Oui, c'est juste (en détachant
-
-EN ATTENDANT
-
-GODOT
-
-85
-
-qu'on - ne s'y - soit pe ndu . Mais tu
-n'as pas voulu. Tu ne te rappelles pas ?
+VLADIMIR. - Mais si. Tu ne te rappelles pas. Il s'en est fallu d'un cheveu qu'on ne s'y soit pendu. (Il réfléchit.) Oui, c'est juste (en détachant les mots) qu'on - ne s'y - soit pendu . Mais tu n'as pas voulu. Tu ne te rappelles pas ?
 ESTRAGON. - Tu l'as rêvé.
-VLADIMIR - Est-ce p ossible que tu aies oublié
-
-les mots)
-
--
-
--
-
-déjà ?
-ESTRAGON. - Je suis comme ça. Ou j'oublie
-tout de suite ou je n'oublie j amais.
-VLADIMIR.
-Et POZZO et Luclcy, tu as oublié
--
-
-aussi ?
-
-ESTRAGON.
-POZZO et Lucky ?
-VLADIMIR.
-Il a tout oublié !
-ESTRAGON.
-Je me rappelle un énergumèn e
-qui m' a foutu des coups de pied. Ensuite il a fait
-le con.
+VLADIMIR - Est-ce possible que tu aies oublié déjà ?
+ESTRAGON. - Je suis comme ça. Ou j'oublie tout de suite ou je n'oublie jamais.
+VLADIMIR. - Et Pozzo et Lucky, tu as oublié aussi ?
+ESTRAGON. - Pozzo et Lucky ?
+VLADIMIR. - Il a tout oublié !
+ESTRAGON. - Je me rappelle un énergumène qui m'a foutu des coups de pied. Ensuite il a fait le con.
 VLADIMIR. - C'était Lucky !
-ESTRAGON.
-Ça, je m 'en souviens. Mais
-quand c'était ?
-VLADIMIR.
-Et l'autre qui le menait, tu t'en
--
-
--
-
--
-
--
-
--
-
-souviens aussi ?
-ESTRAGON.
-VLADIMIR.
-ESTRAGON.
-ça ?
-VLADIMIR.
-ESTRAGON.
-VLADIMIR. -
-
--
-
--
-
--
-
--
-
--
-
-nais pas ?
-
-Il m'a donné des os.
-POZZO !
-Et tu dis que c'était hier, tout
-
-C'était
-
-Mais
-
-oui, voyons.
-
-Et à
-
-cet endroit ?
-Mais bien sûr ! Tu ne recon­
-
-ESTRAGON (soudain furieux).
-Qu'est-ce qu'il y a à reconnaître ?
-roulure de vie au milieu des sables
-
--
-
-Reconnais !
-
-J'ai tiré ma
-! Et tu veux
-
-86
-
-EN ATTENDANT GODOT
-
-que j'y voie des nuances ! (Regard circulaire.)
-Regarde-moi cette salop erie ! Je n'en ai jamais
-bougé !
-
+ESTRAGON. - Ça, je m'en souviens. Mais quand c'était ?
+VLADIMIR. - Et l'autre qui le menait, tu t'en souviens aussi ?
+ESTRAGON. - Il m'a donné des os.
+VLADIMIR. - C'était Pozzo !
+ESTRAGON. - Et tu dis que c'était hier, tout ça ?
+VLADIMIR. - Mais oui, voyons.
+ESTRAGON. - Et à cet endroit ?
+VLADIMIR. -  Mais bien sûr ! Tu ne reconnais pas ?
+ESTRAGON (soudain furieux). - Reconnais ! Qu'est-ce qu'il y a à reconnaître ?  J'ai tiré ma roulure de vie au milieu des sables ! Et tu veux que j'y voie des nuances ! (Regard circulaire.) Regarde-moi cette saloperie ! Je n'en ai jamais bougé !
 VLADIMIR. - Du calme, du calme.
-ESTRAGON. - Alors fous-moi la paix. avec tes
-paysages ! Parle-moi du sous-sol !
-VLADIMIR. -- Tout de même, tu ne vas pas
-me dire que ça (geste) ressemble au Vaucluse !
-Il y a qu and même une grosse différence.
-ESTRAGON. - Le Vaucluse ! Qui te parle du
-Vaucluse ?
-
-VLADIMIR. - Mais tu as bien été dans le Vau­
-cluse ?
-ESTRAGON. - Mais non, je n'ai jamais été
-dans le Vaucluse ! J'ai coulé toute ma chaude­
-pisse d'existence ici, je te dis ! Ici ! Dans la
-Merdecluse !
-VLADIMIR. - Pourtant nous avons été ensem­
-ble dans le Vaucluse, j'en mettrais ma main au
-feu. Nous avons fait les vendanges , tiens, chez
-un nommé B onnelly, à Roussillon.
-ESTRAGON (plus calme). - C'est p ossible. Je
-n'ai rien remarqué.
-
+ESTRAGON. - Alors fous-moi la paix avec tes paysages ! Parle-moi du sous-sol !
+VLADIMIR. -- Tout de même, tu ne vas pas me dire que ça (geste) ressemble au Vaucluse ! Il y a quand même une grosse différence.
+ESTRAGON. - Le Vaucluse ! Qui te parle du Vaucluse ?
+VLADIMIR. - Mais tu as bien été dans le Vaucluse ?
+ESTRAGON. - Mais non, je n'ai jamais été dans le Vaucluse ! J'ai coulé toute ma chaude-pisse d'existence ici, je te dis ! Ici ! Dans la Merdecluse !
+VLADIMIR. - Pourtant nous avons été ensemble dans le Vaucluse, j'en mettrais ma main au feu. Nous avons fait les vendanges, tiens, chez un nommé Bonnelly, à Roussillon.
+ESTRAGON (plus calme). - C'est possible. Je n'ai rien remarqué.
 VLADIMIR. - Mais là-bas tout est rouge !
-ESTRAGON (excédé). - Je n'ai rien remarqué,
-je te dis !
-Silence. Vladimir soupire profondément.
+ESTRAGON (excédé). - Je n'ai rien remarqué, je te dis !
+
+        Silence. Vladimir soupire profondément.
+
 VLADIMIR. - Tu es difficile à vivre, Gogo.
-ESTRAGON. - On ferait mieux de se sép arer.
+ESTRAGON. - On ferait mieux de se séparer.
+VLADIMIlt. - Tu dis toujours ça. Et chaque fois tu reviens.
 
-EN ATTENDANT
+        Silence.
 
-GODOT
-
-87
-
-VLADIMIlt. - Tu dis toujours ça. Et chaque
-fois tu reviens.
-Silence.
-ESTRAGON. - Pour bien faire, il faudrait me
-tuer, comme l'autre.
-VLADIMIR. - Quel autre ? (Un temps.) Quel
-autre ?
+ESTRAGON. - Pour bien faire, il faudrait me tuer, comme l'autre.
+VLADIMIR. - Quel autre ? (Un temps.) Quel autre ?
 ESTRAGON. - Comme des billions d'autres.
-VLADIMIR (sentencieux). - A chacun sa petite
-croix. (Il soupire.) Pendant le petit pendant et
-le bref après .
-ESTRAGON. - En attendant, essayons de con­
-verser sans nous exalter, pu isqu e nous sommes
-incapables de nous t aire .
-VLADIMIR. - C'est vrai, nou s sommes intarissables.
+VLADIMIR (sentencieux). - A chacun sa petite croix. (Il soupire.) Pendant le petit pendant et le bref après .
+ESTRAGON. - En attendant, essayons de converser sans nous exalter, puisque nous sommes incapables de nous taire.
+VLADIMIR. - C'est vrai, nous sommes intarissables.
 ESTRAGON. - C'est pour ne pas penser.
 VLADIMIR. - Nous avons des excuses.
-ESTRAGON. - C'est pour ne pas entendre .
+ESTRAGON. - C'est pour ne pas entendre.
 VLADIMIR. - Nous avons nos raisons.
 ESTRAGON. - Toutes les voix mortes.
-VLADIMIR. -- Ça fait un bruit d' ailes .
+VLADIMIR. -- Ça fait un bruit d'ailes.
 ESTRAGON. - De feuilles.
-VLADIMIR. - De s able.
+VLADIMIR. - De sable.
 ESTRAGON. - De feuilles.
-Silence.
 
-VLADIMIR. - Elles parlent toutes en même
-temps.
+        Silence.
+
+VLADIMIR. - Elles parlent toutes en même temps.
 ESTRAGON. - Chacune à part soi.
-Silence.
 
-E N ATTENDANT
-
-88
-
-GODOT
+        Silence.
 
 VLADIMIR. - Plutôt elles chuchotent.
 ESTRAGON. - Elles murmurent.
-VLADIMIR.
-Elles bruissent.
+VLADIMIR. - Elles bruissent.
 ESTRAGON. - Elles murmurent.
--
 
-Silence.
-VLADIMIR.
-Que disent-elles ?
+        Silence.
+
+VLADIMIR. - Que disent-elles ?
 ESTRAGON. - Elles parlent de leur vie.
-VLADIMIR. - Il ne leur suffit pas d'avoir
-vécu.
-ESTRAGON.
-Il faut qu'elles en parlent.
-VLADIMIR.
-Il ne leur suffit pas d'être mortes.
+VLADIMIR. - Il ne leur suffit pas d'avoir vécu.
+ESTRAGON. - Il faut qu'elles en parlent.
+VLADIMIR. - Il ne leur suffit pas d'être mortes.
 ESTRAGON. - Ce n'est pas assez.
--
 
--
+        Silence.
 
--
+VLADIMIR. - Ça fait comme un bruit de plumes.
+ESTRAGON. - De feuilles.
+VLADIMIR. - De cendres.
+ESTRAGON . - De feuilles.
 
-Silence.
-VLADIMIR.
-Ça
-plumes.
-ESTRAGON. - De
-VLADIMIR. - De
-ESTRAGON . - De
--
+        Long silence.
 
-fait comme un bruit de
-feuilles.
-cendres.
-feuilles.
-
-Long silence.
 VLADIMIR. - Dis quelque chose !
 ESTRAGON. - Je cherche.
 
-Long silence.
-VLADIMIR (angois. - Dis n'importe quoi !
-ESTRAGON.
-Qu'est-ce qu'on fait mainte­
--
+        Long silence.
 
-nant ?
-
-VLADIMIR.
-On attend G odot .
+VLADIMIR (angoissé). - Dis n'importe quoi !
+ESTRAGON. - Qu'est-ce qu'on fait maintenant ?
+VLADIMIR. - On attend Godot.
 ESTRAGON. - C'est vrai.
--
 
-Silence.
+        Silence.
+
 VLADIMIR. - Ce que c'est difficile !
 ESTRAGON. - Si tu chantais ?
-
-EN
-
-ATTENDANT GODOT
-
-89
-
-VLADIMIR. - Non non. (Il cherche.) On n' a
-qu'à recommencer.
-ESTRAGON. - Ça ne me semble pas bien dif­
-
-ficile , en effet.
+VLADIMIR. - Non non. (Il cherche.) On n' a qu'à recommencer.
+ESTRAGON. - Ça ne me semble pas bien difficile , en effet.
 VLADIMIR. - C'est le départ qui est difficile.
-ESTRAGON. - On peut partir de n'importe
-quoi.
+ESTRAGON. - On peut partir de n'importe quoi.
 VLADIMIR. - Oui, mais il faut se décider.
 ESTRAGON. - C'est vrai.
 VLADIMIR. - Aide-moi !
 
-Silence.
+        Silence.
 
 ESTRAGON. - Je cherche.
-Silence.
 
-on cherche on entend.
+        Silence.
+
+VLADIMIR. - Quand on cherche on entend.
 ESTRAGON. - C'est vrai.
 VLADIMIR. - Ça empêche de trouver.
 ESTRAGON. - Voilà.
@@ -1559,365 +1264,133 @@ ESTRAGON. - C'est ça, contredisons-nous.
 VLADIMIR, - Impossible.
 ESTRAGON. -- Tu crois ?
 VLADIMIR. - Nous ne risquons plus de penser.
-ESTRAGON. - Alors de quoi nous plaignonsnous ?
+ESTRAGON. - Alors de quoi nous plaignons-nous ?
 VLADIMIR. - Ce n'est pas le pire, de penser.
-ESTRAGON. - Bien sûr, bien sûr, mais c'est
-déj à ça.
+ESTRAGON. - Bien sûr, bien sûr, mais c'est déjà ça.
 VLADIMIR. - Comment, c'est déjà ça ?
-VLADIMIR. - Quand
-
-90
-
-EN ATTENDANT GOOOT
-
-ESTRAGON. - C'est ça, posons-nous des ques­
-
-tions.
-
-VLADIMIR. - Qu'est-ce que tu veux dire, c'est
-déjà ça ?
-ESTRAGON. - C 'est déjà ça en moins.
+ESTRAGON. - C'est ça, posons-nous des questions.
+VLADIMIR. - Qu'est-ce que tu veux dire, c'est déjà ça ?
+ESTRAGON. - C'est déjà ça en moins.
 VLADIMIR. - Evidemment.
-ESTRAGON. - Alors ? Si on s'estimait heu­
-reux ?
-VLADIMIR. - Ce qui est terrible, c'est d'avoir
-pensé .
-ESTRAGON. - Mais cela nous est-il jamais
-arrivé ?
+ESTRAGON. - Alors ? Si on s'estimait heureux ?
+VLADIMIR. - Ce qui est terrible, c'est d'avoir pensé.
+ESTRAGON. - Mais cela nous est-il jamais arrivé ?
 VLADIMIR. - D'où viennent tous ces cadavres ?
-ESTRAGON. - Ces ossements .
+ESTRAGON. - Ces ossements.
 VLADIMIR. - Voilà.
 ESTRAGON. - Evidemment.
 VLADIMIR. - On a dû penser un peu.
 ESTRAGON. - Tout à fait au commencement.
 VLADIMIR. - Un charnier, un charnier.
-ESTRAGON. - Il n'y a qu'à ne pas regarder .
-VLADIMIR. - Ç a tire l'œil.
+ESTRAGON. - Il n'y a qu'à ne pas regarder.
+VLADIMIR. - Ça tire l'œil.
 ESTRAGON. - C'est vrai.
-VLADIMIR. - Malgré qu' o n en ait.
+VLADIMIR. - Malgré qu'on en ait.
 ESTRAGON . - Comment ?
 VLADIMIR. - Malgré qu'on en ait.
 ESTRAGON. - Il faudrait se tourner résolument vers la nature.
 VLADIMIR. - Nous avons essayé.
-ESTRAGON. - C'est vrai .
-
-EN ATTENDANT GODOT
-
-VLADIMIR.
-
--
-
-sûr.
-
-Oh,
-
-ce n'est
-
-91
-
-pas le pire, bien
-
+ESTRAGON. - C'est vrai.
+VLADIMIR. - Oh, ce n'est pas le pire, bien sûr.
 ESTRAGON. - Quoi donc ?
-VLADIMIR. - D'avoir p ensé .
+VLADIMIR. - D'avoir pensé.
 ESTRAGON. - Evidemment.
 VLADIMIR. - Mais on s'en serait passé.
 ESTRAGON. - Qu'est-ce que tu veux ?
 VLADIMIR. - Je sais, je sais.
 
-ESTRAGON.
+        Silence.
 
--
-
-petit galop.
-
-Silence.
-Ce n'était pas si mal comme
-
-VLADIMIR. - Oui, mais m ainten a nt il va
-loir trouver autre chose.
+ESTRAGON. - Ce n'était pas si mal comme petit galop.
+VLADIMIR. - Oui, mais maintenant il va falloir trouver autre chose.
 ESTRAGON. - Voyons.
-VLADIMIR. - Voyo ns .
-ESTRAGON. - Voyo ns .
+VLADIMIR. - Voyons.
+ESTRAGON. - Voyons.
 
-fal-
+        Ils réfléchissent.
 
-Ils réfléchissent.
-? On
-
-VLADIMIR. - Qu'est-ce que je di s ai s
-pourrait rep ren dre là.
-ESTRAGON. - Q u and ?
+VLADIMIR. - Qu'est-ce que je disais ? On pourrait reprendre là.
+ESTRAGON. - Quand ?
 VLADIMIR. - Tout à fait au début.
-
-ESTRAGON.
-VLADIMIR.
-
-ESTRAGON.
-
-trop.
-
--.
--
-
-Au début de quoi ?
-Ce soir. Je disais . . . je disais . . .
-Ma foi, là tu m'en demandes
-
-VLADIMIR. - Attends . . . on s'est e mbras s é s . . .
-o n était c ontents . . . contents . . . qu'est- c e qu'on fait
-m ai nt en ant qu'on est contents. . . on attend. . .
-voyons . . . ça vient . . . o n attend . . . maintenant qu'on
-est cont ents . . . on attend . . . voyons . . . ah ! L'arbre 1
-
-92
-
-EN ATTENDANT GODOT
-
+ESTRAGON. - Au début de quoi ?
+VLADIMIR. - Ce soir. Je disais... je disais...
+ESTRAGON. - Ma foi, là tu m'en demandes trop.
+VLADIMIR. - Attends... on s'est embrassés... on était contents... contents... qu'est-ce qu'on fait maintenant qu'on est contents... on attend... voyons... ça vient... on attend... maintenant qu'on est contents... on attend... voyons... ah ! L'arbre !
 ESTRAGON. - L'arbre ?
-VLADIMIR. - Tu ne te rappelles p as
+VLADIMIR. - Tu ne te rappelles pas ?
 ESTRAGON. - Je suis fatigué.
-VLADIMIR. - Reg arde-le .
+VLADIMIR. - Regarde-l .
 
-?
+        Estragon regarde l'arbre.
 
-Estragon regarde l'arbre.
-
-Je ne vois rien.
-VLADIMIR. - Mais hier soir il était tout noir
-et squelettique ! Auj ourd'hui il est couvert de
-feuilles.
+ESTRAGON. - Je ne vois rien.
+VLADIMIR. - Mais hier soir il était tout noir et squelettique ! Aujourd'hui il est couvert de feuilles.
 ESTRAGON. - De feuilles !
 VLADIMIR. - Dans une seule nuit !
 ESTRAGON. - On doit être au printemps.
 VLADIMIR. - Mais dans une seule nuit !
-ESTRAGON. - Je te dis que nous n'étions pas
-là hier soir. Tu l'as c auchemardé.
-VLADIMIR. - Et où étions-nous hie r soir,
-d'aprè s toi ?
-ESTRAGON. - Je ne sais pas. Ailleurs. Dans
-un autre compartiment. Ce n'est pas le vide
-ESTRAGON. -
-
-qui manque.
-
-VLADIMIR (sûr de son fait). - B on . No u s
-n'étion s pas là hier soir. Maintenant, qu'est-ce
-
-que nous avons fait hier soir ?
+ESTRAGON. - Je te dis que nous n'étions pas là hier soir. Tu l'as cauchemardé.
+VLADIMIR. - Et où étions-nous hier soir, d'après toi ?
+ESTRAGON. - Je ne sais pas. Ailleurs. Dans un autre compartiment. Ce n'est pas le vide qui manque.
+VLADIMIR (sûr de son fait). - Bon. Nous n'étions pas là hier soir. Maintenant, qu'est-ce que nous avons fait hier soir ?
 ESTRAGON. - Ce que nous avons fait ?
-VLADIMIR. - Essaie de t e rappeler.
-ESTRAGON. - Eh b en . . . nous avons dû
-varde r .
-VLADIMIR
-
-quoi ?
-
-(se maîtrisant).
-
--
-
-A propos
-
-b a-
-
-de
-
-EN ATTENDANT GODOT
-
-93
-
-ESTRAGON. - Oh. . . à b âto ns rompus peut­
-être, à propos de bottes. (A vec assurance.) Voilà,
-je me rappelle, hier soir nou s avons bavardé à
-prop o s de bottes. Il y a u n demi-siècle que ça
-du re .
-VLADIMIR. - Tu ne te rappelles aucun fait,
-aucune circonstance ?
-ESTRAGON (las). - Ne me tourmente pas,
-Didi.
-VLADIMIR. - Le
-
-rappelles p as ?
-ESTRAGON.
-
--
-
-d'habitude.
-
-VLADIMIR.
-
--
-
-lite ?
-
-soleil ?
-
-La lune
-
-?
-
-Tu
-
-ne te
-
-Ils devaient être là, comme
-Tu
-
-n' a s rien remarqué
-
-ESTRAGON. - Hél as .
-VLADIMIR. - Et POZZO
-ESTRAGON. - POZZO ?
-
-d'inso-
-
-? Et Lucky ?
-
-VLADIMIR. - L e s o s .
-ESTRAGON. - On aurai t dit
-
-des arêtes.
-
-VLADIMIR. - C'est POZZO q u i te l es a donnés.
-ESTRAGON. - Je n e s ai s p as .
-
-VLADIMIR. - Et le coup de pied ?
-ESTRAGON. - Le coup de pied ? C' e st vrai,
-on m'a donné des coups de pi e d.
-
-VLADIMIR.
-nés .
-
--
-
-C'est Lucky qui te
-
-les a
-
-ESTRAGON. - C'était hier, tout ça ?
-VLADIMIR. - Fais voir ta j amb e .
-ESTRAGON.
-
--
-
-Laquelle ?
-
-don-
-
-94
-
-EN ATTENDANT GODOT
-
-VLADIMIR. - Les deux. Relève ton panta�
-Ion. (Estragon, sur u n pied, tend la jam b e vers
-Vladimir, manque de tomber. Vladimir prend
-la jambe. Estragon chancelle.) Relève ton panta-'
-Ion.
-ESTRAGON (titubant) . - Je ne peux pas.
-Vladimir relève le pantalon, regarde la jambe,
-
-la lâche. Estragon manque de tomber.
-
-VLADIMIR. - L'autre. (Estragon donne la
-même jambe.) L' autre, je te dis ! (Même jeu avec
-l'autre jambe.) V o il à la plaie en train de s'i n­
-
-fecter.
-
-ESTRAGON. - Et
-
-ap r ès
-
-?
-
-VLADIMIR. - Où sont tes chaussures ?
-
-Es T RAG ON . - J'ai dû l es j eter.
-
-VLADIMIR. -
-
-Quand ?
-
+VLADIMIR. - Essaie de te rappeler.
+ESTRAGON. - Eh ben... nous avons dû bavarder .
+VLADIMIR (se maîtrisant). - A propos de quoi ?
+ESTRAGON. - Oh... à bâtons rompus peut­être, à propos de bottes. (Avec assurance.) Voilà, je me rappelle, hier soir nous avons bavardé à propos de bottes. Il y a un demi-siècle que ça dure.
+VLADIMIR. - Tu ne te rappelles aucun fait, aucune circonstance ?
+ESTRAGON (las). - Ne me tourmente pas, Didi.
+VLADIMIR. - Le soleil ? La lune ? Tu ne te rappelles pas ?
+ESTRAGON. - Ils devaient être là, comme d'habitude.
+VLADIMIR. - Tu n'as rien remarqué d'insolite ?
+ESTRAGON. - Hélas.
+VLADIMIR. - Et Pozzo ? Et Lucky ?
+ESTRAGON. - Pozzo ?
+VLADIMIR. - Les os .
+ESTRAGON. - On aurait dit des arêtes.
+VLADIMIR. - C'est Pozzo qui te les a donnés.
 ESTRAGON. - Je ne sais pas.
-VLADIMIR.
-
-ESTRAGON.
-
-VLADIMIR.
-
-les as j etées ?
-
-- Pourquoi ?
-- Je ne me rappelle pas.
-- Non, je veux dire pourquoi tu
-
-ESTRAGON. - Elles me faisaient
-
-mal.
-
-VLADIMIR (montrant les chaussures). - Les
-voilà. (Estragon regarde les chaussures.) A l'en­
-droit même où tu les as posées hi er s oir.
-
-Estragon va vers les
-les inspecte de près.
-
-ch au ssures,
-
-se penche,
-
+VLADIMIR. - Et le coup de pied ?
+ESTRAGON. - Le coup de pied ? C'est vrai, on m'a donné des coups de pied.
+VLADIMIR. - C'est Lucky qui te les a donnés
+ESTRAGON. - C'était hier, tout ça ?
+VLADIMIR. - Fais voir ta jambe.
+ESTRAGON. - Laquelle ?
+VLADIMIR. - Les deux. Relève ton pantalon. (Estragon, sur un pied, tend la jambe vers Vladimir, manque de tomber. Vladimir prend la jambe. Estragon chancelle.) Relève ton pantalon.
+ESTRAGON (titubant). - Je ne peux pas.
+  Vladimir relève le pantalon, regarde la jambe, la lâche. Estragon manque de tomber.
+VLADIMIR. - L'autre. (Estragon donne la même jambe.) L'autre, je te dis ! (Même jeu avec l'autre jambe.) Voilà la plaie en train de s'infecter.
+ESTRAGON. - Et après ?
+VLADIMIR. - Où sont tes chaussures ?
+ESTRAGON. - J'ai dû les jeter.
+VLADIMIR. - Quand ?
+ESTRAGON. - Je ne sais pas.
+VLADIMIR. - Pourquoi ?
+ESTRAGON. - Je ne me rappelle pas.
+VLADIMIR. - Non, je veux dire pourquoi tu les as jetées ?
+ESTRAGON. - Elles me faisaient mal.
+VLADIMIR (montrant les chaussures). - Les voilà. (Estragon regarde les chaussures.) A l'endroit même où tu les as posées hier soir.
+  Estragon va vers les chaussures, se penche, les inspecte de près.
 ESTRAGON. - Ce ne sont pas les miennes.
-
 VLADIMIR. - Pas les tiennes !
-
-EN ATTENDANT GODOT
-
-ESTRAGON. -- Les miennes
-Celles-ci sont jaunes.
-
-étaient
-
-95
-noires.
-
-VLADIMIR. -- Tu es sûr que les tiennes étaient
-noires ?
-ESTRAGON. -- C'est-à-dire qu'elles étaient
-grises.
-VLADIMIR. -- Et celles-ci sont j aunes ? Fais
-voir.
-ESTRAGON (soulevant une chaussure). -- En­
-fin, elles sont verdâtres.
-VLADIMIR (avançant). -- Fais voir. (Estragon
-
-lui donne la chaussure. Vladimir la regarde, la
-;ette avec colère.) Ça alors !
-ESTRAGON. -- Tu vois, tout ça c'est des . . .
-
-VLADIMIR. -- Je vois c e que c'est . Oui, je vois
-ce qu i c'est p assé.
-ESTRAGON. -- Tout ça c'est des . . .
-VLADIMIR. -- C'est simple comme bonjour.
-Un type est venu qui a pris les tiennes et t'a
-laissé les sienn es .
-ESTRAGON. -- Pourquoi ?
-VLADIMIR. -- Les siennes ne lui allaient pas.
-Alors il a pris les tiennes.
-ESTRAGON. -- Mais les miennes étaient trop
-petites.
-VLADIMIR. -- Pour toi. Pas pour lui.
-ESTRAGON. -- Je suis fatigué. (Un temps.)
-Alons-nous-en.
-VLADIMIR. -- On ne peut pas.
-ESTRAGON. -- Pourquoi ?
-
-EN
-
-96
-
-ATTENDANT GODOT
-
-- On attend Godot.
+ESTRAGON. -- Les miennes étaient noires. Celles-ci sont jaunes.
+VLADIMIR. - Tu es sûr que les tiennes étaient noires ?
+ESTRAGON. - C'est-à-dire qu'elles étaient grises.
+VLADIMIR. - Et celles-ci sont jaunes ? Fais voir.
+ESTRAGON (soulevant une chaussure). - Enfin, elles sont verdâtres.
+VLADIMIR (avançant). - Fais voir. (Estragon lui donne la chaussure. Vladimir la regarde, la jette avec colère.) Ça alors !
+ESTRAGON. - Tu vois, tout ça c'est des...
+VLADIMIR. - Je vois ce que c'est. Oui, je vois ce qui c'est passé.
+ESTRAGON. - Tout ça c'est des...
+VLADIMIR. - C'est simple comme bonjour. Un type est venu qui a pris les tiennes et t'a laissé les siennes.
+ESTRAGON. - Pourquoi ?
+VLADIMIR. - Les siennes ne lui allaient pas. Alors il a pris les tiennes.
+ESTRAGON. - Mais les miennes étaient trop petites.
+VLADIMIR. - Pour toi. Pas pour lui.
+ESTRAGON. - Je suis fatigué. (Un temps.) Allons-nous-en.
+VLADIMIR. - On ne peut pas.
+ESTRAGON. - Pourquoi ?
+VLADIMIR. - On attend Godot.
 ESTRAGON. - C'est vrai. (Un temps.) Alors
 commen t faire ?
 VLADIMIR. - Il n'y a rien à faire.
@@ -1929,7 +1402,7 @@ ESTRAGON. - Il n'y a plus de carottes ?
 VLADIMIR. - Non. D'ailleurs tu exagères
 avec les c arottes .
 
-VLADIMIR.
+
 
 ESTRAGON. - Alors donne-moï un radis. (Vla­
 dimir fouille dans ses poches, ne trouve que des
@@ -4284,33 +3757,19 @@ Ils ne bouge1lt pas.
 
 RI DEAU
 
-Samuel Beckett 0 906- 1 989 ) est né à D ubl in Etudes
-au Trinity College. En 1 928 - 1929, lecteur d'anglais à
-.
-
-l'Ecole normale s upérieure, à Paris. En 1 930, retour au
-Trinity College, comme lecteur de français . I nst al é à
-
-Paris dep uis 1938, il commence à écrire ses œuvres en
-français à p artir de 1945 .
-Son roman Molloy paraît en 195 1 , suivi l'année sui­
-vante d En attendant Godot. Cette pièce, créée en 1953
-'
-
-à Paris dans une mise en scène de Roger Blin, sera
-traduite et jouée ensuite dans le monde entier.
-Samuel Beckett s'est vu attribuer en 1969 le prix
-
-Nobel de littérature.
 
 
 
 
-LES ÉDITIONS DE MINUIT
+
+
+
+[center]LES ÉDITIONS DE MINUIT
 
 1952 by LES ÉDITIONS DE MINUIT
 7, rue Bernard Palissy, 75006 Paris
 En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou partiellement le présent. ouvrage sans autorisation de l'éditeur ou du Centre français d'exploitation du droit de copie,
 20, rue des Grands-Augustins, 75006 Paris.
-ISBN 2 7073 0148 5
+ISBN 2 7073 0148 5[/center]
 
+[center][url][font=res://assets/fonts/dynamicfont_128.tres]FIN[/font][/url][/center]
