@@ -35,15 +35,26 @@ func _on_VirusCountDownTimer_timeout():
 		print("Un virus arrive !")
 		can_come = false
 		
-		var number = randi() % GameData.virus_datas.total_proba_weight + 1
+		var total_proba = 0
+		for virus in GameData.virus_datas.virus_liste:
+			if GameData.virus_datas[virus].niv_min_mouse <= GameData.mouse_level:
+				total_proba += GameData.virus_datas[virus].proba_weight
+				print("Y'a virus possible : ", virus, ", avec proba : ", GameData.virus_datas[virus].proba_weight)
+		
+		print("Ca fait proba totale : ", total_proba)
+		
+		var number = randi() % total_proba + 1
 		var p_n = number
 		
+		print("Random number : ", number)
+		
 		for virus in GameData.virus_datas.virus_liste:
-			if number <= GameData.virus_datas[virus]["proba_weight"]:
-				current_virus_name = virus
-				break
-			else:
-				number -= GameData.virus_datas[virus]["proba_weight"]
+			if GameData.virus_datas[virus].niv_min_mouse <= GameData.mouse_level:
+				if number <= GameData.virus_datas[virus].proba_weight:
+					current_virus_name = virus
+					break
+				else:
+					number -= GameData.virus_datas[virus].proba_weight
 		
 		print("Virus is : ", current_virus_name, ", number : ", p_n, ", liste : ", GameData.virus_datas.virus_liste)
 
@@ -63,6 +74,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.hide()
 				
 				$BackBufferCopy/VirusMovePath.set_new_curve_poulpe()
 		
@@ -74,6 +86,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.hide()
 				virus_move_along_curve()
 			
 			"bug":
@@ -84,6 +97,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.hide()
 				virus_move_along_curve()
 			
 			"spider":
@@ -94,6 +108,7 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.show()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.hide()
 				virus_move_along_curve()
 			
 			"eve":
@@ -104,6 +119,18 @@ func _on_VirusCountDownTimer_timeout():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.show()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.hide()
+				virus_move_along_curve()
+			
+			"centipede":
+				$BackBufferCopy/VirusMovePath.set_new_curve_centipede()
+				
+				$BackBufferCopy/VirusMovePath/PathFollow2D/poulpe.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/pirate.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/bug.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/spider.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
+				$BackBufferCopy/VirusMovePath/PathFollow2D/centipede.show()
 				virus_move_along_curve()
 	
 	elif can_come:
@@ -164,7 +191,11 @@ func _on_Tween_tween_all_completed():
 				$BackBufferCopy/VirusMovePath/PathFollow2D/eve.hide()
 				
 				eve_popup.popup()
-				
+			
+			"centipede":
+				print("Euh ca fait rien mais pas grave")
+				can_come = true
+				is_infested = false
 	
 	else:
 		print("Le virus a été repoussé par l'antivirus (proba : " + str(GameData.antivirus_proba_tue_virus) + ")")

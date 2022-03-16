@@ -624,7 +624,7 @@ const upgrades_data = {
 	ventil = {
 		max_upgrade_level = 373,
 		
-		ventils_list = ["base", "pink", "minitel"],
+		ventils_list = ["base", "pink", "minitel", "patate"],
 		base = {
 			unlock_level = 0,
 			unlock_message = "ventil_base_upgrade_message",
@@ -666,6 +666,20 @@ const upgrades_data = {
 			texture_wireless_wrong = "res://assets/sprites/minitel_wireless_wrong.png",
 			
 			fond_texture = "res://assets/sprites/window_minitel.png"
+		},
+		patate = {
+			unlock_level = 20,
+			unlock_message = "ventil_patate_upgrade_message",
+			skin_menu_name = "patate_computer_desc",
+			
+			texture_wire_off = "res://assets/sprites/OrdiPatate05.png",
+			texture_wire_ok = "res://assets/sprites/OrdiPatate04.png",
+			texture_wire_wrong = "res://assets/sprites/OrdiPatate06.png",
+			texture_wireless_off = "res://assets/sprites/OrdiPatate03.png",
+			texture_wireless_ok = "res://assets/sprites/OrdiPatate01.png",
+			texture_wireless_wrong = "res://assets/sprites/OrdiPatate02.png",
+			
+			fond_texture = "res://assets/sprites/windowsHillFond01.png"
 		}
 	},
 	autoclick = {
@@ -715,27 +729,40 @@ const upgrades_data = {
 }
 
 const virus_datas: Dictionary = {
-	total_proba_weight = 23,
-	
-	virus_liste = ["poulpe", "pirate", "bug", "spider", "eve"],
+	virus_liste = ["poulpe", "pirate", "bug", "spider", "eve", "centipede"],
 	poulpe = {
 		nominal_speed = 1000,
-		proba_weight = 8
+		niv_min_mouse = 0,
+		proba_weight = 1
 	},
 	pirate = {
 		nominal_speed = 600,
+		niv_min_mouse = 30,
 		proba_weight = 6
 	},
 	bug = {
 		nominal_speed = 2000,
+		niv_min_mouse = 20,
 		proba_weight = 4
 	},
 	spider = {
 		nominal_speed = 1000,
+		niv_min_mouse = 40,
 		proba_weight = 2
 	},
 	eve = {
 		nominal_speed = 1000,
+		niv_min_mouse = 10,
+		proba_weight = 3
+	},
+	centipede = {
+		nominal_speed = 600,
+		niv_min_mouse = 15,
+		proba_weight = 3
+	},
+	amongus = {
+		nominal_speed = 1000,
+		niv_min_mouse = 15,
 		proba_weight = 3
 	}
 }

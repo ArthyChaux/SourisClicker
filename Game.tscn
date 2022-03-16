@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=2]
+[gd_scene load_steps=179 format=2]
 
 [ext_resource path="res://assets/sprites/souris101.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Game.gd" type="Script" id=2]
@@ -83,6 +83,14 @@
 [ext_resource path="res://assets/sprites/eve_ecrase.png" type="Texture" id=81]
 [ext_resource path="res://scripts/EnAttendantGodotLecture.gd" type="Script" id=82]
 [ext_resource path="res://RobotPopup.gd" type="Script" id=83]
+[ext_resource path="res://assets/sprites/Abast01.png" type="Texture" id=84]
+[ext_resource path="res://assets/sprites/AbastMaj.png" type="Texture" id=85]
+[ext_resource path="res://assets/sprites/CentipedeVirus02.png" type="Texture" id=86]
+[ext_resource path="res://assets/sprites/CentipedeVirus03.png" type="Texture" id=87]
+[ext_resource path="res://assets/sprites/CentipedeVirus06.png" type="Texture" id=88]
+[ext_resource path="res://assets/sprites/CentipedeVirus01.png" type="Texture" id=89]
+[ext_resource path="res://assets/sprites/CentipedeVirus04.png" type="Texture" id=90]
+[ext_resource path="res://assets/sprites/CentipedeVirus05.png" type="Texture" id=91]
 
 [sub_resource type="Shader" id=108]
 code = "shader_type canvas_item;
@@ -126,7 +134,7 @@ func _ready():
 	GameData.connect(\"autoclick_level_changed\", self, \"update_text\")
 
 func update_text(_autoclick_level):
-	text = \"HiClick : %sC/s\" % GameData.clicks_per_seconds
+	text = \"%sC/s\" % GameData.clicks_per_seconds
 "
 
 [sub_resource type="GDScript" id=38]
@@ -137,7 +145,7 @@ func _ready():
 	GameData.connect(\"antivirus_duration_changed\", self, \"update_text\")
 
 func update_text(new_antivirus_duration):
-	text = \"Abast : %02d:%02d:%02d:%02d\" % [int(new_antivirus_duration/(3600*24)), int(new_antivirus_duration/3600) % 24, int(new_antivirus_duration/60) % 60, new_antivirus_duration % 60]
+	text = \"%02d:%02d:%02d:%02d\" % [int(new_antivirus_duration/(3600*24)), int(new_antivirus_duration/3600) % 24, int(new_antivirus_duration/60) % 60, new_antivirus_duration % 60]
 "
 
 [sub_resource type="GDScript" id=56]
@@ -315,6 +323,11 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 122.718, 168.381, -122.718, -168.381, 436.342, 235.141, 9.56822, 298.216, -9.56822, -298.216, 446.863, -841.544 )
 }
 
+[sub_resource type="Curve2D" id=117]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 888.981, 257.112, 122.718, 168.381, -122.718, -168.381, -536.993, 423.712, -345.578, 182.389, 345.578, -182.389, -455.089, -267.716, -249.616, 259.818, 249.616, -259.818, 663.007, -968.669 )
+}
+
 [sub_resource type="AnimatedTexture" id=91]
 frames = 4
 fps = 10.0
@@ -325,6 +338,19 @@ frame_2/texture = ExtResource( 74 )
 frame_2/delay_sec = 0.0
 frame_3/texture = ExtResource( 64 )
 frame_3/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=116]
+frames = 5
+fps = 10.0
+frame_0/texture = ExtResource( 89 )
+frame_1/texture = ExtResource( 86 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 87 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 90 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 91 )
+frame_4/delay_sec = 0.0
 
 [sub_resource type="Shader" id=76]
 code = "shader_type canvas_item;
@@ -987,6 +1013,66 @@ tracks/54/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/55/type = "value"
+tracks/55/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:rotation_degrees")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 90.0 ]
+}
+tracks/56/type = "value"
+tracks/56/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:texture")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 116 ) ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:modulate")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:visible")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede/VirusOutScreenButton:disabled")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=37]
 resource_name = "antivirus_wins"
@@ -1158,6 +1244,18 @@ tracks/13/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ SubResource( 49 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 5.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0.0, 90.0 ]
 }
 
 [sub_resource type="Curve2D" id=89]
@@ -2579,6 +2677,54 @@ tracks/19/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/20/type = "value"
+tracks/20/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:texture")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 88 ), SubResource( 116 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 2, 5, 5.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("BackBufferCopy/VirusMovePath/PathFollow2D/centipede/VirusOutScreenButton:disabled")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=15]
 length = 0.001
@@ -3694,15 +3840,32 @@ valign = 1
 autowrap = true
 script = SubResource( 41 )
 
-[node name="AutoClickShower" type="Label" parent="OrdiOffset/Computer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="OrdiOffset/Computer"]
 margin_left = -6.0
 margin_top = -23.0
 margin_right = 353.0
-margin_bottom = 87.0
+margin_bottom = 93.0
 rect_scale = Vector2( 0.142, 0.142 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="OrdiOffset/Computer/HBoxContainer"]
+margin_left = 113.0
+margin_right = 177.0
+margin_bottom = 116.0
+size_flags_horizontal = 10
+texture = ExtResource( 24 )
+stretch_mode = 6
+
+[node name="AutoClickShower" type="Label" parent="OrdiOffset/Computer/HBoxContainer"]
+margin_left = 181.0
+margin_top = 44.0
+margin_right = 359.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 37 )
-text = "Hiclick : 0C/s"
-align = 1
+text = "0C/s"
 valign = 1
 autowrap = true
 script = SubResource( 39 )
@@ -3710,15 +3873,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AntivirusShower" type="Label" parent="OrdiOffset/Computer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="OrdiOffset/Computer"]
 margin_left = -39.0
 margin_top = -23.0
-margin_right = 249.0
-margin_bottom = 53.0
+margin_right = 251.0
+margin_bottom = 52.0
 rect_scale = Vector2( 0.142, 0.142 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="OrdiOffset/Computer/HBoxContainer2"]
+margin_left = 31.0
+margin_right = 95.0
+margin_bottom = 75.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 0.5
+texture = ExtResource( 84 )
+stretch_mode = 6
+
+[node name="AntivirusShower" type="Label" parent="OrdiOffset/Computer/HBoxContainer2"]
+margin_left = 99.0
+margin_top = 23.0
+margin_right = 290.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 37 )
-text = "Abast : 00:00:00:00"
-align = 1
+text = "00:00:00:00"
 valign = 1
 autowrap = true
 script = SubResource( 38 )
@@ -3798,7 +3979,7 @@ position = Vector2( 7.258, -43.405 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 29 )
 animation = "in_screen"
-frame = 1
+frame = 2
 playing = true
 
 [node name="VirusInScreen" type="AnimatedSprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -3807,7 +3988,6 @@ position = Vector2( 10.8158, 9.53497 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 35 )
 animation = "in_screen"
-frame = 1
 playing = true
 
 [node name="PirateInScreen" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
@@ -3830,11 +4010,12 @@ position = Vector2( -31.451, 145.586 )
 scale = Vector2( 0.15, 0.15 )
 curve = SubResource( 70 )
 script = ExtResource( 55 )
-virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ]
+virus_poulpe_curves = [ SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 67 ), SubResource( 66 ), SubResource( 68 ), SubResource( 69 ) ]
 virus_pirate_curves = [ SubResource( 74 ) ]
 virus_bug_curves = [ SubResource( 96 ) ]
 virus_spider_curves = [ SubResource( 96 ) ]
 virus_eve_curves = [ SubResource( 115 ) ]
+virus_centipede_curves = [ SubResource( 117 ) ]
 
 [node name="PathFollow2D" type="PathFollow2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath"]
 rotation = -1.64301
@@ -3911,11 +4092,27 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 80 )
 
 [node name="VirusOutScreenButton" type="TextureButton" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/eve"]
-margin_left = -53.0
-margin_top = -69.0
-margin_right = 55.0
+margin_left = -30.0
+margin_top = -41.0
+margin_right = 34.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 64, 64 )
+
+[node name="centipede" type="Sprite" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D"]
+visible = false
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+texture = SubResource( 116 )
+
+[node name="VirusOutScreenButton" type="TextureButton" parent="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/centipede"]
+margin_left = -38.0
+margin_top = -69.0
+margin_right = 26.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 64, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MaskVirusOutPolygon" type="Polygon2D" parent="OrdiOffset/Computer/Virus/BackBufferCopy"]
 material = SubResource( 77 )
@@ -4068,6 +4265,9 @@ margin_right = 59.1429
 margin_bottom = -24.0
 expand = true
 script = SubResource( 52 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton2" type="TextureButton" parent="OrdiOffset/Computer/DebugKeys"]
 anchor_left = 0.738201
@@ -4591,7 +4791,7 @@ margin_right = 128.0
 margin_bottom = 156.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
-texture = ExtResource( 19 )
+texture = ExtResource( 84 )
 expand = true
 stretch_mode = 6
 
@@ -4662,7 +4862,7 @@ margin_right = 128.0
 margin_bottom = 156.0
 rect_min_size = Vector2( 128, 128 )
 mouse_filter = 2
-texture = ExtResource( 19 )
+texture = ExtResource( 85 )
 expand = true
 stretch_mode = 6
 
@@ -5335,6 +5535,9 @@ margin_right = -20.0
 margin_bottom = -31.0
 texture = ExtResource( 8 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PopupExclusive" type="Control" parent="."]
 visible = false
@@ -7867,6 +8070,7 @@ __meta__ = {
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/bug/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/spider/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/eve/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
+[connection signal="button_down" from="OrdiOffset/Computer/Virus/BackBufferCopy/VirusMovePath/PathFollow2D/centipede/VirusOutScreenButton" to="OrdiOffset/Computer/Virus" method="_on_VirusOutScreenButton_pressed"]
 [connection signal="timeout" from="OrdiOffset/Computer/Virus/VirusCountDownTimer" to="OrdiOffset/Computer/Virus" method="_on_VirusCountDownTimer_timeout"]
 [connection signal="animation_finished" from="OrdiOffset/Computer/Virus/AnimationPlayer" to="OrdiOffset/Computer/Virus" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="tween_all_completed" from="OrdiOffset/Computer/Virus/Tween" to="OrdiOffset/Computer/Virus" method="_on_Tween_tween_all_completed"]

@@ -6,6 +6,7 @@ export(Array, Curve2D) var virus_pirate_curves
 export(Array, Curve2D) var virus_bug_curves
 export(Array, Curve2D) var virus_spider_curves
 export(Array, Curve2D) var virus_eve_curves
+export(Array, Curve2D) var virus_centipede_curves
 
 func set_new_curve_poulpe():
 	curve = virus_poulpe_curves[randi() % len(virus_poulpe_curves)]
@@ -21,3 +22,6 @@ func set_new_curve_spider():
 
 func set_new_curve_eve():
 	curve = virus_eve_curves[randi() % len(virus_eve_curves)]
+
+func set_new_curve_centipede():
+	curve = virus_centipede_curves[randi() % len(virus_centipede_curves)]
